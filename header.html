@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <style> 
-    a {
+    a:link {
       /*all: unset;*/
+      background-image: linear-gradient(to bottom, rgb(50,50,50), rgb(150,150,150));
+      background-size: 300% 300%;
       position: relative;
       vertical-align: middle;
       /*display:table;*/
@@ -14,6 +16,17 @@
       min-width: 10%;
       align-content: center;
       align-items: center;
+      transition: background .3s ease-in-out;
+      box-shadow: 0 0px 15px 0 rgba(255, 255, 255, 0.75);
+
+    }
+    a:hover {
+      background-position: 50% 50%;
+      box-shadow: 0 0px 15px 0 rgba(49, 196, 190, 0.75);
+    }
+    a:active {
+      background-position: 100% 100%;
+      transition: background .2s ease-in-out;
     }
     a p {
       /*margin-top: 1em;*/
@@ -41,6 +54,7 @@
       font-size: 48px;
       padding: 16px 0em;
       transition-duration: 0.4s;
+      box-shadow: unset;
     }
     a#title:hover {
       /*background-color:white;*/
@@ -58,7 +72,7 @@
     .link {
       flex:1;
 
-      margin: 10px;
+      margin: 10px 4px;
     }
   </style>
 </head>
