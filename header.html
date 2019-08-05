@@ -25,6 +25,9 @@
       text-align: center;
       vertical-align: middle;
     }
+    #side-nav {
+      position:sticky;
+    }
     h1#titleheading {
       position: relative;
       margin: 10px 0;
@@ -53,30 +56,30 @@
 <body>
   <div class="header">
     <h1 id="titleheading"><a id="title" href="index.html">Andrew Wei</a></h1>
-    <p>This is a testing ground for a student website, I guess</p>
+    <p>This is a student website, I guess</p>
     <br />
   </div>
-  <div class="side-nav">
+  <div id="side-nav">
     <a class="link" href="https://github.com/nowei"><p>GitHub</p></a>
     <a class="link" href="https://www.linkedin.com/in/nowei/"><p>LinkedIn</p></a>
-    <a class="link" href="https://en.wikipedia.org/wiki/Pembroke_Welsh_Corgi#/media/File:Welchcorgipembroke.JPG"><p>A picture of a corgi on wikipedia</p></a>
-    <a class="link" href="#"><p>Link</p></a>
-  <script>
-    var coll = document.getElementsByClassName("link");
-    var minHeight = Infinity;
-    for (i = 0; i < coll.length; i++) {
-      if (coll[i].offsetHeight < minHeight)
-        minHeight = coll[i].offsetHeight;
-    }
-    // To get the height with padding left inside 
-    var minHeightWoPadding = minHeight - 2 * parseInt(window.getComputedStyle(coll[0], null).getPropertyValue('padding-top'), 10) 
-    for (i = 0; i < coll.length; i++) {
-      if (coll[i].offsetHeight != minHeight) {
-        coll[i].childNodes[0].style.margin=String((minHeightWoPadding - coll[i].childNodes[0].offsetHeight) / 2) + "px 0";
+    <a class="link" href="./impostersyndrome.html"><p>Imposter Syndrome</p></a>
+    <a class="link" href="./photos.html"><p>Photos</p></a>
+    <script>
+      var coll = document.getElementsByClassName("link");
+      var minHeight = Infinity;
+      for (i = 0; i < coll.length; i++) {
+        if (coll[i].offsetHeight < minHeight)
+          minHeight = coll[i].offsetHeight;
       }
-      // console.log(coll[i].style);
-    }
-  </script>
+      // To get the height with padding left inside 
+      var minHeightWoPadding = minHeight - 2 * parseInt(window.getComputedStyle(coll[0], null).getPropertyValue('padding-top'), 10) 
+      for (i = 0; i < coll.length; i++) {
+        if (coll[i].offsetHeight != minHeight) {
+          coll[i].childNodes[0].style.margin=String((minHeightWoPadding - coll[i].childNodes[0].offsetHeight) / 2) + "px 0";
+        }
+        // console.log(coll[i].style);
+      }
+    </script>
   </div>
   <hr>
 </body>

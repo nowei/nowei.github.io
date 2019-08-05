@@ -6,6 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <style> 
+    #content {
+      position: relative;
+      background-color: white;
+      opacity: 0.8;
+    }
+    #contact {
+      /*border-style: solid;*/
+      /*border-color: white;*/
+      border: 5px solid grey  ;
+      border-radius: 10px;
+      width:20%;
+      position: absolute;
+      right: 5%;
+      top: 50px;
+      color: black;
+    }
+    #test {
+      height: 6000px;
+    }
   </style>
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <script>
@@ -16,8 +35,14 @@
 </head>
 <body>
   <div id="header"></div>
-  <u>Contact info</u><br \>
-  email: nowei@cs.washington.edu <br \>
-  School year:
+  <div id="content">
+  <image></image>
+    <div id="contact">
+      <u>Contact info</u><br \>
+      email: nowei@cs.washington.edu <br \>
+      I usually don't answer my phone because UW leaked phone numbers and I get scam calls, but I do respond to text messages
+    </div>
+    <div id="test"></div>
+  </div>
 </body>
 </html>
