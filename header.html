@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style> 
+    a {
+      /*all: unset;*/
+      position: relative;
+      vertical-align: middle;
+      /*display:table;*/
+      max-width: 280px;
+      min-width: 10%;
+      align-content: center;
+      align-items: center;
+    }
+    a p {
+      /*margin-top: 1em;*/
+      /*margin-bottom: 1em;*/
+      /*margin: 0 0;*/
+      max-width: 80%;
+      /*padding: 0 0 ;*/
+      /*position: relative;*/
+      text-align: center;
+      vertical-align: middle;
+    }
+    h1#titleheading {
+      position: relative;
+      margin: 10px 0;
+      /*Trick: Adding a minimum height to a header so that when you add a hover effect, the height doesn't change*/
+      height:80px;
+    }
+    a#title {
+      /*position: absolute;*/
+      transition: unset;
+      max-width: unset;
+      text-decoration: none;
+      background: unset;
+      position:relative;
+      font-size: 48px;
+      padding: 16px 0em;
+      transition-duration: 1s;
+    }
+    a#title:hover {
+      /*background-color:white;*/
+      font-size: 64px;
+      /*padding: 6.5px 0;*/
+      text-shadow: 0px 0px 5px white;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1 id="titleheading"><a id="title" href="index.html">Andrew Wei</a></h1>
+    <p>This is a testing ground for a student website, I guess</p>
+    <br />
+  </div>
+  <div class="side-nav">
+    <a class="link" href="https://github.com/nowei"><p>GitHub</p></a>
+    <a class="link" href="https://www.linkedin.com/in/nowei/"><p>LinkedIn</p></a>
+    <a class="link" href="https://en.wikipedia.org/wiki/Pembroke_Welsh_Corgi#/media/File:Welchcorgipembroke.JPG"><p>A picture of a corgi on wikipedia</p></a>
+    <a class="link" href="#"><p>Link</p></a>
+  <script>
+    var coll = document.getElementsByClassName("link");
+    var minHeight = Infinity;
+    for (i = 0; i < coll.length; i++) {
+      if (coll[i].offsetHeight < minHeight)
+        minHeight = coll[i].offsetHeight;
+    }
+    // To get the height with padding left inside 
+    var minHeightWoPadding = minHeight - 2 * parseInt(window.getComputedStyle(coll[0], null).getPropertyValue('padding-top'), 10) 
+    for (i = 0; i < coll.length; i++) {
+      if (coll[i].offsetHeight != minHeight) {
+        coll[i].childNodes[0].style.margin=String((minHeightWoPadding - coll[i].childNodes[0].offsetHeight) / 2) + "px 0";
+      }
+      // console.log(coll[i].style);
+    }
+  </script>
+  </div>
+  <hr>
+</body>
+</html>
