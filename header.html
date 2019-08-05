@@ -25,9 +25,6 @@
       text-align: center;
       vertical-align: middle;
     }
-    #side-nav {
-      position:sticky;
-    }
     h1#titleheading {
       position: relative;
       margin: 10px 0;
@@ -43,13 +40,25 @@
       position:relative;
       font-size: 48px;
       padding: 16px 0em;
-      transition-duration: 1s;
+      transition-duration: 0.4s;
     }
     a#title:hover {
       /*background-color:white;*/
       font-size: 64px;
       /*padding: 6.5px 0;*/
       text-shadow: 0px 0px 5px white;
+    }
+    #side-nav {
+      display: flex;
+      justify-content: center;
+      position:sticky;
+      top: 0;
+      align-items: center;
+    }
+    .link {
+      flex:1;
+
+      margin: 10px;
     }
   </style>
 </head>
@@ -64,7 +73,7 @@
     <a class="link" href="https://www.linkedin.com/in/nowei/"><p>LinkedIn</p></a>
     <a class="link" href="./impostersyndrome.html"><p>Imposter Syndrome</p></a>
     <a class="link" href="./photos.html"><p>Photos</p></a>
-    <script>
+    <!-- <script>
       var coll = document.getElementsByClassName("link");
       var minHeight = Infinity;
       for (i = 0; i < coll.length; i++) {
@@ -79,8 +88,9 @@
         }
         // console.log(coll[i].style);
       }
-    </script>
+    </script> -->
   </div>
+  <!-- <div style="height:6000px"></div> -->
   <hr>
 </body>
 </html>
