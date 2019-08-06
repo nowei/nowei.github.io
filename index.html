@@ -10,6 +10,7 @@
       position: relative;
       background-color: white;
       opacity: 0.8;
+      padding-bottom: 2%
     }
     #contact {
       /*border-style: solid;*/
@@ -19,21 +20,43 @@
       width:25%;
       position: absolute;
       right: 5%;
-      top: 50px;
+      top: 20px;
       color: black;
+    }
+    #links {
+      width:14%;
+      position: absolute;
+      left: 1%;
+      top: 220px;
+      color: black;
+      text-align: left
     }
     #aboutme {
       /*position: ;*/
-      width: 65%;
-      padding-left:2.5%;
+      width: 52%;
+      padding-left:16%;
       text-align:left;
       color: black;
       min-height:300px;
+      left:10%;
     }
     p {
       margin: unset;
+      text-align: left;
+      /*display: unset;*/
     }
-
+    a.links:link, a.links:visited {
+      color:black;
+      padding:unset;
+      min-width:unset;
+      background:unset;
+    }
+    a.links:hover {
+      color:lightblue;
+    }
+    a.links:active {
+      color:cyan;
+    }
   </style>
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <script>
@@ -45,16 +68,22 @@
 <body>
   <div id="header"></div>
   <div id="content">
-  <image></image>
-    <div id="contact">
-      <u>Contact info</u><br \>
+    <img src="./imgs/face.jpg" alt="face" style="margin: 10px 10px;float:left">
+    <div id="contact"><u>Contact info</u><br \>
       email: nowei@cs.washington.edu <br \>
       I usually don't answer my phone because UW leaked student phone numbers and I get scam calls, but I do respond to text messages.
     </div>
+    <div id="links">
+      <u>Links</u><br \>
+      <a class="links" href="https://github.com/nowei">GitHub</a>
+      <a class="links" href="https://www.linkedin.com/in/nowei/">LinkedIn</a>
+    </div>
     <div id="aboutme">
-      <img src="./imgs/face.jpg" alt="face" style="width:170px;height:170px;margin-right:15px;float:left">
-      <p>I'm an <strike>undergraduate</strike> 5th year master's student at UW studying CSE.</p><br/>
-      <p>I spend most of my time </p>
+      <h2 style="margin-bottom: unset;">Who am I?</h2>
+      <p>I'm an <strike>undergraduate</strike> 5th year master's student at UW studying CSE.</p> <br style="padding-bottom: "\>
+      <h2 style="margin-bottom: unset;">About me</h2>
+      <p>I spend most of my time on <a class="links" href="./classes.html">classes</a> and TAing.</p> <br \>
+      <p>I listen to a lot of music, mostly folk, hip-hop, or alternative rock. I usually listen to something like DJ Okawari when I'm working on something.</p><br \>
     </div>
   </div>
 </body>
