@@ -113,6 +113,8 @@
 </head>
 <body>
   <div id="header"></div>
+  <p>I take a lot of classes</p>
+  <div><button id="expand" style=":unset;">Expand all</button> <button id="collapse">Collapse all</button></div>
   <div class="quarter-container">
     <div class="quarter-grid">
     <div class="quarter-item">
@@ -159,7 +161,7 @@
           <li>CSE 470 - Computer Architecture II</li>
           <li>CSE 481V - VR Capstone</li>
           <ul>
-            <li>Project: ChatAssist</li>
+            <li>Project: <a class="link_proj" href="https://uwrealitylab.github.io/vrcapstone19sp-team3/">ChatAssist</a></li>
           </ul>
           TA: CSE 180 - Intro to Data Science 
         </ul>
@@ -221,26 +223,116 @@
         </ul>
       </div>
     </div>
-    <div class="quarter-item">
-      hi
-    </div>
     </div>
     </div>
 
   </div>
+  <button>Before UW</button>
+  <p>Before UW, I did Running Start and AP classes in high school.</p>
+  <div class="quarter-container">
+    <div class="quarter-grid">
+    <div class="quarter-item">
+      <button class="quarter2">Autumn 2016</button>
+      <div class="classes">
+        <ul>
+          <li>ASL I</li>
+          <li>Statics</li>
+          <li>Multivariable Calculus</li>
+          <li>Physics III</li>
+        </ul>
+      </div>
+    </div>
+    <div class="quarter-item">
+      <button class="quarter2">Winter 2017</button>
+      <div class="classes">
+        <ul>
+          <li>Arabic I</li>
+          <li>ASL II</li>
+          <li>Java II</li>
+          <li>Electrical Circuits</li>
+          <li>Mechanics of Materials</li>
+        </ul>
+      </div>
+    </div>
+    <div class="quarter-item">
+      <button class="quarter2">Spring 2017</button>
+      <div class="classes">
+        <ul>
+          <li>Java III</li>
+          <li>ASL III</li>
+          <li>Dynamics</li>
+          <li>African-American History</li>
+          <li>Yoga</li>
+          <li>Karate</li>
+        </ul>
+      </div>
+    </div>
+    <div class="quarter-item">
+      <button class="quarter2">Summer 2017</button>
+      <div class="classes">
+        <ul>
+          <li>Symbolic Logic</li>
+          <li>Soldering</li>
+        </ul>
+      </div>
+    </div>
+    <p style="width:100%">At the time I was also taking AP Euro and a physics class</p>
+
+    <div class="quarter-item">
+      <button class="quarter2">Autumn 2015</button>
+      <div class="classes">
+        <ul>
+          <li>Visual Basic</li>
+          <li>English Composition</li>
+          <li>Contemporary Health</li>
+        </ul>
+      </div>
+    </div>
+    <div class="quarter-item">
+      <button class="quarter2">Winter 2016</button>
+      <div class="classes">
+        <ul>
+          <li>Engineering Modeling</li>
+          <li>Technical Writing</li>
+          <li>Physics I</li>
+        </ul>
+      </div>
+    </div>
+    <div class="quarter-item">
+      <button class="quarter2">Spring 2016</button>
+      <div class="classes">
+        <ul>
+          <li>Java I</li>
+          <li>Thermodynamics</li>
+          <li>Physics II</li>
+        </ul>
+      </div>
+    </div>
+    <div class="quarter-item">
+      <button class="quarter2">Summer 2016</button>
+      <div class="classes">
+        <ul>
+          <li>Linear Algebra and Differential Calculus of Several Variables</li>
+          <li>Ordinary Differential Equations</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+    </div>
+    <p style="width:100%">At the time I was also taking AP Calculus BC, AP Chemistry, and AP Statistics</p>
 
   <script>
     var coll = document.getElementsByClassName("quarter");
     var i;
-    var x;
+    // var x;
     // Get consistent max length value
-    var maxlen = 0;
+    var maxlen1 = 0;
     for (i = 0; i < coll.length; i++) {
       // console.log(coll[i].nextElementSibling.scrollHeight);
-      if (coll[i].nextElementSibling.scrollHeight > maxlen)
-        maxlen = coll[i].nextElementSibling.scrollHeight;
+      if (coll[i].nextElementSibling.scrollHeight > maxlen1)
+        maxlen1 = coll[i].nextElementSibling.scrollHeight;
     }
-    console.log(maxlen);
+    console.log(maxlen1);
     for (i = 0; i < coll.length; i++) {
       coll[i].addEventListener("click", function() {
         this.classList.toggle("active");
@@ -249,10 +341,10 @@
           content.style.minHeight = null;
           // content.style.display = "none";
           content.style.overflow = "hidden";
-          clearInterval(x);
+          // clearInterval(x);
         } else {
-          content.style.minHeight = maxlen + "px";
-          console.log(maxlen);
+          content.style.minHeight = maxlen1 + "px";
+          console.log(maxlen1);
           // To match height
           // content.style.maxHeight = content.scrollHeight + "px";
 
@@ -260,7 +352,34 @@
         }
       });
     }
+    var coll = document.getElementsByClassName("quarter2");
+    // Get consistent max length value
+    var maxlen2 = 0;
+    for (i = 0; i < coll.length; i++) {
+      // console.log(coll[i].nextElementSibling.scrollHeight);
+      if (coll[i].nextElementSibling.scrollHeight > maxlen2)
+        maxlen2 = coll[i].nextElementSibling.scrollHeight;
+    }
+    console.log(maxlen2);
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.minHeight) {
+          content.style.minHeight = null;
+          // content.style.display = "none";
+          content.style.overflow = "hidden";
+          // clearInterval(x);
+        } else {
+          content.style.minHeight = maxlen2 + "px";
+          console.log(maxlen2);
+          // To match height
+          // content.style.maxHeight = content.scrollHeight + "px";
 
+          // x = setTimeout(function() {content.style.overflow = "visible"}, 1000);
+        }
+      });
+    }
   </script>
 </body>
 </html>
