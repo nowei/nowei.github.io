@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <style> 
-    a:link {
+    a.navlink:link {
       /*all: unset;*/
       background-image: linear-gradient(to bottom, rgb(50,50,50), rgb(150,150,150));
       background-size: 300% 300%;
@@ -21,11 +21,11 @@
       box-shadow: 0 0px 15px 0 rgba(255, 255, 255, 0.75);
 
     }
-    a:hover {
+    a.navlink:hover {
       background-position: 50% 50%;
       box-shadow: 0 0px 15px 0 rgba(49, 196, 190, 0.75);
     }
-    a:active {
+    a.navlink:active {
       background-position: 100% 100%;
       transition: background .2s ease-in-out;
     }
@@ -70,7 +70,7 @@
       top: 0;
       align-items: center;
     }
-    .link {
+    .navlink {
       /*flex:1;*/
 
       margin: 10px 4px;
@@ -84,10 +84,10 @@
     <br />
   </div>
   <div id="side-nav">
-    <a class="link" href="/"><p>Home</p></a>
-    <a class="link" href="/classes/"><p>Classes</p></a>
-    <a class="link" href="/projects/"><p>Projects</p></a>
-    <a class="link" href="/photos/"><p>Photos</p></a>
+    <a class="navlink" href="/"><p>Home</p></a>
+    <a class="navlink" href="/classes/"><p>Classes</p></a>
+    <a class="navlink" href="/projects/"><p>Projects</p></a>
+    <a class="navlink" href="/photos/"><p>Photos</p></a>
     <!-- <script>
       var coll = document.getElementsByClassName("link");
       var minHeight = Infinity;

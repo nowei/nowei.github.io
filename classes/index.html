@@ -4,7 +4,7 @@
   <title>Andrew Wei</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
   <style>
      /* For the tooltips */
     body {
@@ -14,7 +14,8 @@
 
     }
     p {
-      all: unset;
+      /*all: unset;*/
+      margin: 10px 0;
     }
     .tooltip {
       /*word-break: break-all;*/
@@ -115,8 +116,8 @@
   <div id="header"></div>
   <p style="margin: 10px">I take a lot of classes</p>
   <br />
-  <div><button id="expand" style=":unset;">Expand all</button> <button id="collapse">Collapse all</button></div>
-  <div class="quarter-container">
+<!--   <div><button id="expand" style="width:50%">Expand all</button> <button id="collapse" style="width:50%">Collapse all</button></div>
+ -->  <div class="quarter-container">
     <div class="quarter-grid">
     <div class="quarter-item">
       <button class="quarter">Autumn 2018</button>
@@ -229,9 +230,10 @@
 
   </div>
   <hr>
-  <p>Before UW</p><br />
+  <p style="margin:unset">Before UW</p><br />
 
-  <p>Before UW, I did Running Start and AP classes in high school.</p>
+  <p style="margin:unset">Before UW, I did Running Start and AP classes in high school.</p> <br />
+  <p style="margin-top:unset; margin-bottom:10px">At the time I was also taking AP Euro and a physics class</p>
   <div class="quarter-container">
     <div class="quarter-grid">
     <div class="quarter-item">
@@ -279,8 +281,8 @@
         </ul>
       </div>
     </div>
-    <p style="width:100%">At the time I was also taking AP Euro and a physics class</p>
 
+    <p style="width:100%; margin:10px 0px; text-align: center;">At the time I was also taking AP Calculus BC, AP Chemistry, and AP Statistics</p>
     <div class="quarter-item">
       <button class="quarter2">Autumn 2015</button>
       <div class="classes">
@@ -322,7 +324,6 @@
     </div>
     </div>
     </div>
-    <p style="width:100%">At the time I was also taking AP Calculus BC, AP Chemistry, and AP Statistics</p>
 
   <script>
     var coll = document.getElementsByClassName("quarter");
@@ -384,5 +385,6 @@
       });
     }
   </script>
+  <div id="footer"></div>
 </body>
 </html>

@@ -19,6 +19,9 @@ html {
 div#header {
   min-height: 263px;
 }
+div#footer {
+  min-height: 200px;
+}
 body {
   font-family: "Consolas", Helvetica, sans-serif;
   width:100%;
@@ -47,6 +50,7 @@ a:link, a:visited, button {
   transition: background-image 5s ease-in-out;
 
 }
+
 
 #buttons {
   text-decoration: underline;
