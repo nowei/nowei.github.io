@@ -19,6 +19,7 @@
       align-items: center;
       transition: background .3s ease-in-out;
       box-shadow: 0 0px 15px 0 rgba(255, 255, 255, 0.75);
+      height: 43px;
 
     }
     a.navlink:hover {
@@ -29,7 +30,8 @@
       background-position: 100% 100%;
       transition: background .2s ease-in-out;
     }
-    a p {
+    a.navlink p, #titledescription {
+      margin:10px 0;
       /*margin-top: 1em;*/
       /*margin-bottom: 1em;*/
       /*margin: 0 0;*/
@@ -73,14 +75,14 @@
     .navlink {
       /*flex:1;*/
 
-      margin: 10px 4px;
+      margin: 10px 6px;
     }
   </style>
 </head>
-<body>
+<body style="height:250px">
   <div class="header">
     <h1 id="titleheading"><a id="title" href="index.html">Andrew Wei</a></h1>
-    <p>This is an IN-PROGRESS student website, I guess</p>
+    <p id="titledescription">This is an IN-PROGRESS student website, I guess</p>
     <br />
   </div>
   <div id="side-nav">
