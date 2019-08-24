@@ -16,6 +16,9 @@ html {
   /*how to make scroll disappear?*/
   /*background-color:transparent;*/
 }
+div#header {
+  min-height: 310px;
+}
 body {
   font-family: "Consolas", Helvetica, sans-serif;
   width:100%;
