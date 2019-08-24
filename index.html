@@ -51,12 +51,16 @@
       padding:unset;
       min-width:unset;
       background:unset;
-      transition-duration: all 0.2s ease-in;
+      border-radius: 5px;
+      /*transition-duration: all 0.2s ease-in;*/
     }
     a.links:hover {
       color:lightblue;
       background: lightblue;
       color:black;
+      transition: background 0.4s;
+      box-shadow: 0 0px 15px 0 rgba(49, 196, 190, 0.75);
+      transition: box-shadow 0.3s;
     }
     a.links:active {
       color:cyan;
@@ -74,7 +78,7 @@
   <div id="content">
     <img src="./imgs/face.jpg" alt="face" style="margin: 10px 10px;float:left">
     <div id="contact"><u>Contact info</u><br \>
-      email: nowei@cs.washington.edu <br \>
+      email: <a href="mailto:nowei@cs.washington.edu" class="links">nowei@cs.washington.edu</a> <br \>
       I usually don't answer my phone because UW leaked phone numbers and I get scam calls, but I do respond to texts.
     </div>
     <div id="links">
@@ -83,14 +87,55 @@
       <a class="links" href="https://www.linkedin.com/in/nowei/">LinkedIn</a>
     </div>
     <div id="aboutme">
-      <h2 style="margin-bottom: unset;">Who am I?</h2>
-      <p>I'm an <strike>undergraduate</strike> 5th year master's student at UW studying CSE.</p> <br style="padding-bottom: unset;"\>
-      <h2 style="margin-bottom: unset;">About me</h2>
-      <p>I spend most of my time on <a class="links" href="./classes/">classes</a> and TAing.</p> <br \>
-      <p>I listen to a lot of music, mostly folk, hip-hop, or alternative rock. I usually listen to something like DJ Okawari or Grieves when I'm working on something.</p><br \>
-      <p>I go out to eat places with friends, watch anime/tv shows/movies, and read books for fun. </p>
+      <h2 style="margin-bottom: unset;">who am I?</h2>
+      <p>I'm a<strike>n undergraduate</strike> 5th year master's student at UW studying CSE. </p> <br style="padding-bottom: unset;"\>
+      <h2 style="margin-bottom: unset;" class="collapsible">about me</h2>
+      <div class="content">
+        <p class="descriptions">I was born in Taiwan and moved to Washington when I was 5. </p> 
+        <p class="descriptions">I graduated with a Bachelor's of Science in Computer Engineering in June 2019 from the University of Washington. Now I'm working on a Master's degree at UW.</p> 
+        <p class="descriptions">I'm interested in many aspects and applications of computing, but I'm mainly focused on learning more about Machine Learning and Distributed Systems right now.</p>
+        <p class="descriptions" style="padding: 0 0 ">Before UW, I did</p> <p class="tooltip"><span class="normaltext" style="border-bottom: 2px dashed black;">Running Start</span> <span class="tooltiptext" style="">Taking college classes in high school</span></p><p class="descriptions" style="display:inline;"> at Edmonds Community College and took some other classes at some other places. </p>
+        <p class="descriptions">During the school year, I spend most of my time on <a class="links" href="./classes/">classes</a>, TAing, and helping other people. </p>
+        <p class="descriptions">I listen to a lot of <a class="links" href="./music/">music</a>, mostly folk, hip-hop, or alternative rock. </p>
+        <p class="descriptions">I go out to eat with friends, watch anime/tv shows/movies, and read books for fun. </p>
+      </div>
+      <br \>
+      <h2 style="margin-top: 10px" class="collapsible">tentative classes, aut19</h2>
+      <div class="content">
+        <ul>
+          <li>CSE 521: Design and Analysis of Algorithms</li>
+          <li>CSE 552: Distributed and Parallel Systems</li>
+          <li>CSE 599M: Principled Approaches to Robust Machine Learning</li>
+        </ul>
+      </div>
+      <br \>
+      <h2 style="margin-bottom: unset; margin-top: 10px" class="collapsible">Entertainment</h2>
+      <div class="content">
+        <li style="">
+          <ul style="padding: unset; display: inline;">CSE 521: Design and Analysis of Algorithms</ul>
+          <ul style="padding: unset; display: inline;">CSE 552: Distributed and Parallel Systems</ul>
+          <ul style="padding: unset; display: inline;">CSE 599M: Principled Approaches to Robust Machine Learning</ul>
+        </li>
+      </div>
+      
     </div>
   </div> 
   <div id="footer"></div>
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+  </script>
 </body>
 </html>

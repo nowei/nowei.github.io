@@ -76,3 +76,51 @@ ul li {
   text-align: left;
   /*word-break: break-all;*/
 }
+
+.tooltip {
+  /*word-break: break-all;*/
+  position: relative;
+}
+.normaltext {
+  position: relative;
+  border-bottom: 1px dashed white; /* If you want dots under the hoverable text */
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  background-color:grey;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 1px 1px;
+  position: absolute;
+  z-index: 1;
+  overflow: visible;
+  top: 100%;
+  left: 10%;
+  right: 10%;
+}
+
+.descriptions {
+  padding:10px 0;
+}
+
+.collapsible {
+  background-color: #60ff60;
+  border-radius: 5px;
+  display: inline;
+}
+
+.collapsible:hover {
+  background-color: #99ff99;
+}
+
+.content {
+  max-height: 0;
+  transition: max-height 0.4s ease-in-out;
+  overflow: hidden;
+}
