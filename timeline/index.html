@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en-US'>
 <head>
-  <title>Classes I've taken</title>
+  <title>Timeline of what I've done</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
@@ -69,12 +69,19 @@
       min-width:unset;
       min-height:unset;
       padding: unset;
+      display:inline;
     }
     a.link_proj:hover {
       color: lightblue;
     }
     a.link_proj:active {
       color: cyan;
+    }
+    .topic {
+      /*display: inline-block;*/
+      font-weight:bold;
+      text-align:left;
+      left: 0%;
     }
   </style>
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -86,8 +93,8 @@
 </head>
 <body>
   <div id="header"></div>
-  <p style="margin: 10px">I take a lot of classes</p>
-  <h1 style="margin:unset"><u>At UW</u></h1><br />
+  <p style="margin: 10px">Timeline of activities</p>
+  <h1 style="margin:unset"><u>University of Washington</u></h1><br />
   <h2>Master of Science in Computer Science and Engineering</h2>
   <div class="quarter-container">
     <div class="quarter-grid">
@@ -124,7 +131,12 @@
             <li><a class="link_proj" href="../projects/CSE455FinalReport.pdf">Report</a></li>
           </ul>
           <li>CSE 473 - Intro to Artificial Intelligence</li>
-          TA: CSE 414 - Databases
+          <hr \>
+          <li><u>TA</u>: CSE 414 - Databases</li>
+          <div class="topic">Volunteering</div>
+          <li>Dawg Daze Leader</li>
+          <div class="topic">Hackathons</div>
+          <li><i>Dubhacks 2018</i>: Package theft detection</li> 
         </ul>
       </div>
     </div>
@@ -136,7 +148,10 @@
           <li>CSE 447 - Natural Language Processing</li>
           <li>CSE 469 - Computer Architecture I</li>
           <li class="tooltip">CSE 599 - <span class="normaltext">Theory of Optimization and Continuous Algorithms</span> <span class="tooltiptext"> Convex Optimizations, <br style="all:unset" />i.e. end me</span></li>
-          TA: CSE 312 - Stats and stuff
+          <hr \>
+          <li><u>TA</u>: CSE 312 - Stats and stuff</li>
+          <div class="topic">Volunteering</div>
+          <li>UW Math Day</li>
         </ul>
       </div>
     </div>
@@ -154,12 +169,23 @@
           <ul>
             <li>Project: <a class="link_proj" href="https://uwrealitylab.github.io/vrcapstone19sp-team3/">ChatAssist</a></li>
           </ul>
-          TA: CSE 180 - Intro to Data Science 
+          <hr \>
+          <li><u>TA</u>: CSE 180 - Intro to Data Science</li> 
+          <div class="topic">Life Events</div>
+          <li>Graduated from Undergrad, Cum Laude</li>
+          <div class="topic">Volunteering</div>
+          <li>Engineering Dicovery Days</li> 
+
         </ul>
       </div>
     </div>
     <div class="quarter-item">
-      <!-- Leave empty -->
+      <button class="quarterb">Summer 2019</button>
+      <div class="classes">
+        <ul>
+          <li><u>Interning</u>: Letron Entertainment Tech, A Cloud Network Monitoring start-up in Kaohsiung, Taiwan</li>
+        </ul>    
+      </div>
     </div>
 
     <div class="quarter-item">
@@ -172,6 +198,11 @@
           <li>CSE 331 - Software Design and Implementation</li>
           <li>CSE 351 - Hardware/Software Interface</li>
           <li>CSE 495 - Vertically Integrated Project</li>
+          <hr \>
+          <div class="topic">Volunteering</div>
+          <li>Puget Sound Bird Festival</li> 
+          <div class="topic">Hackathons</div>
+          <li><i>Dubhacks 2017</i>: Fitbit for Wheelchair Users, won Accessibility Challenge</li> 
         </ul>
       </div>
     </div>
@@ -185,6 +216,9 @@
           <li class="tooltip">CSE 344 - <span class="normaltext">Intro to Data Management</span> <span class="tooltiptext">Databases and stuff</span></li>
           <li class="tooltip">CSE 369 - <span class="normaltext">Intro to Digital Design</span> <span class="tooltiptext">FPGAs and Verilog</span></li>
           <li>CSE 390 - Problem Solving with Programming</li>
+          <hr \>
+          <div class="topic">Hackathons</div>
+          <li><i>nwHacks 2018</i>: Fruit ripeness app</li> 
         </ul>
       </div>
     </div>
@@ -193,10 +227,16 @@
       <div class="classes">
         <ul>
           <li class="tooltip">CSE 371 - <span class="normaltext">Design of Digital Circuits and Systems</span> <span class="tooltiptext">Verilog II: Electric Boogaloo</span></li>
+          <ul>
+            <li>Project: <a class="link_proj" href="https://drive.google.com/file/d/1mMqNNky8TlR3kXyZnWidnr3k37A-P_Px/view?usp=sharing">Brick Breaker</a></li>
+          </ul>
           <li class="tooltip">CSE 391 - <span class="normaltext">Software Tools</span> <span class="tooltiptext">Linux and Stuff</span></li>
           <li>CSE 451 - Intro to Operating Systems</li>
           <li>LING 200 - Intro to Linguistic Thought</li>
-          TA: CSE 312 - Stats and stuff
+          <hr \>
+          <li><u>TA</u>: CSE 312 - Stats and stuff</li>
+          <div class="topic">Volunteering</div>
+          <li>Engineering Discovery Days</li> 
         </ul>
       </div>
     </div>
@@ -206,11 +246,21 @@
         <ul>
           <li>CSE 474 - Intro to Embedded Systems</li>
           <ul>
+            <li>Team: Drive</li>
             <li>Project: <a class="link_proj" href="https://drive.google.com/file/d/1iwGpQ_J5b0VphyDPrFP9gnaINVZLwMR3/view">Combat! (video)</a></li>
           </ul>
           <li>CSE 490 - Character Pre-Production for 3D Animation</li>
           <li>ENGL 207 - Introduction to Cultural Studies</li>
-          TA: CSE 344 - Databases
+          <hr \>
+          <li><u>TA</u>: CSE 344 - Databases</li>
+          <div class="topic">Life Events</div>
+          <li>Got accepted to 5th Year Masters</li>
+          <div class="topic">Volunteering</div>
+          <li>Summer 2018 Special Olympics</li>
+          <div class="topic">Hackathons</div>
+          <li><i>MITHacks 2018</i>: Disaster Relief app for reporting missing persons</li> 
+          <div class="topic">Activities</div>
+          <li><i>Microsoft Intern Puzzle Day</i>: 2nd place [got carried]</li> 
         </ul>
       </div>
     </div>
@@ -219,10 +269,10 @@
 
   </div>
   <hr style="margin:30px 0">
-  <h1 style="margin:unset; padding-top: 10px"><u>Before UW</u></h1><br />
+  <h1 style="margin:unset; padding-top: 10px"><u>High School</u></h1><br />
   <h2>Associate of Science in Mechanical Engineering and Computer Engineering</h2>
   <p style="margin:unset">Before UW, I did Running Start at Edmonds Community College and took AP classes in high school.</p> <br />
-  <p style="margin-top:unset; margin-bottom:10px">At the time I was also taking AP Euro and a physics class</p>
+  <p style="margin-top:unset; margin-bottom:10px">At the time I was also taking AP Euro and a physics class. I volunteered at Alderwood Middle School's TSA club.</p>
   <div class="quarter-container">
     <div class="quarter-grid">
     <div class="quarter-item">
@@ -231,8 +281,18 @@
         <ul>
           <li>ASL I</li>
           <li>Statics</li>
+          <ul>
+            <li>Project: <a class="link_proj" href="./imgs/bridge3.jpg">Balsa Wood Bridges</a></li>
+            <li>We won <a class="link_proj" href="./imgs/bridge1.jpg">first</a> and <a class="link_proj" href="./imgs/bridge2.jpg">second</a> place with our two bridges</li>
+          </ul>
           <li>Multivariable Calculus</li>
           <li>Physics III</li>
+          <ul>
+            <li>Project: <a class="link_proj" href="./imgs/glass.jpg">Sound and Glass</a></li>
+            <li>Analyzing sounds using glasses and water</li>
+            <li>Project: <a class="link_proj" href="./imgs/waves.jpg">Wave and Dry Ice</a></li>
+            <li>Trying to depict sound waves in dry ice smoke</li>
+          </ul>
         </ul>
       </div>
     </div>
@@ -255,9 +315,21 @@
           <li>Java III</li>
           <li>ASL III</li>
           <li>Dynamics</li>
+          <ul>
+            <li>Team: <a class="link_proj" href="./imgs/dynamics.png">How Do We Do This?</a></li>
+            <li>Project: <a class="link_proj" href="./imgs/gear.jpg">Dynamics Modeling</a></li>
+            <li>Model a gear</li>
+          </ul>
           <li>African-American History</li>
           <li>Yoga</li>
           <li>Karate</li>
+          <hr>
+          <div class="topic">Life Events</div>
+          <li>Got accepted to UW</li>
+          <li>Got my Associates Degrees</li>
+          <li>Graduated from EdCC</li>
+          <li>High School Valedictorian</li>
+          <li>Got a high school math award thing</li>
         </ul>
       </div>
     </div>
@@ -267,6 +339,15 @@
         <ul>
           <li>Symbolic Logic</li>
           <li>Soldering</li>
+          <hr>
+          <div class="topic">Life Events</div>
+          <li>Got accepted into CSE and ME through the Engineering Application</li>
+          <ul>
+            <li>Told could only major in one, ended up choosing CSE</li>
+          </ul>
+          <div class="topic">Certifications</div>
+          <li>IPC-A-610</li>
+          <li>IPC-J-STD-001</li>
         </ul>
       </div>
     </div>
@@ -289,6 +370,12 @@
           <li>Engineering Modeling</li>
           <li>Technical Writing</li>
           <li>Physics I</li>
+          <ul>
+            <li>Project: Friction</li>
+            <li>Finding different friction constants</li>
+            <li>Project: Something with Springs</li>
+            <li>I don't actually remember this one</li>
+          </ul>
         </ul>
       </div>
     </div>
@@ -298,7 +385,22 @@
         <ul>
           <li>Java I</li>
           <li>Thermodynamics</li>
+          <ul>
+            <li>Project: <a class="link_proj" href="./imgs/thermo2.png">Stirling Engine</a></li>
+            <li>Efficiency: -0.000%</li>
+            <li>Note: Building it was harder than making the model</li>
+          </ul>
           <li>Physics II</li>
+          <ul>
+            <li>Project: Using a Laser Pointer to Light a Match</li>
+            <li>Project: <a class="link_proj" href="./imgs/magnets.JPG">Magnets and Temperature</a></li>
+            <li>Testing how well magnets work at different temperatures</li>
+          </ul>
+          <hr>
+          <div class="topic">Awards</div>
+          <li>President's Volunteer Service Award - Gold</li>
+          <li>EdCC Physics Award</li>
+          <li>Edmonds Rotary Club Youth Merit Award</li>
         </ul>
       </div>
     </div>
@@ -311,6 +413,8 @@
         </ul>
       </div>
     </div>
+    <p style="width:100%; margin:10px 0px; text-align: center;">Before that I took AP Calculus AB and AP World History and some CAD classes.</p>
+    <p style="width:100%; margin:10px 0px; text-align: center;">Volunteered at Achievement4Edmonds, Move60, and the Edmonds Demo Garden.</p>
     </div>
     </div>
 
