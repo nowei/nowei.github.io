@@ -100,7 +100,7 @@ ul li {
   position: absolute;
   z-index: 1;
   overflow: visible;
-  top: 100%;
+  top: 140%;
   left: 10%;
   right: 10%;
 }
@@ -123,4 +123,49 @@ ul li {
   max-height: 0;
   transition: max-height 0.4s ease-in-out;
   overflow: hidden;
+}
+
+.thumbnail {
+  position: relative;
+  z-index: 2;
+  /*z-index: 3;*/
+}
+.thumbnail:hover {
+  background-color: transparent;
+  z-index: 3;
+}
+.thumbnail span {
+  position: fixed;
+/*  background-color: grey;
+  padding: 5px;
+  left: -1000px;
+  border: 1px solid grey;
+  visibility: hidden;
+  text-decoration: none;
+*/  
+  display: none;
+  visibility: hidden;
+  /*left: 0%;*/
+  /*margin-left: 30vw;*/
+  /*margin-right: vw;*/
+  /*max-width: 10vw;*/
+  /*right: 50%;*/
+  /*width: 50%;*/
+  /*height:auto;*/
+  overflow: hidden;
+  top: 50%;
+  margin-top: -300px;
+  right: 10%;
+}
+.thumbnail span img {
+  border-width: 2px;
+  height: 600px;
+  width: auto;
+  padding: 5px;
+}
+.thumbnail:hover span {
+  display: inline;
+  visibility: visible;
+  z-index: 0;
+  /*left: 0;*/
 }

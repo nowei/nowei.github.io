@@ -34,6 +34,7 @@
       /*float:left;*/
       /*margin: 0 auto;*/
       /*display: flex;*/
+      z-index: 1;
     }
     .quarter-grid {
       display:flex;
@@ -51,14 +52,15 @@
       justify-content: flex-start;
       /*display: flex;*/
       /*border-radius:25px;*/
+      overflow:visible;
       /*overflow: hidden;*/
     }
-    .quarterb, .quartercc, .quarterm {
+    .quarterba, .quarterbb, .quartercc, .quarterm {
       padding: 3px 0;
       height:50px;
       border: 1px solid white;
     }
-    .quarterb:hover, .quartercc:hover, .quarterm:hover {
+    .quarterba:hover, .quarterbb:hover, .quartercc:hover, .quarterm:hover {
       padding:0 0;
       border: 3px solid white;
     }
@@ -96,16 +98,8 @@
   <p style="margin: 10px">Timeline of activities</p>
   <h1 style="margin:unset"><u>University of Washington</u></h1><br />
   <h2>Master of Science in Computer Science and Engineering</h2>
-  <div class="quarter-container">
-    <div class="quarter-grid">
-    <div class="quarter-item">
-      <button class="quarterm">Autumn 2019</button>
-      <div class="classes">
-        <ul>
-          <li>Classes tbd</li>
-        </ul>
-      </div>
-    </div>
+  <div  class="quarter-container">
+    <div id="masters" class="quarter-grid">
   </div>
   </div>
 
@@ -116,7 +110,7 @@
   <div class="quarter-container">
     <div class="quarter-grid">
     <div class="quarter-item">
-      <button class="quarterb">Autumn 2018</button>
+      <button class="quarterbb">Autumn 2018</button>
       <div class="classes">
         <ul>
           <li>CSE 421 - Intro to Algorithms</li>
@@ -136,12 +130,13 @@
           <div class="topic">Volunteering</div>
           <li>Dawg Daze Leader</li>
           <div class="topic">Hackathons</div>
-          <li><i>Dubhacks 2018</i>: <a class="link_proj" href="./imgs/BoxOrNoBox.jpg">Box or No Box</a>, Package theft detection</li> 
+          <li><i>Dubhacks 2018</i>: <a class="thumbnail link_proj" href="./imgs/BoxOrNoBox.jpg">Box or No Box<span><img src="./imgs/BoxOrNoBox.jpg" /></span></a>, Package theft detection</li> 
+
         </ul>
       </div>
     </div>
     <div class="quarter-item">
-      <button class="quarterb">Winter 2019</button>
+      <button class="quarterbb">Winter 2019</button>
       <div class="classes">
         <ul>
           <li>CSE 446 - Machine Learning</li>
@@ -156,7 +151,7 @@
       </div>
     </div>
     <div class="quarter-item">
-      <button class="quarterb">Spring 2019</button>
+      <button class="quarterbb">Spring 2019</button>
       <div class="classes">
         <ul>
           <li>CSE 452 - Distributed Systems</li>
@@ -182,7 +177,7 @@
       </div>
     </div>
     <div class="quarter-item">
-      <button class="quarterb">Summer 2019</button>
+      <button class="quarterbb">Summer 2019</button>
       <div class="classes">
         <ul>
           <div class="topic">Intern</div>
@@ -191,9 +186,12 @@
         </ul>    
       </div>
     </div>
-
+  </div>
+</div>
+<div class="quarter-container">
+  <div class="quarter-grid">
     <div class="quarter-item">
-      <button class="quarterb">Autumn 2017</button>
+      <button class="quarterba">Autumn 2017</button>
       <div class="classes">
         <ul>
           <li>CHEM 237 - Organic Chemistry I</li>
@@ -206,12 +204,12 @@
           <div class="topic">Volunteering</div>
           <li>Puget Sound Bird Festival</li> 
           <div class="topic">Hackathons</div>
-          <li><a class="link_proj" href="./imgs/dubhacks.jpg"><i>Dubhacks 2017</i></a>: Fitbit for Wheelchair Users, won Accessible Design Challenge</li> 
+          <li><a class="thumbnail link_proj" href="./imgs/dubhacks.jpg"><i>Dubhacks 2017</i><span><img src="./imgs/dubhacks.jpg" /></span></a>: Fitbit for Wheelchair Users, won Accessible Design Challenge</li> 
         </ul>
       </div>
     </div>
     <div class="quarter-item">
-      <button class="quarterb">Winter 2018</button>
+      <button class="quarterba">Winter 2018</button>
       <div class="classes">
         <ul>
           <li class="tooltip">CSE 312 - <span class="normaltext">Foundations of Computing II</span> <span class="tooltiptext">Stats and stuff</span></li>
@@ -222,14 +220,14 @@
           <li>CSE 390 - Problem Solving with Programming</li>
           <hr \>
           <div class="topic">Hackathons</div>
-          <li><a class="link_proj" href="./imgs/nwhacks1.jpg"><i>nwHacks 2018</i></a>: <a class="link_proj" href="./imgs/fuits.png">Fruit</a> ripeness app</li> 
+          <li><a class="thumbnail link_proj" href="./imgs/nwhacks1.jpg"><i>nwHacks 2018</i><span style="right:5%"><img src="./imgs/nwhacks1.jpg"/></span></a>: <a class="thumbnail link_proj" href="./imgs/fruits.png">Fruit<span><img src="./imgs/fruits.png" /></span></a> ripeness app</li> 
           <div class="topic">Clubs</div>
           <li>Joined HuskyADAPT</li>
         </ul>
       </div>
     </div>
     <div class="quarter-item">
-      <button class="quarterb">Spring 2018</button>
+      <button class="quarterba">Spring 2018</button>
       <div class="classes">
         <ul>
           <li class="tooltip">CSE 371 - <span class="normaltext">Design of Digital Circuits and Systems</span> <span class="tooltiptext">Verilog II: Electric Boogaloo</span></li>
@@ -247,7 +245,7 @@
       </div>
     </div>
     <div class="quarter-item">
-      <button class="quarterb">Summer 2018</button>
+      <button class="quarterba">Summer 2018</button>
       <div class="classes">
         <ul>
           <li>CSE 474 - Intro to Embedded Systems</li>
@@ -288,17 +286,17 @@
           <li>ASL I</li>
           <li>Statics</li>
           <ul>
-            <li>Project: <a class="link_proj" href="./imgs/bridge3.jpg">Balsa Wood Bridges</a>
+            <li>Project: <a class="thumbnail link_proj" href="./imgs/bridge3.jpg">Balsa Wood Bridges<span><img src="./imgs/bridge3.jpg" /></span></a>
               <br style="all: unset;" \>
-              We won <a class="link_proj" href="./imgs/bridge1.jpg">first</a> and <a class="link_proj" href="./imgs/bridge2.jpg">second</a> place with our two bridges</li>
+              We won <a class="thumbnail link_proj" href="./imgs/bridge1.jpg">first<span><img src="./imgs/bridge1.jpg" /></span></a> and <a class="thumbnail link_proj" href="./imgs/bridge2.jpg">second<span><img src="./imgs/bridge2.jpg" /></span></a> place with our two bridges</li>
           </ul>
           <li>Multivariable Calculus</li>
           <li>Physics III</li>
           <ul>
-            <li>Project: <a class="link_proj" href="./imgs/glass.jpg">Sound and Glass</a> 
+            <li>Project: <a class="thumbnail link_proj" href="./imgs/glass.jpg">Sound and Glass<span><img src="./imgs/glass.jpg" /></span></a> 
               <br style="all: unset;" \>
               Analyzing sounds using glasses and water</li>
-            <li>Project: <a class="link_proj" href="./imgs/waves.jpg">Wave and Dry Ice</a>
+            <li>Project: <a class="thumbnail link_proj" href="./imgs/waves.jpg">Wave and Dry Ice<span><img src="./imgs/waves.jpg" /></span></a>
               <br style="all: unset;" \>
               Trying to depict sound waves in dry ice smoke</li>
           </ul>
@@ -325,8 +323,8 @@
           <li>ASL III</li>
           <li>Dynamics</li>
           <ul>
-            <li>Team: <a class="link_proj" href="./imgs/dynamics.png">How Do We Do This?</a></li>
-            <li>Project: <a class="link_proj" href="./imgs/gear.jpg">Dynamics Modeling</a>
+            <li>Team: <a class="thumbnail link_proj" href="./imgs/dynamics.png">How Do We Do This?<span><img src="./imgs/dynamics.png" /></span></a></li>
+            <li>Project: <a class="thumbnail link_proj" href="./imgs/gear.jpg">Dynamics Modeling<span><img src="./imgs/gear.jpg" /></span></a>
             <br style="all: unset;" \>
             Model a gear</li>
           </ul>
@@ -394,7 +392,7 @@
           <li>Java I</li>
           <li>Thermodynamics</li>
           <ul>
-            <li>Project: <a class="link_proj" href="./imgs/thermo2.png">Stirling Engine</a>
+            <li>Project: <a class="thumbnail link_proj" href="./imgs/thermo2.png">Stirling Engine<span><img src="./imgs/thermo2.png" /></span></a>
               <br style="all: unset;" \>
               Efficiency: -0.000%
               <br style="all: unset;" \>
@@ -403,7 +401,7 @@
           <li>Physics II</li>
           <ul>
             <li>Project: Using a Laser Pointer to Light a Match</li>
-            <li>Project: <a class="link_proj" href="./imgs/magnets.JPG">Magnets and Temperature</a>
+            <li>Project: <a class="thumbnail link_proj" href="./imgs/magnets.JPG">Magnets and Temperature<span><img src="./imgs/magnets.JPG" /></span></a>
             <br style="all: unset;" \>
             Testing how well magnets work at different temperatures</li>
           </ul>
@@ -430,10 +428,77 @@
     </div>
 
   <script>
+    function generateQuarter(parent, quartertype, position, content) {
+      var p = document.getElementById(parent);
+      var quarteritem = document.createElement('DIV');
+      quarteritem.classList.add('quarter-item');
+      p.appendChild(quarteritem);
+
+      var btn = document.createElement("BUTTON");
+      btn.innerHTML = content['name'];
+      btn.classList.add(quartertype);
+      // btn.style.width = "25%";
+      // btn.style.left = -37.5 + 25 * position + "%";
+      // btn.style['position'] = "relative";
+      quarteritem.appendChild(btn);
+      var div = document.createElement('DIV');
+      quarteritem.appendChild(div);
+      var list = document.createElement('UL');
+      div.appendChild(list);
+      div.classList.add('classes');
+      // div.style['position'] = "relative";
+      // div.style.width = "25%";
+      // div.style.left = position * 25 + "%";
+
+      if (content.hasOwnProperty('classes')) {
+        var classes = content['classes'];
+        for (var i = 0; i < classes.length; i++) {
+          var item = document.createElement('LI');
+          console.log(classes[i]);
+          item.innerHTML = classes[i]['name'];
+          list.appendChild(item);
+        }
+      }
+      var orig = div.scrollHeight;
+
+
+
+      btn.addEventListener("click", function() {
+          this.classList.toggle("active");
+          console.log(this.classList);
+          var content = this.nextElementSibling;
+          console.log('nani' + content);
+          if (content.style.minHeight != 0) {
+            content.style.minHeight = null;
+            // content.style.display = "none";
+            content.style.overflow = "hidden";
+            // clearInterval(x);
+          } else {
+            content.style.minHeight = orig + "px";
+            console.log(orig);
+            console.log(content.style.minHeight);
+            // console.log(maxlen1);
+            // To match height
+            // content.style.maxHeight = content.scrollHeight + "px";
+
+            // x = setTimeout(function() {content.style.overflow = "visible"}, 1000);
+          }
+        });
+    }
+    var aut2019 = {"name": "Autumn 2019",
+               "classes": [{"name": "CSE 521: Design and Analysis of Algorithms"}, 
+                           {"name": "CSE 552 - Distributed and Parallel Systems"}, 
+                           {"name": "CSE 599M - Principled Approaches to Robust Machine Learning"}]
+              };
+    generateQuarter("masters", 'quarterm', 1, aut2019)
+    // generateQuarter("masters", 'quarterm', 2, aut2019)
+
+
+
+
     function equalizeHeight(phase) {
       var coll = document.getElementsByClassName(phase);
       var i;
-      // var x;
       // Get consistent max length value
       var maxlen1 = 0;
       for (i = 0; i < coll.length; i++) {
@@ -442,6 +507,8 @@
           maxlen1 = coll[i].nextElementSibling.scrollHeight;
       }
       console.log(maxlen1);
+      console.log("." + phase);
+        
       for (i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function() {
           this.classList.toggle("active");
@@ -452,7 +519,7 @@
             content.style.overflow = "hidden";
             // clearInterval(x);
           } else {
-            content.style.minHeight = maxlen1 + "px";
+            content.style.minHeight = content.scrollHeight + "px";
             console.log(maxlen1);
             // To match height
             // content.style.maxHeight = content.scrollHeight + "px";
@@ -462,9 +529,16 @@
         });
       }
     }
-    equalizeHeight("quarterm");
-    equalizeHeight("quarterb");
+    // equalizeHeight("quarterm");
+    equalizeHeight("quarterba");
+    equalizeHeight("quarterbb");
     equalizeHeight("quartercc");
+    // $(".classes").on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){ 
+    //   if (this.style.minHeight) {
+    //     this.style.overflow = "visible";
+    //     console.log("nani");
+    //   }
+    // });
   </script>
   <div id="footer"></div>
 </body>
