@@ -6,18 +6,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
   <style> 
+    a.links:link, a.links:visited {
+      color: white;
+    }
+    a.links:hover {
+      color: rgb(50,50,50);
+    }
+    a.links:active {
+      color: cyan;
+    }
+    dt { 
+      display:block; 
+      float:left; 
+      width:400px; 
+      text-align: right;
+    }
+    dt:after{
+      content:':\00a0';
+    }
+    dd { 
+      display:block;
+      text-align: left;
+      margin-left: 400px;
+    }
   </style>
   <script src="jquery.js"></script>
   <script>
     $(function() {
-      $("#header").load("./header.html");
+      $("#header").load("../header.html");
     });
   </script>
 </head>
 <body>
   <div id="header"></div>
-  <h1>Projects</h1>
-  <h2>Ordered by time and omitting things before college</h2>
+  <h1>Current projects</h1>
+  <h2></h2>
+  <h2></h2>
+  <hr>
+  <h1>Past Projects</h1>
+  <h3>Ordered by time and omitting things from high school</h2>
+  <h2>ChatAssist</h2>
+  <dl>
+    <dt>Context</dt><dd>CSE 481V - VR Capstone</dd>
+    <dt>Description</dt><dd>AR app using MagicLeap that would transcribe/translate English to other languages in AR to help people who are hard of hearing or are still learning English. Basically captions in real life.</dd>
+    <dt>Technologies</dt><dd>C#, Unity</dd>
+    <dt>Contribution</dt><dd>Designed the controls for changing languages and scrolling through the chat log, experimented with the computer vision detection on the Magic Leap to determine where to place the markers for the chat bubble. Dealt with random Unity bugs.</dd>
+    <dt>Project</dt><dd><a class="links" href="https://uwrealitylab.github.io/vrcapstone19sp-team3/">website</a></dd>
+  </dl>
+
+  <h2>SBDs on the Lucky-E</h2>
+  <dl>
+    <dt>Context</dt><dd>CSE 456 - Computer Graphics</dd>
+    <dt>Description</dt><dd>A trailer-style video about battleships and aliens</dd>
+    <dt>Technologies</dt><dd>C++</dd>
+    <dt>Contribution</dt><dd>Wrote the majority of the physics involved in collision detection, but not much else.</dd>
+    <dt>Project</dt><dd><a class="links" href="./video-1559820307.mp4">video</a></dd>
+  </dl>
   
+  <h2>MemeDub</h2>
+  <dl>
+    <dt>Context</dt><dd>CSE 455 - Computer Vision</dd>
+    <dt>Description</dt><dd>an application that put hats on heads</dd>
+    <dt>Technologies</dt><dd>C++, python</dd>
+    <dt>Contribution</dt><dd>Set up and tested different open-source computer vision frameworks for facial recognition and helped determine which one to use. Wrote the majority of the report and the poster.</dd>
+    <dt>Project</dt><dd><a class="links" href="https://github.com/MichaelMiles/HatonHead">GitHub</a></dd>
+  </dl>
+
+  <h2>WHYLDFIRE 🔥</h2>
+  <dl>
+    <dt>Context</dt><dd>CSE 442 - Data Visualization</dd>
+    <dt>Description</dt><dd>a visualization about wildfires in the U.S.</dd>
+    <dt>Technologies</dt><dd>JavaScript, d3</dd>
+    <dt>Contribution</dt><dd>Included a sunburst chart using d3 and fixed some UI elements of the website.</dd>
+    <dt>Project</dt><dd><a class="links" href="https://cse442-18f.github.io/fp-whyldfire/">website</a></dd>
+  </dl>
+
+  <h2 class="tooltip"><span class="normaltext">Trusted Receivables</span><span class="tooltiptext">Box or No Box</span></h2>
+  <dl>
+    <dt>Context</dt><dd>Dubhacks 2018</dd>
+    <dt>Description</dt><dd>a package theft alert system using a webcam and </dd>
+    <dt>Technologies</dt><dd>python, OpenCV, Azure, Twilio</dd>
+    <dt>Contribution</dt><dd>Coordinated project, hooked up the vision API, SMS integration</dd>
+    <dt>Project</dt><dd><a class="links" href="https://devpost.com/software/trusted-receivables">devpost</a>, <a class="links" href="https://github.com/satvikshukla/dubhacks18">GitHub</a></dd>
+  </dl>
+  
+  <h2>Relief</h2>
+  <dl>
+    <dt>Context</dt><dd>MITHacks 2018</dd>
+    <dt>Technologies</dt><dd>SQLServer, Java, Azure</dd>
+    <dt>Description</dt><dd>Disaster relief app for reporting missing people</dd>
+    <dt>Contribution</dt><dd>Coordinated project, set up the Microsoft Azure database and backend that would interpret data sent from the front end, interact with the server, and send the information back to the front end. Helped determine what kind of information we would store. Created slides.</dd>
+    <dt>Project</dt><dd>slides because the code is on another computer [TODO]</dd>
+  </dl>
+  
+  <h2>Combat!</h2>
+  <dl>
+    <dt>Context</dt><dd>CSE/EE 474 - Intro to Embedded Systems</dd>
+    <dt>Description</dt><dd>A two-player tank game</dd>
+    <dt>Technologies</dt><dd>C, TM4C123G Tiva Board</dd>
+    <dt>Contribution</dt><dd>Hooked up the buttons for the controls, created a rudimentary app that could display the game score on a phone, debugged the connection between the Tiva programmable board and an LCD, and wrote the majority of the report. </dd>
+    <dt>Project</dt><dd><a class="links" href="https://drive.google.com/file/d/1iwGpQ_J5b0VphyDPrFP9gnaINVZLwMR3/view">video</a></dd>
+  </dl>
+
+  <h2>Brick breaker</h2>
+  <dl>
+    <dt>Context</dt><dd>CSE/EE 371 - Design of Digital Circuits and Systems</dd>
+    <dt>Description</dt><dd>A brick breaker game </dd>
+    <dt>Technologies</dt><dd>FPGAs, SystemVerilog</dd>
+    <dt>Contribution</dt><dd>Wrote the report and created slides</dd>
+    <dt>Project</dt><dd><a class="links" href="https://drive.google.com/file/d/1mMqNNky8TlR3kXyZnWidnr3k37A-P_Px/view?usp=sharing">video</a></dd>
+  </dl>
+
+  <h2>Rype</h2>
+  <dl>
+    <dt>Context</dt><dd>nwHacks 2018</dd>
+    <dt>Description</dt><dd>Fruit ripeness app</dd>
+    <dt>Technologies</dt><dd>Microsoft Custom Vision API, Android, Java</dd>
+    <dt>Contribution</dt><dd>Hooking up and training the Custom Vision API</dd>
+    <dt>Project</dt><dd><a class="links" href="https://devpost.com/software/rype">devpost</a></dd>
+  </dl>
+
+  <h2>Wheelbit</h2>
+  <dl>
+    <dt>Context</dt><dd>Dubhacks 2017</dd>
+    <dt>Description</dt><dd>Fitbit for wheel-chair users</dd>
+    <dt>Technologies</dt><dd>Android, Bluetooth, Arduino, Java</dd>
+    <dt>Contribution</dt><dd>Coordinated project, debugging bluetooth connection, creating FSM for tracking wheel rotations</dd>
+    <dt>Project</dt><dd><a class="links" href="https://devpost.com/software/wheelbit">devpost</a>, <a class="links" href="https://github.com/buimatt/WheelBit">GitHub</a></dd>
+  </dl>
   <div id="footer"></div>
 </body>

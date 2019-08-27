@@ -39,14 +39,14 @@ p {
   display: inline-block;
 }
 a:link, a:visited, button {
-  background-image: linear-gradient(rgb(50,50,50), rgb(100,100,100));
+  /*background-image: linear-gradient(rgb(50,50,50), rgb(100,100,100));*/
   border: none; 
   color: white;
-  padding: 0.5em 0.5em;
+  /*padding: 0.5em 0.5em;*/
   display: inline-block;
   font-size: 1em;
   font-family: "Consolas";
-  min-width:200px;
+  /*min-width:200px;*/
   background-repeat: no-repeat;
   -webkit-transition: background-image 5s ease-in-out;
   transition: background-image 5s ease-in-out;
@@ -103,8 +103,10 @@ ul li {
   z-index: 1;
   overflow: visible;
   top: 140%;
-  left: 10%;
-  right: 10%;
+  /*left: 50%;*/
+  left: 0;
+  right: 0;
+  margin:auto;
 }
 
 .descriptions {
@@ -112,13 +114,17 @@ ul li {
 }
 
 .collapsible {
-  background-color: #60ff60;
+  /*background-color: #60ff60;*/
+  padding: 0 5px;
+  color: white;
+  background-color: black;
   border-radius: 5px;
   display: inline;
 }
 
 .collapsible:hover {
-  background-color: #99ff99;
+  /*background-color: #99ff99;*/
+  background-color: grey;
 }
 
 .content {
@@ -182,14 +188,14 @@ ul li {
 }
 a.links:link, a.links:visited {
   color:black;
-  padding:unset;
+  padding: 0 2px;
   min-width:unset;
   background:unset;
   border-radius: 5px;
   /*transition-duration: all 0.2s ease-in;*/
 }
 a.links:hover {
-  color:lightblue;
+  /*color:lightblue;*/
   background: lightblue;
   color:black;
   transition: background 0.4s;
