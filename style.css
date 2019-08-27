@@ -34,6 +34,8 @@ body {
 p {
   /*width:1000px;*/
   text-align: center;
+  line-height: 25px;
+
   display: inline-block;
 }
 a:link, a:visited, button {
@@ -168,4 +170,32 @@ ul li {
   visibility: visible;
   z-index: 0;
   /*left: 0;*/
+}
+
+#links {
+  width:14%;
+  position: absolute;
+  left: 1%;
+  top: 220px;
+  color: black;
+  text-align: left
+}
+a.links:link, a.links:visited {
+  color:black;
+  padding:unset;
+  min-width:unset;
+  background:unset;
+  border-radius: 5px;
+  /*transition-duration: all 0.2s ease-in;*/
+}
+a.links:hover {
+  color:lightblue;
+  background: lightblue;
+  color:black;
+  transition: background 0.4s;
+  box-shadow: 0 0px 15px 0 rgba(49, 196, 190, 0.75);
+  transition: box-shadow 0.3s;
+}
+a.links:active {
+  color:cyan;
 }
