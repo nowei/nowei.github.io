@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--
-  <link rel="stylesheet" href="style.css">  (For debugging header) -->
+  <!-- (For debugging header)  -->
+  <link rel="stylesheet" href="style.css">  
   <style> 
     a.navlink:link {
       padding: 0.5em 0.5em;
@@ -24,19 +24,6 @@
       box-shadow: 0 0px 15px 0 rgba(255, 255, 255, 0.75);
       height: 43px;
       font-size:1.25rem;
-    }
-    @media screen and (min-width: 700px) {
-      a.navlink:link {
-        min-width:20%;
-        /*font-size:1.25rem;*/
-      }
-    }
-    @media screen and (max-width: 700px) {
-      a.navlink:link {
-        float: none;
-        width: 100%;
-        font-size:1.25rem;
-      }
     }
     a.navlink:hover {
       background-position: 50% 50%;
@@ -59,43 +46,33 @@
     }
     h1#titleheading {
       position: relative;
-      margin: 10px 0;
+      margin: 0 0;
       /*Trick: Adding a minimum height to a header so that when you add a hover effect, the height doesn't change*/
-      height:25%;
+      height:50px;
     }
     a#title {
       white-space: normal;
       /*word-break:none;*/
-      /*position: absolute;*/
+      position: absolute;
+      right:25%;
+      left:25%;
       transition: unset;
       max-width: unset;
       text-decoration: none;
       background: unset;
-      position:relative;
-      font-size: 2rem;
-      padding: 5px 0em;
+      font-size: 36px;
       transition-duration: 0.4s;
       box-shadow: unset;
+      padding:6px;
     }
-    @media screen and (min-width: 500px) {
-      a#title {
-        font-size: 2rem;
-        padding: 0 0;
-      }
-    }
+    
     a#title:hover {
       /*background-color:white;*/
-      padding-top: 10px;
-      font-size: 2.5rem;
-      word-break: break-word;
-      /*padding: 6.5px 0;*/
+      font-size: 48px;
+      wpxord-break: break-word;
+      /*top:50%;*/
+      padding:0;
       text-shadow: 0px 0px 5px white;
-    }
-    @media screen and (min-width: 500px) {
-      a#title:hover {
-        font-size: 2.5rem;
-        padding-top: 0px;
-      }
     }
     #top-nav {
       /*display: flex;*/
@@ -104,15 +81,69 @@
       top: 0;
       align-items: center;
     }
-    @media screen and (min-width: 700px) {
-      #top-nav {
-        display: flex;
-      }
-    }
     .navlink {
       /*flex:1;*/
 
       margin: 10px 6px;
+    }
+    @media screen and (max-width: 500px) {
+      h1#titleheading {
+        position: relative;
+        margin: 0 0;
+        /*Trick: Adding a minimum height to a header so that when you add a hover effect, the height doesn't change*/
+        height:50px;
+      }
+      a#title {
+        font-size: 24px;
+      }
+      a#title:hover {
+        font-size: 30px;
+      }
+    }
+    @media screen and (min-width: 950px) {
+      #top-nav {
+        display: flex;
+      }
+      a.navlink:link {
+        min-width:20%;
+        /*font-size:1.25rem;*/
+      }
+      h1#titleheading {
+        text-align: center;
+        /*height:45px;*/
+      }
+      a#title {
+        /*font-size: 30px;*/
+        /*padding: 0 0;*/
+      }
+      a#title:hover {
+        /*font-size: 36px;*/
+        /*margin:0px 0;*/
+        /*padding-top: 0px;*/
+        left:0;
+        right:0;
+      }
+    }
+    @media screen and (max-width: 950px) {
+      a#title {
+
+        right:0%;
+        left:0%;
+      }
+      a.navlink:link {
+        float: none;
+        width: 100%;
+        font-size:24px;
+      }
+      h1#titleheading {
+        height:40px;
+      }
+      a#title {
+        font-size:24px;
+      }
+      a#title:hover {
+        font-size:32px;
+      }
     }
   </style>
 </head>

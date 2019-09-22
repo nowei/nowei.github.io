@@ -184,14 +184,6 @@ ul li {
   /*left: 0;*/
 }
 
-#links {
-  width:14%;
-  position: absolute;
-  left: 1%;
-  top: 50%;
-  color: black;
-  text-align: left
-}
 a.links:link, a.links:visited {
   color:black;
   padding: 0 2px;
