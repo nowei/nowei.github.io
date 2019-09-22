@@ -7,15 +7,14 @@
   <style> 
     a.navlink:link {
       padding: 0.5em 0.5em;
-
-      min-width:200px;
+  
       /*all: unset;*/
       background-image: linear-gradient(to bottom, rgb(50,50,50), rgb(150,150,150));
       background-size: 300% 300%;
       position: relative;
       vertical-align: middle;
       /*display:table;*/
-      max-width: 280px;
+      /*max-width: 15%;*/
       /*min-width: 10%;*/
       padding: 0;
       align-content: center;
@@ -23,7 +22,20 @@
       transition: background .3s ease-out;
       box-shadow: 0 0px 15px 0 rgba(255, 255, 255, 0.75);
       height: 43px;
-
+      font-size:1.25rem;
+    }
+    @media screen and (min-width: 700px) {
+      a.navlink:link {
+        min-width:20%;
+        /*font-size:1.25rem;*/
+      }
+    }
+    @media screen and (max-width: 700px) {
+      a.navlink:link {
+        float: none;
+        width: 100%;
+        font-size:1.25rem;
+      }
     }
     a.navlink:hover {
       background-position: 50% 50%;
@@ -48,33 +60,53 @@
       position: relative;
       margin: 10px 0;
       /*Trick: Adding a minimum height to a header so that when you add a hover effect, the height doesn't change*/
-      height:80px;
+      height:25%;
     }
     a#title {
+      white-space: normal;
+      /*word-break:none;*/
       /*position: absolute;*/
       transition: unset;
       max-width: unset;
       text-decoration: none;
       background: unset;
       position:relative;
-      font-size: 48px;
-      padding: 16px 0em;
+      font-size: 2rem;
+      padding: 5px 0em;
       transition-duration: 0.4s;
       box-shadow: unset;
+    }
+    @media screen and (min-width: 500px) {
+      a#title {
+        font-size: 2rem;
+        padding: 0 0;
+      }
     }
     a#title:hover {
       /*background-color:white;*/
       padding-top: 10px;
-      font-size: 56px;
+      font-size: 2.5rem;
+      word-break: break-word;
       /*padding: 6.5px 0;*/
       text-shadow: 0px 0px 5px white;
     }
-    #side-nav {
-      display: flex;
+    @media screen and (min-width: 500px) {
+      a#title:hover {
+        font-size: 2.5rem;
+        padding-top: 0px;
+      }
+    }
+    #top-nav {
+      /*display: flex;*/
       justify-content: center;
       /*position:sticky;*/
       top: 0;
       align-items: center;
+    }
+    @media screen and (min-width: 700px) {
+      #top-nav {
+        display: flex;
+      }
     }
     .navlink {
       /*flex:1;*/
@@ -83,12 +115,12 @@
     }
   </style>
 </head>
-<body style="height:250px">
+<body style="height:10%">
   <div class="header">
     <h1 id="titleheading"><a id="title" href="index.html">A website, I guess</a></h1>
     <br />
   </div>
-  <div id="side-nav">
+  <div id="top-nav">
     <a class="navlink" href="/"><p>Home</p></a>
     <a class="navlink" href="/timeline/"><p>Timeline</p></a>
     <a class="navlink" href="/projects/"><p>Projects</p></a>
@@ -110,7 +142,7 @@
       }
     </script> -->
   </div>
-  <!-- <div style="height:6000px"></div> -->
+  <!-- <div style="height:7000px"></div> -->
   <hr>
 </body>
 </html>

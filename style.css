@@ -1,28 +1,34 @@
 html {
+  /*font-size: 2vh;*/
   background-image: linear-gradient(rgb(0,0,0), rgb(50,50,50));
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;*/
   background-size: cover;
   /*height: 100vmax;*/
   display:flex;
+  background-position: center;
 
   /*How to set minimum height*/
+  min-width: 100%;
   min-height: 100%;
   height:auto;
   /* always makes scrollbar appear */
   /*overflow-y: scroll;*/
 }
+
 ::-webkit-scrollbar {
   width:0px;
   /*how to make scroll disappear?*/
   /*background-color:transparent;*/
 }
-div#header {
+/*div#header {
   min-height: 250px;
-}
+}*/
 div#footer {
   min-height: 200px;
 }
 body {
+  background-image: linear-gradient(rgb(0,0,0), rgb(50,50,50));
+  background-repeat: no-repeat;
   font-family: "Consolas", Helvetica, sans-serif;
   width:100%;
   padding-left: 10%;
@@ -182,7 +188,7 @@ ul li {
   width:14%;
   position: absolute;
   left: 1%;
-  top: 220px;
+  top: 200px;
   color: black;
   text-align: left
 }
