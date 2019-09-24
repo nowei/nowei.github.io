@@ -20,9 +20,9 @@ html {
   /*how to make scroll disappear?*/
   /*background-color:transparent;*/
 }
-/*div#header {
-  min-height: 250px;
-}*/
+div#header {
+  min-height: 142px;
+}
 div#footer {
   min-height: 200px;
 }
