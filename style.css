@@ -58,8 +58,6 @@ a:link, a:visited, button {
   transition: background-image 5s ease-in-out;
 
 }
-
-
 #buttons {
   text-decoration: underline;
   cursor: pointer;
@@ -202,4 +200,34 @@ a.links:hover {
 }
 a.links:active {
   color:cyan;
+}
+
+@media screen and (max-width: 950px) {
+  a.navlink:link {
+    float: none;
+    width: 100%;
+    font-size: 24px;
+  }
+  a.navlink {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  html {
+    display: block;
+  }
+  html, body, footer {
+    margin: 2px;
+    padding: 2px;
+    box-sizing: border-box;
+    position:absolute;  
+    background: #222;  
+    list-style: none;
+    font-size: 1.2em;
+    padding: 10px 20px; 
+    width: 100%;
+  }
+
+  /** { margin: 0; padding: 0; }*/
 }
