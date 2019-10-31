@@ -70,6 +70,20 @@
   <div id="header"></div>
   <h3>TODO: Add photos section and add photos</h3>
   <h1>Current projects</h1>
+  <h2>Parameter Server</h2>
+  <dl>
+    <dt>Context</dt><dd>Graduate Distributed Systems</dd>
+    <dt>Description</dt><dd>Testing out Parameter Server setups for Distributed Machine Learning frameworks.</dd>
+    <dt>Technologies</dt><dd>[TODO]</dd>
+    <dt>Project</dt><dd>[TODO]</dd>
+  </dl>
+  <h2>Adversarial Deep Learning</h2>
+  <dl>
+    <dt>Context</dt><dd>Deep Learning</dd>
+    <dt>Description</dt><dd>Creating a framework for evaluating performance of state-of-the-art image classifiers on perturbed/altered images.</dd>
+    <dt>Technologies</dt><dd>Python, Flask, Pytorch</dd>
+    <dt>Project</dt><dd>[TODO]</dd>
+  </dl>
   <h2>Personal Website</h2>
   <dl>
     <dt>Context</dt><dd>Personal Project</dd>
@@ -97,7 +111,7 @@
   <h2>ChatAssist</h2>
   <dl>
     <dt>Context</dt><dd>CSE 481V - VR Capstone</dd>
-    <dt>Description</dt><dd>AR app using MagicLeap that would transcribe/translate English to other languages in AR to help people who are hard of hearing or are still learning English. Basically captions in real life.</dd>
+    <dt>Description</dt><dd>AR app using MagicLeap that would transcribe/translate English to other languages in AR to help people who are hard of hearing or are still learning English. Basically captions in real life. We had a setup of bluetooth microphones that streamed English conversations to laptops that were then forwarded to Amazon Transcribe. We then updated the text displayed on the Magic Leap to whatever language was selected. We originally used object detection for markers to mark where the text boxes would go, but learned that the Magic Leap's image tracking wasn't super stable, so we ended up making it adjustable instead.</dd>
     <dt>Technologies</dt><dd>C#, Unity</dd>
     <dt>Contribution</dt><dd>Designed the controls for changing languages and scrolling through the chat log, experimented with the computer vision detection on the Magic Leap to determine where to place the markers for the chat bubble. Dealt with random Unity bugs.</dd>
     <dt>Project</dt><dd><a class="links" href="https://uwrealitylab.github.io/vrcapstone19sp-team3/">website</a></dd>
@@ -115,7 +129,7 @@
   <h2>MemeDub</h2>
   <dl>
     <dt>Context</dt><dd>CSE 455 - Computer Vision</dd>
-    <dt>Description</dt><dd>an application that put hats on heads</dd>
+    <dt>Description</dt><dd>An application that put hats on heads</dd>
     <dt>Technologies</dt><dd>C++, python</dd>
     <dt>Contribution</dt><dd>Set up and tested different open-source computer vision frameworks for facial recognition and helped determine which one to use. </dd>
     <dt>Project</dt><dd><a class="links" href="https://github.com/MichaelMiles/HatonHead">GitHub</a>, <a class="links" href="./CSE455_Final_FangWeiXu_poster.pdf">Poster</a>, <a class="links" href="./CSE455FinalReport.pdf">Report</a></dd>
@@ -133,7 +147,7 @@
   <h2 class="tooltip"><span class="normaltext">Trusted Receivables</span><span class="tooltiptext">Box or No Box</span></h2>
   <dl>
     <dt>Context</dt><dd>Dubhacks 2018</dd>
-    <dt>Description</dt><dd>a package theft alert system using a webcam and </dd>
+    <dt>Description</dt><dd>Developed a tool to prevent packages from being stolen off of porches of residential buildings/apartments using a security camera feed. Used Object Detection to generate tags for each frame of input through Cognitive Services and inform user of suspicious activities using Twilio.</dd>
     <dt>Technologies</dt><dd>python, OpenCV, Azure, Twilio</dd>
     <dt>Contribution</dt><dd>Led project, hooked up the vision API, SMS integration</dd>
     <dt>Project</dt><dd><a class="links" href="https://devpost.com/software/trusted-receivables">devpost</a>, <a class="links" href="https://github.com/satvikshukla/dubhacks18">GitHub</a></dd>
@@ -142,10 +156,10 @@
   <h2>Relief</h2>
   <dl>
     <dt>Context</dt><dd>MITHacks 2018</dd>
+    <dt>Description</dt><dd>Disaster relief app for reporting missing people. Developed a java application to help disaster relief volunteers coordinate between disaster relief camps and people outside disaster areas to look up information on friends and relatives. Used Microsoft Azure to run a database for keeping track of found and missing people at disaster areas and Microsoft Cognitive Services Face API to look for people using images. Allowed friends and family to upload information/photos to the application to assist relief efforts, like where people could potentially be and what they looked like so that they could identify them using computer vision. Then the volunteers could update the information to include which relief camp people are located in. </dd>
     <dt>Technologies</dt><dd>SQLServer, Java, Azure</dd>
-    <dt>Description</dt><dd>Disaster relief app for reporting missing people</dd>
-    <dt>Contribution</dt><dd>Led project, set up the Microsoft Azure database and backend that would interpret data sent from the front end, interact with the server, and send the information back to the front end. Helped determine what kind of information we would store. Created slides.</dd>
-    <dt>Project</dt><dd>slides because the code is on another computer [TODO]</dd>
+    <dt>Contribution</dt><dd>Led project, set up the Microsoft Azure database and backend that would interpret data sent from the front end, interact with the server, and send the information back to the front end. Helped determine what kind of information we would store. </dd>
+    <dt>Project</dt><dd>[TODO]</dd>
   </dl>
   
   <h2>Combat!</h2>
@@ -169,7 +183,7 @@
   <h2>Rype</h2>
   <dl>
     <dt>Context</dt><dd>nwHacks 2018</dd>
-    <dt>Description</dt><dd>Fruit ripeness app</dd>
+    <dt>Description</dt><dd>We made a fruit ripeness app to help determine whether fruit was ripe or not. We put in a lot of pictures of fruits at different stages of ripeness (bananas are pretty gross) and trained a classifier to detect ripeness of specific fruits, like bananas and apples. The idea was to help people who weren’t sure whether a fruit was ripe or not due to inexperience or other things.</dd>
     <dt>Technologies</dt><dd>Microsoft Custom Vision API, Android, Java</dd>
     <dt>Contribution</dt><dd>Hooking up and training the Custom Vision API</dd>
     <dt>Project</dt><dd><a class="links" href="https://devpost.com/software/rype">devpost</a></dd>
@@ -178,7 +192,7 @@
   <h2>Wheelbit</h2>
   <dl>
     <dt>Context</dt><dd>Dubhacks 2017</dd>
-    <dt>Description</dt><dd>Fitbit for wheel-chair users</dd>
+    <dt>Description</dt><dd>Fitbit for wheel-chair users. We used an Arduino and a sensors to keep track of how many times the sensor passed a specific point on a wheel. We then sent that information via Bluetooth to an android application and that kept track of the daily rotations. We won the accessible design challenge. </dd>
     <dt>Technologies</dt><dd>Android, Bluetooth, Arduino, Java</dd>
     <dt>Contribution</dt><dd>Led project, debugging bluetooth connection, creating FSM for tracking wheel rotations</dd>
     <dt>Project</dt><dd><a class="links" href="https://devpost.com/software/wheelbit">devpost</a>, <a class="links" href="https://github.com/buimatt/WheelBit">GitHub</a></dd>
