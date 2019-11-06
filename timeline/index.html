@@ -492,6 +492,13 @@
           console.log(classes[i]);
           item.innerHTML = classes[i]['name'];
           list.appendChild(item);
+          if classes[i].hasOwnProperty('project') {
+            var project_list = document.createElement('UL');
+            var item = document.createElement('LI');
+            item.innerHTML = classes[i]['project']['name'];
+            project_list.append(item);
+            list.append(project_list);
+          }
         }
       }
       console.log(Object.keys(content).length);
@@ -557,12 +564,16 @@
       //   });
     }
     var aut2019 = {"name": "Autumn 2019",
-                   "classes": [{"name": "CSE 521: Design and Analysis of Algorithms"}, 
-                               {"name": "CSE 552 - Distributed and Parallel Systems"}, 
+                   "classes": [{"name": "CSE 521: Design and Analysis of Algorithms", 
+                                "project": {"name": "Paper", "content": "TBD"}}, 
+                               {"name": "CSE 552 - Distributed and Parallel Systems", 
+                                "project": {"name": "Live Inference for Distributed Machine Learning", "content": "TBD"}}, 
                                {"name": "CSE 590C1: Change Seminar: Technology for Developing Regions"},
                                {"name": "CSE 590F: Computing and the Developing World"},
-                               {"name": "CSE 599G1 - Deep Learning"},
-                               {"name": "CSE 599M - Principled Approaches to Robust Machine Learning"}],
+                               {"name": "CSE 599G1 - Deep Learning", 
+                                "project": {"name": "Web playground for Adversarial Deep Learning", "content": "TBD"}},
+                               {"name": "CSE 599M - Principled Approaches to Robust Machine Learning",
+                                "project": {"name": "TBD", "content": "TBD"}}],
                    "activities": [{"name": "TA", "content": {"name": "CSEP 546 - Machine Learning"}},
                                   {"name": "Volunteering", "content": 
                                   [{"name": "Dawg Daze Leader"}, 
