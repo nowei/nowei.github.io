@@ -492,7 +492,7 @@
           console.log(classes[i]);
           item.innerHTML = classes[i]['name'];
           list.appendChild(item);
-          if classes[i].hasOwnProperty('project') {
+          if (classes[i].hasOwnProperty('project')) {
             var project_list = document.createElement('UL');
             var item = document.createElement('LI');
             item.innerHTML = classes[i]['project']['name'];
