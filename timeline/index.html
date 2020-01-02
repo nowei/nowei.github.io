@@ -125,7 +125,7 @@
     .collapsible {
       padding: 3px 3px;
       margin: 20px 5px;
-      background-color: rgb(40,40,40);
+      background-color: rgb(80,70,60);
     }
     .content {
       padding: 3px 3px;
@@ -142,10 +142,10 @@
   <div id="header"></div>
   <p style="margin: 10px">Timeline of activities</p>
   <h1 style="margin:unset"><u>University of Washington</u></h1><br />
-  <h2 class="collapsible">Master of Science in Computer Science and Engineering</h2>
+  <h2 id="masters" class="collapsible">Master of Science in Computer Science and Engineering</h2>
   <div class="content">
     <div class="quarter-container">
-      <div id="masters" class="quarter-grid">
+      <div id="masters1" class="quarter-grid">
       </div>
     </div>
   </div>
@@ -514,7 +514,11 @@
           if (classes[i].hasOwnProperty('project')) {
             var project_list = document.createElement('UL');
             var item = document.createElement('LI');
-            item.innerHTML = 'Project: ' + classes[i]['project']['name'];
+            if (classes[i]['project'].hasOwnProperty('content')) {
+              item.innerHTML = 'Project: <a class="link_proj" href="' + classes[i]['project']['content'] + '" >' + classes[i]['project']['name'] + "<a/>";
+            } else {
+              item.innerHTML = 'Project: ' + classes[i]['project']['name'];
+            }
             project_list.append(item);
             list.append(project_list);
           }
@@ -605,10 +609,16 @@
                                                {"name": "Empowering Prevention and Inclusive Communities Workshop"}]}]
                   };
     var win2020 = {"name": "Winter 2020",
-
-                  }
-    generateQuarter("masters", 'quarterm', 1, aut2019);
-    // generateQuarter("masters", 'quarterm', 2, aut2019)
+                   "classes": [{"name": "CSE 490V: Virtual Reality Systems"},
+                               {"name": "CSE 515: Statistical Methods in Computer Science"},
+                               {"name": "CSE 590F: Computing and the Developing World"},
+                               {"name": "CSE 590R: Robotics Colloquium"},
+                               {"name": "CSE 599C: Data Center Systems"},
+                               {"name": "CSE 599I: Interactive Learning"}],
+                   "activities": [{"name": "TA", "content": {"name": "CSE 452: Distributed Systems"}}]
+                  };
+    generateQuarter("masters1", 'quarterm', 1, aut2019);
+    generateQuarter("masters1", 'quarterm', 2, win2020);
 
 
 
@@ -673,6 +683,8 @@
         } 
       });
     }
+    var latest = document.getElementById("masters").nextElementSibling;
+    latest.style.maxHeight = latest.scrollHeight + "px";
   </script>
 </body>
 </html>

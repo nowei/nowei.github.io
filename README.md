@@ -2,7 +2,7 @@
 Personal website
 
 # TODO
-* Redo project links for generated courses
+* <s>Redo project links for generated courses</s> ✔️
 * <s>Standardize TA listing on timeline</s> ✔️
 * Separate class number from name of class
 * <s>Add hide bar on high school stuff on timeline</s> ✔️
