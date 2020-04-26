@@ -509,8 +509,19 @@
         for (var i = 0; i < classes.length; i++) {
           var item = document.createElement('LI');
           console.log(classes[i]);
-          item.innerHTML = classes[i]['name'];
+          var temp = classes[i]['name'].split(": ");
+          item.innerHTML = temp[0].bold() + ": " + temp[1];
           list.appendChild(item);
+
+          if (classes[i]['dropped']) {
+            item.innerHTML = item.innerHTML.strike() + " [dropped]";
+            var dropped_expl = document.createElement('UL');
+            list.append(dropped_expl);
+            var dropped_expl_item = document.createElement('LI');
+            var temp = classes[i]['dropped_expl'].split(": ");
+            dropped_expl_item.innerHTML = temp[0].bold() + ": " + temp[1];
+            dropped_expl.append(dropped_expl_item);
+          }
           if (classes[i].hasOwnProperty('project')) {
             var project_list = document.createElement('UL');
             var item = document.createElement('LI');
@@ -553,6 +564,10 @@
             item.style.textAlign = "left";
             item.style.margin = "0";
             item.innerHTML = activities[i]['content']['name'];
+            // if (item.innerHTML.includes(': ')) {
+            //   var temp = item.innerHTML.split(": ");
+            //   item.innerHTML = temp[0].underline() + ": " + temp[1];
+            // }
             if (activities[i]['content'].hasOwnProperty('description')) {
               item.innerHTML += ", " + activities[i]['content'][j]['description'];
             }
@@ -613,7 +628,8 @@
                   };
     var win2020 = {"name": "Winter 2020",
                    "classes": [{"name": "CSE 490V: Virtual Reality Systems", 
-                                "project": {"name": "Making a Wide Field of View Headset", "content": "../projects/CSE490v_final_project.pdf"}},
+                                "project": {"name": "Making a Wide Field of View Headset", 
+                                            "content": "../projects/CSE490v_final_project.pdf"}},
                                {"name": "CSE 515: Statistical Methods in Computer Science"},
                                {"name": "CSE 590F: Computing and the Developing World"},
                                {"name": "CSE 590R: Robotics Colloquium"},
@@ -626,11 +642,17 @@
                                                {"name": "This Will Destroy You"}]}]
                   };
     var spr2020 = {"name": "Spring 2020",
-                   "classes": [{"name": "CSE 547: Machine Learning for Big Data"},
-                               {"name": "CSE 599Q1: Intro to Quantum Algorithms"},
-                               {"name": "CSE 599W: Reinforcement Learning"},
-                               {"name": "CSE 599Y: Mobile & Wireless Systems"}],
-                   "activities": [{"name": "TA", "content": {"name": "CSE 452: Distributed Systems"}}]
+                   "classes": [{"name": "CSE 547: Machine Learning for Big Data",
+                                "project": {"name": "Stock Bot"}},
+                               {"name": "CSE 599Q1: Intro to Quantum Algorithms", "dropped": true, 
+                                "dropped_expl": "Reason: I guess it was stressful doing it online and I don't think I had the time to do as well as I would've wanted to in the other stuff I was doing and I didn't feel like I was ready for this"},
+                               {"name": "CSE 599W: Reinforcement Learning", 
+                                "project": {"name": "Stock thing using deep RL, probably"}},
+                               {"name": "CSE 599Y: Mobile & Wireless Systems", 
+                                "project": {"name": "I have no idea, still TBD"}}],
+                   "activities": [{"name": "Context", "content": {"name": "Zoom University: everything's online and it kind of hurts"}},
+                                  {"name": "TA", "content": {"name": "CSE 452: Distributed Systems"}},
+                                  {"name": "Research", "content": {"name": "Started working on some DS-related thing"}}]
                   };
     generateQuarter("masters1", 'quarterm', 1, aut2019);
     generateQuarter("masters1", 'quarterm', 2, win2020);
