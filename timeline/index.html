@@ -145,11 +145,13 @@
   <h2 id="masters" class="collapsible">Master of Science in Computer Science and Engineering</h2>
   <div class="content">
     <div class="quarter-container">
+      <div id="masters2" class="quarter-grid">
+      </div>
       <div id="masters1" class="quarter-grid">
       </div>
     </div>
   </div>
-
+  <div style="padding:10px"></div>
   <h2 class="collapsible">Bachelor of Science in Computer Engineering</h2>
   <div class="content">
     <div class="quarter-container">
@@ -190,7 +192,7 @@
             <li>CSE 469: Computer Architecture I</li>
             <li class="tooltip">CSE 599: <span class="normaltext">Theory of Optimization and Continuous Algorithms</span> <span class="tooltiptext"> Convex Optimizations, <br style="all:unset" />i.e. end me</span></li>
             <hr \>
-            <b>TA</b><br style="all:unset" /> <span class="tooltip">CSE 312: <span class="normaltext">Foundations of Computing II</span> <span class="tooltiptext">Stats and stuff</span>
+            <b>TA</b><br style="all:unset" /> <span class="tooltip">CSE 312: <span class="normaltext">Foundations of Computing II</span> <span class="tooltiptext">Stats and stuff</span></span>
             <div class="topic">Volunteering</div>
             <li>UW Math Day</li>
           </ul>
@@ -232,8 +234,8 @@
           <ul>
             <div class="topic">Intern</div>
 
-            <li><i>Letron Entertainment Tech</i>, A Cloud Network Monitoring start-up in Kaohsiung, Taiwan</li>
-          </ul>    
+            <b>Letron Entertainment Tech</b>, A Website Health Network Monitoring start-up in Kaohsiung, Taiwan
+          </ul>
         </div>
       </div>
     </div>
@@ -272,6 +274,8 @@
             <li><a class="thumbnail link_proj" href="./imgs/nwhacks1.jpg"><i>nwHacks 2018</i><span style="right:5%"><img src="./imgs/nwhacks1.jpg"/></span></a>: <a class="thumbnail link_proj" href="./imgs/fruits.png">Fruit<span><img src="./imgs/fruits.png" /></span></a> ripeness app</li> 
             <div class="topic">Clubs</div>
             <li>Joined HuskyADAPT</li>
+            <div class="topic">Life Events</div>
+            <li>Became a senior?</li>
           </ul>
         </div>
       </div>
@@ -473,7 +477,7 @@
           </ul>
         </div>
       </div>
-      <p style="width:100%; margin:10px 0px; text-align: center;">At the time I was also taking AP Calculus BC, AP Chemistry, and AP Statistics</p>
+      <p style="width:100%; margin:10px 0px; text-align: center;">At the time I was also taking AP Calculus BC, AP Chemistry, and AP Statistics.</p>
       <p style="width:100%; margin:10px 0px; text-align: center;">Before that I took AP Calculus AB and AP World History and some CAD classes.</p>
       <p style="width:100%; margin:10px 0px; text-align: center;">Volunteered at Achievement4Edmonds, Move60, and the Edmonds Demo Garden.</p>
       </div>
@@ -551,14 +555,14 @@
             // var topicList = document.createElement('UL');
             // div.appendChild(topicList);
             for (var j = 0; j < activities[i]['content'].length; j++) {
-              var item = document.createElement('LI');
+              var item = document.createElement('div');
               item.innerHTML = activities[i]['content'][j]['name'];
               if (activities[i]['content'][j].hasOwnProperty('description')) {
+                item.innerHTML = '<b>' + item.innerHTML + '</b>'
                 item.innerHTML += ", " + activities[i]['content'][j]['description'];
               }
               list.appendChild(item);
             }
-            
           } else {
             var item = document.createElement('P');
             item.style.textAlign = "left";
@@ -643,21 +647,36 @@
                   };
     var spr2020 = {"name": "Spring 2020",
                    "classes": [{"name": "CSE 547: Machine Learning for Big Data",
-                                "project": {"name": "Stock Bot"}},
+                                "project": {"name": "Stock Bot", "content": "https://github.com/kaiweic/stockbot"}},
                                {"name": "CSE 599Q1: Intro to Quantum Algorithms", "dropped": true, 
                                 "dropped_expl": "Reason: I guess it was stressful doing it online and I don't think I had the time to do as well as I would've wanted to in the other stuff I was doing and I didn't feel like I was ready for this"},
                                {"name": "CSE 599W: Reinforcement Learning", 
-                                "project": {"name": "Stock thing using deep RL, probably"}},
+                                "project": {"name": "Deep RL in the Stock Market, extension", "content": "../projects/CSE599W_Final_Report.pdf"}},
                                {"name": "CSE 599Y: Mobile & Wireless Systems", 
-                                "project": {"name": "I have no idea, still TBD"}}],
+                                "project": {"name": "Bathroom fall detection", "content": "https://github.com/leiyiz/BathroomFallDetection"}}],
                    "activities": [{"name": "Context", "content": {"name": "Zoom University: everything's online and it kind of hurts"}},
                                   {"name": "TA", "content": {"name": "CSE 452: Distributed Systems"}},
-                                  {"name": "Research", "content": {"name": "Started working on some DS-related thing"}}]
+                                  {"name": "Research", "content": {"name": "Started working on some DS-related thing related to RocksDB"}}]
+                  };
+    var sum2020 = {"name": "Summer 2020",
+                   "activities": [{"name": "Intern", "content": [{"name": "Amazon", "description": "Worked on a Promotions Management tool and made the search faster"}]}]};
+    var aut2020 = {"name": "Autumn 2020",
+                   "classes": [{"name": "CSE 492: Patterns for Career Success"},
+                               {"name": "CSE 527: Computational Biology",
+                                "project": {"name": "Leukemia classification"}},
+                               {"name": "CSEM 584: Computer Security",
+                                "project": {"name": "TBD"}},
+                               {"name": "CSE 599B: AI & the Brain",
+                                "project": {"name": "TBD"}},
+                               {"name": "CSE 599I: Generative Models",
+                                "project": {"name": "TBD"}}],
+                   "activities": [{"name": "TA", "content": {"name": "CSEP 546: Machine Learning"}}]
                   };
     generateQuarter("masters1", 'quarterm', 1, aut2019);
     generateQuarter("masters1", 'quarterm', 2, win2020);
     generateQuarter("masters1", 'quarterm', 3, spr2020);
-
+    generateQuarter("masters1", 'quarterm', 4, sum2020);
+    generateQuarter("masters2", 'quarterm', 1, aut2020);
 
 
 
