@@ -642,7 +642,7 @@
                                {"name": "CSE 599I: Interactive Learning"}],
                    "activities": [{"name": "TA", "content": {"name": "CSE 452: Distributed Systems"}},
                                   {"name": "Concerts Attended",
-                                   "content": [{"name": "American Authors"},
+                                   "content": [{"name": "American Authors, Magic Giant, Public"},
                                                {"name": "This Will Destroy You"}]}]
                   };
     var spr2020 = {"name": "Spring 2020",
@@ -663,20 +663,29 @@
     var aut2020 = {"name": "Autumn 2020",
                    "classes": [{"name": "CSE 492: Patterns for Career Success"},
                                {"name": "CSE 527: Computational Biology",
-                                "project": {"name": "Leukemia classification"}},
+                                "project": {"name": "Leukemia classification", "content": "https://github.com/nowei/leukemia-classification"}},
                                {"name": "CSEM 584: Computer Security",
-                                "project": {"name": "TBD"}},
+                                "project": {"name": "Presentation on Intro to Differential Privacy", "content": "../projects/Intro to Differential Privacy.pdf"}},
                                {"name": "CSE 599B: AI & the Brain",
-                                "project": {"name": "TBD"}},
+                                "project": {"name": "Exploring Spiking Neural Networks", "content": "../projects/CSE 599 B Final Project - Andrew Wei & Kushal Jhunjhunwalla.pdf"}},
                                {"name": "CSE 599I: Generative Models",
-                                "project": {"name": "TBD"}}],
-                   "activities": [{"name": "TA", "content": {"name": "CSEP 546: Machine Learning"}}]
+                                "project": {"name": "Poor Man's GPT-3", "content": "https://github.com/kaiweic/Poor-man-s-GPT-3"}}],
+                   "activities": [{"name": "TA", "content": {"name": "CSEP 546: Machine Learning"}},
+                                  {"name": "Coding Competition", "content": {"name": "Credit Suisse Global Coding Challenge - 3rd place in US"}}]
+                  };
+    var win2021 = {"name": "Winter 2021",
+                   "classes": [{"name": "CSE 525: Random Algorithms"},
+                               {"name": "CSE 561: Computer Networks"},
+                               {"name": "CSE 599C: Data Management for ML"},
+                               {"name": "CSE 599D1: Theoretical Deep Learning"}],
+                   "activities": [{"name": "TA", "content": {"name": "CSEP 552: Distributed Systems"}}]
                   };
     generateQuarter("masters1", 'quarterm', 1, aut2019);
     generateQuarter("masters1", 'quarterm', 2, win2020);
     generateQuarter("masters1", 'quarterm', 3, spr2020);
     generateQuarter("masters1", 'quarterm', 4, sum2020);
     generateQuarter("masters2", 'quarterm', 1, aut2020);
+    generateQuarter("masters2", 'quarterm', 2, win2021);
 
 
 
