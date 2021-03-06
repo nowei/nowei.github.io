@@ -518,7 +518,7 @@
           list.appendChild(item);
 
           if (classes[i]['dropped']) {
-            item.innerHTML = item.innerHTML.strike() + " [dropped]";
+            item.innerHTML = item.innerHTML.strike();// + " [dropped]";
             var dropped_expl = document.createElement('UL');
             list.append(dropped_expl);
             var dropped_expl_item = document.createElement('LI');
@@ -648,8 +648,7 @@
     var spr2020 = {"name": "Spring 2020",
                    "classes": [{"name": "CSE 547: Machine Learning for Big Data",
                                 "project": {"name": "Stock Bot", "content": "https://github.com/kaiweic/stockbot"}},
-                               {"name": "CSE 599Q1: Intro to Quantum Algorithms", "dropped": true, 
-                                "dropped_expl": "Reason: I guess it was stressful doing it online and I don't think I had the time to do as well as I would've wanted to in the other stuff I was doing and I didn't feel like I was ready for this"},
+                               {"name": "CSE 599Q1: Intro to Quantum Algorithms", "dropped": true},
                                {"name": "CSE 599W: Reinforcement Learning", 
                                 "project": {"name": "Deep RL in the Stock Market, extension", "content": "../projects/CSE599W_Final_Report.pdf"}},
                                {"name": "CSE 599Y: Mobile & Wireless Systems", 
@@ -678,7 +677,15 @@
                                {"name": "CSE 561: Computer Networks"},
                                {"name": "CSE 599C: Data Management for ML"},
                                {"name": "CSE 599D1: Theoretical Deep Learning"}],
-                   "activities": [{"name": "TA", "content": {"name": "CSEP 552: Distributed Systems"}}]
+                   "activities": [{"name": "TA", "content": {"name": "CSEP 552/CSE 452: Distributed Systems"}}]
+                  };
+    var win2021 = {"name": "Spring 2021",
+                   "classes": [{"name": "CSE 401: Intro to Compiler Construction"},
+                               {"name": "CSEM 544: Database Systems"},
+                               {"name": "CSE 571: Probabilistic Robotics"},
+                               {"name": "CSE 599H: Comping for Social Good"},
+                               {"name": "ME 574: Applied Parallel Computing"}],
+                   "activities": [{"name": "TA", "content": {"name": "CSE 452: Distributed Systems\n CSE 547: Machine Learning for Big Data"}}]
                   };
     generateQuarter("masters1", 'quarterm', 1, aut2019);
     generateQuarter("masters1", 'quarterm', 2, win2020);
