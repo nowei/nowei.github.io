@@ -16,6 +16,60 @@
 </head>
 <body>
   <div id="header"></div>
+  Page for (ideally) human-readable definitions of CS topics. 
+  In other words, how I would explain things to people if they asked me about something. 
   
+  Reflection is important. Being able to explain things is also important, so I've decided to write down things I've learned. 
+  I'm trying to write them as I learn them, but it might take a bit to catch up with what I've seen. 
+
+  Machine Learning: 
+  Model: 
+  Loss Function: 
+  Bias-variance tradeoffs: Bias errors refers to errors caused by model complexity (e.g. not being complex enough to learn the model or being too complex and overfitting) and variance errors refers to the errors made due to fitting to the noise in training vs. validation/test sets. Another example would be that if your model learns the training data very well, but doesn't do very well on validation or test data, then it's possible that the features chosen might help distinguish things in the training set, but may not be very helpful for the validation/test sets. 
+  Kernel method: Compute phi(x)_T phi(x') with |x| many comps where phi moves |x| -> m where m &gt |x|
+  Stacking: Have a bunch of models and combine outputs, then learn another model on the outputs of those models
+  Bagging: 
+  Cross-validation: 
+  Data augmentation: 
+  Transductive learning: Given a labeled training set and unlabeled test set, perform predictions only for the test points.
+
+  Deep Learning: 
+  Batch Normalization: 
+  Epsilon Nets: 
+  Universal Approximation Theorem: 
+  Weak Supervision: 
+
+  Distributed Systems:
+  Linearizability:
+  Serializability: 
+  CAP theory:
+  - 
+  Paxos: 
+
+  Networking: 
+  Why do packets get dropped? Switch buffers might be full [network congestion]. Receiver buffers might be full because app doesn't recv(). 
+
+  Algorithms: 
+  Principle of deferred decision: Put off deciding everything at once and instead decide things one at a time to get to the solution. 
+
+
+  Computer Graphics:
+  Transparent: clear
+  Opaque: not clear
+  Ray Tracing: 
+  Gimbal Lock: 
+  Quaternion: 
+
+  Computer Vision: 
+
+  Computer Architecture:
+  Dataflow model of computation: Execute when inputs are ready
+  Control flow (Von Neumann model of computation): Executes instructions in the order specified 
+  https://cacm.acm.org/magazines/2019/6/237005-heterogeneous-von-neumann-dataflow-microprocessors/fulltext
+
+  Math tricks or something:
+  Jensen's inequality:
+  Algos majority probability thing boosting?
+
   <div id="footer"></div>
 </body>
