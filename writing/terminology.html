@@ -32,12 +32,17 @@
   Cross-validation: 
   Data augmentation: 
   Transductive learning: Given a labeled training set and unlabeled test set, perform predictions only for the test points.
+  Boot-strapping: 
 
   Deep Learning: 
+  Gradient Descent: 
   Batch Normalization: 
   Epsilon Nets: 
   Universal Approximation Theorem: 
   Weak Supervision: 
+  Embedding Layer: https://gdcoder.com/what-is-an-embedding-layer/
+  Simulated Annealing: Approximates global optimum by defining problem as a function with many parameters, subject to constraints. Based on heating and controlled cooling to alter physical properties. In practice, the constraint can be included in the objective function as a penalty. At each step, there's a probability between moving the system to a new, neighboring state or staying in the current state. The probabilities lead the system to be in a state with lower energy. States are altered to produce neighboring states. Metaheuristics use the neighbors of a solution to explore the solution space and while preferring better neighbors, they also keep worse ones to avoid getting stuck in local optimum. The idea of temperature is how much we should still explore, with smaller T favoring going downhill more and more and T = 0 meaning that we only go downhill. 
+
 
   Distributed Systems:
   Linearizability:
@@ -66,6 +71,13 @@
   Dataflow model of computation: Execute when inputs are ready
   Control flow (Von Neumann model of computation): Executes instructions in the order specified 
   https://cacm.acm.org/magazines/2019/6/237005-heterogeneous-von-neumann-dataflow-microprocessors/fulltext
+
+  GPUs
+  Bank Conflicts: Local memory is divided into memory banks, two memory locations can occur in the same bank. Each bank can only address one dataset at a time, so if a halfwarp loads/stores data from/to the same bank in an action, the access has to be serialized (bank conflict), which loses the parallel speedup. 
+  Shared Nothing: each thread works by itself without looking at data from neighboring threads.
+  Shared Memory: Place in GPU memory unique to a ___(Warp?)___. Usually requires a parallel copy operation but then threads in a ____ can access the data in shared memory. 
+
+  Polyhedral Compilation: loops treated like parametric polyhedra and exploting combinatorial and geometrical optimizatoins on these objects to analyze and optimize the programs. Can be helpful in many contexts, but the main thing is that it helps by optimizing based on structures, not the number of elements the structures represent. (https://polyhedral.info/)
 
   Math tricks or something:
   Jensen's inequality:

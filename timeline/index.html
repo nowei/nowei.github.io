@@ -92,12 +92,12 @@
       }
     }
 
-    .quarterba, .quarterbb, .quartercc, .quarterm {
+    .quarterba, .quarterbb, .quartercc, .quarterm, .quartera {
       padding: 3px 0;
       height:50px;
       border: 1px solid white;
     }
-    .quarterba:hover, .quarterbb:hover, .quartercc:hover, .quarterm:hover {
+    .quarterba:hover, .quarterbb:hover, .quartercc:hover, .quarterm:hover, .quartera:hover {
       padding:0 0;
       border: 3px solid white;
     }
@@ -141,10 +141,24 @@
 <body>
   <div id="header"></div>
   <p style="margin: 10px">Timeline of activities</p>
-  <h1 style="margin:unset"><u>University of Washington</u></h1><br />
-  <h2 id="masters" class="collapsible">Master of Science in Computer Science and Engineering</h2>
+  <h1 style="margin:unset"><u>Adulting/Real-Worlding</u></h1><br />
+<!--   <h2 class="collapsible">2022 - [Something something, naming is hard]</h2>
+  <div class="content" style="max-height: 100%">
+    Nothing yet but I wanted to restart the timeline to start in Jan. because I'm out of school now. 
+  </div>
+  <div style="padding:10px"></div> -->
+  <h2 class="collapsible">2021 - Pandemic Blues 2: Electric Boogaloo</h2>
   <div class="content" style="max-height: 100%">
     <div class="quarter-container">
+      <div id="2021" class="quarter-grid" style="transition: all 2s"></div>
+    </div>
+  </div>
+
+  <hr style="margin:30px 0">
+  <h1 style="margin:unset"><u>University of Washington</u></h1><br />
+  <h2 id="masters" class="collapsible">Master of Science in Computer Science and Engineering</h2>
+  <div class="content">
+    <div class="quarter-container" >
       <div id="masters2" class="quarter-grid">
       </div>
       <div id="masters1" class="quarter-grid">
@@ -162,10 +176,11 @@
     </div>
   </div>
   <hr style="margin:30px 0">
-  <h1 class="collapsible" style="margin:unset; padding-top: 10px"><u>High School/Community College</u></h1>
+  <h1 style="margin:unset"><u>Edmonds Community College </u></h1><br />
+  <h2 class="collapsible" style="margin:unset">Associate of Science</h2>
   <div class="content">
     <h2>Associate of Science in Mechanical Engineering and Computer Engineering</h2>
-    <p style="margin:unset">Before UW, I did Running Start at Edmonds Community College and took AP classes in high school.</p> <br />
+    <p style="margin:unset">Before UW, I did Running Start (taking Community College classes while in high school) at Edmonds Community College and took AP classes on top of that.</p> <br />
     <div class="quarter-container">
       <div id="ugrad2" class="quarter-grid">
       </div>
@@ -371,6 +386,18 @@
       //     }
       //   });
     }
+
+    var aut2021 = {"name": "Autumn 2021",
+                   "activities": 
+                                 [{"name": "Interviewing", "content": {"name": "Finding a job", "description": "Interviewed at a handful of places and eventually found a job"}}, 
+                                  {"name": "Software Engineer", "content": {"name": "OctoML", "description": "Ambiguously working on the backend"}},
+                                  {"name": "Conferences Attended", 
+                                   "bullet": true,
+                                   "content": [{"name": "ASSETS 2021"}]},
+                                  {"name": "Life Events", "bullet": true, "content": 
+                                 [{"name": "Acquired: Job"}]}]};
+    generateQuarter("2021", 'quartera', 4, aut2021);
+
     var aut2019 = {"name": "Autumn 2019",
                    "classes": [{"name": "CSE 521: Design and Analysis of Algorithms", 
                                 "project": {"name": "Finding Frequent Items in Data Streams", "content": "https://github.com/nowei/frequent_items"}}, 
@@ -382,7 +409,8 @@
                                 "project": {"name": "Exploration of Adversarial Deep Learning", "content": "https://github.com/nowei/adversarial-dl"}},
                                {"name": "CSE 599M: Principled Approaches to Robust Machine Learning",
                                 "project": {"name": "Robustness of Federated Learning", "content": "TBD"}}],
-                   "activities": [{"name": "TA", "bullet": true, "content": [{"name": "CSEP 546: Machine Learning"}]},
+                   "activities": 
+                                 [{"name": "TA", "bullet": true, "content": [{"name": "CSEP 546: Machine Learning"}]},
                                   {"name": "Volunteering", "bullet": true, "content": 
                                   [{"name": "Dawg Daze Leader"}, 
                                    {"name": "Dubhacks 2019"},
@@ -508,7 +536,7 @@
                        "content": [{"name": "nwHacks 2018", "content": "./imgs/nwhacks1.jpg", "thumbnail": true, "position":"right", "description": '<a class="thumbnail link_proj" href="./imgs/fruits.png">Fruit<span><img src="./imgs/fruits.png" /></span></a>  ripeness app'}]}, 
                       {"name": "Life Events", 
                        "bullet": true,
-                       "content": [{"name": "Became a senior?"}]}]
+                       "content": [{"name": "Became a senior at university?"}]}]
                   };
     var spr2018 = {"name": "Spring 2018",
                    "classes": [{"name": "CSE 371: Design of Digital Circuits and Systems", "project": {"name": "Brick Breaker", "content": "https://drive.google.com/file/d/1mMqNNky8TlR3kXyZnWidnr3k37A-P_Px/view?usp=sharing"}},
