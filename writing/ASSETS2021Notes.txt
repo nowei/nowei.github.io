@@ -1,0 +1,846 @@
+ASSETS 2021 Notes
+Day 5
+
+Augmentative and Alternative Communication Technologies
+- HCI and NLP and Personal Narrative
+- Technology should be available to everyone 
+- Co-design and continual evaluation to create usable technology. 
+- Unintelligible speech means communication is difficult or impossible. 
+- AAC transformed lives and can be downloaded to mobile devices or purchased from companies
+- Increased literacy for everyone 
+- AAC users don't initiate topics/conversations, respond with short responses, rarely share stories, and rely on low-tech AAC
+- AAC gets abandoned because there's limited user-centered design, people who use the technology aren't involved in the creation of the technology.
+- Goal should be to include stakeholders in all stages of design. 
+- Support narrative of the AAC users
+- Symbol-based systems didn't have many AAC user participation 
+- People using AAC should be seen as experts
+- Lack of Assistive Technology Role
+- Challenges: Poorly reported UCD (User-centered design) in literature, Access to end users, Inclusive and diverse investigator teams, LAck of Assistive Technology roles, and Training end users to be informed users.
+- ICU-Talk -> Train all medical practitioners in AAC?
+- Remote collaboration? Find the most effective online interaction. Teams didn't work and it was very clear. Zoom worked better. Developed strategies and techniques for support.
+- Perception of what is intuitive or not? 
+- AAC technologies becoming more affordable + available? Low tech a viable choice? In the past, they said it wasn't applicable, but today most people have mobile phones and we need to use technology that exists in context and harness what people are currently using. Most active AAC research groups is based in Pretoria -> using more technology and seeing benefits
+- Supporting prototypes long term? Risk of new paradigm is difficult for small companies. Work a lot with AAC technology companies and they have built relationships over the years. With advent of mobile technology and more access, it's better, but it's still not easy.
+- Film Canister switches? The most simple ideas are the most effective. Bendy straw is most effective AAC device in history. In assistive technology industry, we now have access to a wide range of technologies. We're able to purchase these on Amazon at fractions of prices. The lazier people are and the more they want to use IoT, the better it will be for disabled people. Keep abreast of what the advances are. Looking back on history, how do we keep lobbying developers to ensure everything is accessible so that we can actually benefit from more things being created every day.
+- Caregivers taking over co-design role from children? Relatable, in our user group we teach participant support people to keep quiet. The most difficult thing for people that are there to help, is to take the backseat, but they are there to support people and let them express what they want to express. Need to support participants even when they have extremely complex needs. Teach groups to be quiet, listen and to wait. This is difficult for a lot of people, including me. 
+
+Disability Studies as a Source of Critical Inqury for the Field of Assistive Technology
+- Jennifer Mankoff 
+- Devva is an anthropologist, she's the outlier and she's at home with her computer and keyboard. I know how to solve an access problem? But you won't know if you won't ask me. 
+
+Day 4
+
+Student Research Competition Finals 
+
+> Giving a voice to the Voiceless
+- There are limitations to speech synthesizers 
+- Voice customization was made using 
+- They obtained general terms for speech and used MTurk to get pleasantness of voice
+- They created a voice creator system 
+- Female voices are preferable to male voices
+- Downside was that they couldn't get the reach out to people with speech disorders, but got a lot of responses for MTurk
+- No participant information so not sure on responses
+- In opinion, people want unique voice that correlate to their personalities
+- AAC would like a personalized voice? Aylett et. al
+
+> Activity recognition in older adults with training data from younger adults. 
+- Older adults want to use health tracking, but many smartwatch data doesn't have data for older adults
+- How does activity recognition from younger adults apply to older adults?
+- Training on younger data 
+- Limited accuracy for when using younger adults data to predict older data? Insights as to why: People are doing different activities. Maybe get more data regarding type of activity being done. Personalization would be good. 
+- Negative implications/potential harms for the project? Global training data is important, but preferences can change over time, so we don't want to personalizing it once. Data security, can we use edge/local computing to make things more private? 
+- Surveillance acceptability? Older adults were mostly fine with the health trackers
+
+> Reading comprehension for people with disabilities or reading difficulties?
+- Variability of reading comprehension. Testing accessibility of texts. 
+- Tested whether there's a difference in equivalent tests conducted on paper or on an iPad. 
+- Recruited 16 people with intellectual disabilities and read 4 texts each. 
+- Touchscreen based testing is a viable option for their target group
+- More testing and accessibility improvements are necessary
+- Order of texts were randomized. Answered question -> Subjective rating. 
+
+> Auditory feedback to compensate audible instructions to support people with visual impairment
+- Help people with visual impairment hear screen reader in noisy environments
+- How do different compensation techniques help? 
+- Tested with sighted and unsighted people
+- Varied number of tasks with different types of compensation
+
+> Adee - Bringing tools for accessibility into design tools
+- 15% of people experience disability
+- Stuff like color contrast checker 
+- Visibility of product? Impacts? Work on making it more comprehensive and getting more feedback
+- How accessible is the tool itself? They had limitations to use APIs and platforms, which had many restrictions. Working on fixing things and making it more accessible. Need help from platform as well to improve it. 
+
+TACCESS Presentations Session 2
+> Towards Designing Mobile Apps for Independent Travel: Exploring Current Barriers and Opportunities for Supporting Young Adults with Down's Syndrome
+- Work with participants and caretakers
+- 6 key barriers for performing actions 
+- Lack of personal security and safety, communication, independent travel, technology accessibility and usability, forgetting tasks and activities, lack of information and knowledge
+- Unfamiliarity, Public Transportation access, Technology and apps, and Parent anxiety
+- Designed prototype app for instructions. 
+
+> How could Equality and Data Protection law shape AI Fairness for People with Disabilities?
+- If not designed fairly, AI can harm people
+- AI can target people with disabilities. 
+- Equality law protects people. People with disabilities should get reasonable accomodations
+- Equality law treats disability differently from other protected characteristics; data protection law treats disability similarly. 
+- Helps challenge unfair AI systems for people with disabilities
+
+> Computer Vision-based Methodology to Improve Interaction for People with Motor and Speech Impairment
+- ML personalization for interactions
+- It is hard to create datasets 
+- Gestures and meanings configured by users and caregivers. 
+- PGCA, personal gesture communication assistant.
+- Uses optical flow for reading gestures for customized inputs
+- Evidence that it should be beneficial
+
+> Accessible Web Development: Opportunities to improve education & practice of web development with a screen reader
+- Comprehensive Literature Review and Interviews with Blind Web Developers
+- Visual information without accessible equivalent, Orienting, and other problems.
+- Interviews helped with finding web-specific challenges, like wire framing tools, no validation of css outputs, and no accessible explanation/demos of CSS and web design concepts.
+- Many focused on back-end rather than front-end, getting sighted programmers, and CSS frameworks 
+- Machine Learning or AI processed visual design and CSS output verification.
+- Tactile interfaces to support learning and design verification and understanding spatial web design
+- Started groundwork on accessibility issues for blind web developers. 
+- Includes issues, strategies, and future work
+- Helped with design for screen-reader focused class. 
+
+> Irrelevant Gadgets or a Source of Worry: Exploring Wearable Activity Trackers with Older Adults
+- Focus groups and interviews with 24 older adults, talked about physical activities/inactivity, experience; along with co-design session for wearables they would prefer
+- 41 online survey participants
+- Thematic analysis: 1.) physical activity is personal and complex, personal nature of physical activity and reasons for inactivity, also with problems with the built environment and 2.) Wearables are an emotional technology, familiarity (anxious or reminder of issues), avoiding pressure to perform
+- lukewarm of current designs, unsure if technology can help
+- Limitations of existing wearables due to activity selection and individual barriers; but future work includes looking into adapting to preferences and needs and knowing that technology might not be the solution to the problems 
+- Wearable activity trackers -> Pressures, Barriers, hedonic aspects
+
+> Melodie: A Design Inquiry into Accessible Crafting through Audio-enhanced Weaving
+- Audio-enhanced weaving
+- Observed 19 weavers with vision impairments
+- Weaving is a learned skill that takes years to master
+- Captures past experiences 
+- Open to using new tools, but shouldn't hinder actions. 
+- Better understanding -> Melodie is a weaving loom that provides audio feedback. 
+- From instructor: Audio cues helped with initially orienting people
+- Weavers said issues could be pointed out, but people should have control over how to fix things and the interactions
+- Sounds could be distracting when you use hearing for everything. 
+
+> Immersive Virtual Reality for Older Adults: Empirically Grounded Design Guidelines
+- Proliferation of immersive VR for older adults. 
+- Lack of empirical guidelines -> Not limited to safety, but how to use it as an engaging medium
+- 1.) Literature review - ACM + PubMed for immersive VR and older people; Accessibility, Usability, User experience
+- 2.) Laddering study - 6 dominant things, spatial presence + scenery were good and interactions were kinda bad
+- 3.) Empirically grounding the guidelines - Validated guidelines
+- Recommendations: immersive VR needs to be tuned for age-related changes, they should have audio-visual engaging environments. 
+
+Paper Session 8: Independence and everyday living
+> Non-Visual Cooking: Exploring Practices and Challenges of Meal Preparation by People with Visual Impairments
+- Visual-impaired people don't cook as much because recipes have visual instructions -> Eat out, sometimes not healthy food
+- Current approaches, challenges, and opportunities?
+- 122 youtube Video Analysis, Interviews -> 12 activities: preparation; cooking; tools, environment, and recognition
+- Challenges: Utilizing tools or too many tools; information access could have too many images and recipes are hard to follow; touching and feeling, hard to feel liquid level and using hands to feel objects isn't safe/efficient; hard to cook precisely and sometimes it's ambiguous; hard to know what to flip; hard to process item quality; hard to collaboratively cook; 
+- Opportunities: Zero touch interactions for cooking, speech and mid-air gesture? Status tracking and safety monitoring; collaborative cooking; contextual inquiry and learning process. 
+- Challenges to field? Complexity of preparation; kitchen contexts with deployment settings; too many tools is problematic. Looking is supposed to be enjoyable -> safety concerns like burning or cutting themselves. 
+- What did YouTube videos for cooking for people with visual impairments focus on? People focus on vision impairment on daily lives. 
+- Cooking instructions or suggestions for ensuring safety during cooking? Didn't explicitly collect cooking instructions.
+- Existing systems? Assistive systems are minimally used due to complexity of cooking space. Some are using be my eyes or ira for recognition on food status. Tactile bumpers or grill stickers are used. They really like using instant pot, because it's a full solution for certain things and they can just use one pot for many dishes. There are clear cuisines and instructions. 
+- Wearing smart glasses can help? I don't know, but some potential activity tracking could help with reminders. 
+- New tools for cooking? Knife can cut things, but you can have like veggie slicers and food processors, but too many tools is hard because there's a lot of stuff there. It's also harder to clean. Added burden of device and concerns? 
+- Address problem in domain by creating new solutions, finding tech that works, or disseminating information? There are kitchen appliances like instant pop and grills. Some technology exists, but how do people adopt the appliances safely and easily? Novel interaction techniques and technology? It does exist for cooking, like collaborative cooking. You can add sensors, glasses, but the first step is to think about the problem and what exists before coming up with solutions. 
+- Dual sensory loss (deaf-blindness)? Didn't explore, but things like zero touch interactions but can be extended. Can learn from users about their interactions/experience with cooking. 
+
+> Deinstitutionalizing Independence: Discourses of Disability and Housing in Accessible Computing
+- Independent Living Movement? Institutionalization was a common practice. 
+- Cylons?
+- History of institutionalization? 
+- Housing and disability? 
+- Institutionalization was clinically justifiable - "disability should be cured" - nursing home
+- independence is a clinical problem? 
+- Homes are a clinical space? 
+- Disabled or older people were seen as bothersome to society
+- Institutionalization is a reality for many disabled people today, this research highlights problems that disabled people face
+- Tension between promoting independence and employing institutional discourse
+- Independence is a civil right, not an artificially constructed state 
+- nonclinical aspects of homes deserve increased attention
+- Technology should adopt least restrictive design approach. 
+- Challenges to field? Key challenge is a larger problem that realizing that many problems we're addressing is coming out of institutionalization. Institutionalization exist -> Ableism. Anti-ableism vs. addressing ableism. Domestic spaces should be considered in different contexts. 
+- Should the accessibility community "recommend" the social model of disability? No because it might not be the best and each model has its own strengths. Appreciate the model, but know that other models better describe issues. Modeling disability is important for visibility and discourse. In housing, ableism that exists is not about bodies or environment, but history of housing being used as a way to discriminate that flavors topics of importance. It's a history handed to us that is discriminatory and built on ableism. Think about how to approach research in domestic spaces. 
+- Address problem in domain by creating novel solutions, finding tech that works, or disseminating information? Finding/defining problems. It feels wrong to surveil people, since it turns it into an institution. Is technology the problem? 
+- Inform development of AI for in-home care? Re-institutionalization of home? There's a section in paper. If we are designers, we should be asking participants what they're giving up in order to use a system? What kind of data/intrusion is being asked from users. 
+
+> Opportunities for Supporting Self-efficacy Through Orientation & Mobility Training Technologies for Blind and Partially Sighted People
+- Orientation and mobility training helps independent living for BVI. 
+- Self-efficacy is belief in being able to accomplish things, vicarious experiences, verbal persuasion, and emotional and physiological state
+- Goal is to understand O&M skill building, along with socio-economic and cultural factors that impact O&M support. 
+- Technology used in O&M training like canes
+- Funding varies, funding is expensive; lack of early O&M support leads to helplessness and loss of freedom. 
+- Home and family life? Parents of BVI children were overprotective
+- Personal view has a great impact on self-efficacy and technology use is contingent on  perception and attitude of O&M instructors
+- Focus more on BVI individual in sociocultural context including families+partners and O&M instructors 
+- Challenges to field? How needs/conditions for BVI evolve over time -> Experience changes over time. Social context also changes, like becoming parents; having comorbidities. They had new expecations of themselves and people. Using a long cane or mobile phone is hard as needs change, e.g. also carrying a child. 
+- COVID? Complete halt in O&M teaching. Impact on people's idea of independence. 
+- Address problem in domain by creating new solutions, finding tech that works, or disseminating information? Novel technologies can be used, but might not be available. There is a need for novel technologies, but there should be a balance for innovation and application in real life. Actual applications should be explored. 
+
+> Investigating the Navigational Habits of People who are Blind in India
+- Infrastructure isn't present for helping people who are blind
+- Low and middle income countries have low investment in infrastructure
+- 14 participants from K-12 schools in a LMIC. Determine role of culture and environmental factors
+- Described experiences weren't as prevalent in non-LMICs. Actively seeking support from third parties. Reason for crossing was it was fastest or the most accessible route. Judging positions of cars was hard. 
+- Participants were willing to take risks when crossing busy highways. Tried to use cane or speedbumps
+- Rainy season -> Masked landmarks, cane helped with walking, walking barefoot also helps. 
+- Everyone had concerns navigating at night time; some street lighting could help for people who could sense light; Interlocking arms would help 
+- Should try to make solutions to support locating third parties and support interlocking of arms  
+- Challenges to field? Societal acceptance. On a surface level, people who are blind go out and if there are political caste or scenario, pushes down the self-efficacy part. From a home society level, they are more accepted hopefully. Disability is not a disease, it's a condition. More affordable and easily accessible technology helps with self-efficacy. 
+- Covid impact on navigational practices? During pandemic, most people were indoors, so free navigation and it was easier to explore. 
+- Address problem in domain by creating new solutions, finding tech that works, or disseminating information? Awareness of fact, they should know that technology exists, and then go into details.
+
+Experience Reports
+> A Case for Making Web Accessibility Guidelines Accessible: Older Adult Content Creators and Web Accessibility Planning
+- Let residents build and maintain websites
+- Can older adults make accessible websites? 
+- Challenges include finding comprehensive web accessibility information sources for lay persons, helping people learn about their individual web accessibility needs, and making pdfs accessible. Tested AI tools for making things more accessible and had a discussion about it. 
+
+> Developing Accessible Mobile Applications with Cross-Platform Development Frameworks
+- Developing mobile assistive technologies with a cross platform developing framework
+- Cross-platform developing frameworks don't expose accessibility-related OS APIs 
+- Looked at screen-reader APIs, many are functionally equivalent, but are implemented differently 
+- If an API isn't exposed, it's still possible to make accessible apps, but then the developers need to write native code. Several devs weren't able to solve the problem, but official Xamarin dev was able to do so. 
+- Accessibility-related APIs are still not well-implemented in cross platform development frameworks.
+
+> Interdependent Variables: Remotely Designing Tactile Graphics for an Accessible Workflow
+- Making line charts and bar charts more accessible -> But remote work and living in different locations 
+- How to make things accessible? Made graphics accessible for blind people. 
+- Digitally create graphics using tactile graphics software -> Gets machine-embossed
+- Tactile graphics helps BLV people get involved with work when discussing about diagrams
+
+> Lost in Translation: Challenges and Barriers to Sign Language-Accessible User Research
+- They did a focus group
+- Including native signers as not only participants, but as active members as well. 
+- Language-accessibility should go beyond the execution of methods and go into different forms of communication to make users feel included. 
+- Averting attention in sign language leads to direct information loss 
+- If planning to work with signers, strategies for translation and transcription should happen early on
+- How to make sign language tech/research accessible if methods weren't accessible?
+- Language barriers go both ways between researchers and participants. Researchers want to ask questions, but they should be translated into sign languages. Transcription of signed responses from participants may lose tone/voice. 
+
+> Providing and Accessing Support During the COVID-19 Pandemic: Experiences of Mental Health Professionals, Community and Vocational Support Providers, and Adults with ASD
+- mental health professionals weren't used to the transition online and didn't get the training to transition online
+- Mental professionals didn't like telehealth
+- Clients had techincal issues with using telehealth 
+- Translating in-person services to telehealth services was difficult. Internet issues led to problems, but people appreciated being able to interact with people, even if online. 
+
+> Regulating Personal Cameras for Disabled People and People with Deafblindness: Implications for HCI and Accessible Computing
+- Personal cameras for disabled users? Use of personal cameras in public settings? Legal/ethical considerations?
+- Information isn't conveyed properly to people with deafblindness
+- GDPR regulaes personal data 
+- Disabled people are on the receiving end of technology rather than empowered users
+- Data processing should be local and offline
+- Make sure safeguards are built into technologies 
+- Technology should be cost-effective, affordable, and robust
+- Also need to inform key policy makers to make sure that people with disabilities can get access to technologies they need.
+
+Paper Session 9: Communication and novel interactions
+> At a Different Pace: Evaluating Whether Users Prefer Timing Parameters in American Sign Language Animations to Differ from Human Signers’ Timing
+- ASL used as a prmary language by half a million people
+- Some English texts are too hard too read
+- Adding ASL to a website is hard because ASL would have to be updated each time an edit occurred.  
+- Sign duration is how long it takes to sign the sign and transition is the time it takes to go between positions for signs
+- Differential signing rate and pause frequency also matter. Pause duration is also important.
+- Better quality ASL animation is close to human ASL signers 
+- What are the preferences of ASL signers? 
+- 20 participants evaluating ASL animation
+- People liked animation that was closer to humans. Some exaggeration of speed and timing can be helpful. 
+
+> I See What You Are Saying: A Literature Review of Eye Tracking Research in Communication of Deaf or Hard of Hearing Individuals
+- Gaze patterns and attention management strategies? Looked at literature on eye-tracking
+- Eye-tracking was popular in 1990s 
+- Native signers focused their gaze on eyes
+- Novice signers focused gaze on mouth
+- In classrooms, DHH students focused attention on the interpreter or the slides and the peripheral vision on captions, subtitles, and the lecturer or student discussions
+- 
+
+> “It is fascinating to make these beasts fly”: Understanding Visually Impaired People’s Motivations and Needs for Drone Piloting
+- Depends on visual information to pilot the drone
+- Drones can help with guidance and hand-object localization
+- Surveyed 59 respondants 
+- Do they have an interest in drones, how did they think about it?
+- People have different reasons for why they want to fly drones
+- How to support BVI piloting drones? 
+- People wanted voice commands or getting information through smartphones or headphones
+- People wanted it to work with existing apps
+- Spoken information helps with safety threats and beeps and tones could help with drone movements or environmental cues
+- Haptic feedback would help with object detection and spatial awareness and distance perception and directional information. 
+- They suggested having wearables with haptic feedback or just on the phone 
+
+> Aided Nonverbal Communication through Physical Expressive Objects
+- Co-designed a physical expressive object with co-author. Augmentative and Alternative Communication Device generates speech and supports verbal communication. 
+- Adds motion for non-verbal communication to support social agency. 
+- There was a timer, waive, and reset motion.
+- The sidekicked helped communicate readiness and need for more time to type
+- Body language helped with seeing the need for more time, but the sidekick visualizes this.
+- There should be better integration with AAC devices. AAC development tools with personalized input methods. Helps with conversation dynamics. 
+
+Day 3
+
+# TACCESS Presentations Session 1
+> Echolocation as a Means for People with Visual Impairment (PVI) to Acquire Spatial Knowledge of Virtual Space
+- Understanding virtual spaces using echolocation.
+- What features of space can be perceived? 
+- How does active echolocation support people with visual impairment in acquiring spatial knowledge of space?
+- Participant opinions regarding the use of ecolocation to acquire spatial knowledge? 
+- Users could distinguish material the virtual room was covered in and identify the relative size and detect presence of 90-deree turns most of the time. 
+- Half of participants could combine this information to get a mental map of the space.
+
+> Fully Autonomous Vehicles for People with Visual Impairment: Policy, Accessibility, and Future Directions
+- How state and federal policy should guide FAV for BVI people. 
+- Fully autonomous vehicles need a person with a drivers license to be in the vehicle, which restricts BVI people
+- Want to integrate accessibility policy to both public and private settings, should allow interface in different forms. 
+- Embrace touchscreen/active feedback. Multi-sensory is helpful for both BVI and non-BVI persons. 
+
+> Investigating Best Practices for Remote Summative Usability Testing with People with Mild to Moderate Dementia
+- Mild to moderate dementia -> miss out on some benefits of technology because it's hard to use. 
+- Some user studies are carried out by letting participants have access to the tech, have remote access to the tech, or have them describe to researchers what they should do.  
+- Researchers should choose the platform most comfortable to participants. 
+- People should read things aloud and there should be a step to familiarize participants with the study process. 
+- Let them have the option to choose the setting for the interview. 
+- Ask for permission for everything and let the user change things back if asked. 
+- Basically communicate with participants in a conversational tone 
+
+> A Longitudinal Evaluation of Tablet-Based Child Speech Therapy with Apraxia World
+- Speech therapy game that gave children practice speaking 10 words with 10 repetitions each to help with pronunciation. 
+- Most people enjoyed the game and people tried very hard while playing. 
+- Children measurably improved their speech patterns in boht automated and caregiver feedback. 
+- Gave time back to caregivers and better fit their schedules.
+
+> Enhancing Internet Search Abilities for People with Intellectual Disabilities in Sri Lanka
+- Participants were used to using computers
+- Diagnostic session helped participants show their abilities and gave a baseline on technical skills
+- Workshop had verbal prompting or encouragement
+- Workshop had print materials with verbal descriptions
+- Workshop for multimedia eLearning format. 
+- People were able to transfer skills to web searching, increased their ability to search when given proper support. Participants were actively engaged.
+- Iterative participatory approach for gaining design insight w/ people with intellectual disability. Identified support needs and opportunities for IDD people to learn how to search for things on the web. Worked with a new community and people with IDD and gave a new perspective. 
+
+> A Comparison of Touchscreen and Mouse for Real-World and Abstract Tasks with Older Adults- 
+- Cognitive impairment happens to older adults. 
+- C-TOC (cognitive testing-on-computer) require motor skills and can impact results. 
+- Is performance affected by input devices? 
+- Is performance differences can be observed on Fitts's Law tasks. 
+- sub-tests are chosen and mapped to Fitts's tasks pointing and dragging for low and high precision tasks. 
+- Speed were faster with touch screen regardless of precision of abstract task. 
+- Lack of qualitative performance data, so behavioral patterns are also recorded. 
+- Make tests easier to take for aging users, e.g. larger interface with reasonable spacing, and support for decomposable tasks. Things like touchscreen sensitivity and normative data is needed before deployment. 
+- More data would be needed for calibration. 
+
+> The FATE Landscape of Sign Language AI Datasets: An Interdisciplinary Perspective
+- Fairness, Accountability, Transparency, and Ethics. 
+- Content of datasets varies, like labels and metadata. Characteristics of signers in the dataset affects who may benefit from the future applications. Stuff like faces lead to potential privacy concerns. 
+- Model performance depends on training data, excluding minority results means that the system won't work well for them. Model design is also important like data driven approaches or things with subject matter expert inputs.
+- Use cases: Sign language recognition, generation, and translation.
+- Dataset ownership is unclear, who owns the sign language data?
+- Access: Different people and companies or governments may want access to sign language data
+- Collection mechanisms: Like in the lab (uniform), remotely through video where quality is variable, annotations need to be linguistically based which needs a high level of expertise. 
+- Transparency and Understanding: Like how discussions surrounding sign language should be carried out in sign language to encourage people to participate. 
+
+# Novel tools and usability studies
+> American Sign Language Video Anonymization to Support Online Participation of Deaf and Hard of Hearing Users
+- Motivation is for anonymous communication online. Goals is to understanding goals of DHH interest in face transformation. 
+- Anonymized technology prototypes were used that changed the face, removed the torso, or had a mask of the face. 
+- Phase 1 checked performance of prototypes in understandability, naturalness, and anonymity protection
+- Phase 2 participants see themselves and judge acceptability of the technology and discuss concerns and uses. 
+- Face transformation videos with the torso displayed were better than without torso and tiger face. Understandability was reduced when torso was cut out. Participants didn't feel that any 3 were natural. The without torso was better for anonymization than with torso because it allowed them to not show the body characteristics
+- Said that they should try to increase understandability at the tradeoff of anonymity protection, the same for naturalness. Understandability increased with naturalness. 
+- Design considerations include allowing users to choose which option of anonymization they could use and let them weigh the tradeoffs. Users wanted a base level of naturalness that avoids interfering with the viewer's focus on the message. Video viewers and creators must be thought about. Ethical use of technology? To avoid impersonating people, the system should produce a novel composite/hybrid of the source and target face. 
+- Changes in research domain in 5-10 years? sign language recognition being automated would be cool. Better algorithms for transforming videos to reduce latency so transformations are more natural. 
+- Identify signer? Type of technology to obscure identification by movements? -> Able to identify by style of signing. There are computer vision algorithms that do motion and movement tracking. At this point not sure how various each person's style of signing can be categorized or if there's a standard, but motion of signing can be examined. Patterns can be extracted and maybe have the signing style be altered. Some people shown themselves and they said that they didn't recognize themselves. No torso led to higher anonymization. 
+
+> Designing Tools for High-Quality Alt Text Authoring
+- Automatic alt text is AI generated, which aren't great. 
+- The goal is to include pointers to alt-text authors
+- 12 sighted alt-text authors reviewed by 6 BLV reviewers
+- Interface changes altered alt text quality. Alt text suggestions helped people add more information and starting from automatic alt text influenced quality. 
+- Aimed for Accuracy and Completeness, conciseness vs. detailedness are counter to each other
+- One alt text fits all is not the most desirable because people might want varying levels of detail
+- Changes in research domain in 5-10 years? Make sure that ethical issues aren't preserved, like texts that describe people and their identities
+- Concerns in automatic alt text? Automatic alt text needs to be checked for accuracy since they could describe what's in the image, but might not be accurate or may miss some things.
+- summary before more description? This is a place for tools to create high-level descriptions and then more detailed ones. 
+
+> Slidecho: Flexible Non-Visual Exploration of Presentation Videos
+- The goal is to make online videos accessible 
+- Takes in video; extracts slide frames by removing videos (relied on detecting shot/slide boundaries); slide elements (slide number, notification that slide has changed, used microsoft scene detection service), many elements are redundant with slide and use cosine similarity of embeddings to; and described elements (didn't capture images vs. presenter image descriptions well). 
+- User study with no synchronization and with sync. All questions were answered accurated. Sync mode took less navigation time and led to less slides being viewed. 
+- Changes in research domain in 5-10 years? More robust, multi-learning approach to mitigate information differences. Adaptability/Personalization is important.
+- How will it be deployed? Able to integrate in any existing video platform, but what works better or worse for the system? The technique could apply to mostly presentation videos, but videos with many shot changes are hard (maybe have ongoing video descriptions). 
+- How to make it effective/usable? Evaluate usability from the presenter side. 1. Accurate judgement between visuals and natural language text. Image description can only generate automatic descriptions. Visual and verbal alignment are straightforward techniques that can be improved upon. 2. There's an added interface for authors to correct errors. But there should be a better design for users to edit contents. More flexible interfaces would be nice.
+
+> VStroll: An Audio-based Virtual Exploration to Encourage Walking among People with Vision Impairments
+- People with visual disability have a hard issue with exercising due to safety and other concerns. 
+- There were blind sports. There are also exercise games like Wii Tennis or yoga. 
+- Walking + Virtual exploration (avoids monotony)
+- User selects location on google maps and it drops them to nearest road and starts describing the place as they begin walking. 
+- Binary spatial information (stuff on right go in right ear and vice versa for left). Able to get audio updates like distance walked/calories burned. 
+- User study found that over 7 days, 16 participants had 253 trips.
+- Getting updates helped with fitness goals. 
+- Perceived themselves as virtual avatars exploring places. 
+- They could learn about new areas and explore areas from their past. 
+- Participants wanted more features like fitness tracking 
+- Findings: Audio + haptic helps with engagement. positive reinforcements helped motivate users to do more physical activities. Point-of-interest-rich virtual trips can increase immersiveness. 
+- Changes in research domain in 5-10 years? Technology advancement -> 1. wearable, low-cost sensors, 2. geographic information from open street map (sparse in India) [otherwise it's very expensive to use Google Maps and not scalable in terms of pricing]. 
+- Similarity to games? Widespread games aren't accessible, but the games themselves can be played and have accessibility in mind. 
+
+# 50th Anniversary Panel 3: The Relationship Between Disability Rights and Digital Accessibility
+- Lose independence if he bought a new house -> No dials because of digital displays. 
+- They need an easy way for tech developers to think about and integrate accessibility without it just being bolted on. 
+- Must show costs of not being inclusive. 
+- Google Docs and Android weren't accessible -> Wasted engineering time/effort to fix it
+- Disability can happen suddenly. Digital environment changes more rapidly than built environment. There should be standards to guide construction to make things accessible.
+- Technological innovation has sometimes disadvantaged people with disabilities. Stuff built for people with disabilities can help people without disabilities, like captioning. Internet of Things vs. Internet of Accessible Things? Everything now has interfaces -> Should have accessibility features. Voice activation -> Leaves out DHH people. E.g. accurate animated children that can be lip-read. Approach with an open mind and be open to work with populations you want to include. 
+- As a researcher, you need to reach out to people in different populations to build technology to be accessible/inclusive. Should be an advocacy researcher to work with people with disabilities so that they have a place at the table. 
+- Web accessibility initiative. How to design web pages so that they're accessible? But things now work together and interact with each other. What it means to make things accessible changes as technology evolves. Accessibility feature v.s. usable accessibility features. Are people with learning disabilities included? Way to do this is with co-design. 
+- Affordability and Accessibility to technology is inequitable.
+- Tech literacy + More charging areas should be available. 
+- Disability data is needed not just from disability research. Disability status should be collected when collecting broad demographic data. 
+- Be careful on people who say that they are experts on all types of disabilities. People claim that they know everything but that's almost definitely not the case. There should be redundancy for ways to interact with a product. If a particular standard is set in place, make sure that different considerations are made. 
+- Disability is the only characteristic that can be attained at any time in life.
+- Make sure research is aligned with the needs of people with disability. WAI-COP (communities of practice) accessibility research in Europe. 
+
+# Poster Session 3
+## Session 1: Study Method & Community
+> Landscape Analysis of Commercial Visual Assistance Technologies - How do Visual Assistance Technologies advertise to users? The main goal is to leverage AI to provide visual assistance on iOS. Collects and stores user visual data on the cloud rather than on the device. Goal is to determine how they advertise and how that aligns with users/target populations.  
+> A review of how older adults’ computer skills and proficiency are reported in the literature - Prior technology skills impact study outcomes. How are older adults' computer skills reported?  
+> Interview and Think-Aloud Accessibility for Deaf and Hard of Hearing Participants in Design Research - Adjust to think aloud by describing action and then performing action rather than doing it simultaneously for people who talk
+> Meeting Participants with Intellectual Disabilities during COVID-19 Pandemic: Challenges and Improvisation - How to meet with stakeholders? Apply multi-modal qualitative research and try to keep participants engaged while avoiding distractions. 
+> Expanding Designing for One to Invite Others Through Reverse Inclusion - Explore prototypes with people with disabilities and it helps them connect with others. 
+
+## Session 2: Mobility & Navigation
+> Walker - An Autonomous, Interactive Walking Aid - Older people aren't super great with technology and interfaces. Walker with an interface and navigation gives sense of independence back to people with walkers.
+>>> Collecting Sidewalk Network Data at Scale for Accessible Pedestrian Travel - Sidewalk location width and cnnectivity + Infrastructure -> Helps with city planning and data collection. 
+> Robot Trajectories When Approaching a User with a Visual Impairment - Robots move so that they won't hit people they're trying to help. 
+> An automated AR-based annotation tool for indoor navigation for visually impaired people - AR label for items in 3D space. 
+>>> Clew3D: Automated Generation of O&M Instructions Using LIDAR-Equipped Smartphones - LIDAR iOS for path generation
+
+## Session 3: Games, Color, & Live Communication Support
+> Rehabilitation through Accessible Mobile Gaming and Wearable Sensors - Prevent long-term issues from joint bleeding. Play Access was adapted to use body gesture issues. 
+> Colorable Band: A Wearable Device to Encourage Daily Decision Making Based on Behavior of Users with Color Vision Deficiency - Hand camera to show color and material type. 
+> Inverse Color Contrast Checker: Automatically Suggesting Color Adjustments that meet Contrast Requirements on the Web - Gives suggestions to fix contrast issues. 
+> Social Haptic Communication mimicked with vibrotactile paterns - an evaluation by users with deafblindness - Vibration can be used for social haptic communication users. Vibrators attached on back of chair to draw vibrations on backs. 
+> PatRec: A Mobile Game for Learning Social Haptic Communication - Game for learning social haptic communication, vibrator on back of chairs.
+
+## Session 4: Smarthomes, Open Source Tools, & Accessible Citizen Science
+>>> Accessible Citizen Science, by people with intellectual disability - Citizen science should be inclusive and accessible. Improved self-confidence and well-being for people with disabilities. Worked on via SeeATree app, which adds significant trees. People with IDD tested the app and participants enjoyed the outint to use the app. Citizen Science apps should be accessible to allow people to give back to the community. 
+- Pandemic or not? During pandemic, but in Australia -> Easier to visit people at day center. 
+- Ideas for engagement for rural/remote/not near a program -> Local council area, but citizen science projects exist in a lot of places. 
+> Is home-based webcam eye-tracking with older adults living with and without Alzheimer’s disease feasible? - Positioning face and eyes and eye-gaze location process are hard. Alzheimer's -> harder for calibration. 
+>>> An Open-source Tool for Simplifying Computer and Assistive Technology Use - Sets up assistive technology on laptops. Bookmarks bar on the left. Same interface across different platforms. Digital affinity (talent) =/= Intelligence. Easier to find features. Can set the settings and transfer the assistive technology (uninstalls when you're done). Integrates this with system settings. 
+- User identification? There's a sign-in. 
+> Towards Using Live Photos to Mitigate Image Quality Issues In VQA Photography - Visual Question Answer using multiple (lower-quality-ish/blurrier) images  
+
+## Session 5: Web & Social Media
+> Accessibility Support in Web Frameworks - Are web frameworks accessible? Used WCAG. Looked for where errors can be displayed. React saw an error, Wave saw more errors. Usually not detected. 
+> Towards a Secured and Safe Online Social Media Design Framework for People with Intellectual Disability - Looked at literature synthesis, regulation, and data flow. Online social media user framework. Breaks up aspects of social media. 
+> Designing a Pictorial Communication Web Application With People With Intellectual Disability - Alternative for displays. Allows people to use pictures to communicate pictorially. 
+>>> SciA11y: Converting Scientific Papers to Accessible HTML - Machine learning to detect components in a pdf. Extracted figures and references. Machine Learning methods to get text, structure, and images. Adds markup that makes the paper easier to navigate for screen reader users. BLV interviews. Reading order could be incorrect. Math content might not be accessible. Problem with alt text came up. HTML and CSS make it easier to modify papers in a way that's easier to read for screen reader users. PDF technologies is just not the best format for these use cases. CSS + HTML lets people use browser features. Find copy and paste works very well. Section links are helpful. Translation tools can also be used. 
+- Why start with research papers in pdf formats? Reading was a big barrier. 
+- Usable for disability identity anonymity? Good first pass, but need equations and tables. Looking to open-source. 
+- Whether render html and then make the html render edit-able? Add annotations/alt text? Iterative process in the future is cool. HTML default format for papers would be cool. 
+- Visualizations/graphics that aren't image files. Vector images? Automatic descriptions for something like that? 
+
+- Parse equations from 
+
+# Paper Session 7: AI and Accessibility
+> Fluent: An AI Augmented Writing Tool for People who Stutter
+- Stutter -> Less competent/employable 
+- Older -> More conscious and can anticipate stuttering moments -> Avoidance/synonymous words/fillers
+- Words are phonetically embedded -> Distance is how close phonetics are -> Easy and difficult words -> Give words that are easy or hard to say. 
+-> Active learning + Feedback words get rated -> More personalization for each user  
+- Better than random with explicit feedback. Implicit feedback isn't as great. 
+- Improves reading for people who stutter
+- Takeaway, undergrad+masters+phd -> ML, but wanted accessibility-related/stuttering. Happy to work with speech specialists in the community. 
+- Simulated users? Primary goal was to identify phonetic patterns. Went to different self-help groups related to stuttering. Tried to gather common stuttering patterns -> Create complex patterns for simulated users. Need IRB. Humble beginnings into this research. 
+- Privacy is critical. There's a tradeoff. Incentivize researchers to go out and collect data but privacy is a concern. 
+- Effort put into collecting data, how do we encourage researchers to use the data? Grand challenges in Accessibility that people can work together and collaborate on? Not much authentic datasets on stuttering. Need more dataset creation for different communities. Don't just put it online. Ways in which data was collected, includes meta biases like data collection mechanisms. Possible positive and negative notes about the data should be included. 
+
+> Disability-first Dataset Creation: Lessons from Constructing a Dataset for Teachable Object Recognition with Blind and Low Vision Data Collectors
+- Image taken by people with disabilities should be included so that they can be learned as well. 
+- ORBIT is collected with the goal of recognizing data specific/personalized to users, like keys and cups. 
+- Better balance collection methods with machine learning requirements. 
+- Cultivating informed contributors? 
+- Built accessible data collection infrastructure -> Reuse was limited
+- Incentivize and compensate data collectors? 
+- Financial rewards/learning new skills as incentives? Chicken or egg problem of building teachable object recognizers without a dataset? 
+- One takeaway? Different communities need to work together to make something useful for the space of AI and accessibility. 
+- Who suggested taking videos? Balance machine learning requirements and collection methods. Wanted to try video because it's rich data and it increases the chances that the object is in frame. It was suggested by sighted researchers and it was explored with BLV participants to make sure that the videos can be recorded without too much difficulty. 
+- Ethics cuts across all of the work in AI/Accessibility. We want inclusive datasets but there might be privacy concerns
+
+> Sharing Practices for Datasets Related to Accessibility and Aging
+- Datasets don't exist regarding accessibility and aging. 
+- Goal is where we are with the data that exists, what's being collected/shared?
+- 137 datasets related to accessibility from 1984 to 2020
+- Keywords on search engines + repositories + authors -> Qualitatively Coded -> Analyzed focus and sample size and sharing practices
+- Language is smallest and speech is largest. 
+- Developmental and Learning were less represented and data was less common because children often had to consent to the data. 
+- There needs to be standardized practices, there should be a technical, legal, and institutional privacy frameworks regarding data collection/maintenance 
+- One takeaway? Data-driven innovation -> challenges handling different characteristics related to data prcatices and pursuing ethical concerns and privacy that are sensitive. We have to work as a community and it's great to have a conversation.
+- Diversity in data? Including data about people with disabilities and aging adults -> Less biased models -> Need to consider privacy concerns. 
+
+> WLA4ND: a Wearable Dataset of Learning Activities for Young Adults with Neurodiversity to Provide Support in Education
+- 17% neurodivergent children. 
+- What happens in settings with online courses where there aren't support staff?
+- Lack of inclusive dataset -> there's a need to collect data. 
+- Inclusive dataset of learning activities performed by young, neurodiverse adults. 
+- 9 participants with neurodiversity -> gyroscope, accelerometer, heart rate. 
+- 13 dimensions of features
+- 5 metrics per sliding window
+- Automated recognition of data would be easier. Limitation of data collection exist. 
+- Contributes a novel inclusive dataset, classification applied to neurodiverse populations. Suggests possible applications for the datasets.
+- One takeaway? For accessibility like HoH or visual impairments, IDD has less data/less present datasets. Building inclusive datasets with ground truths for different populations is important. 
+- Pay attention to PII when collecting data? Also consider risk of self-reported data. 
+
+-----------------------------------------------------------------
+
+Day 2
+
+# Health and support systems
+
+> Understanding Barriers and Design Opportunities to Improve Healthcare and QOL for Older Adults through Voice Assistants
+2034 expects old people to outnumber children. How do we improve care/technology for older adults? Semi-structured interviews to ask questions to patients and providers. They wanted easier ways to track medications, companionships, interactions with care providers, and voice-based tech. Medical and healthcare-related tasks expected to be easier. There should be some sort of monitoring to help guide people in case they forget about their health conditions. There should be conversational voice assistants to improve QoL for older adults. They did a survey of voice assistants and found some areas for improvements.
+- Challeneges? Working with older adults, as a researcher it's hard to do inductive/deductive coding regarding qualitative results. First accessibility research project so it's hard to interview with people/older adults. When they try to respond, they get distracted easily and conversations drift. 
+- People live in groups, how does this impact the study? Did not consider shared use case and it was mentioned under limitations. Older technologist complained about his wife experiencing that using Alexa's voice recognition features aren't that great. Not the major focus, but will be a future focus. voli.ucsd.edu
+
+> How Online Tests Contribute to the Support System for People With Cognitive and Mental Disabilities
+Diagnosing cognitive and mental disabilities is hard. How do online tests help with diagnosis? 4 themes. Online tests provide some reflection and sometimes gives some affirmation of conditions. Family members might stand in the way of getting a diagnosis. Online tests provide support after diagnosis? Professional diagnosis sometimes don't have enough information. Helps keep track of mental state and ability over time. Facilitate communal attachment? Gives some source of confirmation from community. Challenges? Hard to trust online tests. Some are scared that results will be shared. There is also an over-interpretation of results. Online tests can help fill some gaps in the support system for people with cognitive/mental disabilities. 
+- Challenges? Online recruitment -> Self-selection bias (people who already participate in these online forums already accepted their disability identity might not have access to professionals that can confirm whether they have a disability or not. It's harder for them to participate in research and let people know that they have those conditions.) Trying to push towards norm of inclusiveness of people who take these tests.
+
+> Designing an App to help Individuals with Intellectual and Developmental Disabilities to Recognize Abuse
+Hard to identify, especially if they didn't get training to identify it. App to help people with IDD identify abuse. Co-design process with two teams from different backgrounds. There are learning design concepts and engagement design concepts. Co-design findings, static content should exist for overall understanding; motivational elements should be rewards rather than punishments. There are grounding experiences in case people got triggered. Participants liked videos even though it was triggering. Engagement elements were necessary. Grounding activities should be available at any point rather than just the end. 
+- Challenges? Co-design process, no power dynamic; so there's a lot of wind-up for trust-building which is time-consuming. 
+- Julie asked how it helps with reporting abuse? App gives examples of to people with IDD about abuse. Voice of people with IDD is disregarded. Teachers with IDD saying that being able to show videos/examples gives more credibility. It also gives an easy reference for calling for help.
+- Abuse sometimes isn't reported properly -> This app gives autonomy and control to people with IDD. 
+
+> Beyond Fun: Players’ Experiences of Accessible Rehabilitation Gaming with Spinal Cord Injury
+Games make exercises more fun, but there may be negative experiences if the games are not designed well. Spinal injuries may lead to a variety of disabilities. Passive cycling is unengaging and leads to time to reflect, usually leading to negative thoughts. Gaming with challenges and a progression-tracker helps with engagement. Games that were too difficult made people feel like they aren't able to overcome the challenges. Context of rehabilitation, when badly designed it's emphasizes their disability. Participation gives autonomy, challenges support competance, socialization helps with relatededness. 
+- Points? There were scores, but game scores motivated people to work harder in their rehabilitation. 
+- Challenges? Recruitment -> Hearing participant statements as they meant them, getting grounded with their experiences rather than coming in from own perspective. Understanding what they mean.
+- 6 participants with SCI and they described their injury as something that happens to them/things that were done to them. What were they actually doing? Where is the sense of autonomy? 
+
+> VIDDE: Visualizations for Helping People with COPD Interpret Dyspnea During Exercise
+Chronic Obsructive Pulmonary Disease (Progressive lung disorder). Respiratory Impairment results in Dyspnea during exertion, which lead to people avoiding physical activity and leads to physical deconditioning, which leads to more dyspnea. Pulmonary Rehabilitation can help. VIDDE helps with visualizing dyspnea, which helps give feedback on breathing and distress levels. VIDDE helped give a sense of relief and reassurance and helps inform users of their conditions when they feel unsafe. 
+- Recruitment, people with COPD are susceptible to COVID. They had participants participate in their own houses, which led to the exclusion of people with severe COPD for health concerns. 
+----
+
+Screen-readers and effective descriptions
+> Understanding Screen-Reader Users’ Experiences with Online Data Visualizations
+Visualizations are inequitable for screen reader users because many exist as images which don't have additional information. There were two studies: one qualitative with 9 screen-reader users and one quantitative with 36. Problems with online data visualizations and information they seek. Screen-reader users first look at data holistically and wanted multi-modal visualizations. Both accuracy and extraction times differed between screen-reader and non-screen-reader users. Need discoverable and comprehensible visualizations. Need both a holistic view and drilled-down exploration. Current approaches aren't accessible and they need to spend a lot more time on visualizations to get the same understanding of data.
+- Pay attention to personalization of tools and software for demographics. Needs to cater to demographic needs. 
+- If researchers create charts, should they include a table as well as text? How to make charts more accessible? They wanted tabular and textual representations of data. What was in the interactions that takes more time? If there are a lot of data points, how do users know what is the max or minimum? There is a cost to tabular and textual information. 
+- Information visualization next steps? Voice activated system for questions. Allow users to ask questiosn about visualizations and let them guide the exploration. 
+- Avoid embedding confirmation of how we interpret images/videos? What is someone trying to explain or extract from the data? What is the basic information that people try to extract? Overall trend? min max? title of visualization? Compare data points? It's interesting to explore if given a visualization, what is the perceived information about a given chart. Kind of touches what people look for. 
+
+> Understanding Screen Readers' Plugins
+Plugins extend software built-in functionalities. Some screen readers have plugins. This paper asks why blind users need screen reader plugins. Makes more programs more accessible and Plugins modify screen readers' existing features, provide audio feedback on shortcuts, and can add more shortcuts. Plugins are developed usually altruistically, there are no financial incentive, and it requires a background in programming/scripting. Plugins are distributed and deployed usually with no centralized plugin repository and ad-hoc approaches are used to find plug-ins. Maintainability is low or non-existent, not a lot of quality control. Sometimes there's poor documentations and they introduce new shortcuts that are hard to memorize. Malware in plugins, ransomware; needs feedback and history of developer. There's a need for raising awareness about screen reader plugins and building a central plugin repository. There should be engagement with 3rd party developers through incentives and encouragement of individual plug in development, and a central plugin repository. 
+- Software is partially accessible. Only way to combat inaccessibility is with plug-ins. Developing plugins is difficult and needs some sighted assistance working philantrophically. No good way to share work with others. What is the motivation/incentive to continue building plug-ins? There is no incentive for communities that build the plug-ins. How do we make development easier/incentivized. Third thing is that many people in the space work on the thing for a while, but how does it get maintained? Does it even get used? 
+
+> Going Beyond One-Size-Fits-All Image Descriptions to Satisfy the Information Wants of People Who are Blind or Have Low Vision
+Alt-texts are needed for making images accessible for blind/low-vision people. Many images don't include alt text. Many image description services aren't trained with input from BLV people. Images lose context. HCI researchers have studies regarding what BLV people want for images. How does context influence what people want from images. Scenarios were made up of image sources and the goal for the consumer. What content would they want based on each scenario? People who were blind wanted different parts of the image to be described depending on the goals. This was a study on context-aware image descriptions. There should be minimum viable descriptions for image descriptions and ways to communicate the information. 
+- Image descriptions should be personalized. People with different information goals want different things from images. 
+- Need to provide basic terminology and allow people to ask visual questions. The idea that image descriptions relates to voice assistance and alt text. 
+- Avoid embedding confirmation of how we interpret images/videos? There's a difference between exploratory search and task-based search. There's distinct processes inherent to each one. There's a non-visual/visual sense-making that filters through the information. Interested in non-visual/visual sense-making strategies.
+
+> The Efficacy of Collaborative Authoring of Video Scene Description
+Audio descriptions describe what's happening in the video. ViScene novice author reads initial scene description, sighted or blind reviewer reviews the description, and then the author rewrites. They had blind and sighted participants in a study for reviewing the descriptions. They compared how sighted/blind evaluated scenes, comparisons, and cost calculation. Sighted evaluation improved the descriptions. Monetary cost ranged from 2.8 to 5.48 dollars. Talked about how to improve collaborative process. 
+- Wanted cost/time effective. Wanted to start with something simple, maybe have a small description for scenes. Some videos are really packed and there aren't places to put descriptions. 
+- Images, charts, plugins. Video descriptions? Is adding information the only thing we can do? People put a bunch of information in the descriptions. Anyone can describe anything and people have different information needs. Getting feedback from blind people gives some idea of mixed ability collaboration, so that they can identify needs of audiences. Blind people can give feedback to authors about amount of information. 
+- Avoid embedding confirmation of how we interpret images/videos? There's a cookbook of how to provide a good audio description. Challenge of personal objectivity was there, end user must give feedback on what they want/need.
+
+- In the past they wanted to describe images in general. Now we're looking at charts, scale, and personalization. There's problems with scaling. Companies are now looking into the space instead of just 3rd parties doing stuff. Where do we think we'll be in the future? 
+Abi says that people should be getting more information than just what they're looking for. By 2036 there'll be equity in access as well as interpretations. 
+Ather doesn't want to talk about this in 2036 because ideally it's not an issue then. There's an emphasis on what's important about the image or chart, but does this mean that unimportant information doesn't need to be communicated? How to communicate information in a way that is equitable in a way comparable to sighted users. 
+Syed plug-in store with ratings and comments. If there is a better pipeline for accessing, developing, and maintaining plugins, there wouldn't be a problem anymore. 
+
+- Opportunity for convergence of technology. 
+
+50th anniversary history of SIGACCESS
+- What does ASSETS mean? 
+ASSistivE TechnologieS 
+
+- Original focus? Assimilating blind programmers. Convert newsletter from professional activities for the blind to 3 different areas, blind deaf and motor-impaired. 
+SIGCAPH moving into SIG removed SIG from ACM. 
+Social Security Administration asked SIGCAPH to make a building more accessible. Accessiblity wasn't a focus at the beignning, but it was the beginning of a focus on making things more accessible.
+- How did ASSETS start? 1978 for 6 months there was no leadership. Established ASSETS conference to provide forum for academia and companies to talk about the development of computer systems for people with impairments/disabilities. 
+- There was some funding from the department of education. 
+
+- How has the research space changed? Did BLV and deaf or HoH research -> cognitive and language-learning issues. There's more involved participatory studies. Language involves and some language makes you wince. Words matter and words we use to talk about people and describe their characteristics can impact people and how the feel. 
+
+- Excited for future? 
+Focus on end users in he SIG. Maybe medical advances fix some issues. AI revolution. 
+
+- HireVue used computer vision that looked for things like eye contact that might have an impact on sighted vs. non-sighted people. 
+
+- Nature of content? Access? Access to what? 
+
+- Hopes for new members? Takeaways? Making connections, feel free to reach out. 
+
+Adobe - PDF Accessibility. Changing fonts. Adding lines for focus. Document readability improving reading efficiency.
+
+Elsevier - Science Direct is peer-reviewed accessible platform. Accessibility module that makes sure charts and graphs are accessible? They do research to make things more accessible. 
+
+Web & Social Media
+> Making web accessibility more accessible - Hard to make things accessible because not clear how to make it accessible. Declarative framework for web components, innovative accessible testing tools, structured categorical identification. Browser tool that replaces browsing experience with accessibility experience like simplifying the page. There are static accessibility checks. A11A to create wiki for creating accessibility-related resources that makes it easier for developers that aren't familiar with web accessibility. 
+> Designing Sensory and Social Tools for Neurodivergent Individuals in Social Media Environments - social media and sensory guides for neurodivergent individuals.  
+> Sound Cells: Rendering Visual and Braille Music in the Browser - Letters transcribed to music, rendered in Braille. Two experienced blind musicians -> Good between print and tool. 
+> Designing a Podcast Platform for Deaf and Hard of Hearing Users - Transcription of podcast for Deaf or HoH that displays text and has text formatting options.  
+> Image Explorer: Multi-Layered Touch Exploration to Make Images Accessible - Hierachical view of image that has a breakdown for describing parts of images. Generating alt text is hard, missing crucial information or it may be incorrect. Facebook has lists of information. Microsoft has SeeingEye presents information in selected area. Text is easier and quicker to navigate, but touch provides spatial information. Allows users to make judgement of auto-generated captions. 
+
+Information Access | Study Methods
+> The Use of Automatic Text Simplification to Provide Reading Assistance to Deaf and Hard-of-hearing Individuals in Computing Fields - Reduce text complexity. Automatic text simplification to help people with difficulties with more complex text.
+> Audio Description Technology for Live Theater: Exploring New Approaches - Text reading compared with actual performance to see when to add scene description
+> Uncovering Patterns in Reviewers’ Feedback to Scene Description Authors - 4 teams created for different types of feedback: quality, speech act, required action, guidance. 
+> Facilitating Sharing and Re-use of Accessibility Datasets: Benefits and Risks - Data sourced from people with disabilities and older results. Systemic Review -> Survey + Interview -> Evaluation. 
+> Respectful Language as Perceived by People with Disabilities - Person-first language vs. identity-first language. ASSETs is usually seen as respectful. Study on language use. 
+
+AR/VR | Creativity & Design Tools
+> Mobile Augmented Reality Using Deep Learning for Visually Impaired People - ARML, uses computer vision to query items. Safe model is mark closest item. Query item is distance from the world. 
+> See-Through Captions: Real-Time Captioning on Transparent Display for Deaf and Hard-of-Hearing People - Real-time captioning system that has a transparent display. Speech is transcribed and reversed so that both people can see on both sides.
+- Why not AR glasses? Conversation partner can't see results. When using transparent display, can easily see result of speech recognition. 
+- Brightness of display is limited. 
+> Shifting Narratives: Understanding and Amplifying Creative Labor among People with Disabilities - Work is filled by deficit, study on how people put put effort into creative ventures. How creators involved their disabled children. There were questions of monetization and disclosure. Blind weavers -> Field observations and interviews -> Audio-enhanced loom -> Challenge misconceptions of disability. Disabled content creators in online market places -> See how they get involved in the marketplace. 
+> CollabAlly: Accessible Collaboration Awareness in Document Editing - Gives information and different voices for different collaborators. Adds sounds to actions. 
+> myView: End-user Authoring of Virtual Environments for Therapy - Interactive therapeutic access? Creating virtual spaces allows for reminiscence in contexts. 
+
+Programming & Making
+> Helping Students with Cerebral Palsy Program via Voice-Enabled Block-based Programming - Code blocks using speech recognition. 
+> Programming by Voice - Novice programmers are surveyed to voice blocks of code and found that people skipped punctuation
+> Fostering collaboration with asymmetric roles in accessible programming environments for children with mixed-visual-abilities - Assymetric roles in mixed-ability classes. Different roles -> constant communication. Result is high potential for learning and social interaction.
+> Kavita Project: Voice Programming for People with Motor Disabilities - People use voice to write python code. 
+- Based on limited vocabulary compared to NLP route. 
+
+Learning
+> Tactile Play and Literacy Learning for Blind or Visually Impaired Children - Interview with non-English BVI people. Tangible games for BVI children. Longitudinal study over a semester.
+> An Intelligent Math E-Tutoring System for Students with Specific Learning Disabilities - Math anxiety? Gaze is used to detect negative behavior. Intervention like dance is used. 
+> Making Math Graphs More Accessible in Remote Learning: Using Sonification to Introduce Discontinuity in Calculus - Sonification for discontinuities. Removable and jump continuity is hard to interpret. 
+> Active Math Learning for Students with Writing Disabilities - Guided vs. unguided structure for math writing assistance. 
+
+Representations of disability and researcher perspectives
+> What difference does tech make? Conceptualizations of Disability and Assistive Technology among Kenyan Youth 
+- There's a stigma against people with disabilities. Global south sees disability as disasterous and prevents people from entering the workforce/providing. Community and family bonds are stronger in the global south. 
+- Assistive technology is seen as essential. 
+- People describing people with emotion used words charged with negative emotions. 
+- Stigma by association.
+- Assistive Technology is seen as permanent and the only tool capable of normalizing capabilities
+- Assistive Technology was seen as a sign of having access to resources. 
+- Accessibility research should focus on capabilities of people with disabilities. Should try to break mental assocations between disability and poverty. 
+- Representation challenges? Image is very linked to language and culture. People might not have terms to describe different types of disabilities in their local languages. Things can be lost in translation in descriptions.  
+- Scaling up visibility of people with disabilities? Showing people in media. 
+- 1. Connection between visibility and poverty is stronger when we move away not from global north vs. south, but there is no welfare state. Not described as functional impairment, but struggling to find work. Poverty is seen as worst consequence and this has implications in assistive technologies. Affordability vs. cost of assistive technology? Who's bearing the cost of the technology? What is affordable for an individual vs. an institution. There should be a greater focus on poverty and disability, especially when welfare states are not present. 
+
+
+> "That's in the eye of the beholder": Layers of Interpretation in Image Descriptions for Fictional Representations of People with Disabilities
+- Inclusive imagery and accessibility in image descriptions. 
+- How do we describe disabilities? 
+- Several themes: Disability in Context, Describing Disability, Level of Detail, Sites for Introducing Bias, Ableism in Image Description.
+- Describing Disability: Recommend that when identifying fictional characters, it may be better to describe assistive devices rather than assigning the fictional subject an identity.
+- Ableism can be presented in different ways
+3 levels:
+  - Real identity or group that exists vs. artist interpretation
+  - Describer using their own bias in their interpretation
+  - Reader interpretation used to make the final judgement of images
+- Strength in focusing on link on how interactions with people with disabilities inform the creation of technology. 
+- How to make sure that research falls under umbrella of accessible computing. 
+- Fictional characters with performers with preferred descriptions? The author may have intended descriptions. 
+
+> Accept or Address? Researchers’ Perspectives on Response Bias in Accessibility Research
+- Response bias is skew in participant response. This comes from study design and power dynamics 
+- Asked accessibility researchers about how they think about and handle response bias
+- Researcher bias, perspective of researcher influences response of participants. e.g. "Charity" model of research. 
+- Identifying response bias might lead to invalidating experiences. 
+- Do researchers want to address or accept response bias? 
+- Questions impacted by sensitivity, abstractness, or the charity model of disability
+- Methods impacted by framing, environment, relationships, and question-framing
+- Response bias in analysis might be inevitable but researchers can try to contextualize contradictory responses or possible influences. They need to also consider structural factors like structural ableism that might have impacts on participant responses.
+- As researchers, how to control bias? Addressing questions in a way that's sharing lived experience? Changing the study design to allow users to use the technology beforehand. 
+- Scaling up visibility of people with disabilities? No research handbook, not sure how to get started? Paper is a beginning of a discussion on response bias and creating a living document might help other people in the field.  
+- Want to control response bias -> Skew in data? Want to get rid of response bias. Whether we should get rid of response bias itself is another question. Framing of projects and environment (inclusive/accessible) changes the context. 
+
+> Mixed abilities and varied experiences: a group auto-ethnography of a virtual summer internship
+- Working experience across ability spectrum
+- Virtually induced inaccessibility: Impossible to get attention for someone who was hard of hearing. Virtual platform didn't allow people to see setups. 
+- Allyship: Chat can be a vehicle for addressing inaccessibility. Chat can also be used to make accomodations when other options aren't available.
+- Difficulty remembering accomodations: It's hard to remember what to do as the number of disabilities grows.
+- Conflicting access needs: Access needs may conflict with each other, slides might be smaller if there's an interpreter on video. 
+- Reflections/recommendations: Hold team discussions to establish norm (less access conflicts) and create lists of norms with explanations (revisit norms)
+- Way to ensure good representation is that people with different abilities are included in different settings. 
+- Being able to share knowledge surrounding best practices. Burden of best practices falls on disabled scholars and ends up having to advocate for themselves. 
+- Different accommodations helped everyone sometimes, e.g. saying your name before you talk. 
+- Scaling up visibility of people with disabilities? Reading accounts and looking at disability studies for accounts. Looking at disability activists and experts. 
+- Establishing workplace norms? Different levels of awareness in accessibility spaces. Normalizing and always talking about accessibility helps. 
+
+Business Meeting? 
+
+---------------------------------------------------------
+Day 1
+Spaced out over 5 days because people have lives outside of the conference and there's no traveling. 
+
+# Welcome - University of Maryland HCI does Accessibility research. TRACE research center 50th year anniversary, impacts in Windows and Apples and web accessibility. 
+
+# Axel Leblois - DARE Index
+Measuring digital accessibility. 
+Daily participation for messaging and video-conferencing apps is high. 
+Digital accessibility is needed in all settings. 
+G3ict founded in 2006 United Nations to focus on digital accessibility/information accessibility. 
+Convention on the Rights of People with Disabilities (CRPD)? Accessibility is one of 8 principles in CRPD. CRPD requires private and public entities to make things accessible. 
+How does CRPD adoption/impact measured? 
+DARE index variables selected via Legal and Policy foundations for CRPD, Capacity to Implement, and Outcomes. DARE index has a breakdown for different aspects of accessibility commitments, stuff like definitions of disability/accessibility. Are there actually agencies that advocate for people with disabilities. Analyzing performance for policies is based on how far along the implementation of the policy has progressed. High and lower-middle income countries score higher on the DARE Index. CRPD ratification earlier lead to generally higher DARE scores. 
+Reasonable accomodation is important for people with disabilities. 
+G3ict has a division that teaches professionals about making things accessible.
+Very hard to get feedback, so getting people with disabilities involved is necessary for addressing needs and exectations of people with disabilities. 
+Different forms of media like have sectorial accessibility policies like TV, Web, E-books, Public procurement, and Mobile. 
+Level of actual implementation is very low, most forms of accessibility policies for media are minimally or partially implemented. 
+What are the next things in the push for greater accessibility? 
+There is a measured slow push for accessibility/policy-making. 
+Capacity-building and training/certification of accessibility professionals are necessary. 
+1.) Need to increase accessibility professionals 
+2.) Promotion of accessibility standards and public procurement policies - Can't spend public money on things that discriminate against people with disabilities 
+3.) Promote policy frameworks in emerging areas of concern - Justice systems are moving to digital 
+4.) continuing to deliver capacity building programs for governments and advocates
+5.) DARE Academy via Virtual Platform
+
+Q&A: 
+>>> How are outcomes measured in a way that isn't just checking off boxes?
+- Fully aware that some countries need to have the ability to provide accurate data and they know people in the countries from an advocate standpoint and people respond to inquiries
+- They periodically check back in on countries to make sure that they're still accurate. 
+>>> Accountability of DARE Index?
+- Comparison of accessibility in different countries
+- Trying to show that a country didn't implement a key aspect of CRPD? -> Pressure built on countries
+>>> CRPD for countries vs. companies? How are these companies tracked?
+- Private sector is very involved in digital accessibility space. 
+- They have strong programs for promoting digital accessibility and the best solution to the field is using reasonable accomodation as a baseline. 
+- Can't monitor corporations the same way and G3ict isn't focused on corporations
+- Promote how big corporations implement accessibility and promote friendly competition for accessibility 
+
+# Inclusive Education
+> Enabling meaningful use of AI-infused educational technologies for children with blindness 
+PeopleLens is a camera attached on blind children that gives real-time cues of the social environment through spatial audio. 
+There are games that help develop social cues
+Curriculum has several goals 
+Measuring efficacy of AI technologies - Must be aware of people 
+Supporting Meaningful Use - Want ASSETS to build on meaningful use of technology
+Challenge the status quo
+> Understanding Disability Services Toward Improving Graduate Student Services
+Fewer undergraduate students with disabilities go on to do PhDs -> Less diversity in graduate programs 
+- Graduate Student Service Offices are insufficient and ineffective, some are shared with undergrads
+- How do disability services offices help graduate students; 
+- Usually need to go through some steps to get help from disability services offices
+- Research work, off-campus activities, and assistive app requests were categorized as personal study and were rejected. 
+- Accomodations for graduate students don't exist separately from undergraduates
+- Tensions of ableism and implications of registering with DSO. 
+- Not a lot of assistive technology specialists
+> Teachers of the Visually Impaired Compensate with the Absence of Accessible Block-based languages
+- Block-based programming isn't accessible by default. 
+- Used Swift Playground that is a mix of block-based and not. 
+- TVIs said students didn't have keyboard or VoiceOver skills. They lacked precursor skills
+- TVIs said that some students had limited orientation and mobility
+- TVIs may not have experience in programming. 
+- Limited or too complex lesson plans for students
+- TVIs compensate with lack of accessible BBLs? Tangible blocks used as an alternative because students and manually feel things
+- Prefer swift playground because of how they handle accessibility. 
+
+Q: Offices and Technology specialists all seem to need to be comfortable with technology? 
+- Educators need to think about what they're trying to teach and how tech supports what they want to teach. 
+- Educators said workshops teaching technology helped. 
+- Most assistive technology staff didn't have accessibility specialization -> institutions w/ disability services staff should be able to provide this 
+
+> Why computing-related majors? Why top-ranked?
+- Make sure people are involved in engineering efforts. Top universities have good PhD programs and lots of support for students
+
+> How to teach children/society ethical aspects of AI? Any insights?
+- How to perform pattern recognition -> (e.g. collaborative filtering) Talk/show about how systems fail and give them ideas about where the technology is limited or has gaps. 
+
+> Why iPad apps are preferred? 
+- VoiceOver availability
+- Recommended by schools for the blind. 
+
+# Trace Center 50th anniversary 
+- TRACE pinpoints questions and critical areas of accessible technology. 
+- People who worked with TRACE had two perspectives, one from the standpoint of people with disabilities and another from an engineering standpoint
+- People need consensus from government and private companies to achieve results. Different stakeholders should be involved in all levels of promoting digital accessibility, how do we ensure dialogue happens? 
+- Next big step for accessibility? Positive capabilities for AI. Regulations stifling innovation vs. regulation forcing companies to address accessibility. 
+- Make things accessible for people with disabilities by thinking about how to design it if 100% of people have the disability
+- Infobot? Links in comment
+- How tech has changed? No microprocessors and controllers, book has stuff. Evolved over the years and 2.5 decades ago had no awareness of people w/ disabilities using computers. Same today with cognitive disabilities. Surprised people with disabilities had jobs. 
+- Getting involved in policy setting? Standards work, policy work, not enough people in the area to work on this. Check out www.w3.org/WAI -> Get Involved; Need community groups to come together and work towards making things more accessible. 
+- access-board.gov has meetings about 508
+- Challenges to predict the future? Try to gather futurists in HCI, sci-fi writers. HCI looks at what interfaces will look like in 20 years. BCI, AI reinventing interfaces. Challenges, freight-train gathering speed running into the mountainside??? w3 community working on different technologies -> People with disabilities sitting at the table -> Some discussion has a real-time discovery process, e.g. designing accessible user needs in VR environments. Challenge is how to continue cross-disciplinary dialogue where accessibility isn't left and and has a first-person visibility. Make public policy flexible so regulations can live longer. 
+
+Microsoft
+ORBIT dataset - Teachable object recognition with blind and low vision data collectors
+New England and India - Corpra for ASL 
+Designing tools for high quality alt-text authoring. 
+Enabling Meaningful Use of AI-infused Educational Technologies for Children with Blindness: Learning from the Development and Piloting of the PeopleLens Curriculum
+VStroll - Audio-based Virtual Exploration to Encourage Walking w/ people with Visual Impairments
+Soundscape - Map in 3D Sound
+Understanding Telework Experience of People with Disabilities
+Mixed Abilities and Varied Experiences: A Group Auto-Ethnography of a Virtual Summer Internship 
+
+Apple
+1 billion iPhones
+machinelearning.apple.com?
+Screen Recognition - Making inaccessible apps more accessible by segmenting app screen pixels
+Improved chart accessibility for VoiceOver
+Accessible Speech Input - people who stutter INTERSPEECH
+Sound Actions fo Switch Controllers? 
+
+Health & Exercise
+Activity Recognition in Older Adults with Training Data from Younger Adults - Need more data from older people because accuracy from inference isn't very good
+Increasing Access to Trainer-led Aerobic Exercise for People with Visual Impairments through a Sensor Mat System - Instructions rely on visual cues, pressure sensor mat infers location of foot and stuff to give feedback on step arobic exercises
+Determining a Taxonomy of Accessible Phrases During Exercise Instruction for People with Visual Impairments for Text Analysis - No accessible verbal instructions, taxonomy of in/accessible phrases
+Designing Apps to Support Engagement by Older Adults: A think-aloud study of the eNutri dietary-intake assessment web app - Calculates daily nutrition and did a study on how older adults used a web-app
+"What just happened?": Understanding Non-visual Watching Sports Experiences - Get sports watching experiences on different platforms and got information about what they needed for their sports experience
+
+Reading Improvement
+Measuring Text Comprehension for People with Reading Difficulties Using a Mobile Application - Multiple-choice test to test comprehension, mobile app for reading comprehension. Time to read is faster, but no difference in comprehension. 
+iReadMore: A Reading Therapy App Co-Designed by People with Aphasia and Alexia - Therapy for treating aphasia with a travel story
+Augmenta11y: A Reading Assistant Application for Children with Dyslexia - Certain fonts and colors are more readable. OCR App that displays text in dyslexia-friendly way
+Voice Creator: Giving Customized Voice to the Voiceless for Online Communication - Investigate voice attributes and impacts on users perceptions/preferences. Different voice attributes can be selected to create a voice.  
+Exploring the Requirements of Abuse Reporting for Persons with Intellectual and Developmental Disabilities - Formal complaint for people with IDD, shows it's okay for Massachusettes 
+
+Live Communication
+Auditory feedback to compensate audible instructions to support people with visual impairment - Pitch, volume, equalization shows equalization and volume increase helps with comprehension
+Word Cloud for Meeting: A Visualization System for DHH People in Online Meetings - Word clouds are created to recognize topic transitions. Being able to mute words, only having nouns and verbs, choosing colors, and systems varied. Don't hide visual/words behind faces. Position should show recency of words. Shifts of topics may become mixed up. 
+Visionary Caption: Improving the Accessibility of Presentation Slides Through Highlighting Visualization - Forces audience to look at two areas with captions. Default caption and adding annotation for part of visualization. Moving box moves caption near space where the visualization was highlighting. Moving box bad because they can't anticipate where the box would be. Highlighting parts of histograms is cool. 
+SynSLaG: Synthetic Sign Language Generator - Needed a lot of data for 3D motion data generated from Nagashima database for sign language. Different body shapes and clothes. (Sign Language Recognition and Translation (SLR and T). Needed a lot of datasets for high accuracy and generalization. Has sign language data from different view points. They fit 3D Motion Data captured from human motion into CG and creates synthetic videos from CG. SYNTH is lower than CG because CG was made for Nagashima database. Incompleteness to create a hand shape that raises only one finger, hand position is shifted downward, no facial expression. 
+Equivalent Telecommunications Access on Mobile Devices - Modifies phone channels to allow for video and text inputs. Video relay capture services. Many phone numbers and apps, 4 for one person, it's time-consuming. Not connected to general contact/emergency contact list. If he loses contact then what happens? 
+Thought that they could have a direct connect to telecommunications relay service through one number to make things easier. Making calls through TRS. Users can turn on VRS and empowers D/HoH people and still connect them to family and friends. The goal is to continue collaborating in order to get an all-in-one solution for D/HH phone users. 
+
+Mobility and Navigation
+Sidewalk Gallery: An Interactive, Filterable Image Gallery of Over 500,000 Sidewalk Accessibility Problems - Pictures of sidewalks for opensourced voting of problematic sidewalks for wheelchair users
+GazeMetro: A Gaze-Based Interactive System for Metro Map - Gaze are used to navigate/select on a map
+Experimental Crowd+AI Approaches to Track Accessibility Features in Sidewalk Intersections Over Time - Labeled sidewalk features that gets propagated into past images
+"Would the smart cane benefit me?": Perceptions of the Visually Impaired towards Smart Canes - Asked visually impaired smart-cane users about features they needed and addition information about how to use the tool
+
+Creative Design Tools Touch Screen Access
+Adee: Bringing Accessibility Right Inside Design Tools - Gives designers accessibility tools. Gives color-blind tools and stuff. Stuff like color contrast and touch size
+Using Games to Practice Screen Reader Gestures - Games used for visual impaired users. Repeated actions help users get used to actions. 
+New Metrics for Understanding Touch by People with and without Limited Fine Motor Function - Touch process is ovals. Metrics inform about usability of touch. 
+A Preliminary Analysis of Android Educational Game Accessibility - Proposes two game-design challenges, avoid dexterity, allowing switch accessible elements in games. 
+
+Immersive and wearable technologies 
+> Nearmi: A Framework for Designing Point of Interest Techniques for VR Users with Limited Mobility
+Information might be out of view. Same issue exists in VR. Techniques for VR POV informing require orienting, which is hard sometimes. Representations and displays show representations of points of interests and displays show pictures. There is a selection mechanism that orients people to the point of interest. There's tradeoffs between accessibility and realism. There are 13 unique Nearmi implementations and highlighted the need for customizable VR techniques.  
+- Guided access vs. autonomy during VR Gameplay? It depends on things like how people process spatial information. Doesn't put additional burden on people to control the camera. 
+
+> Beyond Adaptive Sports: Challenges & Opportunities to Improve Accessibility and Analytics
+Lack of technological advances, funding, and data in the community. Different problems in different sports for people with different disabilities. Blind sports are hard to coordinate with many people. Wheelchair based sports are slightly easier to track, but there are customizations available for wheelchairs. Improper training methods like video feedback. People want equipment that could provide the measurements for feedback. 
+- Hard to recruit participants because inaccessible tech <-> low funding <-> low participation. What are things that HCI researchers can do that reduce cost of devices and what are things that can be applied to this space to increase involvement? 
+- Sensors on equipment rather than players? People have different bodies/constraints. Equipment allows for more generalizability without needing it to be specialized. 
+
+> Wearable Interactions for Users with Motor Impairments: Systematic Review, Inventory, and Research Implications
+Smart watches and stuff become prevalent. How do people with motor impairments interact with wearables? Compiled 92 interactions. Devices in the study are scoped. Growing interest in topic. Frequency analysis was performed and most papers were empirical research and artifacts. Most were worn on head, wrist, arm, and hand. Number of participants were small. More work should be put into wearable devices, input modalities, extensions, and studies.  
+- No sensors embedded in clothing
+
+> Accessing Passersby Proxemic Signals through a Head-Worn Camera: Opportunities and Limitations for the Blind
+Blind people detects passersby. GlAccess scans for people in the FOV. User study on 10 blind participants, each walked with by 8 times and interacted with people. 1718 annotated frames. There are annotations for presence, position, distance, head pose, and interaction. Mostly all body parts or upper bodies were captured. Pedestrian detection usually depend on head detection. Feedback: 7/10 participants liked having proximate information. Many wanted multiple, aggregated estimates/better estimates before the glasses says things. There are no way to verify whether the visual estimation is correct or not, creates a dependence on model even though models are error-prone. Suggests there should be a focus on interpretability and human error interactions. 
+- Provide information without overloading users? Hard to know what's of interest to the user. GlAccess shows face detection with highest confidence score. 
+- Wheelchair user perception? Depends on what's been captured by camera and height of the person. 
+- IR Sensor? Doesn't think IR sensor will help, but wants to use RGB camera input and sensors. What is there are objects in the way? IR might not help estimate distance between user and pedestrian. 
+- Vuzix? Easy if you do android. They don't have many sensors. Didn't have speakers, but new ones do. FOV isn't very wide. Doesn't support 5G, speed is slow. 
+
+How does it the tech apply to other populations??
+- GlAccess wearing camera allows users to capture stuff in front of the camera. 
