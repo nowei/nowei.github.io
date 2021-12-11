@@ -10,19 +10,35 @@
       position: relative;
       background-color: white;
       opacity: 0.8;
-      padding-bottom: 2%;
-      min-height: 55%;
+      min-height: 75%;
     }
-    p {
-      font-size: 1.25rem;
+    #content {
+      /*width: 75%;*/
+      margin: auto;
     }
     #face_links {
-      width: 13%;
+      padding-top: 1%;
+      display: grid;
+      width: 16%;
       float:left;
+      margin: auto;
+    }
+    #face {
+      padding-bottom: 2%;
+      width:80%;
+      margin: auto;
+      height: auto; 
+      opacity: 1;
+    }
+    #links {
+      width:80%;
+      color: black;
+      text-align: left;
+      word-break: break-word; 
+      margin: auto;
+      top: 90%
     }
     #contact {
-      /*border-style: solid;*/
-      /*border-color: white;*/
       border: 5px solid grey  ;
       border-radius: 10px;
       width:30%;
@@ -42,62 +58,43 @@
     }
     #aboutme p {
       margin: unset;
-
-      /*text-align:unset;*/
       text-align: left;
-      /*display: unset;*/
     }
     .topics {
       margin:unset;
-    }
-    #face {
-      margin-left: 7.5%; 
-      margin-top: 7.5%; 
-      float:left; 
-      width:100%;
-      height:auto; 
-      opacity: 1;
-    }
-    #links {
-      width:100%;
-      position: absolute;
-      left: 10%;
-      color: black;
-      text-align: left;
-      word-break: break-word; 
-      top: 90%
     }
     h2 {
       margin-bottom: 0;
       margin-top: 0;
     }
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 750px) {
+      #face_links #links {
+        padding: 2%;
+        text-align: center;
+      }
       #face_links {
-        width: 40%;
-        /*padding: unset;*/
         padding-top:2.5%;
+        display: block;
+        width: 95%;
+        top:5%;
       }
       #face {
-        width: 160px;
+        width: 50%;
+        margin: 25%;
         margin-top: unset;
+        margin-bottom: 5px;
       }
       #content {
-        width: 100%;
-        /*display: inline-block;*/
-        /*height: 100%;*/
+        width: 95%;
+        margin: auto;
       }
       #links {
-        position: relative;
-        width: unset;
-        left: 1%;
       }
       #contact {
-        /*position: relative;*/
-        width: 55%;
-        height: 160px;
-        padding: unset;
         display: inline-block;
-        right:2.5%;
+        position: relative;
+        width: 95%;
+        right: 0;
       }
       #aboutme {
         margin: 0% 2.5%;
@@ -106,34 +103,12 @@
         display: inline-block;
       }
     }
-    @media screen and (max-width: 970px) {
-      #face_links #face {
-        width: 140px;
-        margin-left: 4%;
+    @media screen and (min-width: 1200px) {
+      #links {
+        left: 10%;
       }
-      #face_links #links {
-        /*word-break: none  ;*/
-        width: 100%;
-        text-align: center;
-        /*color: blue;*/
-      }
-      #face_links {
-        display: block;
-        width: 95%;
-        /*left:5%;*/
-        top:5%;
-        /*margin-right: 20px;*/
-        padding-left: 0;
-      }
-      #contact {
-        position: relative;
-        /*display: block;*/
-        width: 92.5%;
-        margin: 6% 2.5%;
-        margin-top: 0;
-        padding: unset;
-        right: 0;
-        height: unset;
+      p {
+        line-height: unset;
       }
     }
   </style>
@@ -149,8 +124,8 @@
   </div>
   <div id="content">
     <div id="face_links" style="opacity: 1;">
-      <img id="face" src="./imgs/face.jpg" alt="face">
-      <div id="links">
+      <img id="face" class="container_row" src="./imgs/face.jpg" alt="face">
+      <div id="links" class="container_row">
         <b>Links</b><br />
         <a class="links" href="https://github.com/nowei">GitHub</a><br />
         <a class="links" href="https://www.linkedin.com/in/nowei/">LinkedIn</a><br />
@@ -180,7 +155,7 @@
       <br />
       <br style="padding-bottom: unset;"/>
 
-      <h2>interests</h2>
+      <h2>Interests</h2>
       <hr style="margin-top: unset; margin-bottom: unset;">
       <div>
         <h3 class="topics">Technical</h3>

@@ -6,6 +6,11 @@
   <!-- (For debugging header)  -->
   <link rel="stylesheet" href="style.css">  
   <style> 
+    body {
+      width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+    }
     a.navlink:link {
       padding: 0.5em 0.5em;
   
@@ -23,7 +28,6 @@
       transition: background .3s ease-out;
       box-shadow: 0 0px 15px 0 rgba(255, 255, 255, 0.75);
       height: 43px;
-      font-size:1.25rem;
     }
     a.navlink:hover {
       background-position: 50% 50%;
@@ -75,7 +79,8 @@
       text-shadow: 0px 0px 3px white;
     }
     #top-nav {
-      /*display: flex;*/
+      margin: auto;
+      width: 95%;
       justify-content: center;
       /*position:sticky;*/
       top: 0;
@@ -100,13 +105,13 @@
         font-size: 30px;
       }
     }
-    @media screen and (min-width: 950px) {
+    @media screen and (min-width: 1000px) {
       #top-nav {
         display: flex;
       }
       a.navlink:link {
         min-width:20%;
-        /*font-size:1.25rem;*/
+        font-size:1.25rem;
       }
       h1#titleheading {
         text-align: center;
@@ -124,7 +129,7 @@
         right:0;
       }
     }
-    @media screen and (max-width: 950px) {
+    @media screen and (max-width: 1000px) {
       a#title {
 
         right:0%;
@@ -132,8 +137,7 @@
       }
       a.navlink:link {
         float: none;
-        width: 100%;
-        font-size:24px;
+        width: 95%;
       }
       h1#titleheading {
         height:40px;
