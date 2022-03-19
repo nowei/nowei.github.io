@@ -389,7 +389,7 @@
     var aut2021 = {"name": "Autumn 2021",
                    "activities": 
                                  [{"name": "Interviewing", "content": {"name": "Finding a job", "description": "Interviewed at a handful of places and eventually found a job"}}, 
-                                  {"name": "Software Engineer", "content": {"name": "OctoML", "description": "Ambiguously working on the backend"}},
+                                  {"name": "Software Engineer", "content": {"name": "OctoML", "description": "ambiguously working on the backend"}},
                                   {"name": "Volunteering",
                                    "bullet": true,
                                    "content": [{"name": "Hack To Give Thanks - A/B street"}]},
@@ -398,7 +398,16 @@
                                    "content": [{"name": "ASSETS 2021"}]},
                                   {"name": "Life Events", "bullet": true, "content": 
                                  [{"name": "Acquired: Job"}]}]};
-    generateQuarter("2021", 'quartera', 4, aut2021);
+    var win2022 = {"name": "Winter 2022",
+                   "activities": 
+                                 [{"name": "Volunteering",
+                                   "bullet": true,
+                                   "content": [{"name": "CSRSEF judging"}]},
+                                  {"name": "Concerts Attended",
+                                   "bullet": true,
+                                   "content": [{"name": "Imagine Dragons ft. MØ"}]}]};
+    generateQuarter("2021", 'quartera', 1, aut2021);
+    generateQuarter("2021", 'quartera', 2, win2022);
 
     var aut2019 = {"name": "Autumn 2019",
                    "classes": [{"name": "CSE 521: Design and Analysis of Algorithms", 
