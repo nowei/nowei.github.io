@@ -67,6 +67,10 @@ a:hover {
   background-image: linear-gradient(rgb(100,100,100), rgb(150,150,150));
 }
 
+p a:hover {
+  border-radius: 10px;
+}
+
 a:active {
   color:cyan;
 }
