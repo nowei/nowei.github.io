@@ -1,5 +1,6 @@
 # nowei.github.io
 Personal website
+yo
 
 # TODO
 * <s>Redo project links for generated courses</s> ✔️
