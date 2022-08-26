@@ -87,23 +87,7 @@
       align-items: center;
     }
     .navlink {
-      /*flex:1;*/
-
       margin: 10px 6px;
-    }
-    @media screen and (max-width: 500px) {
-      h1#titleheading {
-        position: relative;
-        margin: 0 0;
-        /*Trick: Adding a minimum height to a header so that when you add a hover effect, the height doesn't change*/
-        height:50px;
-      }
-      a#title {
-        font-size: 24px;
-      }
-      a#title:hover {
-        font-size: 30px;
-      }
     }
     @media screen and (min-width: 1000px) {
       #top-nav {
@@ -111,14 +95,14 @@
       }
       a.navlink:link {
         min-width:20%;
-        font-size:1.25rem;
+        /* font-size: 3rem; */
       }
       h1#titleheading {
         text-align: center;
-        /*height:45px;*/
+        /* height:45px; */
       }
       a#title {
-        /*font-size: 30px;*/
+        font-size: 30px;
         /*padding: 0 0;*/
       }
       a#title:hover {
@@ -131,7 +115,6 @@
     }
     @media screen and (max-width: 1000px) {
       a#title {
-
         right:0%;
         left:0%;
       }
@@ -153,7 +136,7 @@
 </head>
 <body style="height:10%">
   <div class="header">
-    <h1 id="titleheading"><a id="title" href="https://nowei.github.io/">A website, I guess</a></h1>
+    <h1 id="titleheading"><a id="title" href="/">A website, I guess</a></h1>
     <br />
   </div>
   <div id="top-nav">

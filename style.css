@@ -10,7 +10,7 @@ html {
   /*How to set minimum height*/
   min-width: 100%;
   min-height: 100%;
-  height:auto;
+  /* height:100%; */
   /* always makes scrollbar appear */
   /*overflow-y: scroll;*/
 }
@@ -24,7 +24,7 @@ div#header {
   min-height: 142px;
 }
 div#footer {
-  min-height: 200px;
+  min-height: 80px;
 }
 body {
   background-image: linear-gradient(rgb(0,0,0), rgb(50,50,50));
@@ -64,7 +64,6 @@ a:link, a:visited, button {
 
 a:hover {
   color: lightblue;
-  background-image: linear-gradient(rgb(100,100,100), rgb(150,150,150));
 }
 
 p a:hover {
@@ -78,7 +77,7 @@ a:active {
 br {
   display: block;
   content: " ";
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
 ul li {
@@ -97,6 +96,7 @@ ul li {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   background-color:grey;
+  cursor:pointer;
 }
 .tooltip .tooltiptext {
   visibility: hidden;
@@ -216,7 +216,7 @@ a.links:active {
     margin-right: 0;
   }
 }*/
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
   html {
     display: block;
   }
@@ -227,14 +227,14 @@ a.links:active {
     /*font-size: 1vw;*/
     width: 95%;
   }
+  h1 {
+    font-size: 4vw;
+  }
+  h2 {
+    font-size: 3vw;
+  }
 
   /** { margin: 0; padding: 0; }*/
-}
-
-@media screen and (max-width: 600px) {
-  * {
-    font-size: 4.5vw;
-  }
 }
 /*@media screen and (min-width: 1000px) {
   * {

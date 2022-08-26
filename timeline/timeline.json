@@ -1,0 +1,1152 @@
+{
+  "sum2022": {
+    "name": "Summer 2022",
+    "activities": [
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Started TEALS thingymabob"
+          }
+        ]
+      },
+      {
+        "name": "Concerts Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Cloud Cult"
+          }
+        ]
+      },
+      {
+        "name": "Musicals Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Hamilton"
+          }
+        ]
+      }
+    ]
+  },
+  "spr2022": {
+    "name": "Spring 2022",
+    "activities": [
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Earth Day at Big Finn Hill Park"
+          },
+          {
+            "name": "Signed up for TEALS thingymabob"
+          }
+        ]
+      },
+      {
+        "name": "Concerts Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Sigur Rós"
+          }
+        ]
+      }
+    ]
+  },
+  "win2022": {
+    "name": "Winter 2022",
+    "activities": [
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "CSRSEF judging"
+          }
+        ]
+      },
+      {
+        "name": "Concerts Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Imagine Dragons ft. MØ"
+          }
+        ]
+      }
+    ]
+  },
+  "aut2021": {
+    "name": "Autumn 2021",
+    "activities": [
+      {
+        "name": "Interviewing",
+        "content": {
+          "name": "Finding a job",
+          "description": "Interviewed at a handful of places and eventually found a job"
+        }
+      },
+      {
+        "name": "Software Engineer",
+        "content": {
+          "name": "OctoML",
+          "description": "ambiguously working on the backend"
+        }
+      },
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Hack To Give Thanks - A/B street"
+          }
+        ]
+      },
+      {
+        "name": "Conferences Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "ASSETS 2021"
+          }
+        ]
+      },
+      {
+        "name": "Life Events",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Acquired: Job"
+          }
+        ]
+      }
+    ]
+  },
+  "sum2021": {
+    "name": "Summer 2021",
+    "activities": [
+      {
+        "name": "Intern",
+        "content": {
+          "name": "Microsoft Research",
+          "description": "Working in the Office of the Chief Economist on some data pipelining and automation for Xbox Finance + Marketing"
+        }
+      },
+      {
+        "name": "Intern Activities",
+        "content": {
+          "name": "Microsoft Intern Puzzle Hunt",
+          "description": "7th place/162 teams"
+        }
+      }
+    ]
+  },
+  "spr2021": {
+    "name": "Spring 2021",
+    "classes": [
+      {
+        "name": "CSEM 501: Intro to Compiler Construction",
+        "project": {
+          "name": "Minijava compiler (with Strings!)"
+        }
+      },
+      {
+        "name": "CSEM 544: Database Systems",
+        "project": {
+          "name": "SimpleDB, toy DBMS implementation"
+        }
+      },
+      {
+        "name": "CSE 571: Probabilistic Robotics",
+        "project": {
+          "name": "Do not hit the duckies in Duckietown",
+          "content": "../projects/571_Final_Report.pdf"
+        }
+      },
+      {
+        "name": "CSE 599H: Computing for Social Good",
+        "project": {
+          "name": "HIV Tracing application with Community Health Toolkit",
+          "content": "../projects/CSE580_Final_Project_Writeup.pdf"
+        }
+      },
+      {
+        "name": "ME 574: Applied Parallel Computing",
+        "project": {
+          "name": "Parallelized Convolutions in CUDA",
+          "content": "../projects/parallel_computing_final.mp4"
+        }
+      }
+    ],
+    "activities": [
+      {
+        "name": "TA",
+        "bullet": true,
+        "content": [
+          {
+            "name": "CSE 452: Distributed Systems"
+          },
+          {
+            "name": "CSE 547: Machine Learning for Big Data"
+          }
+        ]
+      },
+      {
+        "name": "Participating in",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Teach Access 2021"
+          }
+        ]
+      },
+      {
+        "name": "Life Events",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Graduated from UW with my MS degree"
+          },
+          {
+            "name": "Got the Bob Bandes Teaching Award",
+            "description": "Look at me now, ma!"
+          }
+        ]
+      }
+    ]
+  },
+  "win2021": {
+    "name": "Winter 2021",
+    "classes": [
+      {
+        "name": "CSE 525: Random Algorithms",
+        "project": {
+          "name": "Randomized Rumor Spreading",
+          "content": "../projects/RandomizedRumorSpreading.pdf"
+        }
+      },
+      {
+        "name": "CSE 561: Computer Networks",
+        "project": {
+          "name": "Service Mesh Overhead Measurement",
+          "content": "../projects/svc_mesh_measurement_final_report.pdf"
+        }
+      },
+      {
+        "name": "CSE 599C: Data Management for ML",
+        "project": {
+          "name": "Snuba Reimplementation",
+          "content": "../projects/CSE599C_Snuba.pdf"
+        }
+      },
+      {
+        "name": "CSE 599D1: Theoretical Deep Learning",
+        "project": {
+          "name": "Slightly Overparameterized Neural Networks",
+          "content": "../projects/599_DL_Theory.pdf"
+        }
+      }
+    ],
+    "activities": [
+      {
+        "name": "TA",
+        "bullet": true,
+        "content": [
+          {
+            "name": "CSEP 552/CSE 452: Distributed Systems"
+          }
+        ]
+      }
+    ]
+  },
+  "aut2020": {
+    "name": "Autumn 2020",
+    "classes": [
+      {
+        "name": "CSE 492: Patterns for Career Success"
+      },
+      {
+        "name": "CSE 527: Computational Biology",
+        "project": {
+          "name": "Leukemia classification",
+          "content": "https://github.com/nowei/leukemia-classification"
+        }
+      },
+      {
+        "name": "CSEM 584: Computer Security",
+        "project": {
+          "name": "Presentation on Intro to Differential Privacy",
+          "content": "../projects/Intro to Differential Privacy.pdf"
+        }
+      },
+      {
+        "name": "CSE 599B: AI & the Brain",
+        "project": {
+          "name": "Exploring Spiking Neural Networks",
+          "content": "../projects/CSE 599 B Final Project - Andrew Wei & Kushal Jhunjhunwalla.pdf"
+        }
+      },
+      {
+        "name": "CSE 599I: Generative Models",
+        "project": {
+          "name": "Poor Man's GPT-3",
+          "content": "https://github.com/kaiweic/Poor-man-s-GPT-3"
+        }
+      }
+    ],
+    "activities": [
+      {
+        "name": "TA",
+        "bullet": true,
+        "content": [
+          {
+            "name": "CSEP 546: Machine Learning"
+          }
+        ]
+      },
+      {
+        "name": "Coding Competition",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Credit Suisse Global Coding Challenge",
+            "description": "3rd place in US"
+          }
+        ]
+      }
+    ]
+  },
+  "sum2020": {
+    "name": "Summer 2020",
+    "activities": [
+      {
+        "name": "Intern",
+        "content": {
+          "name": "Amazon",
+          "description": "Worked on a Promotions Management tool and made the search faster"
+        }
+      }
+    ]
+  },
+  "spr2020": {
+    "name": "Spring 2020",
+    "classes": [
+      {
+        "name": "CSE 547: Machine Learning for Big Data",
+        "project": {
+          "name": "Stock Bot",
+          "content": "https://github.com/kaiweic/stockbot"
+        }
+      },
+      {
+        "name": "CSE 599Q1: Intro to Quantum Algorithms",
+        "dropped": true
+      },
+      {
+        "name": "CSE 599W: Reinforcement Learning",
+        "project": {
+          "name": "Deep RL in the Stock Market, extension",
+          "content": "../projects/CSE599W_Final_Report.pdf"
+        }
+      },
+      {
+        "name": "CSE 599Y: Mobile & Wireless Systems",
+        "project": {
+          "name": "Bathroom fall detection",
+          "content": "https://github.com/leiyiz/BathroomFallDetection"
+        }
+      }
+    ],
+    "activities": [
+      {
+        "name": "Context",
+        "content": {
+          "name": "Zoom University",
+          "description": "everything's online and it kind of hurts"
+        }
+      },
+      {
+        "name": "TA",
+        "bullet": true,
+        "content": [
+          {
+            "name": "CSE 452: Distributed Systems"
+          }
+        ]
+      },
+      {
+        "name": "Research",
+        "content": {
+          "name": "Rocksdb Characterization",
+          "description": "working on some DS-related thing related to RocksDB"
+        }
+      }
+    ]
+  },
+  "win2020": {
+    "name": "Winter 2020",
+    "classes": [
+      {
+        "name": "CSE 490V: Virtual Reality Systems",
+        "project": {
+          "name": "Making a Wide Field of View Headset",
+          "content": "../projects/CSE490v_final_project.pdf"
+        }
+      },
+      {
+        "name": "CSE 515: Statistical Methods in Computer Science"
+      },
+      {
+        "name": "CSE 590F: Computing and the Developing World"
+      },
+      {
+        "name": "CSE 590R: Robotics Colloquium"
+      },
+      {
+        "name": "CSE 599C: Data Center Systems",
+        "project": {
+          "name": "Consistent Hashing assignment",
+          "content": "https://github.com/nowei/consistent-hashing-lab"
+        }
+      },
+      {
+        "name": "CSE 599I: Interactive Learning"
+      }
+    ],
+    "activities": [
+      {
+        "name": "TA",
+        "bullet": true,
+        "content": [
+          {
+            "name": "CSE 452: Distributed Systems"
+          }
+        ]
+      },
+      {
+        "name": "Concerts Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "American Authors, Magic Giant, Public"
+          },
+          {
+            "name": "This Will Destroy You"
+          }
+        ]
+      }
+    ]
+  },
+  "aut2019": {
+    "name": "Autumn 2019",
+    "classes": [
+      {
+        "name": "CSE 521: Design and Analysis of Algorithms",
+        "project": {
+          "name": "Finding Frequent Items in Data Streams",
+          "content": "https://github.com/nowei/frequent_items"
+        }
+      },
+      {
+        "name": "CSE 552: Distributed and Parallel Systems",
+        "project": {
+          "name": "Live Inference for Distributed Machine Learning",
+          "content": "https://github.com/liangw6/byteps"
+        }
+      },
+      {
+        "name": "CSE 590C1: Change Seminar: Technology for Developing Regions"
+      },
+      {
+        "name": "CSE 590F: Computing and the Developing World"
+      },
+      {
+        "name": "CSE 599G1: Deep Learning",
+        "project": {
+          "name": "Exploration of Adversarial Deep Learning",
+          "content": "https://github.com/nowei/adversarial-dl"
+        }
+      },
+      {
+        "name": "CSE 599M: Principled Approaches to Robust Machine Learning",
+        "project": {
+          "name": "Robustness of Federated Learning",
+          "content": "TBD"
+        }
+      }
+    ],
+    "activities": [
+      {
+        "name": "TA",
+        "bullet": true,
+        "content": [
+          {
+            "name": "CSEP 546: Machine Learning"
+          }
+        ]
+      },
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Dawg Daze Leader"
+          },
+          {
+            "name": "Dubhacks 2019"
+          },
+          {
+            "name": "A Summit on Data: Privacy, Governance and Management"
+          },
+          {
+            "name": "2019 Congressional App Challenge: Appathon"
+          }
+        ]
+      },
+      {
+        "name": "Conferences/Talks/Seminars Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "UW Graduate TA Conference"
+          },
+          {
+            "name": "Northwest Theory Day 2019"
+          },
+          {
+            "name": "Empowering Prevention and Inclusive Communities Workshop"
+          }
+        ]
+      },
+      {
+        "name": "Concerts Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Deck the Hall Ball 2019"
+          },
+          {
+            "name": "Yiruma - Nocturne"
+          }
+        ]
+      }
+    ]
+  },
+  "sum2019": {
+    "name": "Summer 2020",
+    "activities": [
+      {
+        "name": "Intern",
+        "content": {
+          "name": "Letron Entertainment Tech",
+          "description": "A Website Health Network Monitoring start-up in Kaohsiung, Taiwan"
+        }
+      }
+    ]
+  },
+  "spr2019": {
+    "name": "Spring 2019",
+    "classes": [
+      {
+        "name": "CSE 452: Distributed Systems"
+      },
+      {
+        "name": "CSE 457: Computer Graphics",
+        "project": {
+          "name": "SBDs on the Lucky-E (video)",
+          "content": "file:///C:/Users/andre/Documents/nowei.github.io/projects/video-1559820307.mp4",
+          "description": "Mostly done by Matt"
+        }
+      },
+      {
+        "name": "CSE 470: Computer Architecture II"
+      },
+      {
+        "name": "CSE 481V: VR Capstone",
+        "project": {
+          "name": "ChatAssist",
+          "content": "https://uwrealitylab.github.io/vrcapstone19sp-team3/"
+        }
+      }
+    ],
+    "activities": [
+      {
+        "name": "TA",
+        "bullet": true,
+        "content": [
+          {
+            "name": "CSE 180: Intro to Data Science"
+          }
+        ]
+      },
+      {
+        "name": "Life Events",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Graduated from undergrad, Cum Laude"
+          }
+        ]
+      },
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Engineering Discovery Days"
+          }
+        ]
+      }
+    ]
+  },
+  "win2019": {
+    "name": "Winter 2019",
+    "classes": [
+      {
+        "name": "CSE 446: Machine Learning"
+      },
+      {
+        "name": "CSE 447: Natural Language Processing"
+      },
+      {
+        "name": "CSE 469: Computer Architecture I"
+      },
+      {
+        "name": "CSE 599: Theory of Optimization and Continuous Algorithms"
+      }
+    ],
+    "activities": [
+      {
+        "name": "TA",
+        "bullet": true,
+        "content": [
+          {
+            "name": "CSE 312: Statistics for CS"
+          }
+        ]
+      },
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "UW Math Day"
+          }
+        ]
+      }
+    ]
+  },
+  "aut2018": {
+    "name": "Autumn 2018",
+    "classes": [
+      {
+        "name": "CSE 421: Intro to Algorithms"
+      },
+      {
+        "name": "CSE 431: Intro to Theory of Computation"
+      },
+      {
+        "name": "CSE 442: Data Visualization",
+        "project": {
+          "name": "WHYLDFIRE 🔥",
+          "content": "https://cse442-18f.github.io/fp-whyldfire/"
+        }
+      },
+      {
+        "name": "CSE 455: Computer Vision",
+        "project": {
+          "name": "MemeDub",
+          "content": "https://github.com/MichaelMiles/HatonHead"
+        }
+      },
+      {
+        "name": "CSE 473: Intro to Artificial Intelligence"
+      }
+    ],
+    "activities": [
+      {
+        "name": "TA",
+        "bullet": true,
+        "content": [
+          {
+            "name": "CSE 414: Databases"
+          }
+        ]
+      },
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Dawg Daze Leader"
+          }
+        ]
+      },
+      {
+        "name": "Hackthons",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Dubhacks 2018",
+            "description": "<span class=\"thumbnail tooltip-text\">Trusted Receivables, Package theft detection<span><img src=\"./imgs/BoxOrNoBox.jpg\" /></span></span>"
+          }
+        ]
+      }
+    ]
+  },
+  "sum2018": {
+    "name": "Summer 2018",
+    "classes": [
+      {
+        "name": "CSE 474: Intro to Embedded Systems",
+        "project": {
+          "name": "Combat! (video)",
+          "content": "https://drive.google.com/file/d/1iwGpQ_J5b0VphyDPrFP9gnaINVZLwMR3/view"
+        },
+        "team": {
+          "name": "Drive"
+        }
+      },
+      {
+        "name": "CSE 490: Character Pre-Production for 3D Animation"
+      },
+      {
+        "name": "ENGL 207: Introduction to Cultural Studies"
+      }
+    ],
+    "activities": [
+      {
+        "name": "TA",
+        "bullet": true,
+        "content": [
+          {
+            "name": "CSE 344: Intro to Data Management"
+          }
+        ]
+      },
+      {
+        "name": "Life Events",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Got accepted to 5th Year Masters"
+          }
+        ]
+      },
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Summer 2018 Special Olympics"
+          }
+        ]
+      },
+      {
+        "name": "Hackthons",
+        "bullet": true,
+        "content": [
+          {
+            "name": "MITHacks 2018",
+            "description": "Disaster Relief app for reporting missing persons"
+          }
+        ]
+      },
+      {
+        "name": "Activities",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Microsoft Intern Puzzle Day",
+            "description": "2nd place"
+          }
+        ]
+      }
+    ]
+  },
+  "spr2018": {
+    "name": "Spring 2018",
+    "classes": [
+      {
+        "name": "CSE 371: Design of Digital Circuits and Systems",
+        "project": {
+          "name": "Brick Breaker",
+          "content": "https://drive.google.com/file/d/1mMqNNky8TlR3kXyZnWidnr3k37A-P_Px/view?usp=sharing"
+        }
+      },
+      {
+        "name": "CSE 391: Software Tools"
+      },
+      {
+        "name": "CSE 451: Intro to Operating Systems"
+      },
+      {
+        "name": "LING 200: Intro to Linguistic Thought"
+      }
+    ],
+    "activities": [
+      {
+        "name": "TA",
+        "bullet": true,
+        "content": [
+          {
+            "name": "CSE 312: Statistics for CS"
+          }
+        ]
+      },
+      {
+        "name": "Life Events",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Became a TA!"
+          }
+        ]
+      },
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Engineering Discovery Days"
+          }
+        ]
+      }
+    ]
+  },
+  "win2018": {
+    "name": "Winter 2018",
+    "classes": [
+      {
+        "name": "CSE 312: Statistics for CS"
+      },
+      {
+        "name": "CSE 332: Data Structures and Parallelism"
+      },
+      {
+        "name": "CSE 333: Systems Programming"
+      },
+      {
+        "name": "CSE 344: Intro to Data Management"
+      },
+      {
+        "name": "CSE 369: Intro to Digital Design"
+      },
+      {
+        "name": "CSE 390: Problem Solving with Programming"
+      }
+    ],
+    "activities": [
+      {
+        "name": "Clubs",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Joined HuskyADAPT"
+          }
+        ]
+      },
+      {
+        "name": "Hackathons",
+        "bullet": true,
+        "content": [
+          {
+            "name": "nwHacks 2018",
+            "content": "./imgs/nwhacks1.jpg",
+            "thumbnail": true,
+            "position": "right",
+            "description": "<span class=\"thumbnail link_proj tooltip-text\" href=\"./imgs/fruits.png\">Fruit ripeness app<span><img src=\"./imgs/fruits.png\" /></span></span>"
+          }
+        ]
+      },
+      {
+        "name": "Life Events",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Became a senior at university?"
+          }
+        ]
+      }
+    ]
+  },
+  "aut2017": {
+    "name": "Autumn 2017",
+    "classes": [
+      {
+        "name": "CHEM 237: Organic Chemistry I"
+      },
+      {
+        "name": "CSE 311: Logic and Proofs"
+      },
+      {
+        "name": "CSE 331: Software Design and Implementation"
+      },
+      {
+        "name": "CSE 351: Hardware/Software Interface"
+      },
+      {
+        "name": "CSE 495: Vertically Integrated Project"
+      }
+    ],
+    "activities": [
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Puget Sound Bird Festival"
+          }
+        ]
+      },
+      {
+        "name": "Hackathons",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Dubhacks 2017",
+            "content": "./imgs/dubhacks.jpg",
+            "thumbnail": true,
+            "position": "right",
+            "description": "Fitbit for Wheelchair Users, won Accessible Design Challenge"
+          }
+        ]
+      }
+    ]
+  },
+  "sum2017": {
+    "name": "Summer 2017",
+    "classes": [
+      {
+        "name": "PHIL 120: Symbolic Logic"
+      },
+      {
+        "name": "ETEC 111: Soldering"
+      }
+    ],
+    "activities": [
+      {
+        "name": "Life Events",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Got accepted into CSE and ME through the Engineering Applications"
+          },
+          {
+            "name": "Was told that I could only major in one, so I chose CSE"
+          }
+        ]
+      },
+      {
+        "name": "Certifications",
+        "bullet": true,
+        "content": [
+          {
+            "name": "IPC-A-610"
+          },
+          {
+            "name": "IPC-J-STD-001"
+          }
+        ]
+      }
+    ]
+  },
+  "spr2017": {
+    "name": "Spring 2017",
+    "classes": [
+      {
+        "name": "ASL 123: American Sign Language III"
+      },
+      {
+        "name": "ENGR 215: Dynamics",
+        "project": {
+          "name": "Dynamics Modeling",
+          "content": "./imgs/gear.jpg",
+          "thumbnail": true,
+          "position": "left",
+          "description": "Model a gear"
+        },
+        "team": {
+          "name": "How Do We Do This?",
+          "content": "./imgs/dynamics.png",
+          "thumbnail": true,
+          "position": "left"
+        }
+      },
+      {
+        "name": "HIST 106: African American History from 1945 to now"
+      },
+      {
+        "name": "PE 117: Yoga Strength/Flexibility"
+      },
+      {
+        "name": "PE 146: Karate - Beginner"
+      }
+    ],
+    "activities": [
+      {
+        "name": "Life Events",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Got accepted to UW"
+          },
+          {
+            "name": "Got my Associates Degrees"
+          },
+          {
+            "name": "High School Valedictorian"
+          },
+          {
+            "name": "Got a high school math award thing"
+          }
+        ]
+      }
+    ]
+  },
+  "win2017": {
+    "name": "Winter 2017",
+    "classes": [
+      {
+        "name": "ARAB 121: Arabic I"
+      },
+      {
+        "name": "ASL 122: American Sign Language II"
+      },
+      {
+        "name": "CS 142: Java II"
+      },
+      {
+        "name": "ENGR 204: Electrical Circuits"
+      },
+      {
+        "name": "ENGR 225: Mechanics of Materials"
+      }
+    ]
+  },
+  "aut2016": {
+    "name": "Autumn 2016",
+    "classes": [
+      {
+        "name": "ASL 121: American Sign Language I"
+      },
+      {
+        "name": "ENGR 214: Statics",
+        "project": "Balsa Wood Bridges",
+        "content": "./imgs/bridge3.jpg",
+        "thumbnail": true,
+        "position": "right",
+        "description": "We won <a class=\"thumbnail link_proj\" href=\"./imgs/bridge1.jpg\">first<span><img src=\"./imgs/bridge1.jpg\" /></span></a> and <a class=\"thumbnail link_proj\" href=\"./imgs/bridge2.jpg\">second<span><img src=\"./imgs/bridge2.jpg\" /></span></a> place with our two bridges"
+      },
+      {
+        "name": "MATH 254: Multivariable Calculus"
+      },
+      {
+        "name": "PHYS 223: Physics III",
+        "project": [
+          {
+            "name": "Sound and Glass",
+            "content": "./imgs/glass.jpg",
+            "thumbnail": true,
+            "position": "right",
+            "description": "Analyzing sounds made from glasses and water"
+          },
+          {
+            "name": "Waves and Dry Ice",
+            "content": "./imgs/waves.jpg",
+            "thumbnail": true,
+            "position": "right",
+            "description": "Trying to depict sound waves in dry ice smoke"
+          }
+        ]
+      }
+    ]
+  },
+  "sum2016": {
+    "name": "Summer 2016",
+    "classes": [
+      {
+        "name": "MATH 51: Linear Algebra and Differential Calculus of Several Variables"
+      },
+      {
+        "name": "CME 102: Ordinary Differential Equations for Engineers"
+      }
+    ]
+  },
+  "spr2016": {
+    "name": "Spring 2016",
+    "classes": [
+      {
+        "name": "CS 141: Java I"
+      },
+      {
+        "name": "ENGR 224: Thermodynamics",
+        "project": {
+          "name": "Stirling Engine",
+          "content": "./imgs/thermo2.png",
+          "thumbnail": true,
+          "position": "left",
+          "description": "Efficiency: -0.000%. Note: Building it was harder than making the model"
+        }
+      },
+      {
+        "name": "PHYS 222: Physics II",
+        "project": [
+          {
+            "name": "Laser Pointers",
+            "description": "We lit a match with a Laser Pointer"
+          },
+          {
+            "name": "Magnets and Temperature",
+            "content": "./imgs/magnets.JPG",
+            "thumbnail": true,
+            "position": "left",
+            "description": "Testing how well magnets work at different temperatures"
+          }
+        ]
+      }
+    ]
+  },
+  "win2016": {
+    "name": "Winter 2016",
+    "classes": [
+      {
+        "name": "ENGR 111: Engineering Modeling"
+      },
+      {
+        "name": "ENGR 231: Technical Writing"
+      },
+      {
+        "name": "PHYS 221: Physics I",
+        "project": [
+          {
+            "name": "Friction",
+            "description": "Finding different friction coefficients"
+          },
+          {
+            "name": "Something with springs",
+            "description": "I don't actually remember this one"
+          }
+        ]
+      }
+    ]
+  },
+  "aut2015": {
+    "name": "Autumn 2015",
+    "classes": [
+      {
+        "name": "CS 115: Visual Basic"
+      },
+      {
+        "name": "ENGL 101: English Composition"
+      },
+      {
+        "name": "HLTH 100: Contemporary Health"
+      }
+    ]
+  }
+}
