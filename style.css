@@ -29,7 +29,7 @@ div#footer {
 body {
   background-image: linear-gradient(rgb(0,0,0), rgb(50,50,50));
   background-repeat: no-repeat;
-  font-family: "Consolas", Helvetica, sans-serif;
+  font-family: "Lucida Sans Typewriter","Lucida Console",Monaco,"Bitstream Vera Sans Mono",monospace;
   width:80%;
   margin-left: auto;
   margin-right: auto;
@@ -202,7 +202,15 @@ a.links:hover {
   transition: box-shadow 0.3s;
 }
 a.links:active {
-  color:cyan;
+  color:darkcyan;
+}
+
+h2 {
+  padding: 6px 0px;
+}
+
+h3 {
+  padding: 6px 0px;
 }
 
 /*@media screen and (max-width: 950px) {
