@@ -1,251 +1,73 @@
-html {
-  /*font-size: 2vh;*/
-  background-image: linear-gradient(rgb(0,0,0), rgb(50,50,50));
-  /*background-repeat: no-repeat;*/
-  background-size: cover;
-  /*height: 100vmax;*/
-  display:flex;
-  background-position: center;
-
-  /*How to set minimum height*/
-  min-width: 100%;
-  min-height: 100%;
-  /* height:100%; */
-  /* always makes scrollbar appear */
-  /*overflow-y: scroll;*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu monospace;",monospace;
+}
+section {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
 }
 
-::-webkit-scrollbar {
-  width:0px;
-  /*how to make scroll disappear?*/
-  /*background-color:transparent;*/
-}
-div#header {
-  min-height: 142px;
-}
-div#footer {
-  min-height: 80px;
-}
-body {
-  background-image: linear-gradient(rgb(0,0,0), rgb(50,50,50));
-  background-repeat: no-repeat;
-  font-family: "Lucida Sans Typewriter","Lucida Console",Monaco,"Bitstream Vera Sans Mono",monospace;
-  width:80%;
-  margin-left: auto;
-  margin-right: auto;
-  /*font-size: 1.25rem;*/
-  color: white;
-  text-align: center;
-}
-p {
-  /*width:1000px;*/
-  text-align: center;
-
-  display: inline-block;
-}
-a:link, a:visited, button {
-  /*background-image: linear-gradient(rgb(50,50,50), rgb(100,100,100));*/
-  border: none; 
-  color: white;
-  /*padding: 0.5em 0.5em;*/
-  display: inline-block;
-  /*font-size: 1em;*/
-  font-family: "Consolas";
-  /*min-width:200px;*/
-  background-repeat: no-repeat;
-  -webkit-transition: background-image 5s ease-in-out;
-  transition: background-image 5s ease-in-out;
-
-}
-#buttons {
-  text-decoration: underline;
-  cursor: pointer;
+.container {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
-a:hover {
-  color: lightblue;
+.child1 {
+  margin: auto;
+  padding: 36px;
 }
 
-p a:hover {
-  border-radius: 10px;
+.child2 {
+  width: 50%;
+  margin: auto;
+  padding: 36px;
 }
 
-a:active {
-  color:cyan;
-}
-
-br {
+img {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
   display: block;
-  content: " ";
-  margin: 10px 0;
 }
 
-ul li {
-  text-align: left;
-  /*word-break: break-all;*/
-}
 
-.tooltip {
-  /*word-break: break-all;*/
-  position: relative;
-}
-.normaltext {
-  position: relative;
-  border-bottom: 1px dashed white; /* If you want dots under the hoverable text */
-}
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  background-color:grey;
-  cursor:pointer;
-}
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 200px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 1px 1px;
-  position: absolute;
-  z-index: 1;
-  overflow: visible;
-  top: 120%;
-  /*left: 50%;*/
-  left: 0;
-  right: 0;
-  margin:auto;
-}
-
-.descriptions {
-  padding:10px 0;
-}
-
-.collapsible {
-  /*background-color: #60ff60;*/
-  padding: 0 5px;
-  color: white;
-  background-color: black;
-  border-radius: 5px;
-  display: inline;
-}
-
-.collapsible:hover {
-  /*background-color: #99ff99;*/
-  background-color: grey;
-}
-
-.content {
-  max-height: 0;
-  transition: max-height 0.4s ease-in-out;
-  overflow: hidden;
-}
-
-.thumbnail {
-  position: relative;
-  z-index: 2;
-  /*z-index: 3;*/
-}
-.thumbnail:hover {
-  background-color: transparent;
-  z-index: 3;
-}
-.thumbnail span {
-  position: fixed;
-/*  background-color: grey;
-  padding: 5px;
-  left: -1000px;
-  border: 1px solid grey;
-  visibility: hidden;
-  text-decoration: none;
-*/  
-  display: none;
-  visibility: hidden;
-  /*left: 0%;*/
-  /*margin-left: 30vw;*/
-  /*margin-right: vw;*/
-  /*max-width: 10vw;*/
-  /*right: 50%;*/
-  /*width: 50%;*/
-  /*height:auto;*/
-  overflow: hidden;
-  top: 50%;
-  margin-top: -300px;
-  right: 10%;
-}
-.thumbnail span img {
-  border-width: 2px;
-  height: 600px;
-  width: auto;
-  padding: 5px;
-}
-.thumbnail:hover span {
-  display: inline;
-  visibility: visible;
-  z-index: 0;
-  /*left: 0;*/
-}
-
-a.links:link, a.links:visited {
-  color:black;
-  padding: 0 2px;
-  min-width:unset;
-  background:unset;
-  border-radius: 5px;
-  /*transition-duration: all 0.2s ease-in;*/
-}
-a.links:hover {
-  /*color:lightblue;*/
-  background: lightblue;
-  color:black;
-  transition: background 0.4s;
-  box-shadow: 0 0px 15px 0 rgba(49, 196, 190, 0.75);
-  transition: box-shadow 0.3s;
-}
-a.links:active {
-  color:darkcyan;
-}
-
-h2 {
-  padding: 6px 0px;
-}
-
-h3 {
-  padding: 6px 0px;
-}
-
-/*@media screen and (max-width: 950px) {
-  a.navlink:link {
-    float: none;
-    width: 100%;
-    font-size: 24px;
-  }
-  a.navlink {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}*/
 @media screen and (max-width: 1000px) {
-  html {
-    display: block;
-  }
-  html, body, footer {
-    box-sizing: border-box;
-    margin: auto;
-    list-style: none;
-    /*font-size: 1vw;*/
-    width: 95%;
+  section {
+    flex-direction: column;
   }
   h1 {
-    font-size: 4vw;
+    font-size: 24px;
+    margin: 12px;
   }
   h2 {
-    font-size: 3vw;
+    font-size: 18px;
+    margin: 12px;
   }
-
-  /** { margin: 0; padding: 0; }*/
+  h3 {
+    font-size: 12px;
+    margin: 12px;
+  }
+  p {
+    font-size: 12px;
+    margin: 12px;
+  }
+  .child2 {
+    /*width: 50%;   Or whatever */
+    /*height: 50%;  /* Or whatever */*/
+    margin: auto;  /* Magic! */
+    padding: 36px;
+    height: 25vh;
+  }
+  .child1 {
+    margin: auto;
+    padding: 36px;
+    height: 50vh;
+  }
 }
-/*@media screen and (min-width: 1000px) {
-  * {
-    font-size: 100%;
-  }
-}*/
