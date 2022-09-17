@@ -25,7 +25,6 @@ section {
 }
 
 .child2 {
-  width: 66%;
   margin: auto;
   padding: 36px;
 }
@@ -37,6 +36,11 @@ img {
   display: block;
 }
 
+::-webkit-scrollbar {
+  width:0px;
+  /*how to make scroll disappear?*/
+  /*background-color:transparent;*/
+}
 
 @media screen and (max-width: 1000px) {
   section {
@@ -70,4 +74,34 @@ img {
     padding: 36px;
     height: 50vh;
   }
+}
+
+}
+a:link, a:visited, button {
+  border: none; 
+  color: white;
+  display: inline-block;
+  background-repeat: no-repeat;
+  -webkit-transition: background-image 5s ease-in-out;
+  transition: background-image 5s ease-in-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  body, html {
+      background: #111;
+      color: white;
+  }
+
+  a {
+    color: #0350ff;
+  }
+
+  a:hover {
+    color: #0085ff;
+  }
+
+  a:active {
+    color:cyan;
+  }
+
 }
