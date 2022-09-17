@@ -24,7 +24,7 @@
     font-size: 48px;
     margin: 24px;
     color: #fff;
-    background: linear-gradient(270deg, #52ACFF 25%, #FFE32C 100%);
+    background: linear-gradient(275deg, #52ACFF 25%, #FFE32C 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -62,7 +62,16 @@
   <script src="jquery.js"></script>
 </head>
 <body>
-  <div class="container">
+
+  <div id="sidebar">
+    <script>
+      $(function() {
+        $("#sidebar").load("./sidebar.html");
+      });
+    </script>
+  </div>
+
+  <div class="container" style="width:90%; margin-left:0;">
     <section class="one reveal">
       <div class="child1 left" >
         <img src="./imgs/face.jpg" alt="face">
