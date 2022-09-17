@@ -16,6 +16,10 @@
     transform: translateY(0);
     opacity: 1;
   }
+  .reveal.inactive{
+    transform: translateY(0);
+    opacity: 0;
+  }
   h1 {
     font-size: 48px;
     margin: 24px;
@@ -42,43 +46,53 @@
     font-size: 24px;
     margin: 24px 48px;
   }
+  .left {
+    margin-left: auto;
+    margin-right: unset;
+  }
+  .right {
+    margin-left: unset;
+    margin-right: auto;
+  }
   </style>
   <script src="jquery.js"></script>
 </head>
 <body>
   <div class="container">
     <section class="one reveal">
-      <div class="child1">
+      <div class="child1 left" >
         <img src="./imgs/face.jpg" alt="face">
       </div>
-      <div class="child2">
+      <div class="child2 right">
         <h1>Hello World</h1>
-        <h1>My name is Andrew Wei.</h1>
+        <h1>My name is Andrew Wei</h1>
       </div>
     </section>
     <section class="two reveal">
-      <div class="child2">
+      <div class="child2 left">
         <p>
           I'm currently a Software Engineer at OctoML and I'm located in the greater Seattle area.
         </p>
         <p>
           I got my MS in Computer Science & Engineering and BS in Computer Engineering from 
           the Paul G. Allen School of Computer Science & Engineering at the University of Washington. 
+        </p>
+        <p>
           I spent most of my time learning about Distributed Systems and Machine Learning. 
         </p>
         <p>
           All opinions are my own.
         </p>
       </div>
-      <div class="child2">
-        <img style="width: 66%;" src="./imgs/seattle_japanese_garden.jpg" alt="photo of yellow tree and rock">
+      <div class="child2 right">
+        <img style="width: 100%;" src="./imgs/seattle_japanese_garden.jpg" alt="photo of yellow tree and rock">
       </div>
     </section>
     <section class="three reveal">
-      <div class="child2">
+      <div class="child2 left">
         <img style="width: 100%;" src="./imgs/canadian_forest_probably.jpg" alt="photo of yellow tree and rock">
       </div>
-      <div class="child1">
+      <div class="child1 right">
         <h2>Interests</h2>
         <hr>
         <div>
@@ -143,14 +157,17 @@
   <script>
     function reveal() {
       var reveals = document.querySelectorAll(".reveal");
+      var currentTop = document.documentElement.scrollTop || document.body.scrollTop;
+      var currentBottom = currentTop + window.innerHeight;
       for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150;
-        if (elementTop < windowHeight - elementVisible) {
+        var elementTop = currentTop + reveals[i].getBoundingClientRect().top;
+        var elementBottom = currentTop + reveals[i].getBoundingClientRect().bottom;
+        if ((elementTop <= currentTop && elementBottom >= currentTop) || (currentBottom <= elementBottom && elementTop <= currentBottom)) {
+          reveals[i].classList.remove("inactive");
           reveals[i].classList.add("active");
         } else {
           reveals[i].classList.remove("active");
+          reveals[i].classList.add("inactive");
         }
       }
     }

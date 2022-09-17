@@ -25,7 +25,7 @@ section {
 }
 
 .child2 {
-  width: 50%;
+  width: 66%;
   margin: auto;
   padding: 36px;
 }
@@ -33,7 +33,7 @@ section {
 img {
   justify-content: center;
   align-items: center;
-  margin: auto;
+  /*margin: auto;*/
   display: block;
 }
 
