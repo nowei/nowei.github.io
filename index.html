@@ -46,19 +46,13 @@
   li::before{
       content: "> ";
   }
-  p {
-    font-size: 24px;
-    margin: 24px 48px;
-  }
 
   img {
     width: 100%;
   }
 
-  .face {
-    text-align: -webkit-right;
-    width: 50%;
-    float: right;
+  div.image {
+    display: block;
   }
 
   .left {
@@ -74,16 +68,38 @@
     width:90%; 
     margin-left:0;
   }
+  .resize {
+    width: 70%
+  }
 
   @media screen and (max-width: 1000px) {
+    body {
+      justify-content: center;
+    }
     .container {
       width:100%; 
       margin-left:0;
+      height: 100%;
     }
 
-    img {
-      width: auto;
-      height: 100%;
+    .image {
+      width: 75%;
+      margin: auto;
+      height: unset;
+    }
+    .left {
+      width: 100%;
+      margin: auto;
+    }
+
+    .right {
+      width: 100%;
+      margin: auto;
+    }
+    .face {
+      width: 400px;
+      height: auto;
+      vertical-align: middle;
     }
   }
 
@@ -102,18 +118,16 @@
 </head>
 <body>
 
-  <div id="navbar">
-    <script>
-      $(function() {
-        $("#navbar").load("./navbar.html");
-      });
-    </script>
-  </div>
+  <script>
+    $(function() {
+      $("#navbar").load("./navbar.html");
+    });
+  </script>
 
   <div class="container">
     <section class="one reveal">
-      <div style="width: 40%;" class="child1 left" >
-        <img class="face" src="./imgs/face.jpg" alt="face">
+      <div class="child1 left face" >
+        <img src="./imgs/face.jpg" alt="face">
       </div>
       <div class="child2 right">
         <h1>Hello World</h1>
@@ -121,7 +135,7 @@
       </div>
     </section>
     <section class="two reveal">
-      <div style="width: 66%" class="child2 left">
+      <div class="child2 left">
         <p>
           I'm currently a Software Engineer at OctoML and I'm located in the greater Seattle area.
         </p>
@@ -136,12 +150,12 @@
           All opinions are my own.
         </p>
       </div>
-      <div class="child2 right">
+      <div class="child2 right image">
         <img src="./imgs/seattle_japanese_garden.jpg" alt="photo of yellow tree and rock">
       </div>
     </section>
     <section class="three reveal">
-      <div style="width: 66%" class="child2 left">
+      <div class="child2 left image resize">
         <img src="./imgs/canadian_forest_probably.jpg" alt="photo of yellow tree and rock">
       </div>
       <div class="child1 right">
@@ -182,22 +196,6 @@
     <div class="text-container reveal fade-bottom">
     </div>
   </div>
-  <div id="content">
-    <div id="face_links" style="opacity: 1;">
-      
-    </div>
-
-    
-    <div id="aboutme">
-      <br style="padding-bottom: 1px"/>
-      <br />
-      <br style="padding-bottom: unset;"/>
-
-      <br />
-
-    </div>
-  </div> 
-  <!-- <div id="footer"></div> -->
   <script>
     function reveal() {
       var reveals = document.querySelectorAll(".reveal");
@@ -206,7 +204,7 @@
       for (var i = 0; i < reveals.length; i++) {
         var elementTop = currentTop + reveals[i].getBoundingClientRect().top;
         var elementBottom = currentTop + reveals[i].getBoundingClientRect().bottom;
-        if ((elementTop <= currentTop && elementBottom >= currentTop) || (currentBottom <= elementBottom && elementTop <= currentBottom)) {
+        if ((elementTop <= currentTop && elementBottom >= currentTop) || (currentBottom <= elementBottom && elementTop <= currentBottom) || (elementBottom <= currentBottom && elementTop >= currentTop)) {
           reveals[i].classList.remove("inactive");
           reveals[i].classList.add("active");
         } else {
