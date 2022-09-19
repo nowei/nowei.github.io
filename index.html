@@ -50,6 +50,17 @@
     font-size: 24px;
     margin: 24px 48px;
   }
+
+  img {
+    width: 100%;
+  }
+
+  .face {
+    text-align: -webkit-right;
+    width: 50%;
+    float: right;
+  }
+
   .left {
     margin-left: auto;
     margin-right: unset;
@@ -58,23 +69,51 @@
     margin-left: unset;
     margin-right: auto;
   }
+
+  .container {
+    width:90%; 
+    margin-left:0;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .container {
+      width:100%; 
+      margin-left:0;
+    }
+
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    h1 {
+      font-size: 48px;
+      margin: 24px;
+      color: #fff;
+      background: linear-gradient(275deg, #ff8d00 0%, #a90000 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
   </style>
   <script src="jquery.js"></script>
 </head>
 <body>
 
-  <div id="sidebar">
+  <div id="navbar">
     <script>
       $(function() {
-        $("#sidebar").load("./sidebar.html");
+        $("#navbar").load("./navbar.html");
       });
     </script>
   </div>
 
-  <div class="container" style="width:90%; margin-left:0;">
+  <div class="container">
     <section class="one reveal">
-      <div class="child1 left" >
-        <img src="./imgs/face.jpg" alt="face">
+      <div style="width: 40%;" class="child1 left" >
+        <img class="face" src="./imgs/face.jpg" alt="face">
       </div>
       <div class="child2 right">
         <h1>Hello World</h1>
@@ -82,7 +121,7 @@
       </div>
     </section>
     <section class="two reveal">
-      <div class="child2 left" style="width:66%;">
+      <div style="width: 66%" class="child2 left">
         <p>
           I'm currently a Software Engineer at OctoML and I'm located in the greater Seattle area.
         </p>
@@ -98,12 +137,12 @@
         </p>
       </div>
       <div class="child2 right">
-        <img style="width: 100%;" src="./imgs/seattle_japanese_garden.jpg" alt="photo of yellow tree and rock">
+        <img src="./imgs/seattle_japanese_garden.jpg" alt="photo of yellow tree and rock">
       </div>
     </section>
     <section class="three reveal">
-      <div class="child2 left" style="width:66%;">
-        <img style="width: 100%;" src="./imgs/canadian_forest_probably.jpg" alt="photo of yellow tree and rock">
+      <div style="width: 66%" class="child2 left">
+        <img src="./imgs/canadian_forest_probably.jpg" alt="photo of yellow tree and rock">
       </div>
       <div class="child1 right">
         <h2>Interests</h2>
