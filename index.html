@@ -117,16 +117,16 @@
     }
   }
   </style>
-  <script src="jquery.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script>
+    $(function() {
+      $("#navbar").load("./navbar.html");
+    });
+  </script>
+  </script>
 </head>
 <body>
-  <div id="navbar">
-    <script>
-      $(function() {
-        $("#navbar").load("./navbar.html");
-      });
-    </script>
-  </div>
+  <div id="navbar"></div>
   <div class="container">
     <section class="one reveal">
       <div class="child1 left face" >
