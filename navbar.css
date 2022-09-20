@@ -1,0 +1,53 @@
+.navcontainer {
+  height: 100%;
+  width: 10%;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  text-align: left;
+  padding: 0 0 0 2px;
+  background: linear-gradient(to bottom, #111, white);
+}
+
+.navbar {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  background: #fff;
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+
+  .navcontainer {
+    position: unset;
+    margin: auto;
+    width: 100%;
+    padding: 0;
+  }
+
+  .navbar {
+    height: 40%;
+    width: 100%;
+    /*position: fixed;*/
+    z-index: 1;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 20px;
+    border-width: 0 0 2px 0;
+    border-style: solid;
+  }
+
+}
+
+@media (prefers-color-scheme: dark) {
+  .navcontainer {
+    background: linear-gradient(to bottom, white, #111);
+  }
+  .navbar {
+    background: #111;
+  }
+}

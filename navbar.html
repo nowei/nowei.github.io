@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <!-- (For debugging header)  -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/navbar.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
   <div class="navcontainer">
     <div class="navbar">
-      <a href="/">Home</a>
-      <a href="/timeline/">Timeline</a>
-      <a href="/projects/">Projects</a>
-      <a href="/writing/">Writing</a>
+      <a class="navlink" href="/">Home</a>
+      <a class="navlink" href="/timeline/">Timeline</a>
+      <a class="navlink" href="/projects/">Projects</a>
+      <a class="navlink" href="/writing/">Writing</a>
       <a href="https://github.com/nowei">
         <i class="fa fa-github" style="margin-right: 8px"></i>GitHub
       </a>
@@ -31,13 +31,12 @@
   <script>
     $(function(){
       var lastMatch = null;
-      $('a').each(function(){
+      $('a.navlink').each(function(){
         if (window.location.href.includes($(this).prop('href'))) {
           lastMatch = $(this);
         }
       });
       lastMatch.addClass('active');
-      lastMatch.attr("href", "");
     });
   </script>
 </body>
