@@ -5,13 +5,18 @@
   <title>Timeline</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="/style.css">
   <style>
     /* For the tooltips */
     button {
       background-image: linear-gradient(rgb(50, 50, 50), rgb(100, 100, 100));
       padding: 0.5em 0.5em;
       min-width: 200px;
+      color: white;
+    }
+
+    .container {
+      height: unset;
     }
 
     p {
@@ -37,6 +42,10 @@
       /*border:none;*/
     }
 
+    img {
+      width: 0;
+    }
+
     #content {
       width: 100%;
       /*display: inline-block;*/
@@ -51,6 +60,11 @@
       overflow: hidden;
       /*min-height:450px;*/
       transition: min-height 0.4s ease-in-out;
+      margin: 6px;
+    }
+
+    .quarter p {
+      margin: 6px;
     }
 
     .quarter-container {
@@ -59,6 +73,8 @@
       /*display: flex;*/
       z-index: 1;
       border-width: 10px;
+      /*height: 50vh;*/
+      padding: 50px;
     }
 
     .quarter-grid {
@@ -76,27 +92,22 @@
 
     .quarter-item {
       /*float:left;*/
-      padding: 5px 0;
-      /*border-color: white;*/
-      /*border-width: 5px;*/
-      border-color: blue;
-      border-width: 5px 5px;
+      border-color: white;
+      border-width: 2px;
       width: 100%;
       justify-content: flex-start;
       /*display: flex;*/
       /*border-radius:25px;*/
       overflow: visible;
       /*overflow: hidden;*/
+      border-style: solid;
     }
 
     @media screen and (min-width: 1000px) {
       .quarter-item {
         /*float:left;*/
-        padding: 5px 0;
-        /*border-color: white;*/
-        /*border-width: 5px;*/
-        border-color: blue;
-        border-width: 5px 5px;
+        border-color: white;
+        border-width: 2px;
         width: 25%;
         justify-content: flex-start;
         /*display: flex;*/
@@ -111,7 +122,6 @@
     .quartercc,
     .quarterm,
     .quartera {
-      padding: 3px 0;
       height: 50px;
       border: 1px solid white;
     }
@@ -121,7 +131,6 @@
     .quartercc:hover,
     .quarterm:hover,
     .quartera:hover {
-      padding: 0 0;
       border: 3px solid white;
     }
 
@@ -130,33 +139,22 @@
       background-image: unset;
       min-width: unset;
       min-height: unset;
-      padding: unset;
       display: inline;
     }
-
-    a.link_proj:hover {
-      color: lightblue;
-    }
-
-    a.link_proj:active {
-      color: cyan;
-    }
-
     .topic {
       /*display: inline-block;*/
-      font-weight: bold;
       text-align: left;
       left: 0%;
+      margin: 6px;
     }
 
     .collapsible {
-      padding: 3px 3px;
       margin: 20px 5px;
       background-color: rgb(80, 70, 60);
     }
 
-    .content {
-      padding: 3px 3px;
+    ul {
+      padding: 0 0 0 25px;
     }
 
     .thumbnail {
@@ -165,6 +163,24 @@
     .tooltip-text {
       text-decoration: underline dotted;
     }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background-color: #111;
+      border-color: white;
+      border-width: 0;
+      border-bottom-width: 2px;
+      padding: 12px;
+      border-style: solid;
+    }
+
+    @media (prefers-color-scheme: light) {
+      header {
+        background-color: whitesmoke;
+      }
+    }
+
   </style>
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
@@ -177,63 +193,115 @@
 
 <body>
   <div id="navbar"></div>
-  <h1>Timeline of activities</h1>
-  <h1 style="margin:unset"><u>Adulting/Real-Worlding</u></h1><br />
+  <header style="z-index: 1000;">
+    <h1>Timeline of activities</h1>
+  </header>
+  <div class="container">
+    <header>
+      <p style="padding:12px"></p><br />
+      <h1><u>Adulting/Real-Worlding</u></h1><br />
+      <h2>2021 - Pandemic Blues 2: Electric Boogaloo</h2>
+    </header>
+    <section class="one reveal">
+        <div class="content" style="max-height: 100%">
+          <div class="quarter-container">
+            <div id="2021" class="quarter-grid" style="transition: all 2s"></div>
+          </div>
+        </div>
+    </section>
+  </div>
+  <div class="container">
+    <header>
+      <p style="padding:12px"></p><br />
+      <h1><u>University of Washington</u></h1><br />
+      <h2 id="masters">Master of Science in Computer Science and Engineering</h2>
+    </header>
+    <section class="two">
+        <div class="content">
+          <div class="quarter-container">
+            <div id="masters2" class="quarter-grid">
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="two">
+        <div class="content">
+          <div class="quarter-container">
+            <div id="masters1" class="quarter-grid">
+            </div>
+          </div>
+        </div>
+    </section>
+  </div>
+  <div class="container">
+    <header>
+      <p style="padding:12px"></p><br />
+      <h1 ><u>University of Washington</u></h1><br />
+      <h2>Bachelor of Science in Computer Engineering</h2>
+    </header>
+    <section class="three">
+        <div class="content">
+          <div class="quarter-container">
+            <div id="ugrad4" class="quarter-grid">
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="three">
+        <div class="content">
+          <div class="quarter-container">
+            <div id="ugrad3" class="quarter-grid">
+            </div>
+          </div>
+        </div>
+    </section>
+  </div>
+  <div class="container">
+    <header>
+      <p style="padding:12px"></p><br />
+      <h1><u>Edmonds Community College</u></h1><br />
+      <h2>Associate of Science in Mechanical Engineering and Computer Engineering</h2>
+    </header>
+    <section class="four">
+        <div class="content">
+          <p style="text-align: center; width:80%; margin: auto;">
+            Before UW, I did Running Start (taking Community College classes while in high school) 
+            at Edmonds Community College and took AP classes on top of that.
+          </p>
+          <div class="quarter-container">
+            <div id="ugrad2" class="quarter-grid">
+            </div>
+            </div>
+            <p style="text-align: center; width:80%; margin: auto;">
+              At the time I was also taking AP Euro and a physics
+              class. I volunteered at Alderwood Middle School's TSA club.
+            </p>
+          </div>
+    </section>
+    <section class="four">
+        <div class="content">
+          <div class="quarter-container">
+            <div id="ugrad1" class="quarter-grid">
+            </div>
+          </div>
+            <p style="text-align: center; width:80%; margin: auto;">
+              At the time I was also taking AP Calculus BC, AP Chemistry, and AP Statistics.
+            </p>
+            <p style="text-align: center; width:80%; margin: auto;">
+              Before that I took AP Calculus AB and AP World History and some CAD classes.
+            </p>
+            <p style="text-align: center; width:80%; margin: auto;">
+              Volunteered at Achievement4Edmonds, Move60, and the Edmonds Demo Garden.
+            </p>
+        </div>
+    </section>
+
+  </div>
   <!--   <h2 class="collapsible">2022 - [Something something, naming is hard]</h2>
   <div class="content" style="max-height: 100%">
     Nothing yet but I wanted to restart the timeline to start in Jan. because I'm out of school now. 
   </div>
   <div style="padding:10px"></div> -->
-  <h2 class="collapsible">2021 - Pandemic Blues 2: Electric Boogaloo</h2>
-  <div class="content" style="max-height: 100%">
-    <div class="quarter-container">
-      <div id="2021" class="quarter-grid" style="transition: all 2s"></div>
-    </div>
-  </div>
-
-  <hr style="margin:30px 0">
-  <h1 style="margin:unset"><u>University of Washington</u></h1><br />
-  <h2 id="masters" class="collapsible">Master of Science in Computer Science and Engineering</h2>
-  <div class="content">
-    <div class="quarter-container">
-      <div id="masters2" class="quarter-grid">
-      </div>
-      <div id="masters1" class="quarter-grid">
-      </div>
-    </div>
-  </div>
-  <div style="padding:10px"></div>
-  <h2 class="collapsible">Bachelor of Science in Computer Engineering</h2>
-  <div class="content">
-    <div class="quarter-container">
-      <div id="ugrad4" class="quarter-grid">
-      </div>
-      <div id="ugrad3" class="quarter-grid">
-      </div>
-    </div>
-  </div>
-  <hr style="margin:30px 0">
-  <h1 style="margin:unset"><u>Edmonds Community College </u></h1><br />
-  <h2 class="collapsible" style="margin:unset">Associate of Science</h2>
-  <div class="content">
-    <h2>Associate of Science in Mechanical Engineering and Computer Engineering</h2>
-    <p style="margin:unset">Before UW, I did Running Start (taking Community College classes while in high school) at
-      Edmonds Community College and took AP classes on top of that.</p> <br />
-    <div class="quarter-container">
-      <div id="ugrad2" class="quarter-grid">
-      </div>
-      <p style="width:100%; margin-top:unset; margin-bottom:10px">At the time I was also taking AP Euro and a physics
-        class. I volunteered at Alderwood Middle School's TSA club.</p>
-      <div id="ugrad1" class="quarter-grid">
-      </div>
-      <p style="width:100%; margin:10px 0px; text-align: center;">At the time I was also taking AP Calculus BC, AP
-        Chemistry, and AP Statistics.</p>
-      <p style="width:100%; margin:10px 0px; text-align: center;">Before that I took AP Calculus AB and AP World History
-        and some CAD classes.</p>
-      <p style="width:100%; margin:10px 0px; text-align: center;">Volunteered at Achievement4Edmonds, Move60, and the
-        Edmonds Demo Garden.</p>
-    </div>
-  </div>
 
   <script>
     function populateProject(currProject, list) {
@@ -312,9 +380,81 @@
       // div.style.width = "25%";
       // div.style.left = position * 25 + "%";
 
+
+      if (content.hasOwnProperty('activities')) {
+        var activities = content['activities'];
+        for (var i = 0; i < activities.length; i++) {
+          var topic = document.createElement('DIV');
+          topic.classList.add('topic');
+          topic.innerHTML = '<b><u>' + activities[i]['name'] + '</u></b>'
+          div.appendChild(topic);
+          if (Array.isArray(activities[i]['content'])) {
+            var topicList = document.createElement('UL');
+
+            div.appendChild(topicList);
+
+            if (activities[i]['name'] === 'Life Events') {
+              topicList.classList.add("special-bullet");
+            }
+            // console.log(activities[i]);
+            for (var j = 0; j < activities[i]['content'].length; j++) {
+              if (activities[i]['bullet']) {
+                var item = document.createElement('LI');
+              } else {
+                var item = document.createElement('DIV');
+              }
+              if (activities[i]['content'][j]['thumbnail']) {
+
+              } else {
+                item.innerHTML = activities[i]['content'][j]['name'];
+              }
+              if (activities[i]['content'][j]['thumbnail']) {
+                if (activities[i]['content'][j]['position'] == 'left') {
+                  var image = '<span style="right: unset; left: 5%;"><img src="' + activities[i]['content'][j]['content'] + '"/>';
+                } else {
+                  var image = '<span style="left: unset; right: 5%;"><img src="' + activities[i]['content'][j]['content'] + '"/>';
+                }
+                item.innerHTML = '<span class="thumbnail link_proj tooltip-text" href="' + activities[i]['content'][j]['content'] + '" ><i>' + activities[i]['content'][j]['name'] + image + "<i/><span/>";
+              } else {
+                item.innerHTML = activities[i]['content'][j]['name'];
+              }
+              if (activities[i]['content'][j].hasOwnProperty('description')) {
+                item.innerHTML += ": " + activities[i]['content'][j]['description'];
+              }
+              topicList.appendChild(item);
+            }
+          } else {
+            var item = document.createElement('P');
+            item.style.textAlign = "left";
+            item.style.margin = "0";
+            item.innerHTML = '<b> > ' + activities[i]['content']['name'] + '</b>';
+            // if (item.innerHTML.includes(': ')) {
+            //   var temp = item.innerHTML.split(": ");
+            //   item.innerHTML = temp[0].underline() + ": " + temp[1];
+            // }
+            if (activities[i]['content'].hasOwnProperty('description')) {
+              item.innerHTML += ", " + activities[i]['content']['description'];
+            }
+            topic.appendChild(item);
+          }
+
+        }
+
+      }
+
+      if (Object.keys(content).length > 2) {
+        div.appendChild(document.createElement('HR'));
+      }
+
       if (content.hasOwnProperty('classes')) {
-        classesFilled = true;
+        var topic = document.createElement('DIV');
+        topic.classList.add('topic');
+        topic.innerHTML = '<b><u>Classes</u></b>'
+        div.appendChild(topic)
         var classes = content['classes'];
+        var list = document.createElement('UL');
+        div.appendChild(list);
+
         for (var i = 0; i < classes.length; i++) {
           var item = document.createElement('LI');
           // console.log(classes[i]);
@@ -344,66 +484,6 @@
             }
           }
         }
-      }
-      // console.log(Object.keys(content).length);
-      if (Object.keys(content).length > 2 && classesFilled) {
-        list.appendChild(document.createElement('HR'));
-      }
-      if (content.hasOwnProperty('activities')) {
-        var activities = content['activities'];
-        for (var i = 0; i < activities.length; i++) {
-          var topic = document.createElement('DIV');
-          topic.classList.add('topic');
-          topic.innerHTML = '<b><u>' + activities[i]['name'] + '</u></b>'
-          list.appendChild(topic);
-          if (Array.isArray(activities[i]['content'])) {
-            var topicList = document.createElement('UL');
-
-            div.appendChild(topicList);
-            // console.log(activities[i]);
-            for (var j = 0; j < activities[i]['content'].length; j++) {
-              if (activities[i]['bullet']) {
-                var item = document.createElement('li');
-              } else {
-                var item = document.createElement('DIV');
-              }
-              if (activities[i]['content'][j]['thumbnail']) {
-
-              } else {
-                item.innerHTML = activities[i]['content'][j]['name'];
-              }
-              if (activities[i]['content'][j]['thumbnail']) {
-                if (activities[i]['content'][j]['position'] == 'left') {
-                  var image = '<span style="right: unset; left: 5%;"><img src="' + activities[i]['content'][j]['content'] + '"/>';
-                } else {
-                  var image = '<span style="left: unset; right: 5%;"><img src="' + activities[i]['content'][j]['content'] + '"/>';
-                }
-                item.innerHTML = '<span class="thumbnail link_proj tooltip-text" href="' + activities[i]['content'][j]['content'] + '" ><i>' + activities[i]['content'][j]['name'] + image + "<i/><span/>";
-              } else {
-                item.innerHTML = activities[i]['content'][j]['name'];
-              }
-              if (activities[i]['content'][j].hasOwnProperty('description')) {
-                item.innerHTML += ": " + activities[i]['content'][j]['description'];
-              }
-              list.appendChild(item);
-            }
-          } else {
-            var item = document.createElement('P');
-            item.style.textAlign = "left";
-            item.style.margin = "0";
-            item.innerHTML = '<b>' + activities[i]['content']['name'] + '</b>';
-            // if (item.innerHTML.includes(': ')) {
-            //   var temp = item.innerHTML.split(": ");
-            //   item.innerHTML = temp[0].underline() + ": " + temp[1];
-            // }
-            if (activities[i]['content'].hasOwnProperty('description')) {
-              item.innerHTML += ", " + activities[i]['content']['description'];
-            }
-            list.appendChild(item);
-          }
-
-        }
-
       }
 
       // var orig = div.scrollHeight;

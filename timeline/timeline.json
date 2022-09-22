@@ -16,7 +16,7 @@
         "bullet": true,
         "content": [
           {
-            "name": "Cloud Cult"
+            "name": "Cloud Cult ft. Yaima"
           }
         ]
       },
@@ -26,6 +26,15 @@
         "content": [
           {
             "name": "Hamilton"
+          }
+        ]
+      },
+      {
+        "name": "Talks attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "SIGCAS Showcase"
           }
         ]
       }
@@ -868,7 +877,7 @@
         "bullet": true,
         "content": [
           {
-            "name": "Became a senior at university?"
+            "name": "Became a grad student in credits 😎"
           }
         ]
       }
