@@ -1,43 +1,46 @@
-<!DOCTYPE html>
-<html lang='en-US'>
-<head>
-  <meta charset="UTF-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-  <!-- (For debugging header)  -->
-  <link rel="stylesheet" href="/navbar.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-</head>
-<body>
-  <div class="navcontainer">
-    <div class="navbar">
-      <a class="navlink" href="/">Home</a>
-      <a class="navlink" href="/timeline/">Timeline</a>
-      <a class="navlink" href="/projects/">Projects</a>
-      <a class="navlink" href="/writing/">Writing</a>
-      <a href="https://github.com/nowei">
-        <i class="fa fa-github" style="margin-right: 8px"></i>GitHub
-      </a>
-      <a href="https://www.linkedin.com/in/nowei/">
-        <i class="fa fa-linkedin" style="margin-right: 8px"></i>LinkedIn
-      </a>
-      <a href="./Wei_Andrew.pdf">
-        <i class="fa fa-file" style="margin-right: 8px"></i>Resume
-      </a>
-      <div style="font-size: 16px">last updated</div>
-      <div style="font-size: 16px">08/18/2022</div>
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- (For debugging header)  -->
+    <link rel="stylesheet" href="/navbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="navcontainer">
+      <div class="navbar">
+        <a class="navlink" href="/">Home</a>
+        <a class="navlink" href="/timeline/">Timeline</a>
+        <a class="navlink" href="/projects/">Projects</a>
+        <a class="navlink" href="/writing/">Writing</a>
+        <a href="https://github.com/nowei">
+          <i class="fa fa-github" style="margin-right: 8px"></i>GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/nowei/">
+          <i class="fa fa-linkedin" style="margin-right: 8px"></i>LinkedIn
+        </a>
+        <a href="./Wei_Andrew.pdf">
+          <i class="fa fa-file" style="margin-right: 8px"></i>Resume
+        </a>
+        <div style="font-size: 16px">last updated</div>
+        <div style="font-size: 16px">08/18/2022</div>
+      </div>
     </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script>
-    $(function(){
-      var lastMatch = null;
-      $('a.navlink').each(function(){
-        if (window.location.href.includes($(this).prop('href'))) {
-          lastMatch = $(this);
-        }
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      $(function () {
+        var lastMatch = null;
+        $("a.navlink").each(function () {
+          if (window.location.href.includes($(this).prop("href"))) {
+            lastMatch = $(this);
+          }
+        });
+        lastMatch.addClass("active");
       });
-      lastMatch.addClass('active');
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>

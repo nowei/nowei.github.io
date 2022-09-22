@@ -1,95 +1,127 @@
-<!DOCTYPE html>
-<html lang='en-US'>
-<head>
-  <title>Paths</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style.css">
-  <style>
-    p {
-      text-align: left;
-      width:80%;
-      line-height: 30px;
-      display: inline-block;
-    }
-    img {
-      margin: 20px 0px;
-    }
-  </style>
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-  <script>
-    $(function() {
-      $("#header").load("../header.html");
-    });
-  </script>
-</head>
-<body>
-  <div id="header"></div>
-  <h1>Paths</h1>
-  <img src="./imgs/lynnwood.jpg" style="width:50%; height: auto;">
-  <hr>
-  <h2>Goodbyes are weird</h2>
-  <p>
-    &nbsp;&nbsp;&nbsp;&nbsp;I graduated from undergrad in spring 2019 and as I was sitting there in the stadium where
-    the graduation was held, a thought came up. Everyone is going off to do great and amazing things, with their whole 
-    lives ahead of them. But the question that stuck in mind was, will I ever see any of these people again? 
-  </p>
-  <h2>Life and goals as a computer science problem</h2>
-  <p>
-    &nbsp;&nbsp;&nbsp;&nbsp;We get exposed to a lot of people in college and after college, everyone goes kind of goes
-    their separate ways. I mean, eventually, you do as well. Everyone eventually finds their own path in life. There may be 
-    some roadblocks, but that's okay. We all got to where we are; so we'll all get to where we'll eventually be. This 
-    kind of hit me recently: the choices I make, the decisions to do or not do something, impact my future. I guess there's
-    an endless number of paths we can take and we all have a model of the world in our mind, so we sort of have an idea of 
-    what we're doing with our lives in terms of the actions we take. 
-  </p>
-  <p>&nbsp;&nbsp;&nbsp;&nbsp;
-    I guess you can say that there was a path of actions that lead you from some point in time into another and it's sort of 
-    like Laplace's Demon, but without the same level of determinism/absolutism and generality: If you know the outcome of 
-    actions, you can choose some series of actions that eventually brings you to the desired outcome. In other words, you know 
-    that some action or policy will lead you to some reward with some probability. Then you have the choice of deciding 
-    to take that action or not and you'll sort of have an idea of where you'll end up, with some probability. This is only with
-    some probability because our model of the world isn't perfect, so we need to account for errors in our understanding or 
-    chance.
-  </p>
-  <p>&nbsp;&nbsp;&nbsp;&nbsp;
-    I guess you can also sort of see this as a path-finding problem. If you have a goal, there might be multiple paths 
-    to get to where you want to go, but some paths may be longer than other paths and it might not be optimal. I guess we choose
-    our paths unconsciously, but we're all on a path and I guess the question is what action do you want to take on the path 
-    you're currently on given that you have some vague idea of where you need to go. I guess at any point in time, you have an
-    infinite number of possible actions you can take, but some are more likely than others. This might be a little too much to
-    think about at any given time; but each of these actions leads you to another state in the path, which may be closer or
-    further away from whatever goal you have. 
-  </p>
-  <p>&nbsp;&nbsp;&nbsp;&nbsp;
-    There really isn't a point to this, but I guess you can model your goals as a boundless path-finding problem. Although,
-    I guess the point in me learning computer science is to apply it to my life somehow, either using it or being able to 
-    view things in life through the lens of programming, which might be important as we try to make more life-like AI. 
-    Life is essentially performing actions and expecting/observing responses, which is basic I/O; so ¯\_(ツ)_/¯.
-  </p>
-  <h2>People leave and that's okay</h2>
-  <p>&nbsp;&nbsp;&nbsp;&nbsp;
-    Anyways, let's get back on the topic of people going their separate ways. We go about our lives meeting new people, hanging
-    with old people, and I guess do things by ourselves. This sounds like all the cases, so we go forward. There may be times 
-    in our lives when the people we know have similar goals or interests and the paths of your life can be considered to be 
-    connected or parallel to theirs and you'll both try to accomplish some goal and maybe you'll support each other in your
-    endeavors. Who knows. Anyways, eventually the goals diverge or circumstances change and people will go their separate 
-    ways, whether you like it or not. 
-  </p>
-  <p>&nbsp;&nbsp;&nbsp;&nbsp;
-    Then, when people go off into the great big world, what do you do? It's kind of interesting because every
-    time you see someone, it might be the last time that you see them. This begs the questions: Are you satisfied with
-    how you lived your life? Did you do everything you wanted to do? Have you said everything you wanted to say? What does
-    it mean to live a life with no regrets? 
-  </p>
-  <p>&nbsp;&nbsp;&nbsp;&nbsp;
-    We go about our lives with this knowledge. I mean, everyone knows this, but do we truly recognize it before 
-    something happens and realize that we've taken this knowledge for granted? We look to the past with a sense of 
-    nostalgia and comfort, especially when compared to the present. Then again, we all suffer some regret, even if 
-    we don't recognize it at the moment. Sometimes regret can only be realized when looking back at the past. 
-  </p>
-  <p>&nbsp;&nbsp;&nbsp;&nbsp;
-    Maybe there's some grand conclusion that someone can reach from this, but this is all I have to say about this at the moment.
-  </p>
-  <div id="footer"></div>
-</body>
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Paths</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      p {
+        text-align: left;
+        width: 80%;
+        line-height: 30px;
+        display: inline-block;
+      }
+      img {
+        margin: 20px 0px;
+      }
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#header").load("../header.html");
+      });
+    </script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <h1>Paths</h1>
+    <img src="./imgs/lynnwood.jpg" style="width: 50%; height: auto" />
+    <hr />
+    <h2>Goodbyes are weird</h2>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;I graduated from undergrad in spring 2019 and as I
+      was sitting there in the stadium where the graduation was held, a thought
+      came up. Everyone is going off to do great and amazing things, with their
+      whole lives ahead of them. But the question that stuck in mind was, will I
+      ever see any of these people again?
+    </p>
+    <h2>Life and goals as a computer science problem</h2>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;We get exposed to a lot of people in college and
+      after college, everyone goes kind of goes their separate ways. I mean,
+      eventually, you do as well. Everyone eventually finds their own path in
+      life. There may be some roadblocks, but that's okay. We all got to where
+      we are; so we'll all get to where we'll eventually be. This kind of hit me
+      recently: the choices I make, the decisions to do or not do something,
+      impact my future. I guess there's an endless number of paths we can take
+      and we all have a model of the world in our mind, so we sort of have an
+      idea of what we're doing with our lives in terms of the actions we take.
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp; I guess you can say that there was a path of
+      actions that lead you from some point in time into another and it's sort
+      of like Laplace's Demon, but without the same level of
+      determinism/absolutism and generality: If you know the outcome of actions,
+      you can choose some series of actions that eventually brings you to the
+      desired outcome. In other words, you know that some action or policy will
+      lead you to some reward with some probability. Then you have the choice of
+      deciding to take that action or not and you'll sort of have an idea of
+      where you'll end up, with some probability. This is only with some
+      probability because our model of the world isn't perfect, so we need to
+      account for errors in our understanding or chance.
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp; I guess you can also sort of see this as a
+      path-finding problem. If you have a goal, there might be multiple paths to
+      get to where you want to go, but some paths may be longer than other paths
+      and it might not be optimal. I guess we choose our paths unconsciously,
+      but we're all on a path and I guess the question is what action do you
+      want to take on the path you're currently on given that you have some
+      vague idea of where you need to go. I guess at any point in time, you have
+      an infinite number of possible actions you can take, but some are more
+      likely than others. This might be a little too much to think about at any
+      given time; but each of these actions leads you to another state in the
+      path, which may be closer or further away from whatever goal you have.
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp; There really isn't a point to this, but I guess
+      you can model your goals as a boundless path-finding problem. Although, I
+      guess the point in me learning computer science is to apply it to my life
+      somehow, either using it or being able to view things in life through the
+      lens of programming, which might be important as we try to make more
+      life-like AI. Life is essentially performing actions and
+      expecting/observing responses, which is basic I/O; so ¯\_(ツ)_/¯.
+    </p>
+    <h2>People leave and that's okay</h2>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp; Anyways, let's get back on the topic of people
+      going their separate ways. We go about our lives meeting new people,
+      hanging with old people, and I guess do things by ourselves. This sounds
+      like all the cases, so we go forward. There may be times in our lives when
+      the people we know have similar goals or interests and the paths of your
+      life can be considered to be connected or parallel to theirs and you'll
+      both try to accomplish some goal and maybe you'll support each other in
+      your endeavors. Who knows. Anyways, eventually the goals diverge or
+      circumstances change and people will go their separate ways, whether you
+      like it or not.
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp; Then, when people go off into the great big
+      world, what do you do? It's kind of interesting because every time you see
+      someone, it might be the last time that you see them. This begs the
+      questions: Are you satisfied with how you lived your life? Did you do
+      everything you wanted to do? Have you said everything you wanted to say?
+      What does it mean to live a life with no regrets?
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp; We go about our lives with this knowledge. I
+      mean, everyone knows this, but do we truly recognize it before something
+      happens and realize that we've taken this knowledge for granted? We look
+      to the past with a sense of nostalgia and comfort, especially when
+      compared to the present. Then again, we all suffer some regret, even if we
+      don't recognize it at the moment. Sometimes regret can only be realized
+      when looking back at the past.
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp; Maybe there's some grand conclusion that someone
+      can reach from this, but this is all I have to say about this at the
+      moment.
+    </p>
+    <div id="footer"></div>
+  </body>
+</html>

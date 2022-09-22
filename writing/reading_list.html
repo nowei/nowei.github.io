@@ -1,77 +1,278 @@
 https://engineering.kablamo.com.au/posts/2021/memcached-vs-redis-whats-the-difference
-Memcached is simpler and allows for multi-threaded architectures. Memcached has slab classes that store a set amount of bytes and entries are put in the minimum slab class that can fit them. If an entry is smaller than the size for the slab class, the remaining bytes remain unused. This means that the memory never fragments and there's no need to perform a compaction. There's also no need to clean the memory because it can be overwritten. Problems include wasted space and slab sizes not changing. 
-Redis allows for more complex data structures and more complex things like pub/sub or transactions. Redis does jemalloc (malloc that tries to avoid fragmentation and allows for scalable concurrency support), stores, and frees. Has a defrag step that moves things around in memory so that continuous blocks of memory can be used. Redis releases memory back to the OS compared on expiry or purges compared to Memcached where it won't. Memcached won't use more memory than allocated while Redis potentially can. 
-
-Least Recently Used (LRU) has an issue when we evict popular items due to max cache size. 
-Least Frequently Used (LFU) is used to fix the popular item issue and bumps items up when used and has a decay.
-
-Memcached changed their LRU implementation to something more modern where they use levels of doubly-linked lists to indicate hotness or coldness, which correlate with safety and evictability respectively. Memcached has a thread that crawls through the LRU cache, scanning the lists and expiring items as necessary. 
-
-Memcached can be scaled up to 48 cores and can be scaled out into different clusters. Memcached clustering uses a consistent hashing scheme. 
-Redis is mostly single-threaded and scales by running multiple instances of Redis, at the cost of memory efficiency. Redis clusters has leader nodes and redirects commands to the right nodes. Clients should remember the mappings to get the right mappings in the future. Redis clusters lie on a full mesh, which uses a gossip protocol to communicate updates. Hash slots are portions of the value ranges and they move when nodes are added or removed. 
-
-Memcached is better if we can just scale up by throwing CPUs at it, use the cache a lot, use a lot of values, or if we're running the cluster ourselves. Redis is more fancy and does other things. Alternatively, use a L1 local/application cache and then use a L2 network cache because networking costs compute in latency-critical applications. 
-
-TVM: An Automated End-to-End Optimizing Compiler for Deep Learning
-https://arxiv.org/abs/1802.04799
-Many libraries/frameworks are designed for narrow classes of hardware and target-specific optimizations that are hand-optimized/tuned by engineers or use vendor-specific operator libraries. This leads to a tradeoff of not using new operators to leverage graph optimizations made for defined operators or using unoptimized implementations of new operators. TVM is a compiler that exposes graph-level and operator-level optimizations to port deep learning models to different hardware. 
-
-Some problems include using specific hardware features and abstractions, e.g. how DL accelerators introduce new tensor compute primitives compared to GPUs and CPUs improving processing. Each hardware backend has different specs, memory layouts, and different instructions available; specialized accelerators also need to generate code that controls pipeline dependencies to hide memory access latency. 
-
-There is also a large search space for operators, like when to access what memory, threading patterns, and the use of hardware primitives. To address this:
-- TVM has a tensor expression language to build operators and has program transformation primitives that can generate different versions of the program. 
-- TVM has an automated program optimization framework which has a ML-based cost model that collects more data as it's being run. 
-- graph rewriter to get high and operator-level optimizations. Each operator represents a node and each edge is the dependency of the operation. 
-  - Operator fusion - Combines multiple operators into a single kernel without intermediate use of memory. Different categories of graph operators, 3 that can be fused (injective, reduction, complex-out fusable) and one that can't (opaque). Complex-out fusable means that we can fuse operations into the output. 
-  - Constant-folding
-  - Static memory planning pass
-  - Data layout transformations 
-    - Specifies the preferred data layout for each operator given constraints of memory hierarchy. Performs layout transformation between the producer and consumer if the layouts don't match. 
-
-TVM generates a lot of different implementations for each operator on a given hardware back-end and chooses the best one. It decouples descriptions (operators) from computation rules (implementations) and adds new optimizations. High performance on different backends requires support for many schedule primitives to hit a diverse set of optimizations. 
-
-Nested parallelism breaks tasks into subtasks so that an architecture's multi-level thread hierarchy can be utilized. Shared nothing means each thread works by itself without looking at data from neighboring threads. An alternative is to use shared memory, which has all the threads cooperatively grabbing the necessary data for the computation. Tensorization adds extensible tensor compute primitives with multi-dimensional inputs and different data layouts. Extensibility is supported by separating the target hardware intrinsic by using it in a tensor-intrinsic definition. Tensorization decouples the schedule from specific hardware primitives. Tensorized schedules break complex operations into a sequence of micro-kernel calls. Latency hiding overlaps memory operations with computation to maximize utilization of memory and compute. CPUs do this with simulatenous multithreading and hardware prefetching. GPUs do this with rapid context switching on warps of threads. Accelerators do this with a decoupled access-execute architecture and fine-grained synchronization is achieved through software. Decoupled access-execute architecture correctness is enforced by dependence token enqueuing/dequeuing handled by the compiler. 
-
-TVM has a specialized operator for the input shape and layout for each layer, where it needs to decide on schedule optimizations like whether to optimize on the loop order or memory hierarchy, or schedule-specific parameters like tiling size and loop unrolling factor. Thus there is a large search space of operator implementations for each hardware backend and the automated schedule optimizer proposes configurations and predicts its performance. Schedule spaces for a configuration (operator schedule) are defined which include a developer's domain-specific knowledge as well as automatically extracted knobs based on computation description from tensor expression languages. Schedule explorer proposes configurations to improve performance and an ML model takes the loop program as input and predicts the running time on a given hardware backend. The cost model prediction time should be lower than the actual running time to test the operator. A rank objective is used to predict relative order of runtime costs and gradient tree boosting is used for the cost model which predicts the costs from the loop program, e.g. number of memory accesses, reuse ratio, and one-hot encodings of loop annotations like vectorize, unroll, or parallel. The explorer uses the ML model's predictions to select candidates for measurements, or random if no candidates. The explorer uses a parallel simulated annealing algorithm. What this means is that it starts from a random configuration and does a random walk to a nearby configuration and we are successful if the walk ends up with a lower cost, otherwise it fails and is gets rejected. Tests on hardware are done using an RPC-based distributed device pool that lets clients choose the device they test things on. This allows for an infrastructure that performs a single workload optimization and end-to-end graph inference. 
-
-TVM significantly outperforms cuDNN on unconventional operators due to automatically finding optimized operators. 
-
-Learning to Optimize Tensor Programs
-https://arxiv.org/abs/1805.08166
-
-cuDNN is optimized for a narrow range of hardware devices and operators. Supporting different hardware back-ends requires a lot of engineering effort. There are many ways to generate code that ends up achieving the same things, some implementation details include loop order, memory scope, and threading. We want to be able to predict the time it takes to run code for some given operator/expression. Differs from hyper-parameter optimization in a few ways: experiment cost is relatively low (can collect more training data), so inference should be fast; domain-specific problem structure, i.e. we are optimizing programs and they have program structures that can be leveraged; large quantity of similar operators, i.e. different input sizes and data layouts may give different, but similar results that can be used for transfer learning. There are domain-specific languages for code generation with different expression spaces and sets of possible schedules and generated code, like Polyhedral (loops treated like parametric polyhedra and exploting combinatorial and geometrical optimizatoins on these objects to analyze and optimize the programs) or Halide (Defines a schedule space using a set of transformation primitives). 
-
-AutoTVM uses TVM for code generation (based on Halide's compute/schedule separation which allows for separation of hardware intrinsics from transformation primitives and program transformations, which form a rich space of valid programs), which includes things like multi-level tiling on loop axes, loop ordering, shared memory caching for GPUs, and annotations like unrolling and vectorization. Domain-specific features are extracted, e.g. number of memory accesses/data reuse and generic annotations like vectorization, unrolling, and thread binding. Two models were tested, Gradient Boosted Trees (GBT) and TreeGRUs. TreeGRU recursively encodes trees encodes the AST into an embedding vector. Instead of a regression loss function, a rank loss function is used to focus on the relative run times of programs, e.g. one being faster or slower than another. Simulated annealing (probabilistically moving to a better (random) neighbor at each step depending on the efficiency gain and the allowed variation in exploration (temperature)) is performed to explore the model space and there is a batch of parallel Markov chains to improve the prediction of the statistical cost model. The top-performing batch is run on real hardware and the collected performance data is used to update the model. The states of the Markov chain are persisted across the model updates and there is an epsilon-greedy approach to select some portion of candidates randomly to make sure that exploration still happens. 
-
-When selecting the candidates for hardware evaluation, they use an objective that encourages low run-time costs and counts the number of different configuration components covered by the candidate set, which means that it also favors diversity of components within candidates. Uncertainty estimators are used to estimate the effectiveness of a method, bootstrapping is used to split the data into multiple test runs to test the effectiveness of the model when only part of the data is available. Transfer learning is used to speed up optimization and can be applied when there is a transferable representation that is invariant to the source and target domains. Since the search space representation can change, configurations are not invariant to changes in the search space, but the low-level loop AST is a shared representation of programs that is invariant to the search space. 
-
-Context features at loop levels are used to capture the loop characteristics, but can't be generalized across different loop nest patterns. Context relation features take context vectors and extract features to get relationships between features, comparing the i-th feature of loop k to the j-th feature of loop k, they encode relations like how loop count compares to touched memory size, which impacts run-time cost. The global model (based on past data) is combined with the in-domain local model to create the transfer learning method. The global model helps with initial predictions before we have enough data from the current run. 
-
-Black-box otimization has to run many experiments to get a good model. Predefined cost models may not be able to capture the complexity of hardware and has to be altered for each new hardware target. Statistical cost models (GBT and TreeGRU) with a domain-specific cost model are used to enable transfer among workloads. A random baseline is used for a comparison of performance. The search for an efficient configuration using a model-based approach performed better than random search, where previous results for hyper-parameter tuning using a model showed that it didn't perform better than random search. Domain-specific modeling was used to help guide the search for better configurations. A rank-based objective function performed better than the regression one, which avoids having to accurately model absolute cost values. Diversity-aware exploration (favoring diversity in candidate set) didn't improve or hinder the exploration much, but showed marginal improvements. Uncertainty-aware acquisition functions didn't really play a role in improving the performance. Transfer-learning-based models quickly found better solutions compared to non-transfer-learning-based ones. Models using configuration space features worked well within a domain (trained directly on domain, e.g. C7 -> C7) but were less useful across domains (trained on a different domain, e.g. C1-C6 -> C7). Flattened AST features worked well across different convolutional workloads, but not different operators, e.g. convolutions to convolutions vs convolutions to matrix multiplication. Context relation representations (features within each loop level) helped with transferring across operator types. Transfer across similar devices was mostly fine. 
-
-Ansor : Generating High-Performance Tensor Programs for Deep Learning
-https://arxiv.org/abs/2006.06762
-
-A lot of time is put into tuning operators so that they're efficient on some accelerators and that takes away from the development of new operators and accelerators. TVM relied on predefined manually-written templates and Halide aggressively tuned by evaluating incomplete programs and pruning the space. Ansor uses a hierarchical representation of the search space so that high-level structures can be enumerated and low-level details can be sampled. Ansor samples complete programs from the search space and fine-tunes the programs with evolutionary search and a learned cost model. Ansor prioritizes subgraphs of the DNN that are likely to improve performance using a scheduling algorithm based on gradient descent. Ansor only needs mathematical definitions to do this rather than templates. 
-
-Template-guided search can't perform operator fusion well because it can't break down the templates during search. The cost model for sequential generation can't properly judge how performant partial programs will be because the tasks for each program will be different. The order of sequential decisions limits the search space and sequential construction isn't scalable. Ansor addresses this by using a hierarchical structure that generates high-level structures and then samples low-level details which get fine-tuned for better programs. 
-
-Ansor uses an operator fusion algorithm to convert DNNs from model formats to smaller, partitioned subgraphs. It has a program sampler that also constructs the search space, a performance tuner that fine-tunes the performance of sampled programs, and a task scheduler to allocate time for optimizing multiple subgraphs. High-level structures are described by sketches and low-level choices are annotations for the sketches. 
-
-The program sampler enumerates high-level structures and samples low-level details and it randomly samples programs from the space to provide comprehensive coverage. The performance tuner fine-tunes sampled programs by using an evolutionary search which uses previous iterations and past good programs as the initial population for the search. Evolutionary search fine-tunes by using mutation and crossover which perform out-of-order rewrite and address limitations of sequential construction. Querying the cost model is faster than actually measuring the programs. The compiler partitions the large computational graph into smaller subgraphs. The paper claims that how the graph is partitioned doesn't have much of an impact on the performance. The task scheduler uses gradient descent to allocate resources to specific subgraphs. Nodes are visited in DAG order and basic structures are built for computational nodes. Ansor uses a derivation-based enumeration method to generate possible sketches by recursively applying rules. It takes a DAG and returns a list of sketches. 
-
-Starts from the naive program for the last node and recursively applies derivation rules to the states (if the rule applies, apply the rule). There are rules for in-line functions and also rules for multi-level tiling and fusion. There are also opportunities to add a cache node which can be used to write output to a cache block. There's also a rule to factorize a reduction loop into a space loop for more parallelism. There are skip and in-line commands which can be applied whenever they fit. Ansor allows the addition of new derivation rules so that they can generate structures for new algorithms and hardware. 
-
-From generated sketches, a sketch is randomly sampled, with some random tile sizes, parallelized outer loops, vectorized inner loops, and unrolled inner loops. Computation location is also changed sometimes. Random means uniform over valid values. If some custom annotations are necessary, then hints can be given to the computation definition to change the annotation policy. Constant tensors (e.g. inference time) are taken out of loops and made to be more cache-friendly. GPU support for multi-level tiling goes from SSRSRS (CPU) to SSSRRSRS (GPU) to match GPU architecture to match block index, virtual thread, and thread index. New rules are also created, like for using shared memory through a cache node or for cross-thread reduction (more parallelism). 
-
-Fine-tuning is iterative. Evolutionary search uses randomly sampled programs and good programs from previous populations and evolution is run for a fixed number of generations and the best programs from the search are selected out. To evolve a sampled program/annotation, there are a few evolution operations, like tile size mutation, parallel mutation, pragma mutation, computation location mutation, and node-based crossover. 
-
-Tile size mutation selects a level and divides by a random (uniform) factor and multiplies another level by the same factor. Parallel mutation fuses adjacent loop levels or splits it by a factor. Pragma mutation changes a compiler-specific pragma to another valid value. Computation location mutation selects a flexible node and changes its computation location. Node-based crossover randomly merges rewriting steps across different nodes.
-
-The cost model is trained to predict the score of one innermost non-loop statement in a loop nest. The full program just sums the predictions as the score. The feature vector is built for the innermost non-loop statement by extracting features in the context of a full program, like arithmetic features and memory access features. They use a gradient boosted decision tree and the loss function is the weighted squared error loss function. A single model is used for all tensor programs from all DAGs, with normalized outputs per DAG. A new model is trained each time instead of performing incremental updates.
-
-The task scheduler decides on what subgraphs to optimize. A task is a process performed to generate high-performance programs for a subgraph. Tasks are iterative. In each iteration, Ansor selects a task, generated programs for the subgraph, and measured the program on hardware. Each iteration is an opportunity to generate and measure new programs. Different problem formulations guide Ansor on decisions for what to tune and for how long. What to tune gets selected with an approximation of the gradient of the objective with respect to time. It first does an initial round of iterations using round robin and then selects based on previous evaluations of the subgraph and evaluation times from previous, similar subgraphs. Epsilon-greedy is used to maintain some exploration. Ansor prioritizes high latency subgraphs and if no significant improvement occurs within several rounds, it explores something else. Each task starts the sketch for the subgraph from scratch with random mutation and a the learned cost model (model gets updated over iterations).
-
-# Is it possible to guide the search on a sketch of a program somehow instead of random mutations? 
-
-Ansor beat baselines like TVM in terms of measurement and optimization times.
+Memcached is simpler and allows for multi-threaded architectures. Memcached has
+slab classes that store a set amount of bytes and entries are put in the minimum
+slab class that can fit them. If an entry is smaller than the size for the slab
+class, the remaining bytes remain unused. This means that the memory never
+fragments and there's no need to perform a compaction. There's also no need to
+clean the memory because it can be overwritten. Problems include wasted space
+and slab sizes not changing. Redis allows for more complex data structures and
+more complex things like pub/sub or transactions. Redis does jemalloc (malloc
+that tries to avoid fragmentation and allows for scalable concurrency support),
+stores, and frees. Has a defrag step that moves things around in memory so that
+continuous blocks of memory can be used. Redis releases memory back to the OS
+compared on expiry or purges compared to Memcached where it won't. Memcached
+won't use more memory than allocated while Redis potentially can. Least Recently
+Used (LRU) has an issue when we evict popular items due to max cache size. Least
+Frequently Used (LFU) is used to fix the popular item issue and bumps items up
+when used and has a decay. Memcached changed their LRU implementation to
+something more modern where they use levels of doubly-linked lists to indicate
+hotness or coldness, which correlate with safety and evictability respectively.
+Memcached has a thread that crawls through the LRU cache, scanning the lists and
+expiring items as necessary. Memcached can be scaled up to 48 cores and can be
+scaled out into different clusters. Memcached clustering uses a consistent
+hashing scheme. Redis is mostly single-threaded and scales by running multiple
+instances of Redis, at the cost of memory efficiency. Redis clusters has leader
+nodes and redirects commands to the right nodes. Clients should remember the
+mappings to get the right mappings in the future. Redis clusters lie on a full
+mesh, which uses a gossip protocol to communicate updates. Hash slots are
+portions of the value ranges and they move when nodes are added or removed.
+Memcached is better if we can just scale up by throwing CPUs at it, use the
+cache a lot, use a lot of values, or if we're running the cluster ourselves.
+Redis is more fancy and does other things. Alternatively, use a L1
+local/application cache and then use a L2 network cache because networking costs
+compute in latency-critical applications. TVM: An Automated End-to-End
+Optimizing Compiler for Deep Learning https://arxiv.org/abs/1802.04799 Many
+libraries/frameworks are designed for narrow classes of hardware and
+target-specific optimizations that are hand-optimized/tuned by engineers or use
+vendor-specific operator libraries. This leads to a tradeoff of not using new
+operators to leverage graph optimizations made for defined operators or using
+unoptimized implementations of new operators. TVM is a compiler that exposes
+graph-level and operator-level optimizations to port deep learning models to
+different hardware. Some problems include using specific hardware features and
+abstractions, e.g. how DL accelerators introduce new tensor compute primitives
+compared to GPUs and CPUs improving processing. Each hardware backend has
+different specs, memory layouts, and different instructions available;
+specialized accelerators also need to generate code that controls pipeline
+dependencies to hide memory access latency. There is also a large search space
+for operators, like when to access what memory, threading patterns, and the use
+of hardware primitives. To address this: - TVM has a tensor expression language
+to build operators and has program transformation primitives that can generate
+different versions of the program. - TVM has an automated program optimization
+framework which has a ML-based cost model that collects more data as it's being
+run. - graph rewriter to get high and operator-level optimizations. Each
+operator represents a node and each edge is the dependency of the operation. -
+Operator fusion - Combines multiple operators into a single kernel without
+intermediate use of memory. Different categories of graph operators, 3 that can
+be fused (injective, reduction, complex-out fusable) and one that can't
+(opaque). Complex-out fusable means that we can fuse operations into the output.
+- Constant-folding - Static memory planning pass - Data layout transformations -
+Specifies the preferred data layout for each operator given constraints of
+memory hierarchy. Performs layout transformation between the producer and
+consumer if the layouts don't match. TVM generates a lot of different
+implementations for each operator on a given hardware back-end and chooses the
+best one. It decouples descriptions (operators) from computation rules
+(implementations) and adds new optimizations. High performance on different
+backends requires support for many schedule primitives to hit a diverse set of
+optimizations. Nested parallelism breaks tasks into subtasks so that an
+architecture's multi-level thread hierarchy can be utilized. Shared nothing
+means each thread works by itself without looking at data from neighboring
+threads. An alternative is to use shared memory, which has all the threads
+cooperatively grabbing the necessary data for the computation. Tensorization
+adds extensible tensor compute primitives with multi-dimensional inputs and
+different data layouts. Extensibility is supported by separating the target
+hardware intrinsic by using it in a tensor-intrinsic definition. Tensorization
+decouples the schedule from specific hardware primitives. Tensorized schedules
+break complex operations into a sequence of micro-kernel calls. Latency hiding
+overlaps memory operations with computation to maximize utilization of memory
+and compute. CPUs do this with simulatenous multithreading and hardware
+prefetching. GPUs do this with rapid context switching on warps of threads.
+Accelerators do this with a decoupled access-execute architecture and
+fine-grained synchronization is achieved through software. Decoupled
+access-execute architecture correctness is enforced by dependence token
+enqueuing/dequeuing handled by the compiler. TVM has a specialized operator for
+the input shape and layout for each layer, where it needs to decide on schedule
+optimizations like whether to optimize on the loop order or memory hierarchy, or
+schedule-specific parameters like tiling size and loop unrolling factor. Thus
+there is a large search space of operator implementations for each hardware
+backend and the automated schedule optimizer proposes configurations and
+predicts its performance. Schedule spaces for a configuration (operator
+schedule) are defined which include a developer's domain-specific knowledge as
+well as automatically extracted knobs based on computation description from
+tensor expression languages. Schedule explorer proposes configurations to
+improve performance and an ML model takes the loop program as input and predicts
+the running time on a given hardware backend. The cost model prediction time
+should be lower than the actual running time to test the operator. A rank
+objective is used to predict relative order of runtime costs and gradient tree
+boosting is used for the cost model which predicts the costs from the loop
+program, e.g. number of memory accesses, reuse ratio, and one-hot encodings of
+loop annotations like vectorize, unroll, or parallel. The explorer uses the ML
+model's predictions to select candidates for measurements, or random if no
+candidates. The explorer uses a parallel simulated annealing algorithm. What
+this means is that it starts from a random configuration and does a random walk
+to a nearby configuration and we are successful if the walk ends up with a lower
+cost, otherwise it fails and is gets rejected. Tests on hardware are done using
+an RPC-based distributed device pool that lets clients choose the device they
+test things on. This allows for an infrastructure that performs a single
+workload optimization and end-to-end graph inference. TVM significantly
+outperforms cuDNN on unconventional operators due to automatically finding
+optimized operators. Learning to Optimize Tensor Programs
+https://arxiv.org/abs/1805.08166 cuDNN is optimized for a narrow range of
+hardware devices and operators. Supporting different hardware back-ends requires
+a lot of engineering effort. There are many ways to generate code that ends up
+achieving the same things, some implementation details include loop order,
+memory scope, and threading. We want to be able to predict the time it takes to
+run code for some given operator/expression. Differs from hyper-parameter
+optimization in a few ways: experiment cost is relatively low (can collect more
+training data), so inference should be fast; domain-specific problem structure,
+i.e. we are optimizing programs and they have program structures that can be
+leveraged; large quantity of similar operators, i.e. different input sizes and
+data layouts may give different, but similar results that can be used for
+transfer learning. There are domain-specific languages for code generation with
+different expression spaces and sets of possible schedules and generated code,
+like Polyhedral (loops treated like parametric polyhedra and exploting
+combinatorial and geometrical optimizatoins on these objects to analyze and
+optimize the programs) or Halide (Defines a schedule space using a set of
+transformation primitives). AutoTVM uses TVM for code generation (based on
+Halide's compute/schedule separation which allows for separation of hardware
+intrinsics from transformation primitives and program transformations, which
+form a rich space of valid programs), which includes things like multi-level
+tiling on loop axes, loop ordering, shared memory caching for GPUs, and
+annotations like unrolling and vectorization. Domain-specific features are
+extracted, e.g. number of memory accesses/data reuse and generic annotations
+like vectorization, unrolling, and thread binding. Two models were tested,
+Gradient Boosted Trees (GBT) and TreeGRUs. TreeGRU recursively encodes trees
+encodes the AST into an embedding vector. Instead of a regression loss function,
+a rank loss function is used to focus on the relative run times of programs,
+e.g. one being faster or slower than another. Simulated annealing
+(probabilistically moving to a better (random) neighbor at each step depending
+on the efficiency gain and the allowed variation in exploration (temperature))
+is performed to explore the model space and there is a batch of parallel Markov
+chains to improve the prediction of the statistical cost model. The
+top-performing batch is run on real hardware and the collected performance data
+is used to update the model. The states of the Markov chain are persisted across
+the model updates and there is an epsilon-greedy approach to select some portion
+of candidates randomly to make sure that exploration still happens. When
+selecting the candidates for hardware evaluation, they use an objective that
+encourages low run-time costs and counts the number of different configuration
+components covered by the candidate set, which means that it also favors
+diversity of components within candidates. Uncertainty estimators are used to
+estimate the effectiveness of a method, bootstrapping is used to split the data
+into multiple test runs to test the effectiveness of the model when only part of
+the data is available. Transfer learning is used to speed up optimization and
+can be applied when there is a transferable representation that is invariant to
+the source and target domains. Since the search space representation can change,
+configurations are not invariant to changes in the search space, but the
+low-level loop AST is a shared representation of programs that is invariant to
+the search space. Context features at loop levels are used to capture the loop
+characteristics, but can't be generalized across different loop nest patterns.
+Context relation features take context vectors and extract features to get
+relationships between features, comparing the i-th feature of loop k to the j-th
+feature of loop k, they encode relations like how loop count compares to touched
+memory size, which impacts run-time cost. The global model (based on past data)
+is combined with the in-domain local model to create the transfer learning
+method. The global model helps with initial predictions before we have enough
+data from the current run. Black-box otimization has to run many experiments to
+get a good model. Predefined cost models may not be able to capture the
+complexity of hardware and has to be altered for each new hardware target.
+Statistical cost models (GBT and TreeGRU) with a domain-specific cost model are
+used to enable transfer among workloads. A random baseline is used for a
+comparison of performance. The search for an efficient configuration using a
+model-based approach performed better than random search, where previous results
+for hyper-parameter tuning using a model showed that it didn't perform better
+than random search. Domain-specific modeling was used to help guide the search
+for better configurations. A rank-based objective function performed better than
+the regression one, which avoids having to accurately model absolute cost
+values. Diversity-aware exploration (favoring diversity in candidate set) didn't
+improve or hinder the exploration much, but showed marginal improvements.
+Uncertainty-aware acquisition functions didn't really play a role in improving
+the performance. Transfer-learning-based models quickly found better solutions
+compared to non-transfer-learning-based ones. Models using configuration space
+features worked well within a domain (trained directly on domain, e.g. C7 -> C7)
+but were less useful across domains (trained on a different domain, e.g. C1-C6
+-> C7). Flattened AST features worked well across different convolutional
+workloads, but not different operators, e.g. convolutions to convolutions vs
+convolutions to matrix multiplication. Context relation representations
+(features within each loop level) helped with transferring across operator
+types. Transfer across similar devices was mostly fine. Ansor : Generating
+High-Performance Tensor Programs for Deep Learning
+https://arxiv.org/abs/2006.06762 A lot of time is put into tuning operators so
+that they're efficient on some accelerators and that takes away from the
+development of new operators and accelerators. TVM relied on predefined
+manually-written templates and Halide aggressively tuned by evaluating
+incomplete programs and pruning the space. Ansor uses a hierarchical
+representation of the search space so that high-level structures can be
+enumerated and low-level details can be sampled. Ansor samples complete programs
+from the search space and fine-tunes the programs with evolutionary search and a
+learned cost model. Ansor prioritizes subgraphs of the DNN that are likely to
+improve performance using a scheduling algorithm based on gradient descent.
+Ansor only needs mathematical definitions to do this rather than templates.
+Template-guided search can't perform operator fusion well because it can't break
+down the templates during search. The cost model for sequential generation can't
+properly judge how performant partial programs will be because the tasks for
+each program will be different. The order of sequential decisions limits the
+search space and sequential construction isn't scalable. Ansor addresses this by
+using a hierarchical structure that generates high-level structures and then
+samples low-level details which get fine-tuned for better programs. Ansor uses
+an operator fusion algorithm to convert DNNs from model formats to smaller,
+partitioned subgraphs. It has a program sampler that also constructs the search
+space, a performance tuner that fine-tunes the performance of sampled programs,
+and a task scheduler to allocate time for optimizing multiple subgraphs.
+High-level structures are described by sketches and low-level choices are
+annotations for the sketches. The program sampler enumerates high-level
+structures and samples low-level details and it randomly samples programs from
+the space to provide comprehensive coverage. The performance tuner fine-tunes
+sampled programs by using an evolutionary search which uses previous iterations
+and past good programs as the initial population for the search. Evolutionary
+search fine-tunes by using mutation and crossover which perform out-of-order
+rewrite and address limitations of sequential construction. Querying the cost
+model is faster than actually measuring the programs. The compiler partitions
+the large computational graph into smaller subgraphs. The paper claims that how
+the graph is partitioned doesn't have much of an impact on the performance. The
+task scheduler uses gradient descent to allocate resources to specific
+subgraphs. Nodes are visited in DAG order and basic structures are built for
+computational nodes. Ansor uses a derivation-based enumeration method to
+generate possible sketches by recursively applying rules. It takes a DAG and
+returns a list of sketches. Starts from the naive program for the last node and
+recursively applies derivation rules to the states (if the rule applies, apply
+the rule). There are rules for in-line functions and also rules for multi-level
+tiling and fusion. There are also opportunities to add a cache node which can be
+used to write output to a cache block. There's also a rule to factorize a
+reduction loop into a space loop for more parallelism. There are skip and
+in-line commands which can be applied whenever they fit. Ansor allows the
+addition of new derivation rules so that they can generate structures for new
+algorithms and hardware. From generated sketches, a sketch is randomly sampled,
+with some random tile sizes, parallelized outer loops, vectorized inner loops,
+and unrolled inner loops. Computation location is also changed sometimes. Random
+means uniform over valid values. If some custom annotations are necessary, then
+hints can be given to the computation definition to change the annotation
+policy. Constant tensors (e.g. inference time) are taken out of loops and made
+to be more cache-friendly. GPU support for multi-level tiling goes from SSRSRS
+(CPU) to SSSRRSRS (GPU) to match GPU architecture to match block index, virtual
+thread, and thread index. New rules are also created, like for using shared
+memory through a cache node or for cross-thread reduction (more parallelism).
+Fine-tuning is iterative. Evolutionary search uses randomly sampled programs and
+good programs from previous populations and evolution is run for a fixed number
+of generations and the best programs from the search are selected out. To evolve
+a sampled program/annotation, there are a few evolution operations, like tile
+size mutation, parallel mutation, pragma mutation, computation location
+mutation, and node-based crossover. Tile size mutation selects a level and
+divides by a random (uniform) factor and multiplies another level by the same
+factor. Parallel mutation fuses adjacent loop levels or splits it by a factor.
+Pragma mutation changes a compiler-specific pragma to another valid value.
+Computation location mutation selects a flexible node and changes its
+computation location. Node-based crossover randomly merges rewriting steps
+across different nodes. The cost model is trained to predict the score of one
+innermost non-loop statement in a loop nest. The full program just sums the
+predictions as the score. The feature vector is built for the innermost non-loop
+statement by extracting features in the context of a full program, like
+arithmetic features and memory access features. They use a gradient boosted
+decision tree and the loss function is the weighted squared error loss function.
+A single model is used for all tensor programs from all DAGs, with normalized
+outputs per DAG. A new model is trained each time instead of performing
+incremental updates. The task scheduler decides on what subgraphs to optimize. A
+task is a process performed to generate high-performance programs for a
+subgraph. Tasks are iterative. In each iteration, Ansor selects a task,
+generated programs for the subgraph, and measured the program on hardware. Each
+iteration is an opportunity to generate and measure new programs. Different
+problem formulations guide Ansor on decisions for what to tune and for how long.
+What to tune gets selected with an approximation of the gradient of the
+objective with respect to time. It first does an initial round of iterations
+using round robin and then selects based on previous evaluations of the subgraph
+and evaluation times from previous, similar subgraphs. Epsilon-greedy is used to
+maintain some exploration. Ansor prioritizes high latency subgraphs and if no
+significant improvement occurs within several rounds, it explores something
+else. Each task starts the sketch for the subgraph from scratch with random
+mutation and a the learned cost model (model gets updated over iterations). # Is
+it possible to guide the search on a sketch of a program somehow instead of
+random mutations? Ansor beat baselines like TVM in terms of measurement and
+optimization times.

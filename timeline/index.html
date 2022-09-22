@@ -1,616 +1,674 @@
-<!DOCTYPE html>
-<html lang='en-US'>
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Timeline</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      /* For the tooltips */
+      button {
+        background-image: linear-gradient(rgb(50, 50, 50), rgb(100, 100, 100));
+        padding: 0.5em 0.5em;
+        min-width: 200px;
+        color: white;
+      }
 
-<head>
-  <title>Timeline</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/style.css">
-  <style>
-    /* For the tooltips */
-    button {
-      background-image: linear-gradient(rgb(50, 50, 50), rgb(100, 100, 100));
-      padding: 0.5em 0.5em;
-      min-width: 200px;
-      color: white;
-    }
+      .container {
+        height: unset;
+      }
 
-    .container {
-      height: unset;
-    }
+      p {
+        font-size: 16px;
+      }
 
-    p {
-      font-size: 16px;
-    }
-
-    /*    ul {
+      /*    ul {
       font-size: 1em;
     }*/
-    @media screen and (min-width: 1000px) {
-      /*      ul {
+      @media screen and (min-width: 1000px) {
+        /*      ul {
         font-size: 0.9em;
       }*/
-    }
-
-    p {
-      margin: 10px 0;
-    }
-
-    /* for the hide flexbox */
-    button {
-      width: 100%;
-      /*border:none;*/
-    }
-
-    img {
-      width: 0;
-    }
-
-    #content {
-      width: 100%;
-      /*display: inline-block;*/
-      /*height: 100%;*/
-    }
-
-    .quarter {
-      text-align: left;
-      /*display:none;*/
-      /*max-height: 0;*/
-      /*min-height: 0;*/
-      overflow: hidden;
-      /*min-height:450px;*/
-      transition: min-height 0.4s ease-in-out;
-      margin: 6px;
-    }
-
-    .quarter p {
-      margin: 6px;
-    }
-
-    .quarter-container {
-      /*float:left;*/
-      /*margin: 0 auto;*/
-      /*display: flex;*/
-      z-index: 1;
-      border-width: 10px;
-      /*height: 50vh;*/
-      padding: 50px;
-    }
-
-    .quarter-grid {
-      display: flex;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      flex-direction: row;
-    }
-
-    @media screen and (max-width: 1000px) {
-      .quarter-grid {
-        flex-direction: column-reverse;
       }
-    }
 
-    .quarter-item {
-      /*float:left;*/
-      border-color: white;
-      border-width: 2px;
-      width: 100%;
-      justify-content: flex-start;
-      /*display: flex;*/
-      /*border-radius:25px;*/
-      overflow: visible;
-      /*overflow: hidden;*/
-      border-style: solid;
-    }
+      p {
+        margin: 10px 0;
+      }
 
-    @media screen and (min-width: 1000px) {
+      /* for the hide flexbox */
+      button {
+        width: 100%;
+        /*border:none;*/
+      }
+
+      img {
+        width: 0;
+      }
+
+      #content {
+        width: 100%;
+        /*display: inline-block;*/
+        /*height: 100%;*/
+      }
+
+      .quarter {
+        text-align: left;
+        /*display:none;*/
+        /*max-height: 0;*/
+        /*min-height: 0;*/
+        overflow: hidden;
+        /*min-height:450px;*/
+        transition: min-height 0.4s ease-in-out;
+        margin: 6px;
+      }
+
+      .quarter p {
+        margin: 6px;
+      }
+
+      .quarter-container {
+        /*float:left;*/
+        /*margin: 0 auto;*/
+        /*display: flex;*/
+        z-index: 1;
+        border-width: 10px;
+        /*height: 50vh;*/
+        padding: 50px;
+      }
+
+      .quarter-grid {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+
+      @media screen and (max-width: 1000px) {
+        .quarter-grid {
+          flex-direction: column-reverse;
+        }
+      }
+
       .quarter-item {
         /*float:left;*/
         border-color: white;
         border-width: 2px;
-        width: 25%;
+        width: 100%;
         justify-content: flex-start;
         /*display: flex;*/
         /*border-radius:25px;*/
         overflow: visible;
         /*overflow: hidden;*/
+        border-style: solid;
       }
-    }
 
-    .quarterba,
-    .quarterbb,
-    .quartercc,
-    .quarterm,
-    .quartera {
-      height: 50px;
-      border: 1px solid white;
-    }
+      @media screen and (min-width: 1000px) {
+        .quarter-item {
+          /*float:left;*/
+          border-color: white;
+          border-width: 2px;
+          width: 25%;
+          justify-content: flex-start;
+          /*display: flex;*/
+          /*border-radius:25px;*/
+          overflow: visible;
+          /*overflow: hidden;*/
+        }
+      }
 
-    .quarterba:hover,
-    .quarterbb:hover,
-    .quartercc:hover,
-    .quarterm:hover,
-    .quartera:hover {
-      border: 3px solid white;
-    }
+      .quarterba,
+      .quarterbb,
+      .quartercc,
+      .quarterm,
+      .quartera {
+        height: 50px;
+        border: 1px solid white;
+      }
 
-    /* For links */
-    a.link_proj:link {
-      background-image: unset;
-      min-width: unset;
-      min-height: unset;
-      display: inline;
-    }
-    .topic {
-      /*display: inline-block;*/
-      text-align: left;
-      left: 0%;
-      margin: 6px;
-    }
+      .quarterba:hover,
+      .quarterbb:hover,
+      .quartercc:hover,
+      .quarterm:hover,
+      .quartera:hover {
+        border: 3px solid white;
+      }
 
-    .collapsible {
-      margin: 20px 5px;
-      background-color: rgb(80, 70, 60);
-    }
+      /* For links */
+      a.link_proj:link {
+        background-image: unset;
+        min-width: unset;
+        min-height: unset;
+        display: inline;
+      }
+      .topic {
+        /*display: inline-block;*/
+        text-align: left;
+        left: 0%;
+        margin: 6px;
+      }
 
-    ul {
-      padding: 0 0 0 25px;
-    }
+      .collapsible {
+        margin: 20px 5px;
+        background-color: rgb(80, 70, 60);
+      }
 
-    .thumbnail {
-      text-decoration: underline;
-    }
-    .tooltip-text {
-      text-decoration: underline dotted;
-    }
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background-color: #111;
-      border-color: white;
-      border-width: 0;
-      border-bottom-width: 2px;
-      padding: 12px;
-      border-style: solid;
-    }
+      ul {
+        padding: 0 0 0 25px;
+      }
 
-    @media (prefers-color-scheme: light) {
+      .thumbnail {
+        text-decoration: underline;
+      }
+      .tooltip-text {
+        text-decoration: underline dotted;
+      }
       header {
-        background-color: whitesmoke;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background-color: #111;
+        border-color: white;
+        border-width: 0;
+        border-bottom-width: 2px;
+        padding: 12px;
+        border-style: solid;
       }
-    }
 
-  </style>
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
-  <script>
-    $(function () {
-      $("#navbar").load("../navbar.html");
-    });
-  </script>
-</head>
+      @media (prefers-color-scheme: light) {
+        header {
+          background-color: whitesmoke;
+        }
+      }
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#navbar").load("../navbar.html");
+      });
+    </script>
+  </head>
 
-<body>
-  <div id="navbar"></div>
-  <header style="z-index: 1000;">
-    <h1>Timeline of activities</h1>
-  </header>
-  <div class="container">
-    <header>
-      <p style="padding:12px"></p><br />
-      <h1><u>Adulting/Real-Worlding</u></h1><br />
-      <h2>2021 - Pandemic Blues 2: Electric Boogaloo</h2>
+  <body>
+    <div id="navbar"></div>
+    <header style="z-index: 1000">
+      <h1>Timeline of activities</h1>
     </header>
-    <section class="one reveal">
+    <div class="container">
+      <header>
+        <p style="padding: 12px"></p>
+        <br />
+        <h1><u>Adulting/Real-Worlding</u></h1>
+        <br />
+        <h2>2021 - Pandemic Blues 2: Electric Boogaloo</h2>
+      </header>
+      <section class="one reveal">
         <div class="content" style="max-height: 100%">
           <div class="quarter-container">
-            <div id="2021" class="quarter-grid" style="transition: all 2s"></div>
+            <div
+              id="2021"
+              class="quarter-grid"
+              style="transition: all 2s"
+            ></div>
           </div>
         </div>
-    </section>
-  </div>
-  <div class="container">
-    <header>
-      <p style="padding:12px"></p><br />
-      <h1><u>University of Washington</u></h1><br />
-      <h2 id="masters">Master of Science in Computer Science and Engineering</h2>
-    </header>
-    <section class="two">
+      </section>
+    </div>
+    <div class="container">
+      <header>
+        <p style="padding: 12px"></p>
+        <br />
+        <h1><u>University of Washington</u></h1>
+        <br />
+        <h2 id="masters">
+          Master of Science in Computer Science and Engineering
+        </h2>
+      </header>
+      <section class="two">
         <div class="content">
           <div class="quarter-container">
-            <div id="masters2" class="quarter-grid">
-            </div>
+            <div id="masters2" class="quarter-grid"></div>
           </div>
         </div>
-    </section>
-    <section class="two">
+      </section>
+      <section class="two">
         <div class="content">
           <div class="quarter-container">
-            <div id="masters1" class="quarter-grid">
-            </div>
+            <div id="masters1" class="quarter-grid"></div>
           </div>
         </div>
-    </section>
-  </div>
-  <div class="container">
-    <header>
-      <p style="padding:12px"></p><br />
-      <h1 ><u>University of Washington</u></h1><br />
-      <h2>Bachelor of Science in Computer Engineering</h2>
-    </header>
-    <section class="three">
+      </section>
+    </div>
+    <div class="container">
+      <header>
+        <p style="padding: 12px"></p>
+        <br />
+        <h1><u>University of Washington</u></h1>
+        <br />
+        <h2>Bachelor of Science in Computer Engineering</h2>
+      </header>
+      <section class="three">
         <div class="content">
           <div class="quarter-container">
-            <div id="ugrad4" class="quarter-grid">
-            </div>
+            <div id="ugrad4" class="quarter-grid"></div>
           </div>
         </div>
-    </section>
-    <section class="three">
+      </section>
+      <section class="three">
         <div class="content">
           <div class="quarter-container">
-            <div id="ugrad3" class="quarter-grid">
-            </div>
+            <div id="ugrad3" class="quarter-grid"></div>
           </div>
         </div>
-    </section>
-  </div>
-  <div class="container">
-    <header>
-      <p style="padding:12px"></p><br />
-      <h1><u>Edmonds Community College</u></h1><br />
-      <h2>Associate of Science in Mechanical Engineering and Computer Engineering</h2>
-    </header>
-    <section class="four">
+      </section>
+    </div>
+    <div class="container">
+      <header>
+        <p style="padding: 12px"></p>
+        <br />
+        <h1><u>Edmonds Community College</u></h1>
+        <br />
+        <h2>
+          Associate of Science in Mechanical Engineering and Computer
+          Engineering
+        </h2>
+      </header>
+      <section class="four">
         <div class="content">
-          <p style="text-align: center; width:80%; margin: auto;">
-            Before UW, I did Running Start (taking Community College classes while in high school)
-            at Edmonds Community College and took AP classes on top of that.
+          <p style="text-align: center; width: 80%; margin: auto">
+            Before UW, I did Running Start (taking Community College classes
+            while in high school) at Edmonds Community College and took AP
+            classes on top of that.
           </p>
           <div class="quarter-container">
-            <div id="ugrad2" class="quarter-grid">
-            </div>
-            </div>
-            <p style="text-align: center; width:80%; margin: auto;">
-              At the time I was also taking AP Euro and a physics
-              class. I volunteered at Alderwood Middle School's TSA club.
-            </p>
+            <div id="ugrad2" class="quarter-grid"></div>
           </div>
-    </section>
-    <section class="four">
+          <p style="text-align: center; width: 80%; margin: auto">
+            At the time I was also taking AP Euro and a physics class. I
+            volunteered at Alderwood Middle School's TSA club.
+          </p>
+        </div>
+      </section>
+      <section class="four">
         <div class="content">
           <div class="quarter-container">
-            <div id="ugrad1" class="quarter-grid">
-            </div>
+            <div id="ugrad1" class="quarter-grid"></div>
           </div>
-            <p style="text-align: center; width:80%; margin: auto;">
-              At the time I was also taking AP Calculus BC, AP Chemistry, and AP Statistics.
-            </p>
-            <p style="text-align: center; width:80%; margin: auto;">
-              Before that I took AP Calculus AB and AP World History and some CAD classes.
-            </p>
-            <p style="text-align: center; width:80%; margin: auto;">
-              Volunteered at Achievement4Edmonds, Move60, and the Edmonds Demo Garden.
-            </p>
+          <p style="text-align: center; width: 80%; margin: auto">
+            At the time I was also taking AP Calculus BC, AP Chemistry, and AP
+            Statistics.
+          </p>
+          <p style="text-align: center; width: 80%; margin: auto">
+            Before that I took AP Calculus AB and AP World History and some CAD
+            classes.
+          </p>
+          <p style="text-align: center; width: 80%; margin: auto">
+            Volunteered at Achievement4Edmonds, Move60, and the Edmonds Demo
+            Garden.
+          </p>
         </div>
-    </section>
-
-  </div>
-  <!--   <h2 class="collapsible">2022 - [Something something, naming is hard]</h2>
+      </section>
+    </div>
+    <!--   <h2 class="collapsible">2022 - [Something something, naming is hard]</h2>
   <div class="content" style="max-height: 100%">
     Nothing yet but I wanted to restart the timeline to start in Jan. because I'm out of school now.
   </div>
   <div style="padding:10px"></div> -->
 
-  <script>
-    function populateProject(currProject, list) {
-      var project_list = document.createElement('UL');
-      var item = document.createElement('LI');
-      if (currProject.hasOwnProperty('content')) {
-        if (currProject['thumbnail']) {
-          if (currProject['position'] == 'left') {
-            var image = '<span style="right: unset; left: 5%;"><img src="' + currProject['content'] + '"/>';
+    <script>
+      function populateProject(currProject, list) {
+        var project_list = document.createElement("UL");
+        var item = document.createElement("LI");
+        if (currProject.hasOwnProperty("content")) {
+          if (currProject["thumbnail"]) {
+            if (currProject["position"] == "left") {
+              var image =
+                '<span style="right: unset; left: 5%;"><img src="' +
+                currProject["content"] +
+                '"/>';
+            } else {
+              var image =
+                '<span style="left: unset; right: 5%;"><img src="' +
+                currProject["content"] +
+                '"/>';
+            }
+            item.innerHTML =
+              'Project: <span class="thumbnail link_proj tooltip-text" href="' +
+              currProject["content"] +
+              '" >' +
+              currProject["name"] +
+              image +
+              "<span/>";
           } else {
-            var image = '<span style="left: unset; right: 5%;"><img src="' + currProject['content'] + '"/>';
+            item.innerHTML =
+              'Project: <a class="link_proj" href="' +
+              currProject["content"] +
+              '" >' +
+              currProject["name"] +
+              "<a/>";
           }
-          item.innerHTML = 'Project: <span class="thumbnail link_proj tooltip-text" href="' + currProject['content'] + '" >' + currProject['name'] + image + "<span/>";
         } else {
-          item.innerHTML = 'Project: <a class="link_proj" href="' + currProject['content'] + '" >' + currProject['name'] + "<a/>";
+          item.innerHTML = "Project: " + currProject["name"];
         }
-      } else {
-        item.innerHTML = 'Project: ' + currProject['name'];
+        project_list.append(item);
+        if (currProject.hasOwnProperty("description")) {
+          var desc = document.createElement("div");
+          desc.setAttribute("style", "font-style:normal");
+          desc.innerHTML = currProject["description"];
+          project_list.append(desc);
+        }
+        list.append(project_list);
       }
-      project_list.append(item);
-      if (currProject.hasOwnProperty('description')) {
-        var desc = document.createElement('div');
-        desc.setAttribute('style', 'font-style:normal');
-        desc.innerHTML = currProject['description'];
-        project_list.append(desc);
-      }
-      list.append(project_list);
-    }
 
-    function populateTeam(currTeam, list) {
-      var team_list = document.createElement('UL');
-      var item = document.createElement('LI');
-      if (currTeam.hasOwnProperty('content')) {
-        if (currTeam['thumbnail']) {
-          if (currTeam['position'] == 'left') {
-            var image = '<span style="right: unset; left: 5%;"><img src="' + currTeam['content'] + '"/>';
+      function populateTeam(currTeam, list) {
+        var team_list = document.createElement("UL");
+        var item = document.createElement("LI");
+        if (currTeam.hasOwnProperty("content")) {
+          if (currTeam["thumbnail"]) {
+            if (currTeam["position"] == "left") {
+              var image =
+                '<span style="right: unset; left: 5%;"><img src="' +
+                currTeam["content"] +
+                '"/>';
+            } else {
+              var image =
+                '<span style="left: unset; right: 5%;"><img src="' +
+                currTeam["content"] +
+                '"/>';
+            }
+            item.innerHTML =
+              'Team: <span class="thumbnail link_proj tooltip-text" href="' +
+              currTeam["content"] +
+              '" >' +
+              currTeam["name"] +
+              image +
+              "<span/>";
           } else {
-            var image = '<span style="left: unset; right: 5%;"><img src="' + currTeam['content'] + '"/>';
+            item.innerHTML =
+              'Team: <a class="link_proj" href="' +
+              currTeam["content"] +
+              '" >' +
+              currTeam["name"] +
+              "<a/>";
           }
-          item.innerHTML = 'Team: <span class="thumbnail link_proj tooltip-text" href="' + currTeam['content'] + '" >' + currTeam['name'] + image + "<span/>";
         } else {
-          item.innerHTML = 'Team: <a class="link_proj" href="' + currTeam['content'] + '" >' + currTeam['name'] + "<a/>";
+          item.innerHTML = "Team: " + currTeam["name"];
         }
-      } else {
-        item.innerHTML = 'Team: ' + currTeam['name'];
-      }
-      team_list.append(item);
-      if (currTeam.hasOwnProperty('description')) {
-        var desc = document.createElement('div');
-        desc.setAttribute('style', 'font-style:normal');
-        desc.innerHTML = currTeam['description'];
-        team_list.append(desc);
-      }
-      list.append(team_list);
-    }
-
-    function generateQuarter(parent, quartertype, position, content) {
-      var p = document.getElementById(parent);
-      var quarteritem = document.createElement('DIV');
-      quarteritem.classList.add('quarter-item');
-      p.appendChild(quarteritem);
-      var classesFilled = false;
-      var btn = document.createElement("BUTTON");
-      btn.innerHTML = content['name'];
-      btn.classList.add(quartertype);
-      // btn.style.width = "25%";
-      // btn.style.left = -37.5 + 25 * position + "%";
-      // btn.style['position'] = "relative";
-      quarteritem.appendChild(btn);
-      var div = document.createElement('DIV');
-      quarteritem.appendChild(div);
-      var list = document.createElement('UL');
-      div.appendChild(list);
-      div.classList.add('quarter');
-      // div.style['position'] = "relative";
-      // div.style.width = "25%";
-      // div.style.left = position * 25 + "%";
-
-
-      if (content.hasOwnProperty('activities')) {
-        var activities = content['activities'];
-        for (var i = 0; i < activities.length; i++) {
-          var topic = document.createElement('DIV');
-          topic.classList.add('topic');
-          topic.innerHTML = '<b><u>' + activities[i]['name'] + '</u></b>'
-          div.appendChild(topic);
-          if (Array.isArray(activities[i]['content'])) {
-            var topicList = document.createElement('UL');
-
-            div.appendChild(topicList);
-
-            if (activities[i]['name'] === 'Life Events') {
-              topicList.classList.add("special-bullet");
-            }
-            // console.log(activities[i]);
-            for (var j = 0; j < activities[i]['content'].length; j++) {
-              if (activities[i]['bullet']) {
-                var item = document.createElement('LI');
-              } else {
-                var item = document.createElement('DIV');
-              }
-              if (activities[i]['content'][j]['thumbnail']) {
-
-              } else {
-                item.innerHTML = activities[i]['content'][j]['name'];
-              }
-              if (activities[i]['content'][j]['thumbnail']) {
-                if (activities[i]['content'][j]['position'] == 'left') {
-                  var image = '<span style="right: unset; left: 5%;"><img src="' + activities[i]['content'][j]['content'] + '"/>';
-                } else {
-                  var image = '<span style="left: unset; right: 5%;"><img src="' + activities[i]['content'][j]['content'] + '"/>';
-                }
-                item.innerHTML = '<span class="thumbnail link_proj tooltip-text" href="' + activities[i]['content'][j]['content'] + '" ><i>' + activities[i]['content'][j]['name'] + image + "<i/><span/>";
-              } else {
-                item.innerHTML = activities[i]['content'][j]['name'];
-              }
-              if (activities[i]['content'][j].hasOwnProperty('description')) {
-                item.innerHTML += ": " + activities[i]['content'][j]['description'];
-              }
-              topicList.appendChild(item);
-            }
-          } else {
-            var item = document.createElement('P');
-            item.style.textAlign = "left";
-            item.style.margin = "0";
-            item.innerHTML = '<b> > ' + activities[i]['content']['name'] + '</b>';
-            // if (item.innerHTML.includes(': ')) {
-            //   var temp = item.innerHTML.split(": ");
-            //   item.innerHTML = temp[0].underline() + ": " + temp[1];
-            // }
-            if (activities[i]['content'].hasOwnProperty('description')) {
-              item.innerHTML += ", " + activities[i]['content']['description'];
-            }
-            topic.appendChild(item);
-          }
-
+        team_list.append(item);
+        if (currTeam.hasOwnProperty("description")) {
+          var desc = document.createElement("div");
+          desc.setAttribute("style", "font-style:normal");
+          desc.innerHTML = currTeam["description"];
+          team_list.append(desc);
         }
-
+        list.append(team_list);
       }
 
-      if (Object.keys(content).length > 2) {
-        div.appendChild(document.createElement('HR'));
-      }
-
-      if (content.hasOwnProperty('classes')) {
-        var topic = document.createElement('DIV');
-        topic.classList.add('topic');
-        topic.innerHTML = '<b><u>Classes</u></b>'
-        div.appendChild(topic)
-        var classes = content['classes'];
-        var list = document.createElement('UL');
+      function generateQuarter(parent, quartertype, position, content) {
+        var p = document.getElementById(parent);
+        var quarteritem = document.createElement("DIV");
+        quarteritem.classList.add("quarter-item");
+        p.appendChild(quarteritem);
+        var classesFilled = false;
+        var btn = document.createElement("BUTTON");
+        btn.innerHTML = content["name"];
+        btn.classList.add(quartertype);
+        // btn.style.width = "25%";
+        // btn.style.left = -37.5 + 25 * position + "%";
+        // btn.style['position'] = "relative";
+        quarteritem.appendChild(btn);
+        var div = document.createElement("DIV");
+        quarteritem.appendChild(div);
+        var list = document.createElement("UL");
         div.appendChild(list);
+        div.classList.add("quarter");
+        // div.style['position'] = "relative";
+        // div.style.width = "25%";
+        // div.style.left = position * 25 + "%";
 
-        for (var i = 0; i < classes.length; i++) {
-          var item = document.createElement('LI');
-          // console.log(classes[i]);
-          var temp = classes[i]['name'].split(": ");
-          item.innerHTML = temp[0].bold() + ": " + temp[1];
-          list.appendChild(item);
+        if (content.hasOwnProperty("activities")) {
+          var activities = content["activities"];
+          for (var i = 0; i < activities.length; i++) {
+            var topic = document.createElement("DIV");
+            topic.classList.add("topic");
+            topic.innerHTML = "<b><u>" + activities[i]["name"] + "</u></b>";
+            div.appendChild(topic);
+            if (Array.isArray(activities[i]["content"])) {
+              var topicList = document.createElement("UL");
 
-          if (classes[i]['dropped']) {
-            item.innerHTML = item.innerHTML.strike();// + " [dropped]";
-            var dropped_expl = document.createElement('UL');
-            list.append(dropped_expl);
-            // var dropped_expl_item = document.createElement('LI');
-            // var temp = classes[i]['dropped_expl'].split(": ");
-            // dropped_expl_item.innerHTML = temp[0].bold() + ": " + temp[1];
-            // dropped_expl.append(dropped_expl_item);
-          }
-          if (classes[i].hasOwnProperty('team')) {
-            populateTeam(classes[i]['team'], list);
-          }
-          if (classes[i].hasOwnProperty('project')) {
-            if (Array.isArray(classes[i]['project'])) {
-              for (var j = 0; j < classes[i]['project'].length; j++) {
-                populateProject(classes[i]['project'][j], list);
+              div.appendChild(topicList);
+
+              if (activities[i]["name"] === "Life Events") {
+                topicList.classList.add("special-bullet");
+              }
+              // console.log(activities[i]);
+              for (var j = 0; j < activities[i]["content"].length; j++) {
+                if (activities[i]["bullet"]) {
+                  var item = document.createElement("LI");
+                } else {
+                  var item = document.createElement("DIV");
+                }
+                if (activities[i]["content"][j]["thumbnail"]) {
+                } else {
+                  item.innerHTML = activities[i]["content"][j]["name"];
+                }
+                if (activities[i]["content"][j]["thumbnail"]) {
+                  if (activities[i]["content"][j]["position"] == "left") {
+                    var image =
+                      '<span style="right: unset; left: 5%;"><img src="' +
+                      activities[i]["content"][j]["content"] +
+                      '"/>';
+                  } else {
+                    var image =
+                      '<span style="left: unset; right: 5%;"><img src="' +
+                      activities[i]["content"][j]["content"] +
+                      '"/>';
+                  }
+                  item.innerHTML =
+                    '<span class="thumbnail link_proj tooltip-text" href="' +
+                    activities[i]["content"][j]["content"] +
+                    '" ><i>' +
+                    activities[i]["content"][j]["name"] +
+                    image +
+                    "<i/><span/>";
+                } else {
+                  item.innerHTML = activities[i]["content"][j]["name"];
+                }
+                if (activities[i]["content"][j].hasOwnProperty("description")) {
+                  item.innerHTML +=
+                    ": " + activities[i]["content"][j]["description"];
+                }
+                topicList.appendChild(item);
               }
             } else {
-              populateProject(classes[i]['project'], list);
+              var item = document.createElement("P");
+              item.style.textAlign = "left";
+              item.style.margin = "0";
+              item.innerHTML =
+                "<b> > " + activities[i]["content"]["name"] + "</b>";
+              // if (item.innerHTML.includes(': ')) {
+              //   var temp = item.innerHTML.split(": ");
+              //   item.innerHTML = temp[0].underline() + ": " + temp[1];
+              // }
+              if (activities[i]["content"].hasOwnProperty("description")) {
+                item.innerHTML +=
+                  ", " + activities[i]["content"]["description"];
+              }
+              topic.appendChild(item);
             }
           }
         }
+
+        if (Object.keys(content).length > 2) {
+          div.appendChild(document.createElement("HR"));
+        }
+
+        if (content.hasOwnProperty("classes")) {
+          var topic = document.createElement("DIV");
+          topic.classList.add("topic");
+          topic.innerHTML = "<b><u>Classes</u></b>";
+          div.appendChild(topic);
+          var classes = content["classes"];
+          var list = document.createElement("UL");
+          div.appendChild(list);
+
+          for (var i = 0; i < classes.length; i++) {
+            var item = document.createElement("LI");
+            // console.log(classes[i]);
+            var temp = classes[i]["name"].split(": ");
+            item.innerHTML = temp[0].bold() + ": " + temp[1];
+            list.appendChild(item);
+
+            if (classes[i]["dropped"]) {
+              item.innerHTML = item.innerHTML.strike(); // + " [dropped]";
+              var dropped_expl = document.createElement("UL");
+              list.append(dropped_expl);
+              // var dropped_expl_item = document.createElement('LI');
+              // var temp = classes[i]['dropped_expl'].split(": ");
+              // dropped_expl_item.innerHTML = temp[0].bold() + ": " + temp[1];
+              // dropped_expl.append(dropped_expl_item);
+            }
+            if (classes[i].hasOwnProperty("team")) {
+              populateTeam(classes[i]["team"], list);
+            }
+            if (classes[i].hasOwnProperty("project")) {
+              if (Array.isArray(classes[i]["project"])) {
+                for (var j = 0; j < classes[i]["project"].length; j++) {
+                  populateProject(classes[i]["project"][j], list);
+                }
+              } else {
+                populateProject(classes[i]["project"], list);
+              }
+            }
+          }
+        }
+
+        // var orig = div.scrollHeight;
+        // btn.addEventListener("click", function() {
+        //     this.classList.toggle("active");
+        //     console.log(this.classList);
+        //     var content = this.nextElementSibling;
+        //     console.log('nani' + content);
+        //     if (content.style.minHeight != 0) {
+        //       content.style.minHeight = null;
+        //       // content.style.display = "none";
+        //       content.style.overflow = "hidden";
+        //       // clearInterval(x);
+        //     } else {
+        //       content.style.minHeight = orig + "px";
+        //       console.log(orig);
+        //       console.log(content.style.minHeight);
+        //       // console.log(maxlen1);
+        //       // To match height
+        //       // content.style.maxHeight = content.scrollHeight + "px";
+
+        //       // x = setTimeout(function() {content.style.overflow = "visible"}, 1000);
+        //     }
+        //   });
       }
 
-      // var orig = div.scrollHeight;
-      // btn.addEventListener("click", function() {
-      //     this.classList.toggle("active");
-      //     console.log(this.classList);
-      //     var content = this.nextElementSibling;
-      //     console.log('nani' + content);
-      //     if (content.style.minHeight != 0) {
-      //       content.style.minHeight = null;
-      //       // content.style.display = "none";
-      //       content.style.overflow = "hidden";
-      //       // clearInterval(x);
-      //     } else {
-      //       content.style.minHeight = orig + "px";
-      //       console.log(orig);
-      //       console.log(content.style.minHeight);
-      //       // console.log(maxlen1);
-      //       // To match height
-      //       // content.style.maxHeight = content.scrollHeight + "px";
+      const response = fetch("./timeline.json")
+        .then((response) => response.json())
+        .then((data) => {
+          generateQuarter("2021", "quartera", 1, data["aut2021"]);
+          generateQuarter("2021", "quartera", 2, data["win2022"]);
+          generateQuarter("2021", "quartera", 3, data["spr2022"]);
+          generateQuarter("2021", "quartera", 4, data["sum2022"]);
 
-      //       // x = setTimeout(function() {content.style.overflow = "visible"}, 1000);
-      //     }
-      //   });
-    }
+          generateQuarter("masters1", "quarterm", 1, data["aut2019"]);
+          generateQuarter("masters1", "quarterm", 2, data["win2020"]);
+          generateQuarter("masters1", "quarterm", 3, data["spr2020"]);
+          generateQuarter("masters1", "quarterm", 4, data["sum2020"]);
+          generateQuarter("masters2", "quarterm", 1, data["aut2020"]);
+          generateQuarter("masters2", "quarterm", 2, data["win2021"]);
+          generateQuarter("masters2", "quarterm", 3, data["spr2021"]);
+          generateQuarter("masters2", "quarterm", 4, data["sum2021"]);
 
-    const response = fetch('./timeline.json')
-        .then(response => response.json())
-        .then(data => {
-          generateQuarter("2021", 'quartera', 1, data["aut2021"]);
-          generateQuarter("2021", 'quartera', 2, data["win2022"]);
-          generateQuarter("2021", 'quartera', 3, data["spr2022"]);
-          generateQuarter("2021", 'quartera', 4, data["sum2022"]);
+          generateQuarter("ugrad3", "quarterbb", 1, data["aut2017"]);
+          generateQuarter("ugrad3", "quarterbb", 2, data["win2018"]);
+          generateQuarter("ugrad3", "quarterbb", 3, data["spr2018"]);
+          generateQuarter("ugrad3", "quarterbb", 4, data["sum2018"]);
+          generateQuarter("ugrad4", "quarterbb", 1, data["aut2018"]);
+          generateQuarter("ugrad4", "quarterbb", 2, data["win2019"]);
+          generateQuarter("ugrad4", "quarterbb", 3, data["spr2019"]);
+          generateQuarter("ugrad4", "quarterbb", 4, data["sum2019"]);
 
-          generateQuarter("masters1", 'quarterm', 1, data["aut2019"]);
-          generateQuarter("masters1", 'quarterm', 2, data["win2020"]);
-          generateQuarter("masters1", 'quarterm', 3, data["spr2020"]);
-          generateQuarter("masters1", 'quarterm', 4, data["sum2020"]);
-          generateQuarter("masters2", 'quarterm', 1, data["aut2020"]);
-          generateQuarter("masters2", 'quarterm', 2, data["win2021"]);
-          generateQuarter("masters2", 'quarterm', 3, data["spr2021"]);
-          generateQuarter("masters2", 'quarterm', 4, data["sum2021"]);
-
-          generateQuarter("ugrad3", 'quarterbb', 1, data["aut2017"]);
-          generateQuarter("ugrad3", 'quarterbb', 2, data["win2018"]);
-          generateQuarter("ugrad3", 'quarterbb', 3, data["spr2018"]);
-          generateQuarter("ugrad3", 'quarterbb', 4, data["sum2018"]);
-          generateQuarter("ugrad4", 'quarterbb', 1, data["aut2018"]);
-          generateQuarter("ugrad4", 'quarterbb', 2, data["win2019"]);
-          generateQuarter("ugrad4", 'quarterbb', 3, data["spr2019"]);
-          generateQuarter("ugrad4", 'quarterbb', 4, data["sum2019"]);
-
-          generateQuarter("ugrad1", 'quartercc', 1, data["aut2015"]);
-          generateQuarter("ugrad1", 'quartercc', 2, data["win2016"]);
-          generateQuarter("ugrad1", 'quartercc', 3, data["spr2016"]);
-          generateQuarter("ugrad1", 'quartercc', 4, data["sum2016"]);
-          generateQuarter("ugrad2", 'quartercc', 1, data["aut2016"]);
-          generateQuarter("ugrad2", 'quartercc', 2, data["win2017"]);
-          generateQuarter("ugrad2", 'quartercc', 3, data["spr2017"]);
-          generateQuarter("ugrad2", 'quartercc', 4, data["sum2017"]);
+          generateQuarter("ugrad1", "quartercc", 1, data["aut2015"]);
+          generateQuarter("ugrad1", "quartercc", 2, data["win2016"]);
+          generateQuarter("ugrad1", "quartercc", 3, data["spr2016"]);
+          generateQuarter("ugrad1", "quartercc", 4, data["sum2016"]);
+          generateQuarter("ugrad2", "quartercc", 1, data["aut2016"]);
+          generateQuarter("ugrad2", "quartercc", 2, data["win2017"]);
+          generateQuarter("ugrad2", "quartercc", 3, data["spr2017"]);
+          generateQuarter("ugrad2", "quartercc", 4, data["sum2017"]);
         });
 
+      function equalizeHeight(phase) {
+        var coll = document.getElementsByClassName(phase);
+        var i;
+        // Get consistent max length value
+        var maxlen1 = 0;
+        for (i = 0; i < coll.length; i++) {
+          // console.log(coll[i].nextElementSibling.scrollHeight);
+          if (coll[i].nextElementSibling.scrollHeight > maxlen1)
+            maxlen1 = coll[i].nextElementSibling.scrollHeight;
+        }
+        console.log(maxlen1);
+        console.log("." + phase);
 
-    function equalizeHeight(phase) {
-      var coll = document.getElementsByClassName(phase);
-      var i;
-      // Get consistent max length value
-      var maxlen1 = 0;
-      for (i = 0; i < coll.length; i++) {
-        // console.log(coll[i].nextElementSibling.scrollHeight);
-        if (coll[i].nextElementSibling.scrollHeight > maxlen1)
-          maxlen1 = coll[i].nextElementSibling.scrollHeight;
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.minHeight) {
+              content.style.minHeight = null;
+              // content.style.display = "none";
+              content.style.overflow = "hidden";
+              // clearInterval(x);
+            } else {
+              content.style.minHeight = content.scrollHeight + "px";
+              console.log(maxlen1);
+              // To match height
+              // content.style.maxHeight = content.scrollHeight + "px";
+
+              // x = setTimeout(function() {content.style.overflow = "visible"}, 1000);
+            }
+          });
+        }
       }
-      console.log(maxlen1);
-      console.log("." + phase);
+      // equalizeHeight("quarterm");
+      // equalizeHeight("quarterba");
+      // equalizeHeight("quarterbb");
+      // equalizeHeight("quartercc");
+      // $(".quarter").on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+      //   if (this.style.minHeight) {
+      //     this.style.overflow = "visible";
+      //     console.log("nani");
+      //   }
+      // });
+    </script>
+    <div id="footer"></div>
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
 
       for (i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function () {
           this.classList.toggle("active");
           var content = this.nextElementSibling;
-          if (content.style.minHeight) {
-            content.style.minHeight = null;
-            // content.style.display = "none";
-            content.style.overflow = "hidden";
-            // clearInterval(x);
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
           } else {
-            content.style.minHeight = content.scrollHeight + "px";
-            console.log(maxlen1);
-            // To match height
-            // content.style.maxHeight = content.scrollHeight + "px";
-
-            // x = setTimeout(function() {content.style.overflow = "visible"}, 1000);
+            content.style.maxHeight = content.scrollHeight + "px";
           }
         });
       }
-    }
-    // equalizeHeight("quarterm");
-    // equalizeHeight("quarterba");
-    // equalizeHeight("quarterbb");
-    // equalizeHeight("quartercc");
-    // $(".quarter").on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
-    //   if (this.style.minHeight) {
-    //     this.style.overflow = "visible";
-    //     console.log("nani");
-    //   }
-    // });
-  </script>
-  <div id="footer"></div>
-  <script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
 
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + "px";
-        }
-      });
-    }
-
-    // var latest = document.getElementById("masters").nextElementSibling;
-    // latest.style.maxHeight = latest.scrollHeight + "px";
-  </script>
-</body>
-
+      // var latest = document.getElementById("masters").nextElementSibling;
+      // latest.style.maxHeight = latest.scrollHeight + "px";
+    </script>
+  </body>
 </html>

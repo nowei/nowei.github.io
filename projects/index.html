@@ -1,392 +1,798 @@
-<!DOCTYPE html>
-<html lang='en-US'>
-<head>
-  <title>Projects</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style.css">
-  <style> 
-    dt { 
-      display:block; 
-      float:left; 
-      width:25%; 
-      text-align: right;
-    }
-    dt:after{
-      content:':\00a0';
-    }
-    dd { 
-      display:block;
-      text-align: left;
-      margin-left: 25%;
-    }
-    h2 {
-      background-color: rgb(30, 50, 70);
-    }
-    @media screen and (max-width: 800px) {
-      dd {
-        font-size: 0.85rem;
-        margin-left: 40%;
-      }
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Projects</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <style>
       dt {
-        font-size: 0.85rem;
-        width: 40%;
+        display: block;
+        float: left;
+        width: 25%;
+        text-align: right;
       }
-    }
-    @media screen and (max-width: 1000px) {
-      h1 {
-        font-size: 1.4rem;
+      dt:after {
+        content: ":\00a0";
+      }
+      dd {
+        display: block;
+        text-align: left;
+        margin-left: 25%;
       }
       h2 {
-        font-size: 1.0rem;
+        background-color: rgb(30, 50, 70);
       }
-      h3 {
-        font-size: 0.8rem;
+      @media screen and (max-width: 800px) {
+        dd {
+          font-size: 0.85rem;
+          margin-left: 40%;
+        }
+        dt {
+          font-size: 0.85rem;
+          width: 40%;
+        }
       }
-      dd {
-        font-size: 0.7rem;
-        margin-left: 40%;
+      @media screen and (max-width: 1000px) {
+        h1 {
+          font-size: 1.4rem;
+        }
+        h2 {
+          font-size: 1rem;
+        }
+        h3 {
+          font-size: 0.8rem;
+        }
+        dd {
+          font-size: 0.7rem;
+          margin-left: 40%;
+        }
+        dt {
+          font-size: 0.7rem;
+          width: 40%;
+        }
       }
-      dt {
-        font-size: 0.7rem;
-        width: 40%;
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#navbar").load("../navbar.html");
+      });
+    </script>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <h1 style="background-color: rgb(50, 70, 90)">Current projects</h1>
+    <h2>Personal Website</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Personal Project for record-keeping</dd>
+      <dt>Description</dt>
+      <dd>Learning HTML, CSS, and JavaScript by making a website</dd>
+      <dt>Technologies</dt>
+      <dd>HTML, CSS, JavaScript, jQuery</dd>
+      <dt>Project</dt>
+      <dd><a class="links" href="https://nowei.github.io/">website</a></dd>
+    </dl>
+    <h2>Learning Rust</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Personal Project</dd>
+      <dt>Description</dt>
+      <dd>
+        Learning Rust via the
+        <a class="links" href="https://doc.rust-lang.org/stable/book/"
+          >official Rust book</a
+        >.
+      </dd>
+      <dt>Technologies</dt>
+      <dd>Rust, Cargo</dd>
+      <dt>Project</dt>
+      <dd>
+        <a class="links" href="https://github.com/nowei/learning-rust">repo</a>,
+        currently sidelined because school is kind of... taxing...
+      </dd>
+    </dl>
+    <h2>PaxosVis</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Personal Project</dd>
+      <dt>Description</dt>
+      <dd>
+        Designing a visualization for Paxos, a distributed consensus algorithm.
+        This involves teaching myself how to animate using JavaScript, HTML, and
+        CSS, creating a framework for visualizing nodes, sending and receiving
+        messages, and timers using JavaScript and d3.
+      </dd>
+      <dt>Technologies</dt>
+      <dd>HTML, CSS, JavaScript, d3</dd>
+      <dt>Project</dt>
+      <dd>WIP - currently sidelined for learning Rust</dd>
+    </dl>
+
+    <hr />
+
+    <h1 style="background-color: rgb(50, 70, 90)">Past Projects</h1>
+    <h3>Ordered by time</h3>
+    <h3>
+      Colors determined by hash of string made by year(numeric) + quarter
+      abbreviation(string), ex. 2019aut
+    </h3>
+
+    <h2 class="2021spr">HIV Tracing app</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Computing for Social Good</dd>
+      <dt>Description</dt>
+      <dd>
+        Worked with a professor in the school of global health on a HIV tracking
+        application in the context of ART retention in Sub-Saharan Africa using
+        Community Health Toolkit.
+      </dd>
+      <dt>Technologies</dt>
+      <dd>Community Health Toolkit</dd>
+      <dt>Project</dt>
+      <dd>
+        <a class="links" href="./CSE580_Final_Project_Writeup.pdf">report</a>
+      </dd>
+    </dl>
+
+    <h2 class="2021spr">Do not hit the duckies</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Probabilistic Robotics</dd>
+      <dt>Description</dt>
+      <dd>
+        Avoid the Duckies. Or at least try to avoid the duckies. Lots of
+        technical issues with setting up, not a good time.
+      </dd>
+      <dt>Technologies</dt>
+      <dd>Duckietown, PyTorch, ROS</dd>
+      <dt>Project</dt>
+      <dd><a class="links" href="./571_Final_Report.pdf">report</a></dd>
+    </dl>
+
+    <h2 class="2021spr">Parallelized Convolution</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Applied Parallel Computing</dd>
+      <dt>Description</dt>
+      <dd>Shared memory and global memory convolutions in CUDA.</dd>
+      <dt>Technologies</dt>
+      <dd>CUDA, PyTorch, Python, Numba</dd>
+      <dt>Project</dt>
+      <dd><a class="links" href="./parallel_computing_final.mp4">video</a></dd>
+    </dl>
+
+    <h2 class="2021spr">MiniJava Compiler</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Compilers</dd>
+      <dt>Description</dt>
+      <dd>
+        MiniJava with Strings (we did hello world!), starting from scanning, to
+        parsing, to semantics, to code generation.
+      </dd>
+      <dt>Technologies</dt>
+      <dd>Java</dd>
+    </dl>
+
+    <h2 class="2021spr">SimpleDB</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Database Systems</dd>
+      <dt>Description</dt>
+      <dd>
+        SimpleDB was a toy DBMS implementation that implemented things like
+        Buffer Pools, Lock Managers, and a Simple Selinger Query Optimizer.
+      </dd>
+      <dt>Technologies</dt>
+      <dd>Java</dd>
+    </dl>
+
+    <h2 class="2021win">Randomized Rumor Spreading</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Random Algorithms</dd>
+      <dt>Description</dt>
+      <dd>Paper rewrite/summary of a paper on Randomized Rumor Spreading.</dd>
+      <dt>Technologies</dt>
+      <dd>Python</dd>
+      <dt>Project</dt>
+      <dd>
+        <a class="links" href="./RandomizedRumorSpreading.pdf">report</a>,
+        <a
+          class="links"
+          href="https://github.com/nowei/RandomizedRumorSpreading"
+          >repo</a
+        >
+      </dd>
+    </dl>
+
+    <h2 class="2021win">Service Mesh Measurement</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Graduate Networks</dd>
+      <dt>Description</dt>
+      <dd>
+        We performed measurements on network, memory, and compute overheads of
+        running a service mesh on top of two simple microservice architectures.
+      </dd>
+      <dt>Technologies</dt>
+      <dd>Kubernetes, Minikube, AWS EKS, Istio, Prometheus, Wireshark</dd>
+      <dt>Project</dt>
+      <dd>
+        <a class="links" href="./svc_mesh_measurement_final_report.pdf"
+          >report</a
+        >,
+        <a class="links" href="https://github.com/Stosswelle/KuberNerds"
+          >repo</a
+        >
+      </dd>
+    </dl>
+
+    <h2 class="2021win">
+      Neural Networks with Slight Overparameterization review
+    </h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Theoretical Deep Learning</dd>
+      <dt>Description</dt>
+      <dd>
+        We basically did a paper review and go over some proofs about slightly
+        overparameterized neural networks.
+      </dd>
+      <dt>Technologies</dt>
+      <dd>LaTeX, math</dd>
+      <dt>Project</dt>
+      <dd><a class="links" href="./599_DL_Theory.pdf">report</a></dd>
+    </dl>
+
+    <h2 class="2021win">Snuba Reimplementation</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Data Management & Weak Supervision for Machine Learning</dd>
+      <dt>Description</dt>
+      <dd>
+        We reimplemented Snuba, a weak supervision labeling system that
+        generates labels based on a small labeled set and heuristic models based
+        on the features passed in.
+      </dd>
+      <dt>Technologies</dt>
+      <dd>Python, sklearn, NumPy, PyTorch</dd>
+      <dt>Project</dt>
+      <dd>
+        <a class="links" href="./CSE599C_Snuba.pdf">report</a>,
+        <a class="links" href="https://github.com/eric573/SNUBA_2.0">repo</a>
+      </dd>
+    </dl>
+
+    <h2 class="2020aut">Poor Man's GPT-3</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Generative Models</dd>
+      <dt>Description</dt>
+      <dd>
+        Implement TransformerXL model in PyTorch to improve on performance
+        beyond normal Transformer.
+      </dd>
+      <dt>Technologies</dt>
+      <dd>Python, PyTorch</dd>
+      <dt>Project</dt>
+      <dd>
+        <a class="links" href="./Poor_Man_s_GPT_3.pdf">report</a>,
+        <a class="links" href="https://github.com/kaiweic/Poor-man-s-GPT-3"
+          >repo</a
+        >
+      </dd>
+    </dl>
+
+    <h2 class="2020aut">Leukemia Classification</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Computational Biology</dd>
+      <dt>Description</dt>
+      <dd>
+        Understanding how gene expression patterns are different in different
+        subtypes of cancer + leukemia sub-type classification with 17 sub-types
+        of Leukemia and a group of healthy patients.
+      </dd>
+      <dt>Technologies</dt>
+      <dd>Python, NumPy, sklearn</dd>
+      <dt>Project</dt>
+      <dd>
+        <a class="links" href="https://github.com/nowei/leukemia-classification"
+          >repo</a
+        >, <a class="links" href="./leukemia_slides.pdf">slides</a>,
+        <a class="links" href="./leukemia_final.pdf">report</a>
+      </dd>
+    </dl>
+
+    <h2 class="2020aut">Intro to Differential Privacy presentation</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Computer Security</dd>
+      <dt>Description</dt>
+      <dd>
+        Introduce Differential Privacy and ethical concerns surrounding private
+        data.
+      </dd>
+      <dt>Project</dt>
+      <dd>
+        <a class="links" href="./Intro to Differential Privacy.pdf">slides</a>,
+        <a
+          class="links"
+          href="https://drive.google.com/file/d/1fQ0grJNTPwTJ5LFvjPPaWnQZenCyX6G_/view?usp=sharing"
+          >video</a
+        >
+      </dd>
+    </dl>
+
+    <h2 class="2020aut">Exploring Spiking Neural Networks</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>AI & the Brain</dd>
+      <dt>Description</dt>
+      <dd>
+        Implement and explore performance of small spiking neural networks.
+      </dd>
+      <dt>Technologies</dt>
+      <dd>Python, PyTorch</dd>
+      <dt>Project</dt>
+      <dd>
+        <a
+          class="links"
+          href="./CSE 599 B Final Project - Andrew Wei & Kushal Jhunjhunwalla.pdf"
+          >report</a
+        >
+      </dd>
+    </dl>
+
+    <h2 class="2020spr">
+      Stockbot: Stock Price Prediction with Historical and Sentiment data
+    </h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Machine Learning for Big Data</dd>
+      <dt>Description</dt>
+      <dd>Stock price prediction with Tweets and past stock prices</dd>
+      <dt>Technologies</dt>
+      <dd>Python, Selenium, BeautifulSoup4, PyTorch</dd>
+      <dt>Project</dt>
+      <dd>
+        <a class="links" href="https://github.com/kaiweic/stockbot">repo</a>,
+        <a class="links" href="./StockbotSlides.pdf">slides</a>,
+        <a class="links" href="./CSE547_Project_Final_Report.pdf">report</a>,
+        <a class="links" href="./547_video_stockbot.mp4">video</a>
+      </dd>
+    </dl>
+    <h2 class="2020spr">Deep Reinforcement Learning in the Stock Market</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Reinforcement Learning</dd>
+      <dt>Description</dt>
+      <dd>
+        Testing out a deep reinforcement learning scheme for an agent in the
+        stock market
+      </dd>
+      <dt>Technologies</dt>
+      <dd>Python, gym</dd>
+      <dt>Project</dt>
+      <dd><a class="links" href="./CSE599W_Final_Report.pdf">report</a></dd>
+    </dl>
+    <h2 class="2020spr">Bathroom Fall Detection</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Mobile & Wireless Systems</dd>
+      <dt>Description</dt>
+      <dd>Creating an app for detecting bathroom falls</dd>
+      <dt>Technologies</dt>
+      <dd>Android Studio, Java, SMS, Bluetooth</dd>
+      <dt>Project</dt>
+      <dd>
+        <a
+          class="links"
+          href="https://docs.google.com/presentation/d/18YGNd0Af0y8UC32h3UDJHPzzdNmH9RSrcR3tkNNLDLk/edit?usp=sharing"
+          >slides</a
+        >,
+        <a class="links" href="https://github.com/leiyiz/BathroomFallDetection"
+          >repo</a
+        >
+      </dd>
+    </dl>
+
+    <h2 class="2020win">Wide FOV Headset from scratch</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Virtual Reality Systems</dd>
+      <dt>Description</dt>
+      <dd>
+        Attempting to create a wide FOV headset using Fresnel lenses, LCDs, and
+        3D printing
+      </dd>
+      <dt>Technologies</dt>
+      <dd>Physics and math, I guess; some CAD, but that wasn't me</dd>
+      <dt>Project</dt>
+      <dd><a class="links" href="./CSE490v_final_project.pdf">report</a></dd>
+    </dl>
+    <h2 class="2020win">Consistent Hashing Lab</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Datacenter Systems</dd>
+      <dt>Description</dt>
+      <dd>
+        Creating an educational project for undergrads about consistent hashing
+      </dd>
+      <dt>Technologies</dt>
+      <dd>Python</dd>
+      <dt>Project</dt>
+      <dd>
+        <a class="links" href="https://github.com/nowei/consistent-hashing-lab"
+          >repo</a
+        >
+      </dd>
+    </dl>
+    <h2 class="2019aut">Live Inference in a Parameter Server</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Graduate Distributed Systems</dd>
+      <dt>Description</dt>
+      <dd>
+        Implementing live inference for the BytePS Distributed Machine Learning
+        framework.
+      </dd>
+      <dt>Technologies</dt>
+      <dd>AWS, Docker, PyTorch</dd>
+      <dt>Project</dt>
+      <dd>
+        <a class="links" href="https://github.com/liangw6/byteps">repo</a>,
+        <a class="links" href="./552FinalReport(Fall2019).pdf">report</a>
+      </dd>
+    </dl>
+    <h2 class="2019aut">Robustness of a Parameter Server</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Robust Machine Learning</dd>
+      <dt>Description</dt>
+      <dd>Evaluating robustness in a Federated Learning setting.</dd>
+      <dt>Project</dt>
+      <dd><a class="links" href="./Robust_ML_Final_Project">report</a></dd>
+    </dl>
+    <h2 class="2019aut">Adversarial Deep Learning</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Deep Learning</dd>
+      <dt>Description</dt>
+      <dd>
+        Creating a framework for evaluating performance of state-of-the-art
+        image classifiers on perturbed/altered images.
+      </dd>
+      <dt>Technologies</dt>
+      <dd>Python, Flask, PyTorch</dd>
+      <dt>Project</dt>
+      <dd>
+        <a class="links" href="https://github.com/nowei/adversarial-dl">repo</a
+        >,
+        <a
+          class="links"
+          href="https://github.com/nowei/adversarial-dl/blob/master/final_poster.pdf"
+          >poster</a
+        >, <a class="links" href="./Deep_Learning_Final_Report">report</a>
+      </dd>
+    </dl>
+    <h2 class="2019aut">Algorithm Analysis</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Graduate Algorithms</dd>
+      <dt>Description</dt>
+      <dd>
+        Evaluating a paper/possibly implementing the algorithm, specifically
+        <a
+          class="links"
+          href="https://www.cs.rutgers.edu/~farach/pubs/FrequentStream.pdf"
+          >a streaming algorithm</a
+        >.
+      </dd>
+      <dt>Technologies</dt>
+      <dd>Python, LaTeX</dd>
+      <dt>Project</dt>
+      <dd>
+        <a class="links" href="https://github.com/nowei/frequent_items">repo</a>
+      </dd>
+    </dl>
+    <h2 class="2019spr">ChatAssist</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>CSE 481V - VR Capstone</dd>
+      <dt>Description</dt>
+      <dd>
+        AR app using MagicLeap that would transcribe/translate English to other
+        languages in AR to help people who are hard of hearing or are still
+        learning English. Basically captions in real life. We had a setup of
+        bluetooth microphones that streamed English conversations to laptops
+        that were then forwarded to Amazon Transcribe. We then updated the text
+        displayed on the Magic Leap to whatever language was selected. We
+        originally used object detection for markers to mark where the text
+        boxes would go, but learned that the Magic Leap's image tracking wasn't
+        super stable, so we ended up making it adjustable instead.
+      </dd>
+      <dt>Technologies</dt>
+      <dd>C#, Unity</dd>
+      <dt>Contribution</dt>
+      <dd>
+        Designed the controls for changing languages and scrolling through the
+        chat log, experimented with the computer vision detection on the Magic
+        Leap to determine where to place the markers for the chat bubble. Dealt
+        with random Unity bugs.
+      </dd>
+      <dt>Project</dt>
+      <dd>
+        <a
+          class="links"
+          href="https://uwrealitylab.github.io/vrcapstone19sp-team3/"
+          >website</a
+        >
+      </dd>
+    </dl>
+
+    <h2 class="2019spr">SBDs on the Lucky-E</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>CSE 457 - Computer Graphics</dd>
+      <dt>Description</dt>
+      <dd>A trailer-style video about battleships and aliens</dd>
+      <dt>Technologies</dt>
+      <dd>C++</dd>
+      <dt>Contribution</dt>
+      <dd>
+        Wrote the majority of the physics involved in collision detection, but
+        not much else.
+      </dd>
+      <dt>Project</dt>
+      <dd><a class="links" href="./video-1559820307.mp4">video</a></dd>
+    </dl>
+
+    <h2 class="2018aut">MemeDub</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>CSE 455 - Computer Vision</dd>
+      <dt>Description</dt>
+      <dd>An application that put hats on heads</dd>
+      <dt>Technologies</dt>
+      <dd>C++, python</dd>
+      <dt>Contribution</dt>
+      <dd>
+        Set up and tested different open-source computer vision frameworks for
+        facial recognition and helped determine which one to use.
+      </dd>
+      <dt>Project</dt>
+      <dd>
+        <a class="links" href="https://github.com/MichaelMiles/HatonHead"
+          >GitHub</a
+        >,
+        <a class="links" href="./CSE455_Final_FangWeiXu_poster.pdf">Poster</a>,
+        <a class="links" href="./CSE455FinalReport.pdf">Report</a>
+      </dd>
+    </dl>
+
+    <h2 class="2018aut">WHYLDFIRE 🔥</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>CSE 442 - Data Visualization</dd>
+      <dt>Description</dt>
+      <dd>a visualization about wildfires in the U.S.</dd>
+      <dt>Technologies</dt>
+      <dd>JavaScript, d3</dd>
+      <dt>Contribution</dt>
+      <dd>
+        Included a sunburst chart using d3 and fixed some UI elements of the
+        website.
+      </dd>
+      <dt>Project</dt>
+      <dd>
+        <a class="links" href="https://cse442-18f.github.io/fp-whyldfire/"
+          >website</a
+        >
+      </dd>
+    </dl>
+
+    <h2 class="2018aut">
+      <span class="tooltip"
+        ><span class="normaltext">Trusted Receivables</span
+        ><span class="tooltiptext">Box or No Box</span></span
+      >
+    </h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Dubhacks 2018</dd>
+      <dt>Description</dt>
+      <dd>
+        Developed a tool to prevent packages from being stolen off of porches of
+        residential buildings/apartments using a security camera feed. Used
+        Object Detection to generate tags for each frame of input through
+        Cognitive Services and inform user of suspicious activities using
+        Twilio.
+      </dd>
+      <dt>Technologies</dt>
+      <dd>python, OpenCV, Azure, Twilio</dd>
+      <dt>Contribution</dt>
+      <dd>Led project, hooked up the vision API, SMS integration</dd>
+      <dt>Project</dt>
+      <dd>
+        <a class="links" href="https://devpost.com/software/trusted-receivables"
+          >devpost</a
+        >,
+        <a class="links" href="https://github.com/satvikshukla/dubhacks18"
+          >GitHub</a
+        >
+      </dd>
+    </dl>
+
+    <h2 class="2018sum">Relief</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>MITHacks 2018</dd>
+      <dt>Description</dt>
+      <dd>
+        Disaster relief app for reporting missing people. Developed a java
+        application to help disaster relief volunteers coordinate between
+        disaster relief camps and people outside disaster areas to look up
+        information on friends and relatives. Used Microsoft Azure to run a
+        database for keeping track of found and missing people at disaster areas
+        and Microsoft Cognitive Services Face API to look for people using
+        images. Allowed friends and family to upload information/photos to the
+        application to assist relief efforts, like where people could
+        potentially be and what they looked like so that they could identify
+        them using computer vision. Then the volunteers could update the
+        information to include which relief camp people are located in.
+      </dd>
+      <dt>Technologies</dt>
+      <dd>SQLServer, Java, Azure</dd>
+      <dt>Contribution</dt>
+      <dd>
+        Led project, set up the Microsoft Azure database and backend that would
+        interpret data sent from the front end, interact with the server, and
+        send the information back to the front end. Helped determine what kind
+        of information we would store.
+      </dd>
+      <dt>Project</dt>
+      <dd>[TODO - I forgot where the repo was >_<]</dd>
+    </dl>
+
+    <h2 class="2018sum">Combat!</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>CSE/EE 474 - Intro to Embedded Systems</dd>
+      <dt>Description</dt>
+      <dd>A two-player tank game</dd>
+      <dt>Technologies</dt>
+      <dd>C, TM4C123G Tiva Board</dd>
+      <dt>Contribution</dt>
+      <dd>
+        Hooked up the buttons for the controls, created a rudimentary app that
+        could display the game score on a phone, and debugged the connection
+        between the Tiva programmable board and an LCD.
+      </dd>
+      <dt>Project</dt>
+      <dd>
+        <a
+          class="links"
+          href="https://drive.google.com/file/d/1iwGpQ_J5b0VphyDPrFP9gnaINVZLwMR3/view"
+          >video</a
+        >
+      </dd>
+    </dl>
+
+    <h2 class="2018spr">Brick breaker</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>CSE/EE 371 - Design of Digital Circuits and Systems</dd>
+      <dt>Description</dt>
+      <dd>A brick breaker game</dd>
+      <dt>Technologies</dt>
+      <dd>FPGAs, SystemVerilog</dd>
+      <dt>Contribution</dt>
+      <dd>
+        Created slides and presented the project, but most of it was done by
+        someone else.
+      </dd>
+      <dt>Project</dt>
+      <dd>
+        <a
+          class="links"
+          href="https://drive.google.com/file/d/1mMqNNky8TlR3kXyZnWidnr3k37A-P_Px/view?usp=sharing"
+          >video</a
+        >
+      </dd>
+    </dl>
+
+    <h2 class="2018win">Rype</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>nwHacks 2018</dd>
+      <dt>Description</dt>
+      <dd>
+        We made a fruit ripeness app to help determine whether fruit was ripe or
+        not. We put in a lot of pictures of fruits at different stages of
+        ripeness (bananas are pretty gross) and trained a classifier to detect
+        ripeness of specific fruits, like bananas and apples. The idea was to
+        help people who weren’t sure whether a fruit was ripe or not due to
+        inexperience or other things.
+      </dd>
+      <dt>Technologies</dt>
+      <dd>Microsoft Custom Vision API, Android, Java</dd>
+      <dt>Contribution</dt>
+      <dd>Hooking up and training the Custom Vision API</dd>
+      <dt>Project</dt>
+      <dd>
+        <a class="links" href="https://devpost.com/software/rype">devpost</a>
+      </dd>
+    </dl>
+
+    <h2 class="2017aut">Wheelbit</h2>
+    <dl>
+      <dt>Context</dt>
+      <dd>Dubhacks 2017</dd>
+      <dt>Description</dt>
+      <dd>
+        Fitbit for wheel-chair users. We used an Arduino and a sensors to keep
+        track of how many times the sensor passed a specific point on a wheel.
+        We then sent that information via Bluetooth to an android application
+        and that kept track of the daily rotations. We won the accessible design
+        challenge.
+      </dd>
+      <dt>Technologies</dt>
+      <dd>Android, Bluetooth, Arduino, Java</dd>
+      <dt>Contribution</dt>
+      <dd>
+        Led project, debugging bluetooth connection, creating FSM for tracking
+        wheel rotations
+      </dd>
+      <dt>Project</dt>
+      <dd>
+        <a class="links" href="https://devpost.com/software/wheelbit">devpost</a
+        >,
+        <a class="links" href="https://github.com/buimatt/WheelBit">GitHub</a>
+      </dd>
+    </dl>
+    <div id="footer"></div>
+    <script>
+      // From https://werxltd.com/wp/2010/05/13/javascript-implementation-of-javas-string-hashcode-method/
+      String.prototype.hashCode = function () {
+        var hash = 0,
+          i,
+          chr;
+        if (this.length === 0) return hash;
+        for (i = 0; i < this.length; i++) {
+          chr = this.charCodeAt(i);
+          hash = (hash << 5) - hash + chr;
+          hash |= 0; // Convert to 32bit integer
+        }
+        return hash;
+      };
+      var h2s = document.querySelectorAll("h2");
+      console.log(h2s);
+      for (let h2 of h2s) {
+        console.log(h2.classList);
+        try {
+          var value = h2.classList[0].hashCode();
+          console.log(h2.classList[0], value);
+          if (value < 0) value *= -1;
+          var r = value % 255;
+          value = Math.floor(value / 255);
+          var g = value % 255;
+          value = Math.floor(value / 255);
+          var b = value % 255;
+          console.log(r, g, b);
+          h2.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+        } catch (error) {
+          console.log(error);
+        }
       }
-    }
-  </style>
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-  <script>
-    $(function() {
-      $("#navbar").load("../navbar.html");
-    });
-  </script>
-</head>
-<body>
-  <div id="navbar"></div>
-  <h1 style="background-color: rgb(50, 70, 90)">Current projects</h1>
-  <h2>Personal Website</h2>
-  <dl>
-    <dt>Context</dt><dd>Personal Project for record-keeping</dd>
-    <dt>Description</dt><dd>Learning HTML, CSS, and JavaScript by making a website</dd>
-    <dt>Technologies</dt><dd>HTML, CSS, JavaScript, jQuery</dd>
-    <dt>Project</dt><dd><a class="links" href="https://nowei.github.io/">website</a></dd>
-  </dl>
-  <h2>Learning Rust</h2>
-  <dl>
-    <dt>Context</dt><dd>Personal Project</dd>
-    <dt>Description</dt><dd>Learning Rust via the <a class="links" href="https://doc.rust-lang.org/stable/book/">official Rust book</a>.</dd>
-    <dt>Technologies</dt><dd>Rust, Cargo</dd>
-    <dt>Project</dt><dd><a class="links" href="https://github.com/nowei/learning-rust">repo</a>, currently sidelined because school is kind of... taxing...</dd>
-  </dl>
-  <h2>PaxosVis</h2>
-  <dl>
-    <dt>Context</dt><dd>Personal Project</dd>
-    <dt>Description</dt><dd>Designing a visualization for Paxos, a distributed consensus algorithm. This involves teaching myself how to animate using JavaScript, HTML, and CSS, creating a framework for visualizing nodes, sending and receiving messages, and timers using JavaScript and d3. </dd>
-    <dt>Technologies</dt><dd>HTML, CSS, JavaScript, d3</dd>
-    <dt>Project</dt><dd>WIP - currently sidelined for learning Rust</dd>
-  </dl>
-  
-  <hr>
-
-  <h1 style="background-color: rgb(50, 70, 90)">Past Projects</h1>
-  <h3>Ordered by time</h3>
-  <h3>Colors determined by hash of string made by year(numeric) + quarter abbreviation(string), ex. 2019aut</h3>
-
-  <h2 class="2021spr">HIV Tracing app</h2>
-  <dl>
-    <dt>Context</dt><dd>Computing for Social Good</dd>
-    <dt>Description</dt><dd>Worked with a professor in the school of global health on a HIV tracking application in the context of ART retention in Sub-Saharan Africa using Community Health Toolkit.</dd>
-    <dt>Technologies</dt><dd>Community Health Toolkit</dd>
-    <dt>Project</dt><dd><a class="links" href="./CSE580_Final_Project_Writeup.pdf">report</a></dd>
-  </dl>
-
-  <h2 class="2021spr">Do not hit the duckies</h2>
-  <dl>
-    <dt>Context</dt><dd>Probabilistic Robotics</dd>
-    <dt>Description</dt><dd>Avoid the Duckies. Or at least try to avoid the duckies. Lots of technical issues with setting up, not a good time.</dd>
-    <dt>Technologies</dt><dd>Duckietown, PyTorch, ROS</dd>
-    <dt>Project</dt><dd><a class="links" href="./571_Final_Report.pdf">report</a></dd>
-  </dl>
-
-  <h2 class="2021spr">Parallelized Convolution</h2>
-  <dl>
-    <dt>Context</dt><dd>Applied Parallel Computing</dd>
-    <dt>Description</dt><dd>Shared memory and global memory convolutions in CUDA.</dd>
-    <dt>Technologies</dt><dd>CUDA, PyTorch, Python, Numba</dd>
-    <dt>Project</dt><dd><a class="links" href="./parallel_computing_final.mp4">video</a></dd>
-  </dl>
-
-  <h2 class="2021spr">MiniJava Compiler</h2>
-  <dl>
-    <dt>Context</dt><dd>Compilers</dd>
-    <dt>Description</dt><dd>MiniJava with Strings (we did hello world!), starting from scanning, to parsing, to semantics, to code generation.</dd>
-    <dt>Technologies</dt><dd>Java</dd>
-  </dl>
-
-  <h2 class="2021spr">SimpleDB</h2>
-  <dl>
-    <dt>Context</dt><dd>Database Systems</dd>
-    <dt>Description</dt><dd>SimpleDB was a toy DBMS implementation that implemented things like Buffer Pools, Lock Managers, and a Simple Selinger Query Optimizer.</dd>
-    <dt>Technologies</dt><dd>Java</dd>
-  </dl>
-
-  <h2 class="2021win">Randomized Rumor Spreading</h2>
-  <dl>
-    <dt>Context</dt><dd>Random Algorithms</dd>
-    <dt>Description</dt><dd>Paper rewrite/summary of a paper on Randomized Rumor Spreading.</dd>
-    <dt>Technologies</dt><dd>Python</dd>
-    <dt>Project</dt><dd><a class="links" href="./RandomizedRumorSpreading.pdf">report</a>,
-                        <a class="links" href="https://github.com/nowei/RandomizedRumorSpreading">repo</a></dd>
-  </dl>
-
-  <h2 class="2021win">Service Mesh Measurement</h2>
-  <dl>
-    <dt>Context</dt><dd>Graduate Networks</dd>
-    <dt>Description</dt><dd>We performed measurements on network, memory, and compute overheads of running a service mesh on top of two simple microservice architectures.</dd>
-    <dt>Technologies</dt><dd>Kubernetes, Minikube, AWS EKS, Istio, Prometheus, Wireshark</dd>
-    <dt>Project</dt><dd><a class="links" href="./svc_mesh_measurement_final_report.pdf">report</a>,
-                        <a class="links" href="https://github.com/Stosswelle/KuberNerds">repo</a></dd>
-  </dl>
-
-  <h2 class="2021win">Neural Networks with Slight Overparameterization review</h2>
-  <dl>
-    <dt>Context</dt><dd>Theoretical Deep Learning</dd>
-    <dt>Description</dt><dd>We basically did a paper review and go over some proofs about slightly overparameterized neural networks.</dd>
-    <dt>Technologies</dt><dd>LaTeX, math</dd>
-    <dt>Project</dt><dd><a class="links" href="./599_DL_Theory.pdf">report</a></dd>
-  </dl>
-
-  <h2 class="2021win">Snuba Reimplementation</h2>
-  <dl>
-    <dt>Context</dt><dd>Data Management & Weak Supervision for Machine Learning</dd>
-    <dt>Description</dt><dd>We reimplemented Snuba, a weak supervision labeling system that generates labels based on a small labeled set and heuristic models based on the features passed in.</dd>
-    <dt>Technologies</dt><dd>Python, sklearn, NumPy, PyTorch</dd>
-    <dt>Project</dt><dd><a class="links" href="./CSE599C_Snuba.pdf">report</a>,
-                        <a class="links" href="https://github.com/eric573/SNUBA_2.0">repo</a></dd>
-  </dl>
-  
-  <h2 class="2020aut">Poor Man's GPT-3</h2>
-  <dl>
-    <dt>Context</dt><dd>Generative Models</dd>
-    <dt>Description</dt><dd>Implement TransformerXL model in PyTorch to improve on performance beyond normal Transformer.</dd>
-    <dt>Technologies</dt><dd>Python, PyTorch</dd>
-    <dt>Project</dt><dd><a class="links" href="./Poor_Man_s_GPT_3.pdf">report</a>,
-                        <a class="links" href="https://github.com/kaiweic/Poor-man-s-GPT-3">repo</a></dd>
-  </dl>
-
-  <h2 class="2020aut">Leukemia Classification</h2>
-  <dl>
-    <dt>Context</dt><dd>Computational Biology</dd>
-    <dt>Description</dt><dd>Understanding how gene expression patterns are different in different subtypes of cancer + leukemia sub-type classification with 17 sub-types of Leukemia and a group of healthy patients.</dd>
-    <dt>Technologies</dt><dd>Python, NumPy, sklearn</dd>
-    <dt>Project</dt><dd><a class="links" href="https://github.com/nowei/leukemia-classification">repo</a>,
-                        <a class="links" href="./leukemia_slides.pdf">slides</a>, 
-                        <a class="links" href="./leukemia_final.pdf">report</a></dd>
-  </dl>
-
-  <h2 class="2020aut">Intro to Differential Privacy presentation</h2>
-  <dl>
-    <dt>Context</dt><dd>Computer Security</dd>
-    <dt>Description</dt><dd>Introduce Differential Privacy and ethical concerns surrounding private data.</dd>
-    <dt>Project</dt><dd><a class="links" href="./Intro to Differential Privacy.pdf">slides</a>,
-                        <a class="links" href="https://drive.google.com/file/d/1fQ0grJNTPwTJ5LFvjPPaWnQZenCyX6G_/view?usp=sharing">video</a></dd>
-  </dl>
-
-  <h2 class="2020aut">Exploring Spiking Neural Networks</h2>
-  <dl>
-    <dt>Context</dt><dd>AI & the Brain</dd>
-    <dt>Description</dt><dd>Implement and explore performance of small spiking neural networks.</dd>
-    <dt>Technologies</dt><dd>Python, PyTorch</dd>
-    <dt>Project</dt><dd><a class="links" href="./CSE 599 B Final Project - Andrew Wei & Kushal Jhunjhunwalla.pdf">report</a></dd>
-  </dl>
-
-  <h2>
-  <h2 class="2020spr">Stockbot: Stock Price Prediction with Historical and Sentiment data</h2>
-  <dl>
-    <dt>Context</dt><dd>Machine Learning for Big Data</dd>
-    <dt>Description</dt><dd>Stock price prediction with Tweets and past stock prices</dd>
-    <dt>Technologies</dt><dd>Python, Selenium, BeautifulSoup4, PyTorch</dd>
-    <dt>Project</dt><dd><a class="links" href="https://github.com/kaiweic/stockbot">repo</a>,
-                        <a class="links" href="./StockbotSlides.pdf">slides</a>, 
-                        <a class="links" href="./CSE547_Project_Final_Report.pdf">report</a>, 
-                        <a class="links" href="./547_video_stockbot.mp4">video</a></dd>
-  </dl>
-  <h2 class="2020spr">Deep Reinforcement Learning in the Stock Market</h2>
-  <dl>
-    <dt>Context</dt><dd>Reinforcement Learning</dd>
-    <dt>Description</dt><dd>Testing out a deep reinforcement learning scheme for an agent in the stock market</dd>
-    <dt>Technologies</dt><dd>Python, gym</dd>
-    <dt>Project</dt><dd><a class="links" href="./CSE599W_Final_Report.pdf">report</a></dd>
-  </dl>
-  <h2 class="2020spr">Bathroom Fall Detection</h2>
-  <dl>
-    <dt>Context</dt><dd>Mobile & Wireless Systems</dd>
-    <dt>Description</dt><dd>Creating an app for detecting bathroom falls</dd>
-    <dt>Technologies</dt><dd>Android Studio, Java, SMS, Bluetooth</dd>
-    <dt>Project</dt><dd><a class="links" href="https://docs.google.com/presentation/d/18YGNd0Af0y8UC32h3UDJHPzzdNmH9RSrcR3tkNNLDLk/edit?usp=sharing">slides</a>,
-                        <a class="links" href="https://github.com/leiyiz/BathroomFallDetection">repo</a></dd>
-  </dl>
-  <h2 class="2020win">Wide FOV Headset from scratch</h2>
-  <dl>
-    <dt>Context</dt><dd>Virtual Reality Systems</dd>
-    <dt>Description</dt><dd>Attempting to create a wide FOV headset using Fresnel lenses, LCDs, and 3D printing</dd>
-    <dt>Technologies</dt><dd>Physics and math, I guess; some CAD, but that wasn't me</dd>
-    <dt>Project</dt><dd><a class="links" href="./CSE490v_final_project.pdf">report</a></dd>
-  </dl>
-  <h2 class="2020win">Consistent Hashing Lab</h2>
-  <dl>
-    <dt>Context</dt><dd>Datacenter Systems</dd>
-    <dt>Description</dt><dd>Creating an educational project for undergrads about consistent hashing</dd>
-    <dt>Technologies</dt><dd>Python</dd>
-    <dt>Project</dt><dd><a class="links" href="https://github.com/nowei/consistent-hashing-lab">repo</a></dd>
-  </dl>
-  <h2 class="2019aut">Live Inference in a Parameter Server</h2>
-  <dl>
-    <dt>Context</dt><dd>Graduate Distributed Systems</dd>
-    <dt>Description</dt><dd>Implementing live inference for the BytePS Distributed Machine Learning framework.</dd>
-    <dt>Technologies</dt><dd>AWS, Docker, PyTorch</dd>
-    <dt>Project</dt><dd><a class="links" href="https://github.com/liangw6/byteps">repo</a>, <a class="links" href="./552FinalReport(Fall2019).pdf">report</a></dd>
-  </dl>
-  <h2 class="2019aut">Robustness of a Parameter Server</h2>
-  <dl>
-    <dt>Context</dt><dd>Robust Machine Learning</dd>
-    <dt>Description</dt><dd>Evaluating robustness in a Federated Learning setting.</dd>
-    <dt>Project</dt><dd><a class="links" href="./Robust_ML_Final_Project">report</a></dd>
-  </dl>
-  <h2 class="2019aut">Adversarial Deep Learning</h2>
-  <dl>
-    <dt>Context</dt><dd>Deep Learning</dd>
-    <dt>Description</dt><dd>Creating a framework for evaluating performance of state-of-the-art image classifiers on perturbed/altered images.</dd>
-    <dt>Technologies</dt><dd>Python, Flask, PyTorch</dd>
-    <dt>Project</dt><dd><a class="links" href="https://github.com/nowei/adversarial-dl">repo</a>, <a class="links" href="https://github.com/nowei/adversarial-dl/blob/master/final_poster.pdf">poster</a>, <a class="links" href="./Deep_Learning_Final_Report">report</a></dd>
-  </dl>
-  <h2 class="2019aut">Algorithm Analysis</h2>
-  <dl>
-    <dt>Context</dt><dd>Graduate Algorithms</dd>
-    <dt>Description</dt><dd>Evaluating a paper/possibly implementing the algorithm, specifically <a class="links" href="https://www.cs.rutgers.edu/~farach/pubs/FrequentStream.pdf">a streaming algorithm</a>.</dd>
-    <dt>Technologies</dt><dd>Python, LaTeX</dd>
-    <dt>Project</dt><dd><a class="links" href="https://github.com/nowei/frequent_items">repo</a></dd>
-  </dl>
-  <h2 class="2019spr">ChatAssist</h2>
-  <dl>
-    <dt>Context</dt><dd>CSE 481V - VR Capstone</dd>
-    <dt>Description</dt><dd>AR app using MagicLeap that would transcribe/translate English to other languages in AR to help people who are hard of hearing or are still learning English. Basically captions in real life. We had a setup of bluetooth microphones that streamed English conversations to laptops that were then forwarded to Amazon Transcribe. We then updated the text displayed on the Magic Leap to whatever language was selected. We originally used object detection for markers to mark where the text boxes would go, but learned that the Magic Leap's image tracking wasn't super stable, so we ended up making it adjustable instead.</dd>
-    <dt>Technologies</dt><dd>C#, Unity</dd>
-    <dt>Contribution</dt><dd>Designed the controls for changing languages and scrolling through the chat log, experimented with the computer vision detection on the Magic Leap to determine where to place the markers for the chat bubble. Dealt with random Unity bugs.</dd>
-    <dt>Project</dt><dd><a class="links" href="https://uwrealitylab.github.io/vrcapstone19sp-team3/">website</a></dd>
-  </dl>
-
-  <h2 class="2019spr">SBDs on the Lucky-E</h2>
-  <dl>
-    <dt>Context</dt><dd>CSE 457 - Computer Graphics</dd>
-    <dt>Description</dt><dd>A trailer-style video about battleships and aliens</dd>
-    <dt>Technologies</dt><dd>C++</dd>
-    <dt>Contribution</dt><dd>Wrote the majority of the physics involved in collision detection, but not much else.</dd>
-    <dt>Project</dt><dd><a class="links" href="./video-1559820307.mp4">video</a></dd>
-  </dl>
-  
-  <h2 class="2018aut">MemeDub</h2>
-  <dl>
-    <dt>Context</dt><dd>CSE 455 - Computer Vision</dd>
-    <dt>Description</dt><dd>An application that put hats on heads</dd>
-    <dt>Technologies</dt><dd>C++, python</dd>
-    <dt>Contribution</dt><dd>Set up and tested different open-source computer vision frameworks for facial recognition and helped determine which one to use. </dd>
-    <dt>Project</dt><dd><a class="links" href="https://github.com/MichaelMiles/HatonHead">GitHub</a>, <a class="links" href="./CSE455_Final_FangWeiXu_poster.pdf">Poster</a>, <a class="links" href="./CSE455FinalReport.pdf">Report</a></dd>
-  </dl>
-
-  <h2 class="2018aut">WHYLDFIRE 🔥</h2>
-  <dl>
-    <dt>Context</dt><dd>CSE 442 - Data Visualization</dd>
-    <dt>Description</dt><dd>a visualization about wildfires in the U.S.</dd>
-    <dt>Technologies</dt><dd>JavaScript, d3</dd>
-    <dt>Contribution</dt><dd>Included a sunburst chart using d3 and fixed some UI elements of the website.</dd>
-    <dt>Project</dt><dd><a class="links" href="https://cse442-18f.github.io/fp-whyldfire/">website</a></dd>
-  </dl>
-
-  <h2 class="2018aut"><span class="tooltip"><span class="normaltext">Trusted Receivables</span><span class="tooltiptext">Box or No Box</span></span></h2>
-  <dl>
-    <dt>Context</dt><dd>Dubhacks 2018</dd>
-    <dt>Description</dt><dd>Developed a tool to prevent packages from being stolen off of porches of residential buildings/apartments using a security camera feed. Used Object Detection to generate tags for each frame of input through Cognitive Services and inform user of suspicious activities using Twilio.</dd>
-    <dt>Technologies</dt><dd>python, OpenCV, Azure, Twilio</dd>
-    <dt>Contribution</dt><dd>Led project, hooked up the vision API, SMS integration</dd>
-    <dt>Project</dt><dd><a class="links" href="https://devpost.com/software/trusted-receivables">devpost</a>, <a class="links" href="https://github.com/satvikshukla/dubhacks18">GitHub</a></dd>
-  </dl>
-  
-  <h2 class="2018sum">Relief</h2>
-  <dl>
-    <dt>Context</dt><dd>MITHacks 2018</dd>
-    <dt>Description</dt><dd>Disaster relief app for reporting missing people. Developed a java application to help disaster relief volunteers coordinate between disaster relief camps and people outside disaster areas to look up information on friends and relatives. Used Microsoft Azure to run a database for keeping track of found and missing people at disaster areas and Microsoft Cognitive Services Face API to look for people using images. Allowed friends and family to upload information/photos to the application to assist relief efforts, like where people could potentially be and what they looked like so that they could identify them using computer vision. Then the volunteers could update the information to include which relief camp people are located in. </dd>
-    <dt>Technologies</dt><dd>SQLServer, Java, Azure</dd>
-    <dt>Contribution</dt><dd>Led project, set up the Microsoft Azure database and backend that would interpret data sent from the front end, interact with the server, and send the information back to the front end. Helped determine what kind of information we would store. </dd>
-    <dt>Project</dt><dd>[TODO - I forgot where the repo was >_<]</dd>
-  </dl>
-  
-  <h2 class="2018sum">Combat!</h2>
-  <dl>
-    <dt>Context</dt><dd>CSE/EE 474 - Intro to Embedded Systems</dd>
-    <dt>Description</dt><dd>A two-player tank game</dd>
-    <dt>Technologies</dt><dd>C, TM4C123G Tiva Board</dd>
-    <dt>Contribution</dt><dd>Hooked up the buttons for the controls, created a rudimentary app that could display the game score on a phone, and debugged the connection between the Tiva programmable board and an LCD. </dd>
-    <dt>Project</dt><dd><a class="links" href="https://drive.google.com/file/d/1iwGpQ_J5b0VphyDPrFP9gnaINVZLwMR3/view">video</a></dd>
-  </dl>
-
-  <h2 class="2018spr">Brick breaker</h2>
-  <dl>
-    <dt>Context</dt><dd>CSE/EE 371 - Design of Digital Circuits and Systems</dd>
-    <dt>Description</dt><dd>A brick breaker game </dd>
-    <dt>Technologies</dt><dd>FPGAs, SystemVerilog</dd>
-    <dt>Contribution</dt><dd>Created slides and presented the project, but most of it was done by someone else.</dd>
-    <dt>Project</dt><dd><a class="links" href="https://drive.google.com/file/d/1mMqNNky8TlR3kXyZnWidnr3k37A-P_Px/view?usp=sharing">video</a></dd>
-  </dl>
-
-  <h2 class="2018win">Rype</h2>
-  <dl>
-    <dt>Context</dt><dd>nwHacks 2018</dd>
-    <dt>Description</dt><dd>We made a fruit ripeness app to help determine whether fruit was ripe or not. We put in a lot of pictures of fruits at different stages of ripeness (bananas are pretty gross) and trained a classifier to detect ripeness of specific fruits, like bananas and apples. The idea was to help people who weren’t sure whether a fruit was ripe or not due to inexperience or other things.</dd>
-    <dt>Technologies</dt><dd>Microsoft Custom Vision API, Android, Java</dd>
-    <dt>Contribution</dt><dd>Hooking up and training the Custom Vision API</dd>
-    <dt>Project</dt><dd><a class="links" href="https://devpost.com/software/rype">devpost</a></dd>
-  </dl>
-
-  <h2 class="2017aut">Wheelbit</h2>
-  <dl>
-    <dt>Context</dt><dd>Dubhacks 2017</dd>
-    <dt>Description</dt><dd>Fitbit for wheel-chair users. We used an Arduino and a sensors to keep track of how many times the sensor passed a specific point on a wheel. We then sent that information via Bluetooth to an android application and that kept track of the daily rotations. We won the accessible design challenge. </dd>
-    <dt>Technologies</dt><dd>Android, Bluetooth, Arduino, Java</dd>
-    <dt>Contribution</dt><dd>Led project, debugging bluetooth connection, creating FSM for tracking wheel rotations</dd>
-    <dt>Project</dt><dd><a class="links" href="https://devpost.com/software/wheelbit">devpost</a>, <a class="links" href="https://github.com/buimatt/WheelBit">GitHub</a></dd>
-  </dl>
-  <div id="footer"></div>
-  <script>
-    // From https://werxltd.com/wp/2010/05/13/javascript-implementation-of-javas-string-hashcode-method/
-    String.prototype.hashCode = function() {
-      var hash = 0, i, chr;
-      if (this.length === 0) return hash;
-      for (i = 0; i < this.length; i++) {
-        chr   = this.charCodeAt(i);
-        hash  = ((hash << 5) - hash) + chr;
-        hash |= 0; // Convert to 32bit integer
-      }
-      return hash;
-    };
-    var h2s = document.querySelectorAll("h2");
-    console.log(h2s);
-    for (let h2 of h2s) {
-      console.log(h2.classList);
-      try {
-        var value = h2.classList[0].hashCode();  
-        console.log(h2.classList[0], value);
-        if (value < 0) value *= -1;
-        var r = value % 255;
-        value = Math.floor(value / 255);
-        var g = value % 255;
-        value = Math.floor(value / 255);
-        var b = value % 255;
-        console.log(r, g, b);
-        h2.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
-      } catch(error) {
-        console.log(error);
-      }
-    }
-
-  </script>
-</body>
+    </script>
+  </body>
+</html>

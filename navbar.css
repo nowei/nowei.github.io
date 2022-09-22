@@ -20,7 +20,6 @@
 }
 
 @media screen and (max-width: 1000px) {
-
   .navcontainer {
     position: unset;
     margin: auto;
@@ -40,7 +39,6 @@
     border-width: 0 0 2px 0;
     border-style: solid;
   }
-
 }
 
 @media (prefers-color-scheme: dark) {

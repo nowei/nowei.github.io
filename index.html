@@ -1,226 +1,239 @@
-<!DOCTYPE html>
-<html lang='en-US'>
-<head>
-  <title>Andrew Wei</title>
-  <meta charset="UTF-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-  <link rel="stylesheet" href="style.css">
-  <style> 
-  .reveal{
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: 2s all ease;
-  }
-  .reveal.active{
-    transform: translateY(0);
-    opacity: 1;
-  }
-  .reveal.inactive{
-    transform: translateY(0);
-    opacity: 0;
-  }
-  h1 {
-    font-size: 48px;
-    margin: 24px;
-    color: #fff;
-    background: linear-gradient(275deg, #52ACFF 25%, #FFE32C 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  h2 {
-    font-size: 36px;
-    margin: 24px;
-  }
-  h3 {
-    font-size: 24px;
-    margin: 24px;
-  }
-  ul {
-    font-size: 24px;
-    margin: 0px 0px 0px 24px;
-    text-indent: -2ch;
-  }
-  li {
-    list-style: none;
-  }
-  li::before {
-    content: "> ";
-  }
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Andrew Wei</title>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .reveal {
+        position: relative;
+        transform: translateY(150px);
+        opacity: 0;
+        transition: 2s all ease;
+      }
+      .reveal.active {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      .reveal.inactive {
+        transform: translateY(0);
+        opacity: 0;
+      }
+      h1 {
+        font-size: 48px;
+        margin: 24px;
+        color: #fff;
+        background: linear-gradient(275deg, #52acff 25%, #ffe32c 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      h2 {
+        font-size: 36px;
+        margin: 24px;
+      }
+      h3 {
+        font-size: 24px;
+        margin: 24px;
+      }
+      ul {
+        font-size: 24px;
+        margin: 0px 0px 0px 24px;
+        text-indent: -2ch;
+      }
+      li {
+        list-style: none;
+      }
+      li::before {
+        content: "> ";
+      }
 
-  img {
-    width: 100%;
-  }
+      img {
+        width: 100%;
+      }
 
-  div.image {
-    display: block;
-  }
+      div.image {
+        display: block;
+      }
 
-  .left {
-    margin-left: auto;
-    margin-right: unset;
-  }
-  .right {
-    margin-left: unset;
-    margin-right: auto;
-  }
+      .left {
+        margin-left: auto;
+        margin-right: unset;
+      }
+      .right {
+        margin-left: unset;
+        margin-right: auto;
+      }
 
-  .container {
-    width:90%; 
-    margin:auto;
-  }
-  .resize {
-    width: 70%
-  }
+      .container {
+        width: 90%;
+        margin: auto;
+      }
+      .resize {
+        width: 70%;
+      }
 
-  @media screen and (max-width: 1000px) {
-    body {
-      justify-content: center;
-    }
-    .container {
-      width:100%; 
-      margin-left:0;
-      height: 100%;
-    }
+      @media screen and (max-width: 1000px) {
+        body {
+          justify-content: center;
+        }
+        .container {
+          width: 100%;
+          margin-left: 0;
+          height: 100%;
+        }
 
-    .image {
-      width: 75%;
-      margin: auto;
-      height: unset;
-    }
-    .left {
-      width: 100%;
-      margin: auto;
-    }
+        .image {
+          width: 75%;
+          margin: auto;
+          height: unset;
+        }
+        .left {
+          width: 100%;
+          margin: auto;
+        }
 
-    .right {
-      width: 100%;
-      margin: auto;
-    }
-    .face {
-      width: 400px;
-      height: auto;
-      vertical-align: middle;
-    }
-    p {
-      font-size: 24px;
-    }
-  }
-
-  @media (prefers-color-scheme: light) {
-    h1 {
-      font-size: 48px;
-      margin: 24px;
-      color: #fff;
-      background: linear-gradient(275deg, #ff8d00 0%, #a90000 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
-  </style>
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-  <script>
-    $(function() {
-      $("#navbar").load("./navbar.html");
-    });
-  </script>
-  </script>
-</head>
-<body>
-  <div id="navbar"></div>
-  <div class="container">
-    <section class="one reveal">
-      <div class="child1 left face" >
-        <img src="./imgs/face.jpg" alt="face">
-      </div>
-      <div class="child2 right">
-        <h1>Hello World</h1>
-        <h1>My name is Andrew Wei</h1>
-      </div>
-    </section>
-    <section class="two reveal">
-      <div class="child2 left">
-        <p>
-          I'm currently a Software Engineer at OctoML and I'm located in the greater Seattle area.
-        </p>
-        <p>
-          I got my MS in Computer Science & Engineering and BS in Computer Engineering from 
-          the Paul G. Allen School of Computer Science & Engineering at the University of Washington. 
-        </p>
-        <p>
-          I spent most of my time learning about Distributed Systems and Machine Learning. 
-        </p>
-        <p>
-          All opinions are my own.
-        </p>
-      </div>
-      <div class="child2 right image">
-        <img src="./imgs/seattle_japanese_garden.jpg" alt="photo of yellow tree and rock">
-      </div>
-    </section>
-    <section class="three reveal">
-      <div class="child2 left image resize">
-        <img src="./imgs/canadian_forest_probably.jpg" alt="photo of yellow tree and rock">
-      </div>
-      <div class="child1 right">
-        <h2>Interests</h2>
-        <hr>
-        <div>
-          <h3>Technical</h3>
-          <ul>
-            <li>Machine/Deep Learning</li>
-            <li>Distributed Systems</li>
-            <li>Applied Algorithms</li>
-          </ul>
-          <h3>Social</h3>
-          <ul>
-            <li>Inclusion/Diversity</li>
-            <li>Volunteering</li>
-            <li>Accessibility</li>
-          </ul>
-          <h3>Hobbies</h3>
-          <ul>
-            <li>Food</li>
-            <li>TV</li>
-            <li>Games</li>
-            <li>Memes</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section class="four reveal">
-      <div class="child2 right">
-        <p>
-          <u>Contact info</u><br />
-          email: a.nowei42[at]gmail.com
-        </p>
-      </div>
-    </section>
-  </div>
-    <div class="text-container reveal fade-bottom">
-    </div>
-  </div>
-  <script>
-    function reveal() {
-      var reveals = document.querySelectorAll(".reveal");
-      var currentTop = document.documentElement.scrollTop || document.body.scrollTop;
-      var currentBottom = currentTop + window.innerHeight;
-      for (var i = 0; i < reveals.length; i++) {
-        var elementTop = currentTop + reveals[i].getBoundingClientRect().top;
-        var elementBottom = currentTop + reveals[i].getBoundingClientRect().bottom;
-        if ((elementTop <= currentTop && elementBottom >= currentTop) || (currentBottom <= elementBottom && elementTop <= currentBottom) || (elementBottom <= currentBottom && elementTop >= currentTop)) {
-          reveals[i].classList.remove("inactive");
-          reveals[i].classList.add("active");
-        } else {
-          reveals[i].classList.remove("active");
-          reveals[i].classList.add("inactive");
+        .right {
+          width: 100%;
+          margin: auto;
+        }
+        .face {
+          width: 400px;
+          height: auto;
+          vertical-align: middle;
+        }
+        p {
+          font-size: 24px;
         }
       }
-    }
-    window.addEventListener("scroll", reveal);
 
-    // To check the scroll position on page load
-    reveal();
-  </script>
-</body>
+      @media (prefers-color-scheme: light) {
+        h1 {
+          font-size: 48px;
+          margin: 24px;
+          color: #fff;
+          background: linear-gradient(275deg, #ff8d00 0%, #a90000 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#navbar").load("./navbar.html");
+      });
+    </script>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div class="container">
+      <section class="one reveal">
+        <div class="child1 left face">
+          <img src="./imgs/face.jpg" alt="face" />
+        </div>
+        <div class="child2 right">
+          <h1>Hello World</h1>
+          <h1>My name is Andrew Wei</h1>
+        </div>
+      </section>
+      <section class="two reveal">
+        <div class="child2 left">
+          <p>
+            I'm currently a Software Engineer at OctoML and I'm located in the
+            greater Seattle area.
+          </p>
+          <p>
+            I got my MS in Computer Science & Engineering and BS in Computer
+            Engineering from the Paul G. Allen School of Computer Science &
+            Engineering at the University of Washington.
+          </p>
+          <p>
+            I spent most of my time learning about Distributed Systems and
+            Machine Learning.
+          </p>
+          <p>All opinions are my own.</p>
+        </div>
+        <div class="child2 right image">
+          <img
+            src="./imgs/seattle_japanese_garden.jpg"
+            alt="photo of yellow tree and rock"
+          />
+        </div>
+      </section>
+      <section class="three reveal">
+        <div class="child2 left image resize">
+          <img
+            src="./imgs/canadian_forest_probably.jpg"
+            alt="photo of yellow tree and rock"
+          />
+        </div>
+        <div class="child1 right">
+          <h2>Interests</h2>
+          <hr />
+          <div>
+            <h3>Technical</h3>
+            <ul>
+              <li>Machine/Deep Learning</li>
+              <li>Distributed Systems</li>
+              <li>Applied Algorithms</li>
+            </ul>
+            <h3>Social</h3>
+            <ul>
+              <li>Inclusion/Diversity</li>
+              <li>Volunteering</li>
+              <li>Accessibility</li>
+            </ul>
+            <h3>Hobbies</h3>
+            <ul>
+              <li>Food</li>
+              <li>TV</li>
+              <li>Games</li>
+              <li>Memes</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="four reveal">
+        <div class="child2 right">
+          <p>
+            <u>Contact info</u><br />
+            email: a.nowei42[at]gmail.com
+          </p>
+        </div>
+      </section>
+    </div>
+    <script>
+      function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        var currentTop =
+          document.documentElement.scrollTop || document.body.scrollTop;
+        var currentBottom = currentTop + window.innerHeight;
+        for (var i = 0; i < reveals.length; i++) {
+          var elementTop = currentTop + reveals[i].getBoundingClientRect().top;
+          var elementBottom =
+            currentTop + reveals[i].getBoundingClientRect().bottom;
+          if (
+            (elementTop <= currentTop && elementBottom >= currentTop) ||
+            (currentBottom <= elementBottom && elementTop <= currentBottom) ||
+            (elementBottom <= currentBottom && elementTop >= currentTop)
+          ) {
+            reveals[i].classList.remove("inactive");
+            reveals[i].classList.add("active");
+          } else {
+            reveals[i].classList.remove("active");
+            reveals[i].classList.add("inactive");
+          }
+        }
+      }
+      window.addEventListener("scroll", reveal);
+
+      // To check the scroll position on page load
+      reveal();
+    </script>
+  </body>
 </html>

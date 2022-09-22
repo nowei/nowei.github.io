@@ -11,7 +11,9 @@ img {
   margin: auto;
   padding: 12px;
 }
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-align: center;
   padding: 12px;
 }

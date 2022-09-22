@@ -1,7 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Ubuntu monospace;",monospace;
+  font-family: "Ubuntu monospace;", monospace;
 }
 
 body {
@@ -44,7 +44,7 @@ p {
 }
 
 ::-webkit-scrollbar {
-  width:0px;
+  width: 0px;
   /*how to make scroll disappear?*/
   /*background-color:transparent;*/
 }
@@ -54,7 +54,7 @@ p {
     width: 100%;
   }
   section {
-/*    flex-direction: column;
+    /*    flex-direction: column;
     height: 120vh;*/
 
     display: block;
@@ -80,19 +80,19 @@ p {
   }
   .child2 {
     /*width: 50%;   Or whatever */
-    /*height: 50%;  /* Or whatever */*/
-    margin: auto;  /* Magic! */
+    /*height: 50%;  /* Or whatever */
+    margin: auto; /* Magic! */
     padding: 36px;
   }
   .child1 {
     margin: auto;
     padding: 36px;
   }
-
 }
 
-a:link, a:visited {
-  border: none; 
+a:link,
+a:visited {
+  border: none;
   display: inline-block;
   background-repeat: no-repeat;
   -webkit-transition: background-image 5s ease-in-out;
@@ -119,9 +119,10 @@ a {
 }
 
 @media (prefers-color-scheme: dark) {
-  body, html {
-      background: #111;
-      color: white;
+  body,
+  html {
+    background: #111;
+    color: white;
   }
 
   a {
@@ -133,7 +134,7 @@ a {
   }
 
   a:active {
-    color:cyan;
+    color: cyan;
   }
 
   a.active {
