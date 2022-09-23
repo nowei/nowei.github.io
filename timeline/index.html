@@ -179,6 +179,25 @@
           background-color: whitesmoke;
         }
       }
+
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        bottom: 0;
+        left: 0;
+        z-index: 1; /* Sit on top */
+        width: 90%; /* Full width */
+        height: 94%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        margin: auto;
+        z-index: 1001;
+      }
+      /* Modal Content/Box */
+      .modal-content {
+        padding: 20px;
+        border: 1px solid #888;
+      }
     </style>
     <script
       src="https://code.jquery.com/jquery-3.3.1.js"
@@ -416,6 +435,9 @@
         var btn = document.createElement("BUTTON");
         btn.innerHTML = content["name"];
         btn.classList.add(quartertype);
+        let name_split = content["name"].split(" ");
+        let class_name = name_split[0] + name_split[1];
+        quarteritem.id = class_name;
         // btn.style.width = "25%";
         // btn.style.left = -37.5 + 25 * position + "%";
         // btn.style['position'] = "relative";
@@ -425,6 +447,21 @@
         var list = document.createElement("UL");
         div.appendChild(list);
         div.classList.add("quarter");
+        div.id = class_name + "-content";
+
+        var modal = document.getElementById(class_name);
+        var modal_content = document.getElementById(class_name + "-content");
+        btn.onclick = function () {
+          if (modal.classList.contains("modal")) {
+            modal.style.display = null;
+            modal.classList.remove("modal");
+            modal_content.classList.remove("modal-content");
+          } else {
+            modal.style.display = "block";
+            modal.classList.add("modal");
+            modal_content.classList.add("modal-content");
+          }
+        };
         // div.style['position'] = "relative";
         // div.style.width = "25%";
         // div.style.left = position * 25 + "%";
