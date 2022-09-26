@@ -546,7 +546,7 @@
     ]
   },
   "sum2019": {
-    "name": "Summer 2020",
+    "name": "Summer 2019",
     "activities": [
       {
         "name": "Intern",
@@ -981,7 +981,7 @@
           "description": "Model a gear"
         },
         "team": {
-          "name": "How Do We Do This?",
+          "name": "Team How Do We Do This?",
           "thumbnail": true,
           "position": "left"
         }

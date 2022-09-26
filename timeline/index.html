@@ -22,6 +22,12 @@
         font-size: 16px;
       }
 
+      h3 {
+        background-color: #202020;
+        text-align: center;
+        margin: 6px;
+      }
+
       /*    ul {
             font-size: 1em;
           }*/
@@ -90,15 +96,11 @@
       }
 
       .quarter-item {
-        /*float:left;*/
         border-color: white;
         border-width: 2px;
         width: 100%;
         justify-content: flex-start;
-        /*display: flex;*/
-        /*border-radius:25px;*/
         overflow: visible;
-        /*overflow: hidden;*/
         border-style: solid;
       }
 
@@ -114,23 +116,6 @@
           overflow: visible;
           /*overflow: hidden;*/
         }
-      }
-
-      .quarterba,
-      .quarterbb,
-      .quartercc,
-      .quarterm,
-      .quartera {
-        height: 50px;
-        border: 1px solid white;
-      }
-
-      .quarterba:hover,
-      .quarterbb:hover,
-      .quartercc:hover,
-      .quarterm:hover,
-      .quartera:hover {
-        border: 3px solid white;
       }
 
       /* For links */
@@ -163,10 +148,10 @@
         text-decoration: underline dotted;
       }
       header {
+        background-color: #202020;
         position: sticky;
         top: 0;
         z-index: 999;
-        background-color: #111;
         border-color: white;
         border-width: 0;
         border-bottom-width: 2px;
@@ -174,14 +159,8 @@
         border-style: solid;
       }
 
-      @media (prefers-color-scheme: light) {
-        header {
-          background-color: whitesmoke;
-        }
-      }
-
       .modal {
-        display: none; /* Hidden by default */
+        display: block; /* Hidden by default */
         position: fixed; /* Stay in place */
         bottom: 0;
         left: 0;
@@ -189,12 +168,13 @@
         width: 90%; /* Full width */
         height: 94%; /* Full height */
         overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: #202020;
         margin: auto;
         z-index: 1001;
       }
       /* Modal Content/Box */
       .modal-content {
+        background-color: #000;
         padding: 20px;
         border: 1px solid #888;
       }
@@ -204,11 +184,36 @@
         flex-wrap: wrap;
         align-items: flex-start;
         margin: 6px;
+        justify-content: center;
       }
 
       .image_elements {
         width: 50%;
         height: auto;
+      }
+
+      .focused_image {
+        /*width: auto;*/
+        height: 100%;
+        margin: 20px;
+      }
+
+      @media (prefers-color-scheme: light) {
+        header {
+          background-color: whitesmoke;
+        }
+        h3 {
+          background-color: whitesmoke;
+        }
+        .quarter-item {
+          border-color: whitesmoke;
+        }
+        .modal {
+          background-color: whitesmoke;
+        }
+        .modal-content {
+          background-color: white;
+        }
       }
     </style>
     <script
@@ -417,22 +422,43 @@
         list.append(team_list);
       }
 
+      function toggleModal(modal) {
+        var class_name = modal.id;
+        var modal_content = document.getElementById(class_name + "-content");
+        if (modal.classList.contains("modal")) {
+          modal.classList.remove("modal");
+          modal_content.classList.remove("modal-content");
+          for (var image of modal.getElementsByTagName("img")) {
+            image.classList.remove("focused_image");
+          }
+          modal.tabIndex = "";
+        } else {
+          modal.classList.add("modal");
+          modal_content.classList.add("modal-content");
+          for (var image of modal.getElementsByTagName("img")) {
+            image.classList.add("focused_image");
+          }
+          modal.tabIndex = "-1";
+          modal.focus();
+        }
+      }
+
       function generateQuarter(parent, quartertype, position, content) {
         var p = document.getElementById(parent);
         var quarteritem = document.createElement("DIV");
         quarteritem.classList.add("quarter-item");
         p.appendChild(quarteritem);
         var classesFilled = false;
-        var btn = document.createElement("BUTTON");
-        btn.innerHTML = content["name"];
-        btn.classList.add(quartertype);
+        var header = document.createElement("h3");
+        header.innerHTML = content["name"];
+        header.classList.add(quartertype);
         let name_split = content["name"].split(" ");
         let class_name = name_split[0] + name_split[1];
         quarteritem.id = class_name;
         // btn.style.width = "25%";
         // btn.style.left = -37.5 + 25 * position + "%";
         // btn.style['position'] = "relative";
-        quarteritem.appendChild(btn);
+        quarteritem.appendChild(header);
         var div = document.createElement("DIV");
         quarteritem.appendChild(div);
         var list = document.createElement("UL");
@@ -441,18 +467,6 @@
         div.id = class_name + "-content";
 
         var modal = document.getElementById(class_name);
-        var modal_content = document.getElementById(class_name + "-content");
-        btn.onclick = function () {
-          if (modal.classList.contains("modal")) {
-            modal.style.display = null;
-            modal.classList.remove("modal");
-            modal_content.classList.remove("modal-content");
-          } else {
-            modal.style.display = "block";
-            modal.classList.add("modal");
-            modal_content.classList.add("modal-content");
-          }
-        };
         // div.style['position'] = "relative";
         // div.style.width = "25%";
         // div.style.left = position * 25 + "%";
@@ -481,10 +495,7 @@
                 } else {
                   var item = document.createElement("DIV");
                 }
-                if (activities[i]["content"][j]["thumbnail"]) {
-                } else {
-                  item.innerHTML = activities[i]["content"][j]["name"];
-                }
+                item.innerHTML = activities[i]["content"][j]["name"];
                 if (!activities[i]["content"][j]["thumbnail"]) {
                   item.innerHTML = activities[i]["content"][j]["name"];
                 }
@@ -592,42 +603,152 @@
         //       // x = setTimeout(function() {content.style.overflow = "visible"}, 1000);
         //     }
         //   });
+        console.log(modal);
+        return modal;
+      }
+
+      function addButtonFuncs(prev, curr, next) {
+        if (prev) {
+          curr.addEventListener("keydown", (event) => {
+            if (event.key !== "ArrowLeft") return;
+            if (curr.classList.contains("modal")) {
+              toggleModal(curr);
+              toggleModal(prev);
+            }
+          });
+        }
+        if (next) {
+          curr.addEventListener("keydown", (event) => {
+            if (event.key !== "ArrowRight") return;
+            if (curr.classList.contains("modal")) {
+              toggleModal(curr);
+              toggleModal(next);
+            }
+          });
+        }
+
+        curr.addEventListener("keydown", (event) => {
+          if (event.key !== "Escape") return;
+          if (document.activeElement !== curr) return;
+          if (curr.classList.contains("modal")) {
+            toggleModal(curr);
+          }
+        });
       }
 
       const response = fetch("./timeline.json")
         .then((response) => response.json())
         .then((data) => {
-          generateQuarter("2021", "quartera", 1, data["aut2021"]);
-          generateQuarter("2021", "quartera", 2, data["win2022"]);
-          generateQuarter("2021", "quartera", 3, data["spr2022"]);
-          generateQuarter("2021", "quartera", 4, data["sum2022"]);
+          let quarters = [];
+          let q_temp = [];
+          q_temp.push(generateQuarter("2021", "quartera", 1, data["aut2021"]));
+          q_temp.push(generateQuarter("2021", "quartera", 2, data["win2022"]));
+          q_temp.push(generateQuarter("2021", "quartera", 3, data["spr2022"]));
+          q_temp.push(generateQuarter("2021", "quartera", 4, data["sum2022"]));
+          quarters.push(...q_temp.reverse());
 
-          generateQuarter("masters1", "quarterm", 1, data["aut2019"]);
-          generateQuarter("masters1", "quarterm", 2, data["win2020"]);
-          generateQuarter("masters1", "quarterm", 3, data["spr2020"]);
-          generateQuarter("masters1", "quarterm", 4, data["sum2020"]);
-          generateQuarter("masters2", "quarterm", 1, data["aut2020"]);
-          generateQuarter("masters2", "quarterm", 2, data["win2021"]);
-          generateQuarter("masters2", "quarterm", 3, data["spr2021"]);
-          generateQuarter("masters2", "quarterm", 4, data["sum2021"]);
+          q_temp = [];
+          q_temp.push(
+            generateQuarter("masters2", "quarterm", 1, data["aut2020"])
+          );
+          q_temp.push(
+            generateQuarter("masters2", "quarterm", 2, data["win2021"])
+          );
+          q_temp.push(
+            generateQuarter("masters2", "quarterm", 3, data["spr2021"])
+          );
+          q_temp.push(
+            generateQuarter("masters2", "quarterm", 4, data["sum2021"])
+          );
+          quarters.push(...q_temp.reverse());
+          q_temp = [];
+          q_temp.push(
+            generateQuarter("masters1", "quarterm", 1, data["aut2019"])
+          );
+          q_temp.push(
+            generateQuarter("masters1", "quarterm", 2, data["win2020"])
+          );
+          q_temp.push(
+            generateQuarter("masters1", "quarterm", 3, data["spr2020"])
+          );
+          q_temp.push(
+            generateQuarter("masters1", "quarterm", 4, data["sum2020"])
+          );
+          quarters.push(...q_temp.reverse());
 
-          generateQuarter("ugrad3", "quarterbb", 1, data["aut2017"]);
-          generateQuarter("ugrad3", "quarterbb", 2, data["win2018"]);
-          generateQuarter("ugrad3", "quarterbb", 3, data["spr2018"]);
-          generateQuarter("ugrad3", "quarterbb", 4, data["sum2018"]);
-          generateQuarter("ugrad4", "quarterbb", 1, data["aut2018"]);
-          generateQuarter("ugrad4", "quarterbb", 2, data["win2019"]);
-          generateQuarter("ugrad4", "quarterbb", 3, data["spr2019"]);
-          generateQuarter("ugrad4", "quarterbb", 4, data["sum2019"]);
+          q_temp = [];
+          q_temp.push(
+            generateQuarter("ugrad4", "quarterbb", 1, data["aut2018"])
+          );
+          q_temp.push(
+            generateQuarter("ugrad4", "quarterbb", 2, data["win2019"])
+          );
+          q_temp.push(
+            generateQuarter("ugrad4", "quarterbb", 3, data["spr2019"])
+          );
+          q_temp.push(
+            generateQuarter("ugrad4", "quarterbb", 4, data["sum2019"])
+          );
+          quarters.push(...q_temp.reverse());
+          q_temp = [];
+          q_temp.push(
+            generateQuarter("ugrad3", "quarterbb", 1, data["aut2017"])
+          );
+          q_temp.push(
+            generateQuarter("ugrad3", "quarterbb", 2, data["win2018"])
+          );
+          q_temp.push(
+            generateQuarter("ugrad3", "quarterbb", 3, data["spr2018"])
+          );
+          q_temp.push(
+            generateQuarter("ugrad3", "quarterbb", 4, data["sum2018"])
+          );
+          quarters.push(...q_temp.reverse());
 
-          generateQuarter("ugrad1", "quartercc", 1, data["aut2015"]);
-          generateQuarter("ugrad1", "quartercc", 2, data["win2016"]);
-          generateQuarter("ugrad1", "quartercc", 3, data["spr2016"]);
-          generateQuarter("ugrad1", "quartercc", 4, data["sum2016"]);
-          generateQuarter("ugrad2", "quartercc", 1, data["aut2016"]);
-          generateQuarter("ugrad2", "quartercc", 2, data["win2017"]);
-          generateQuarter("ugrad2", "quartercc", 3, data["spr2017"]);
-          generateQuarter("ugrad2", "quartercc", 4, data["sum2017"]);
+          q_temp = [];
+          q_temp.push(
+            generateQuarter("ugrad2", "quartercc", 1, data["aut2016"])
+          );
+          q_temp.push(
+            generateQuarter("ugrad2", "quartercc", 2, data["win2017"])
+          );
+          q_temp.push(
+            generateQuarter("ugrad2", "quartercc", 3, data["spr2017"])
+          );
+          q_temp.push(
+            generateQuarter("ugrad2", "quartercc", 4, data["sum2017"])
+          );
+          quarters.push(...q_temp.reverse());
+          q_temp = [];
+          q_temp.push(
+            generateQuarter("ugrad1", "quartercc", 1, data["aut2015"])
+          );
+          q_temp.push(
+            generateQuarter("ugrad1", "quartercc", 2, data["win2016"])
+          );
+          q_temp.push(
+            generateQuarter("ugrad1", "quartercc", 3, data["spr2016"])
+          );
+          q_temp.push(
+            generateQuarter("ugrad1", "quartercc", 4, data["sum2016"])
+          );
+          quarters.push(...q_temp.reverse());
+
+          for (let quarter of quarters) {
+            console.log(quarter.id);
+            quarter.addEventListener("click", () => toggleModal(quarter));
+          }
+
+          addButtonFuncs(quarters[1], quarters[0], null);
+
+          for (let i = 1; i < quarters.length - 1; i++) {
+            addButtonFuncs(quarters[i + 1], quarters[i], quarters[i - 1]);
+          }
+          addButtonFuncs(
+            null,
+            quarters[quarters.length - 1],
+            quarters[quarters.length - 2]
+          );
         });
 
       function equalizeHeight(phase) {
