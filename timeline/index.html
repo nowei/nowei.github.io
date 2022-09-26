@@ -132,11 +132,6 @@
         margin: 6px;
       }
 
-      .collapsible {
-        margin: 20px 5px;
-        background-color: rgb(80, 70, 60);
-      }
-
       ul {
         padding: 0 0 0 25px;
       }
@@ -795,25 +790,6 @@
       //   }
       // });
     </script>
-    <div id="footer"></div>
-    <script>
-      var coll = document.getElementsByClassName("collapsible");
-      var i;
-
-      for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          var content = this.nextElementSibling;
-          if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-          } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-          }
-        });
-      }
-
-      // var latest = document.getElementById("masters").nextElementSibling;
-      // latest.style.maxHeight = latest.scrollHeight + "px";
-    </script>
+    <div id="footer" style="margin: 100px"></div>
   </body>
 </html>
