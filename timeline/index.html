@@ -6,198 +6,207 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
     <style>
-      /* For the tooltips */
-      button {
-        background-image: linear-gradient(rgb(50, 50, 50), rgb(100, 100, 100));
-        padding: 0.5em 0.5em;
-        min-width: 200px;
-        color: white;
-      }
+            /* For the tooltips */
+            button {
+              background-image: linear-gradient(rgb(50, 50, 50), rgb(100, 100, 100));
+              padding: 0.5em 0.5em;
+              min-width: 200px;
+              color: white;
+            }
 
-      .container {
-        height: unset;
-      }
+            .container {
+              height: unset;
+            }
 
-      p {
-        font-size: 16px;
-      }
+            p {
+              font-size: 16px;
+            }
 
-      /*    ul {
-      font-size: 1em;
-    }*/
-      @media screen and (min-width: 1000px) {
-        /*      ul {
-        font-size: 0.9em;
-      }*/
-      }
+            /*    ul {
+            font-size: 1em;
+          }*/
+            @media screen and (min-width: 1000px) {
+              /*      ul {
+              font-size: 0.9em;
+            }*/
+            }
 
-      p {
-        margin: 10px 0;
-      }
+            p {
+              margin: 10px 0;
+            }
 
-      /* for the hide flexbox */
-      button {
-        width: 100%;
-        /*border:none;*/
-      }
+            /* for the hide flexbox */
+            button {
+              width: 100%;
+              /*border:none;*/
+            }
 
-      img {
-        width: 0;
-      }
+      /*      img {
+              width: 0;
+            }
+      */
+            #content {
+              width: 100%;
+              /*display: inline-block;*/
+              /*height: 100%;*/
+            }
 
-      #content {
-        width: 100%;
-        /*display: inline-block;*/
-        /*height: 100%;*/
-      }
+            .quarter {
+              text-align: left;
+              /*display:none;*/
+              /*max-height: 0;*/
+              /*min-height: 0;*/
+              overflow: hidden;
+              /*min-height:450px;*/
+              transition: min-height 0.4s ease-in-out;
+              margin: 6px;
+            }
 
-      .quarter {
-        text-align: left;
-        /*display:none;*/
-        /*max-height: 0;*/
-        /*min-height: 0;*/
-        overflow: hidden;
-        /*min-height:450px;*/
-        transition: min-height 0.4s ease-in-out;
-        margin: 6px;
-      }
+            .quarter p {
+              margin: 6px;
+            }
 
-      .quarter p {
-        margin: 6px;
-      }
+            .quarter-container {
+              /*float:left;*/
+              /*margin: 0 auto;*/
+              /*display: flex;*/
+              z-index: 1;
+              border-width: 10px;
+              /*height: 50vh;*/
+              padding: 50px;
+            }
 
-      .quarter-container {
-        /*float:left;*/
-        /*margin: 0 auto;*/
-        /*display: flex;*/
-        z-index: 1;
-        border-width: 10px;
-        /*height: 50vh;*/
-        padding: 50px;
-      }
+            .quarter-grid {
+              display: flex;
+              justify-content: flex-start;
+              flex-wrap: wrap;
+              flex-direction: row;
+            }
 
-      .quarter-grid {
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        flex-direction: row;
-      }
+            @media screen and (max-width: 1000px) {
+              .quarter-grid {
+                flex-direction: column-reverse;
+              }
+            }
 
-      @media screen and (max-width: 1000px) {
-        .quarter-grid {
-          flex-direction: column-reverse;
-        }
-      }
+            .quarter-item {
+              /*float:left;*/
+              border-color: white;
+              border-width: 2px;
+              width: 100%;
+              justify-content: flex-start;
+              /*display: flex;*/
+              /*border-radius:25px;*/
+              overflow: visible;
+              /*overflow: hidden;*/
+              border-style: solid;
+            }
 
-      .quarter-item {
-        /*float:left;*/
-        border-color: white;
-        border-width: 2px;
-        width: 100%;
-        justify-content: flex-start;
-        /*display: flex;*/
-        /*border-radius:25px;*/
-        overflow: visible;
-        /*overflow: hidden;*/
-        border-style: solid;
-      }
+            @media screen and (min-width: 1000px) {
+              .quarter-item {
+                /*float:left;*/
+                border-color: white;
+                border-width: 2px;
+                width: 25%;
+                justify-content: flex-start;
+                /*display: flex;*/
+                /*border-radius:25px;*/
+                overflow: visible;
+                /*overflow: hidden;*/
+              }
+            }
 
-      @media screen and (min-width: 1000px) {
-        .quarter-item {
-          /*float:left;*/
-          border-color: white;
-          border-width: 2px;
-          width: 25%;
-          justify-content: flex-start;
-          /*display: flex;*/
-          /*border-radius:25px;*/
-          overflow: visible;
-          /*overflow: hidden;*/
-        }
-      }
+            .quarterba,
+            .quarterbb,
+            .quartercc,
+            .quarterm,
+            .quartera {
+              height: 50px;
+              border: 1px solid white;
+            }
 
-      .quarterba,
-      .quarterbb,
-      .quartercc,
-      .quarterm,
-      .quartera {
-        height: 50px;
-        border: 1px solid white;
-      }
+            .quarterba:hover,
+            .quarterbb:hover,
+            .quartercc:hover,
+            .quarterm:hover,
+            .quartera:hover {
+              border: 3px solid white;
+            }
 
-      .quarterba:hover,
-      .quarterbb:hover,
-      .quartercc:hover,
-      .quarterm:hover,
-      .quartera:hover {
-        border: 3px solid white;
-      }
+            /* For links */
+            a.link_proj:link {
+              background-image: unset;
+              min-width: unset;
+              min-height: unset;
+              display: inline;
+            }
+            .topic {
+              /*display: inline-block;*/
+              text-align: left;
+              left: 0%;
+              margin: 6px;
+            }
 
-      /* For links */
-      a.link_proj:link {
-        background-image: unset;
-        min-width: unset;
-        min-height: unset;
-        display: inline;
-      }
-      .topic {
-        /*display: inline-block;*/
-        text-align: left;
-        left: 0%;
-        margin: 6px;
-      }
+            .collapsible {
+              margin: 20px 5px;
+              background-color: rgb(80, 70, 60);
+            }
 
-      .collapsible {
-        margin: 20px 5px;
-        background-color: rgb(80, 70, 60);
-      }
+            ul {
+              padding: 0 0 0 25px;
+            }
 
-      ul {
-        padding: 0 0 0 25px;
-      }
+            .thumbnail {
+              text-decoration: underline;
+            }
+            .tooltip-text {
+              text-decoration: underline dotted;
+            }
+            header {
+              position: sticky;
+              top: 0;
+              z-index: 999;
+              background-color: #111;
+              border-color: white;
+              border-width: 0;
+              border-bottom-width: 2px;
+              padding: 12px;
+              border-style: solid;
+            }
 
-      .thumbnail {
-        text-decoration: underline;
-      }
-      .tooltip-text {
-        text-decoration: underline dotted;
-      }
-      header {
-        position: sticky;
-        top: 0;
-        z-index: 999;
-        background-color: #111;
-        border-color: white;
-        border-width: 0;
-        border-bottom-width: 2px;
-        padding: 12px;
-        border-style: solid;
-      }
+            @media (prefers-color-scheme: light) {
+              header {
+                background-color: whitesmoke;
+              }
+            }
 
-      @media (prefers-color-scheme: light) {
-        header {
-          background-color: whitesmoke;
-        }
-      }
+            .modal {
+              display: none; /* Hidden by default */
+              position: fixed; /* Stay in place */
+              bottom: 0;
+              left: 0;
+              z-index: 1; /* Sit on top */
+              width: 90%; /* Full width */
+              height: 94%; /* Full height */
+              overflow: auto; /* Enable scroll if needed */
+              background-color: rgb(0, 0, 0); /* Fallback color */
+              margin: auto;
+              z-index: 1001;
+            }
+            /* Modal Content/Box */
+            .modal-content {
+              padding: 20px;
+              border: 1px solid #888;
+            }
 
-      .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        bottom: 0;
-        left: 0;
-        z-index: 1; /* Sit on top */
-        width: 90%; /* Full width */
-        height: 94%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0, 0, 0); /* Fallback color */
-        margin: auto;
-        z-index: 1001;
-      }
-      /* Modal Content/Box */
-      .modal-content {
-        padding: 20px;
-        border: 1px solid #888;
-      }
+            .image_container {
+              display:flex;
+              flex-wrap: wrap;
+              align-items: flex-start;
+              margin: 6px;
+            }
+
+            .
     </style>
     <script
       src="https://code.jquery.com/jquery-3.3.1.js"
@@ -342,33 +351,12 @@
         var project_list = document.createElement("UL");
         var item = document.createElement("LI");
         if (currProject.hasOwnProperty("content")) {
-          if (currProject["thumbnail"]) {
-            if (currProject["position"] == "left") {
-              var image =
-                '<span style="right: unset; left: 5%;"><img src="' +
-                currProject["content"] +
-                '"/>';
-            } else {
-              var image =
-                '<span style="left: unset; right: 5%;"><img src="' +
-                currProject["content"] +
-                '"/>';
-            }
-            item.innerHTML =
-              'Project: <span class="thumbnail link_proj tooltip-text" href="' +
-              currProject["content"] +
-              '" >' +
-              currProject["name"] +
-              image +
-              "<span/>";
-          } else {
-            item.innerHTML =
-              'Project: <a class="link_proj" href="' +
-              currProject["content"] +
-              '" >' +
-              currProject["name"] +
-              "<a/>";
-          }
+          item.innerHTML =
+            'Project: <a class="link_proj" href="' +
+            currProject["content"] +
+            '" >' +
+            currProject["name"] +
+            "<a/>";
         } else {
           item.innerHTML = "Project: " + currProject["name"];
         }
@@ -465,8 +453,10 @@
         // div.style['position'] = "relative";
         // div.style.width = "25%";
         // div.style.left = position * 25 + "%";
+        var hasPrev = false;
 
         if (content.hasOwnProperty("activities")) {
+          hasPrev = true;
           var activities = content["activities"];
           for (var i = 0; i < activities.length; i++) {
             var topic = document.createElement("DIV");
@@ -492,26 +482,7 @@
                 } else {
                   item.innerHTML = activities[i]["content"][j]["name"];
                 }
-                if (activities[i]["content"][j]["thumbnail"]) {
-                  if (activities[i]["content"][j]["position"] == "left") {
-                    var image =
-                      '<span style="right: unset; left: 5%;"><img src="' +
-                      activities[i]["content"][j]["content"] +
-                      '"/>';
-                  } else {
-                    var image =
-                      '<span style="left: unset; right: 5%;"><img src="' +
-                      activities[i]["content"][j]["content"] +
-                      '"/>';
-                  }
-                  item.innerHTML =
-                    '<span class="thumbnail link_proj tooltip-text" href="' +
-                    activities[i]["content"][j]["content"] +
-                    '" ><i>' +
-                    activities[i]["content"][j]["name"] +
-                    image +
-                    "<i/><span/>";
-                } else {
+                if (!activities[i]["content"][j]["thumbnail"]) {
                   item.innerHTML = activities[i]["content"][j]["name"];
                 }
                 if (activities[i]["content"][j].hasOwnProperty("description")) {
@@ -539,11 +510,11 @@
           }
         }
 
-        if (Object.keys(content).length > 2) {
-          div.appendChild(document.createElement("HR"));
-        }
-
         if (content.hasOwnProperty("classes")) {
+          if (hasPrev) {
+            div.appendChild(document.createElement("HR"));
+          }
+
           var topic = document.createElement("DIV");
           topic.classList.add("topic");
           topic.innerHTML = "<b><u>Classes</u></b>";
@@ -563,10 +534,6 @@
               item.innerHTML = item.innerHTML.strike(); // + " [dropped]";
               var dropped_expl = document.createElement("UL");
               list.append(dropped_expl);
-              // var dropped_expl_item = document.createElement('LI');
-              // var temp = classes[i]['dropped_expl'].split(": ");
-              // dropped_expl_item.innerHTML = temp[0].bold() + ": " + temp[1];
-              // dropped_expl.append(dropped_expl_item);
             }
             if (classes[i].hasOwnProperty("team")) {
               populateTeam(classes[i]["team"], list);
@@ -580,6 +547,25 @@
                 populateProject(classes[i]["project"], list);
               }
             }
+          }
+        }
+
+        if (content.hasOwnProperty("images")) {
+          div.appendChild(document.createElement("HR"));
+
+          let images = content["images"];
+          let image_container = document.createElement("div");
+          image_container.classList.add("image_container");
+          div.appendChild(image_container);
+
+          let image_width = 50;
+
+          for (let i = 0; i < images.length; i++) {
+            let image_href = images[i];
+            let image = document.createElement("img");
+            image.style = "width: " + image_width + "%; height: auto;";
+            image.src = image_href;
+            image_container.appendChild(image);
           }
         }
 

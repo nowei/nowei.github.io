@@ -701,11 +701,12 @@
         "content": [
           {
             "name": "Dubhacks 2018",
-            "description": "<span class=\"thumbnail tooltip-text\">Trusted Receivables, Package theft detection<span><img src=\"./imgs/BoxOrNoBox.jpg\" /></span></span>"
+            "description": "Trusted Receivables, Package theft detection"
           }
         ]
       }
-    ]
+    ],
+    "images": ["/timeline/imgs/BoxOrNoBox.jpg"]
   },
   "sum2018": {
     "name": "Summer 2018",
@@ -865,10 +866,10 @@
         "content": [
           {
             "name": "nwHacks 2018",
-            "content": "./imgs/nwhacks1.jpg",
             "thumbnail": true,
+            "content": 0,
             "position": "right",
-            "description": "<span class=\"thumbnail link_proj tooltip-text\" href=\"./imgs/fruits.png\">Fruit ripeness app<span><img src=\"./imgs/fruits.png\" /></span></span>"
+            "description": "Fruit ripeness app"
           }
         ]
       },
@@ -881,7 +882,8 @@
           }
         ]
       }
-    ]
+    ],
+    "images": ["/timeline/imgs/nwhacks1.jpg", "/timeline/imgs/fruits.png"]
   },
   "aut2017": {
     "name": "Autumn 2017",
@@ -918,14 +920,14 @@
         "content": [
           {
             "name": "Dubhacks 2017",
-            "content": "./imgs/dubhacks.jpg",
             "thumbnail": true,
             "position": "right",
             "description": "Fitbit for Wheelchair Users, won Accessible Design Challenge"
           }
         ]
       }
-    ]
+    ],
+    "images": ["/timeline/imgs/dubhacks.jpg"]
   },
   "sum2017": {
     "name": "Summer 2017",
@@ -974,14 +976,12 @@
         "name": "ENGR 215: Dynamics",
         "project": {
           "name": "Dynamics Modeling",
-          "content": "./imgs/gear.jpg",
           "thumbnail": true,
           "position": "left",
           "description": "Model a gear"
         },
         "team": {
           "name": "How Do We Do This?",
-          "content": "./imgs/dynamics.png",
           "thumbnail": true,
           "position": "left"
         }
@@ -1015,7 +1015,8 @@
           }
         ]
       }
-    ]
+    ],
+    "images": ["/timeline/imgs/gear.jpg", "/timeline/imgs/dynamics.png"]
   },
   "win2017": {
     "name": "Winter 2017",
@@ -1046,10 +1047,9 @@
       {
         "name": "ENGR 214: Statics",
         "project": "Balsa Wood Bridges",
-        "content": "./imgs/bridge3.jpg",
         "thumbnail": true,
         "position": "right",
-        "description": "We won <a class=\"thumbnail link_proj\" href=\"./imgs/bridge1.jpg\">first<span><img src=\"./imgs/bridge1.jpg\" /></span></a> and <a class=\"thumbnail link_proj\" href=\"./imgs/bridge2.jpg\">second<span><img src=\"./imgs/bridge2.jpg\" /></span></a> place with our two bridges"
+        "description": "We won first and second place with our two bridges"
       },
       {
         "name": "MATH 254: Multivariable Calculus"
@@ -1059,20 +1059,25 @@
         "project": [
           {
             "name": "Sound and Glass",
-            "content": "./imgs/glass.jpg",
             "thumbnail": true,
             "position": "right",
             "description": "Analyzing sounds made from glasses and water"
           },
           {
             "name": "Waves and Dry Ice",
-            "content": "./imgs/waves.jpg",
             "thumbnail": true,
             "position": "right",
             "description": "Trying to depict sound waves in dry ice smoke"
           }
         ]
       }
+    ],
+    "images": [
+      "/timeline/imgs/bridge1.jpg",
+      "/timeline/imgs/bridge2.jpg",
+      "/timeline/imgs/bridge3.jpg",
+      "/timeline/imgs/glass.jpg",
+      "/timeline/imgs/waves.jpg"
     ]
   },
   "sum2016": {
@@ -1096,7 +1101,6 @@
         "name": "ENGR 224: Thermodynamics",
         "project": {
           "name": "Stirling Engine",
-          "content": "./imgs/thermo2.png",
           "thumbnail": true,
           "position": "left",
           "description": "Efficiency: -0.000%. Note: Building it was harder than making the model"
@@ -1111,14 +1115,14 @@
           },
           {
             "name": "Magnets and Temperature",
-            "content": "./imgs/magnets.JPG",
             "thumbnail": true,
             "position": "left",
             "description": "Testing how well magnets work at different temperatures"
           }
         ]
       }
-    ]
+    ],
+    "images": ["/timeline/imgs/thermo2.png", "/timeline/imgs/magnets.JPG"]
   },
   "win2016": {
     "name": "Winter 2016",
