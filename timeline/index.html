@@ -240,6 +240,11 @@
         <div class="content" style="max-height: 100%">
           <div class="quarter-container">
             <div
+              id="2022"
+              class="quarter-grid"
+              style="transition: all 2s"
+            ></div>
+            <div
               id="2021"
               class="quarter-grid"
               style="transition: all 2s"
@@ -598,7 +603,7 @@
         //       // x = setTimeout(function() {content.style.overflow = "visible"}, 1000);
         //     }
         //   });
-        console.log(modal);
+        // console.log(modal);
         return modal;
       }
 
@@ -635,102 +640,66 @@
         .then((response) => response.json())
         .then((data) => {
           let quarters = [];
-          let q_temp = [];
-          q_temp.push(generateQuarter("2021", "quartera", 1, data["aut2021"]));
-          q_temp.push(generateQuarter("2021", "quartera", 2, data["win2022"]));
-          q_temp.push(generateQuarter("2021", "quartera", 3, data["spr2022"]));
-          q_temp.push(generateQuarter("2021", "quartera", 4, data["sum2022"]));
+          let q_temp = [
+            generateQuarter("2022", "quartera", 1, data["aut2022"]),
+          ];
           quarters.push(...q_temp.reverse());
 
-          q_temp = [];
-          q_temp.push(
-            generateQuarter("masters2", "quarterm", 1, data["aut2020"])
-          );
-          q_temp.push(
-            generateQuarter("masters2", "quarterm", 2, data["win2021"])
-          );
-          q_temp.push(
-            generateQuarter("masters2", "quarterm", 3, data["spr2021"])
-          );
-          q_temp.push(
-            generateQuarter("masters2", "quarterm", 4, data["sum2021"])
-          );
-          quarters.push(...q_temp.reverse());
-          q_temp = [];
-          q_temp.push(
-            generateQuarter("masters1", "quarterm", 1, data["aut2019"])
-          );
-          q_temp.push(
-            generateQuarter("masters1", "quarterm", 2, data["win2020"])
-          );
-          q_temp.push(
-            generateQuarter("masters1", "quarterm", 3, data["spr2020"])
-          );
-          q_temp.push(
-            generateQuarter("masters1", "quarterm", 4, data["sum2020"])
-          );
+          q_temp = [
+            generateQuarter("2021", "quartera", 1, data["aut2021"]),
+            generateQuarter("2021", "quartera", 2, data["win2022"]),
+            generateQuarter("2021", "quartera", 3, data["spr2022"]),
+            generateQuarter("2021", "quartera", 4, data["sum2022"]),
+          ];
           quarters.push(...q_temp.reverse());
 
-          q_temp = [];
-          q_temp.push(
-            generateQuarter("ugrad4", "quarterbb", 1, data["aut2018"])
-          );
-          q_temp.push(
-            generateQuarter("ugrad4", "quarterbb", 2, data["win2019"])
-          );
-          q_temp.push(
-            generateQuarter("ugrad4", "quarterbb", 3, data["spr2019"])
-          );
-          q_temp.push(
-            generateQuarter("ugrad4", "quarterbb", 4, data["sum2019"])
-          );
+          q_temp = [
+            generateQuarter("masters2", "quarterm", 1, data["aut2020"]),
+            generateQuarter("masters2", "quarterm", 2, data["win2021"]),
+            generateQuarter("masters2", "quarterm", 3, data["spr2021"]),
+            generateQuarter("masters2", "quarterm", 4, data["sum2021"]),
+          ];
           quarters.push(...q_temp.reverse());
-          q_temp = [];
-          q_temp.push(
-            generateQuarter("ugrad3", "quarterbb", 1, data["aut2017"])
-          );
-          q_temp.push(
-            generateQuarter("ugrad3", "quarterbb", 2, data["win2018"])
-          );
-          q_temp.push(
-            generateQuarter("ugrad3", "quarterbb", 3, data["spr2018"])
-          );
-          q_temp.push(
-            generateQuarter("ugrad3", "quarterbb", 4, data["sum2018"])
-          );
+          q_temp = [
+            generateQuarter("masters1", "quarterm", 1, data["aut2019"]),
+            generateQuarter("masters1", "quarterm", 2, data["win2020"]),
+            generateQuarter("masters1", "quarterm", 3, data["spr2020"]),
+            generateQuarter("masters1", "quarterm", 4, data["sum2020"]),
+          ];
           quarters.push(...q_temp.reverse());
 
-          q_temp = [];
-          q_temp.push(
-            generateQuarter("ugrad2", "quartercc", 1, data["aut2016"])
-          );
-          q_temp.push(
-            generateQuarter("ugrad2", "quartercc", 2, data["win2017"])
-          );
-          q_temp.push(
-            generateQuarter("ugrad2", "quartercc", 3, data["spr2017"])
-          );
-          q_temp.push(
-            generateQuarter("ugrad2", "quartercc", 4, data["sum2017"])
-          );
+          q_temp = [
+            generateQuarter("ugrad4", "quarterbb", 1, data["aut2018"]),
+            generateQuarter("ugrad4", "quarterbb", 2, data["win2019"]),
+            generateQuarter("ugrad4", "quarterbb", 3, data["spr2019"]),
+            generateQuarter("ugrad4", "quarterbb", 4, data["sum2019"]),
+          ];
           quarters.push(...q_temp.reverse());
-          q_temp = [];
-          q_temp.push(
-            generateQuarter("ugrad1", "quartercc", 1, data["aut2015"])
-          );
-          q_temp.push(
-            generateQuarter("ugrad1", "quartercc", 2, data["win2016"])
-          );
-          q_temp.push(
-            generateQuarter("ugrad1", "quartercc", 3, data["spr2016"])
-          );
-          q_temp.push(
-            generateQuarter("ugrad1", "quartercc", 4, data["sum2016"])
-          );
+          q_temp = [
+            generateQuarter("ugrad3", "quarterbb", 1, data["aut2017"]),
+            generateQuarter("ugrad3", "quarterbb", 2, data["win2018"]),
+            generateQuarter("ugrad3", "quarterbb", 3, data["spr2018"]),
+            generateQuarter("ugrad3", "quarterbb", 4, data["sum2018"]),
+          ];
+          quarters.push(...q_temp.reverse());
+
+          q_temp = [
+            generateQuarter("ugrad2", "quartercc", 1, data["aut2016"]),
+            generateQuarter("ugrad2", "quartercc", 2, data["win2017"]),
+            generateQuarter("ugrad2", "quartercc", 3, data["spr2017"]),
+            generateQuarter("ugrad2", "quartercc", 4, data["sum2017"]),
+          ];
+          quarters.push(...q_temp.reverse());
+          q_temp = [
+            generateQuarter("ugrad1", "quartercc", 1, data["aut2015"]),
+            generateQuarter("ugrad1", "quartercc", 2, data["win2016"]),
+            generateQuarter("ugrad1", "quartercc", 3, data["spr2016"]),
+            generateQuarter("ugrad1", "quartercc", 4, data["sum2016"]),
+          ];
           quarters.push(...q_temp.reverse());
 
           for (let quarter of quarters) {
-            console.log(quarter.id);
+            // console.log(quarter.id);
             quarter.addEventListener("click", () => toggleModal(quarter));
           }
 

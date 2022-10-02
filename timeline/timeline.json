@@ -1,4 +1,27 @@
 {
+  "aut2022": {
+    "name": "Autumn 2022",
+    "activities": [
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "TEALS"
+          }
+        ]
+      },
+      {
+        "name": "Comedy Shows Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Jimmy O. Yang @ Moore Theatre, Seattle"
+          }
+        ]
+      }
+    ]
+  },
   "sum2022": {
     "name": "Summer 2022",
     "activities": [
