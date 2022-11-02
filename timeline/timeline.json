@@ -19,6 +19,18 @@
             "name": "Jimmy O. Yang @ Moore Theatre, Seattle"
           }
         ]
+      },
+      {
+        "name": "Concerts Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Erick Irons, The Rain Station, and Sabrina Pirzada"
+          },
+          {
+            "name": "Death Cab for Cutie ft. Chong the Nomad"
+          }
+        ]
       }
     ]
   },
