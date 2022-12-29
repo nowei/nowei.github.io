@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{resume}[2022/12/28]
+\ProvidesClass{WeiAndrew}[2022/12/28]
 \LoadClass[11pt,letterpaper]{article}
 
 \RequirePackage[margin=1.5cm]{geometry}

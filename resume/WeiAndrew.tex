@@ -8,6 +8,7 @@
 \usepackage{tabto}
 \usepackage[nott]{inconsolata}
 \usepackage{parskip}
+\usepackage{atbegshi}
 % \SetLabelAlign{center}{\clap{#1}}
 \SetLabelAlign{center}{\strut\smash{\parbox[t]\labelwidth{\centering#1}}}
 
@@ -19,6 +20,19 @@
 \emergencystretch=\maxdimen
 \hyphenpenalty=10000
 \hbadness=10000
+\newcommand{\discardpages}[1]{% \discardpages{<csv list>}
+  \xdef\discard@pages{#1}% Store pages to discard
+  \AtBeginShipout{% At shipout, decide whether to discard page/not
+    \renewcommand*{\do}[1]{% How to handle each page entry in csv list
+      \ifnum\value{page}=##1\relax%
+        \AtBeginShipoutDiscard% Discard page/not
+        \gdef\do####1{}% Do nothing further
+      \fi%
+    }%
+    \expandafter\docsvlist\expandafter{\discard@pages}% Process list of pages to discard
+  }%
+}
+\discardpages{2}
 
 \begin{document}
 \setlength{\topskip}{0pt}
