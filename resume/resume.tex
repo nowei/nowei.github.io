@@ -1,0 +1,178 @@
+\documentclass{resume}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{calc}
+\usepackage{tabto}
+\usepackage[nott]{inconsolata}
+\usepackage{parskip}
+% \SetLabelAlign{center}{\clap{#1}}
+\SetLabelAlign{center}{\strut\smash{\parbox[t]\labelwidth{\centering#1}}}
+
+\geometry{top=0cm, bottom=0cm, left=0cm, right=0cm}
+
+\definecolor{sidebar}{RGB}{55, 55, 55}
+\setlength{\parindent}{0pt}
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\begin{document}
+\setlength{\topskip}{0pt}
+\noindent\fcolorbox{sidebar}{sidebar}%
+{%
+    \hspace{0.02\textwidth}
+    \begin{minipage}[t][\textheight-2\fboxsep-2\fboxrule][t]{0.25\textwidth}
+        % \color{black}
+        \color{white}
+        \vspace{12px}
+        \vspace{12px}
+        \name{Andrew}{Wei}
+        \occupation{Software Engineer}
+        \vspace{12px}
+
+        \begin{itemize}[align=center]
+            \location{Seattle}{WA}
+            \email{a.nowei42@gmail.com}
+            \phonenumber{206-850-7878}
+            \linkedin{linkedin.com/in/nowei}
+            \github{github.com/nowei}
+        \end{itemize}
+        \vspace{12px}
+
+        \textbf{\underline{Programming Languages}}
+        \begin{tabular}{p{0.04\linewidth}>{\raggedright}p{0.55\linewidth}p{0.1\linewidth}}
+            - & Python, Java                & 5yr \\
+            - & Rust, C/C++                 & 1yr \\
+            - & C\#, Javascript, TypeScript & 3mo \\
+        \end{tabular}
+        \vspace{12px}
+
+        \noindent\textbf{\underline{Hardware Description Lang.}}
+        \begin{tabular}{p{0.04\linewidth}>{\raggedright}p{0.55\linewidth}p{0.1\linewidth}}
+            - & System Verilog & 1yr \\
+            - & Verilog        & 3mo \\
+        \end{tabular}
+        \vspace{12px}
+
+        \textbf{\underline{Technologies/Frameworks}}
+        \raggedright MySQL, SQL++, PostgreSQL, BigQuery,
+        Spark, Datalog, PyTorch,
+        Pandas, AWS, Unity, CUDA,
+        Elasticsearch, Logstash,
+        Kibana, Flask, Kafka,
+        Zookeeper, Selenium,
+        BeautifulSoup4, HTML/CSS,
+        Android Studio, Protobufs,
+        DataDog, GitLab CI
+        \vspace{12px}
+
+        \textbf{\underline{VC \& Deployment Tools}} \\
+        git, Docker, Kubernetes
+        \vspace{12px}
+
+        \textbf{\underline{Hardware}} \\
+        FPGA, soldering
+        \vspace{12px}
+
+        \textbf{\underline{Operating Systems}} \\
+        Windows, Linux, MacOS
+        \vspace{12px}
+
+        \textbf{\underline{Other Languages}} \\
+        \begin{tabular}{p{0.04\linewidth}p{0.4\linewidth}p{0.3\linewidth}}
+            - & English & Proficient \\
+            - & Chinese & Basic      \\
+            - & ASL     & Basic      \\
+        \end{tabular}
+        \vspace{12px}
+
+        \textbf{\underline{Interests}} \\
+        \begin{tabular}{p{0.04\linewidth}p{.9\linewidth}}
+            - & Distributed Systems   \\
+            - & Deep/Machine Learning \\
+            - & Algorithms            \\
+            - & Tech for Good
+        \end{tabular}
+        \vspace{12px}
+
+        \textbf{\underline{Hobbies}} \\
+        food, volunteering, reading, learning, teaching
+    \end{minipage}%
+    \hspace{0.01\textwidth}
+}%
+\hspace{0.01\textwidth}
+\begin{minipage}[t][\textheight-2\fboxsep-2\fboxrule][t]{0.65\textwidth}
+    \smallskip
+    \vspace{6px}
+    {\Large\textbf{\underline{Experience}}}
+    \vspace{6px}
+    \begin{itemize}[leftmargin=5.5mm]
+        \item[{\includegraphics[width=8px]{helpers/octoml.png}}] \textbf{OctoML}
+        \item[] \textbf{Seattle, WA} \hfill 10/2021 - present
+        \item[] \textbf{Software Engineer} - Platform (Acceleration and Deployment)
+        \item[-] Collaborated with others to design, write, and ship \underline{Rust}, \underline{Python}, \underline{Protobufs}, \underline{SQL}, and \underline{YAML} to support SaaS product features and tools for internal analysis
+        \item[-] Wrote code to integrate, test, and internally validate different machine learning models and frameworks
+        \item[-] Wrote documentation for tutorials and new features
+    \end{itemize}
+    \vspace{6px}
+    \begin{itemize}[leftmargin=5.5mm]
+        \item[{\includegraphics[width=7px]{helpers/microsoft.png}}] \textbf{Microsoft}
+        \item[] \textbf{Seattle, WA} \hfill 06/2021 - 09/2021
+        \item[] \textbf{Research Intern} - Data Engineering for Xbox Finance \& Marketing
+        \item[-] Develop \underline{SSIS} data pipeline to crosswalk Xbox Game Pass product usage, cost, and revenue data coming from different teams
+        \item[-] Integrating \underline{SQL Server} data and \underline{PowerAutomate} flows in a \underline{PowerApp} dashboard to assist in evaluating title performance
+    \end{itemize}
+    \vspace{6px}
+    \begin{itemize}[leftmargin=5.5mm]
+        \item[{\includegraphics[width=7px]{helpers/uw.png}}] \textbf{Paul G. Allen School of Computer Science \& Engineering}
+        \item[] \textbf{Seattle, WA} \hfill 03/2018 – 06/2021
+        \item[] \textbf{Graduate Teaching Assistant}
+        \item[-] Led sections of ~30 students and taught concepts within Distributed Systems, Machine Learning (for Big Data),
+              Statistics for CS, Databases, and Intro to Data Science courses
+        \item[-] 4.6/5.0 average section rating
+    \end{itemize}
+    \vspace{6px}
+    \begin{itemize}[leftmargin=5.5mm]
+        \item[{\includegraphics[width=7px]{helpers/amazon.png}}] \textbf{Amazon}
+        \item[] \textbf{Seattle, WA} \hfill 06/2020 – 09/2020
+        \item[] \textbf{SDE Intern} – Improved Search Experience
+        \item[-] Improved and added features to a promotions management tool using \underline{Java}, \underline{TypeScript} and \underline{React Redux}
+        \item[-] Investigated search latency issues, fix lowered latency from ~45s to ~2s and reduced search payload size by 4–10000x
+    \end{itemize}
+    \vspace{6px}
+    \begin{itemize}[leftmargin=5.5mm]
+        \item[] \textbf{Letron Entertainment Tech}
+        \item[] \textbf{Kaohsiung, Taiwan} \hfill 06/2019 – 09/2019
+        \item[] \textbf{Intern} – Website health monitoring
+        \item[-] Implemented monitoring agent for RTMP using \underline{Kafka}, \underline{Zookeeper}, \underline{Docker}, \underline{Elasticsearch}, \underline{Logstash}, and \underline{Kibana}
+        \item[-] Created an API to remotely access networking tools using \underline{Flask}
+    \end{itemize}
+    \vspace{12px}
+
+    {\Large\textbf{\underline{Education}}}
+    \vspace{6px}
+    \begin{itemize}[leftmargin=5.5mm]
+        \item[{\includegraphics[width=7px]{helpers/uw.png}}] \textbf{University of Washington, Seattle} \hfill 2017 – 2021
+        \item[] \textbf{MS} in \textbf{Computer Science \& Engineering} – 3.92 GPA \hfill 06/2021
+        \item[] \textbf{BS} in \textbf{Computer Engineering} – Cum Laude, Dean’s List \hfill 06/2019
+    \end{itemize}
+    \vspace{12px}
+
+    {\Large\textbf{\underline{Projects}}}
+    \vspace{6px} \\
+    \textbf{VR Capstone: ChatAssist} – \underline{Unity}, \underline{C\#}, \underline{Amazon Transcribe} \\
+    \hspace*{12px} An Augmented Reality app on the MagicLeap that transcribes and \\
+    \hspace*{12px} translates speech in real time for those who are hard of hearing \\
+    \hspace*{12px} or new to a language \\
+
+    {\Large\textbf{\underline{Awards}}}
+    \vspace{6px} \\
+    Bob Bandes Teaching Award \hfill 2021 \\
+    Dubhacks 2017 – Accessible Design Winner \hfill 2017 \\
+    President’s Volunteer Service Award – Gold \hfill 2016 \\
+\end{minipage}
+\end{document}
