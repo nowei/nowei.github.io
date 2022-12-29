@@ -7,7 +7,8 @@
         "bullet": true,
         "content": [
           {
-            "name": "TEALS"
+            "name": "TEALS",
+            "description": "made a somewhat derpy presentation about ML for this"
           }
         ]
       },
@@ -31,6 +32,13 @@
             "name": "Death Cab for Cutie ft. Chong the Nomad"
           }
         ]
+      },
+      {
+        "name": "Traveling",
+        "content": {
+          "name": "Went to Taiwan",
+          "description": "partly for family, but mostly for food. Tried remote work and the timezone diff was not it."
+        }
       }
     ]
   },
