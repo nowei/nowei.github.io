@@ -2,10 +2,16 @@ p {
   margin: auto;
   text-align: left;
   padding: auto;
-  line-height: 60px;
+  line-height: 36px;
   width: 80%;
   font-size: 24px;
-  padding: 12px;
+  padding: 18px;
+}
+li {
+  width: 60%;
+  margin: auto;
+  padding: auto;
+  font-size: 18px;
 }
 img {
   margin: auto;
