@@ -165,3 +165,23 @@ ul.special-bullet li {
 ul.special-bullet li::before {
   content: "> ";
 }
+
+.show {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+  height: 0;
+  transition: opacity 0.5s linear;
+}
+
+#cover {
+  position: fixed;
+  height: 100%;
+  width: 90%;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9999;
+}

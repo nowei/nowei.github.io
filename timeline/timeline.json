@@ -1,6 +1,6 @@
 {
-  "aut2022": {
-    "name": "Autumn 2022",
+  "spr2023": {
+    "name": "Spring 2023",
     "activities": [
       {
         "name": "Volunteering",
@@ -8,9 +8,83 @@
         "content": [
           {
             "name": "TEALS",
-            "description": "made a somewhat derpy presentation about ML for this"
+            "description": "went into zoom breakout rooms and asked people if they needed help and they said maybe"
+          },
+          {
+            "name": "Helping out a friend who teaches at a school",
+            "description": "Talked to kids in a class about life, school, going to college, and working"
+          },
+          {
+            "name": "Huskies@Work",
+            "description": "Worked with a college student on his resume, gave some advice, and answered any questions he had"
+          },
+          {
+            "name": "Earth Day",
+            "description": "Picking up some trash around Gas Works Park"
           }
         ]
+      },
+      {
+        "name": "Work",
+        "content": {
+          "name": "Got promoted to señor enjenir",
+          "description": "Mostly doing the same things, kind of just asked to work on more ambiguous things"
+        }
+      },
+      {
+        "name": "Random Events",
+        "content": [
+          {
+            "name": "TedX of UW",
+            "description": "Listened to people talk about random topics"
+          },
+          {
+            "name": "Honk Fest",
+            "description": "Randomly listened to big brass music"
+          }
+        ]
+      },
+      {
+        "name": "Traveling",
+        "content": {
+          "name": "Road trip to California/Las Vegas",
+          "description": "Went to cousin's graduation"
+        }
+      }
+    ]
+  },
+  "win2023": {
+    "name": "Winter 2023",
+    "activities": [
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "TEALS",
+            "description": "went into zoom breakout rooms and asked people if they needed help and they said no"
+          }
+        ]
+      },
+      {
+        "name": "Work",
+        "content": {
+          "name": "Started working on a ML model hosting service",
+          "description": "so like you can put the model in a container and we host those"
+        }
+      }
+    ]
+  },
+  "aut2022": {
+    "name": "Autumn 2022",
+    "activities": [
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": {
+          "name": "TEALS",
+          "description": "Teaching Python through a CMU graphics library, which is a little sus for python imo"
+        }
       },
       {
         "name": "Comedy Shows Attended",
@@ -48,11 +122,9 @@
       {
         "name": "Volunteering",
         "bullet": true,
-        "content": [
-          {
-            "name": "Started TEALS thingymabob"
-          }
-        ]
+        "content": {
+          "name": "Started TEALS thingymabob"
+        }
       },
       {
         "name": "Concerts Attended",
@@ -143,9 +215,9 @@
         }
       },
       {
-        "name": "Software Engineer",
+        "name": "Work",
         "content": {
-          "name": "OctoML",
+          "name": "Software Engineer @ OctoML",
           "description": "ambiguously working on the backend"
         }
       },

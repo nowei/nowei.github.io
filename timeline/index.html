@@ -243,30 +243,38 @@
       <h1>Timeline of activities</h1>
     </header>
     <!-- TODO: Reset the timeline -->
+    <div id="cover"></div>
     <div class="container">
       <header>
         <p style="padding: 12px"></p>
         <br />
         <h1><u>Adulting/Real-Worlding</u></h1>
         <br />
-        <h2>2021 - Pandemic Blues 2: Electric Boogaloo</h2>
+        <h2>2023 - Returning to Normal</h2>
       </header>
-      <section class="one reveal">
-        <div class="content" style="max-height: 100%">
-          <div class="quarter-container">
-            <div
-              id="2022"
-              class="quarter-grid"
-              style="transition: all 2s"
-            ></div>
-            <div
-              id="2021"
-              class="quarter-grid"
-              style="transition: all 2s"
-            ></div>
-          </div>
+      <p style="padding: 12px"></p>
+      <div class="content" style="max-height: 100%">
+        <div class="quarter-container">
+          <div id="2023" class="quarter-grid" style="transition: all 2s"></div>
         </div>
-      </section>
+      </div>
+    </div>
+    <div class="container">
+      <header>
+        <p style="padding: 12px"></p>
+        <br />
+        <h1><u>Adulting/Real-Worlding</u></h1>
+        <br />
+        <h2>2021 - 2022 Pandemic Blues 2: Electric Boogaloo</h2>
+      </header>
+
+      <p style="padding: 12px"></p>
+      <div class="content" style="max-height: 100%">
+        <div class="quarter-container">
+          <div id="2022" class="quarter-grid" style="transition: all 2s"></div>
+          <div id="2021" class="quarter-grid" style="transition: all 2s"></div>
+        </div>
+      </div>
     </div>
     <div class="container">
       <header>
@@ -370,6 +378,7 @@
   <div style="padding:10px"></div> -->
 
     <script>
+      let ready = false;
       function populateProject(currProject, list) {
         var project_list = document.createElement("UL");
         var item = document.createElement("LI");
@@ -596,29 +605,6 @@
           }
         }
 
-        // var orig = div.scrollHeight;
-        // btn.addEventListener("click", function() {
-        //     this.classList.toggle("active");
-        //     console.log(this.classList);
-        //     var content = this.nextElementSibling;
-        //     console.log('nani' + content);
-        //     if (content.style.minHeight != 0) {
-        //       content.style.minHeight = null;
-        //       // content.style.display = "none";
-        //       content.style.overflow = "hidden";
-        //       // clearInterval(x);
-        //     } else {
-        //       content.style.minHeight = orig + "px";
-        //       console.log(orig);
-        //       console.log(content.style.minHeight);
-        //       // console.log(maxlen1);
-        //       // To match height
-        //       // content.style.maxHeight = content.scrollHeight + "px";
-
-        //       // x = setTimeout(function() {content.style.overflow = "visible"}, 1000);
-        //     }
-        //   });
-        // console.log(modal);
         return modal;
       }
 
@@ -655,9 +641,15 @@
         .then((response) => response.json())
         .then((data) => {
           let quarters = [];
-          let q_temp = [
-            generateQuarter("2022", "quartera", 1, data["aut2022"]),
+          let q_temp = [];
+
+          q_temp = [
+            generateQuarter("2023", "quartera", 1, data["win2023"]),
+            generateQuarter("2023", "quatera", 2, data["spr2023"]),
           ];
+          quarters.push(...q_temp.reverse());
+
+          q_temp = [generateQuarter("2022", "quartera", 1, data["aut2022"])];
           quarters.push(...q_temp.reverse());
 
           q_temp = [
@@ -728,6 +720,7 @@
             quarters[quarters.length - 1],
             quarters[quarters.length - 2]
           );
+          ready = true;
         });
 
       function equalizeHeight(phase) {
@@ -749,30 +742,28 @@
             var content = this.nextElementSibling;
             if (content.style.minHeight) {
               content.style.minHeight = null;
-              // content.style.display = "none";
               content.style.overflow = "hidden";
-              // clearInterval(x);
             } else {
               content.style.minHeight = content.scrollHeight + "px";
               console.log(maxlen1);
-              // To match height
-              // content.style.maxHeight = content.scrollHeight + "px";
-
-              // x = setTimeout(function() {content.style.overflow = "visible"}, 1000);
             }
           });
         }
       }
-      // equalizeHeight("quarterm");
-      // equalizeHeight("quarterba");
-      // equalizeHeight("quarterbb");
-      // equalizeHeight("quartercc");
-      // $(".quarter").on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
-      //   if (this.style.minHeight) {
-      //     this.style.overflow = "visible";
-      //     console.log("nani");
-      //   }
-      // });
+
+      // Hide page until fully loaded, kind of hacky, maybe can rewrite using a framework to
+      // force component reloading?
+      function refresh() {
+        console.log("This is ready: " + ready);
+        if (ready) {
+          $("#cover")
+            .animate({ opacity: 0 }, { duration: 16, queue: false })
+            .animate({ height: 0 }, { duration: 16, queue: true });
+        } else {
+          setTimeout(refresh, 50);
+        }
+      }
+      refresh();
     </script>
     <div id="footer" style="margin: 100px"></div>
   </body>

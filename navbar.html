@@ -4,11 +4,69 @@
     <meta charset="UTF-8" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <!-- (For debugging header)  -->
-    <link rel="stylesheet" href="/navbar.css" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
-    />
+    <style>
+      .navcontainer {
+        height: 100%;
+        width: 10%;
+        position: fixed;
+        z-index: 1;
+        right: 0;
+        text-align: left;
+        padding: 0 0 0 2px;
+        background: linear-gradient(to bottom, #111, white);
+      }
+
+      .navbar {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        background: #fff;
+        padding-left: 10px;
+      }
+
+      @media screen and (max-width: 1000px) {
+        .navcontainer {
+          position: unset;
+          margin: auto;
+          width: 100%;
+          padding: 0;
+        }
+
+        .navbar {
+          height: 40%;
+          width: 100%;
+          /*position: fixed;*/
+          z-index: 1;
+          top: 0;
+          left: 0;
+          text-align: center;
+          padding: 20px;
+          border-width: 0 0 2px 0;
+          border-style: solid;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .navcontainer {
+          background: linear-gradient(to bottom, white, #111);
+        }
+        .navbar {
+          background: #111;
+        }
+      }
+    </style>
+    <script type="text/javascript">
+      (function () {
+        var css = document.createElement("link");
+        css.href =
+          "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
+        css.rel = "stylesheet";
+        css.type = "text/css";
+        document.getElementsByTagName("head")[0].appendChild(css);
+      })();
+    </script>
   </head>
 
   <body>
@@ -28,12 +86,12 @@
           <i class="fa fa-suitcase" style="margin-right: 8px"></i>Resume
         </a>
         <div style="font-size: 16px">last updated</div>
-        <div style="font-size: 16px">2022/12/29</div>
+        <div style="font-size: 16px">2023/6/17</div>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
-      $(function () {
+      setTimeout(function () {
         var lastMatch = null;
         $("a.navlink").each(function () {
           if (window.location.href.includes($(this).prop("href"))) {
@@ -41,7 +99,7 @@
           }
         });
         lastMatch.addClass("active");
-      });
+      }, 16);
     </script>
   </body>
 </html>
