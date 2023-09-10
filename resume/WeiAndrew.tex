@@ -46,7 +46,9 @@
 \discardpages{2}
 
 \begin{document}
-\setemojifont{seguiemj.ttf}[Path=/mnt/c/Windows/Fonts/]
+% Hack to allow for windows 10 emojis in windows 11 because they look better 😎
+% https://www.techpowerup.com/forums/threads/change-windows-11-emoji-set.291051/
+\setemojifont{seguiemj_0.ttf}[Path=/mnt/c/Windows/Fonts/]
 \setlength{\topskip}{0pt}
 \noindent\fcolorbox{sidebar}{sidebar}%
 {%
@@ -94,7 +96,7 @@
         Zookeeper, Selenium,
         BeautifulSoup4, HTML/CSS,
         Android Studio, Protobufs,
-        DataDog, GitLab CI
+        DataDog, GitLab CI, Tilt, GitHub Actions
         \vspace{12px}
 
         \textbf{\underline{VC \& Deployment Tools}} \\
@@ -142,9 +144,9 @@
             \item[\footnotesize\emoji{smiling-face-with-sunglasses}] \textbf{Senior Software Engineer}{\footnotesize\space}{\footnotesize\emoji{sailboat}} {\color{gray}\textit{Model Hosting Service}} \hfill 04/2023 - present
         \end{itemize}
         \begin{itemize}[labelindent=0.25em,labelsep=0.8em,leftmargin=*,itemsep=2px,topsep=2px]
-            \item[---] Helped set up local dev environments for platform services with \underline{Tilt}; Improve developer QoL by making local dev environments build faster
-            \item[---] Write and review \underline{Go}, \underline{Python}, and \underline{Kubernetes} configs for platform services; Debug things that \underline{Go} wrong
-            \item[---] Worked with auth and billing service providers and integrated those services into the platform
+            \item[---] Helped set up local dev environments for services with \underline{Tilt}; Improved dev QoL by making local env builds faster for faster iteration
+            \item[---] Write and review \underline{Go}, \underline{Python}, and \underline{Kubernetes} configs for platform services; Debug things that \underline{Go} wrong, propose and implement fixes
+            \item[---] Worked with auth, billing, and telemetry service providers and integrated those services into the platform
         \end{itemize}
         \vspace{4px}
         \begin{itemize}[leftmargin=6mm]
@@ -181,7 +183,7 @@
         \end{itemize}
         \begin{itemize}[labelindent=0.25em,labelsep=0.8em,leftmargin=*,itemsep=2px,topsep=2px]
             \item[---] Improved and added features to a promotions management tool using \underline{Java}, \underline{TypeScript} and \underline{React Redux}
-            \item[---] Investigated search latency issues, fix lowered latency from \textasciitilde45s to \textasciitilde2s and reduced search payload size by 4-10000x
+            \item[---] Investigated search latency issues, the fix lowered latency from \textasciitilde45s to \textasciitilde2s by reducing search payload size by 4-10000x
         \end{itemize}
         \vspace{8px}
         \begin{itemize}[leftmargin=6mm]
@@ -189,8 +191,8 @@
             \item[\footnotesize\emoji{briefcase}] \textbf{Intern}{\footnotesize\space}{\footnotesize\emoji{globe-showing-asia-australia}} {\color{gray}\textit{Website Health Monitoring}}  \hfill 06/2019 - 09/2019
         \end{itemize}
         \begin{itemize}[labelindent=0.25em,labelsep=0.8em,leftmargin=*,itemsep=2px]
-            \item[---] Implemented monitoring agent for RTMP using \underline{Kafka}, \underline{Zookeeper}, \underline{Docker}, \underline{Elasticsearch}, \underline{Logstash}, and \underline{Kibana}
-            \item[---] Created an API to remotely access networking tools using \underline{Flask}
+            \item[---] Implemented a monitoring agent for RTMP using \underline{Kafka}, \underline{Zookeeper}, \underline{Docker}, \underline{Elasticsearch}, \underline{Logstash}, and \underline{Kibana}
+            \item[---] Created APIs to remotely access networking tools using \underline{Flask}
         \end{itemize}
         \vspace{12px}
 
