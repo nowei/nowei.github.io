@@ -1,4 +1,87 @@
 {
+  "aut2023": {
+    "name": "Autumn 2023",
+    "activities": [
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": {
+          "name": "TEALS",
+          "description": "Teaching Python through a CMU graphics library, 2nd edition"
+        }
+      }
+    ]
+  },
+  "sum2023": {
+    "name": "Summer 2023",
+    "activities": [
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": {
+          "name": "TEALS",
+          "description": "Teaching Python through a CMU graphics library, 2nd edition"
+        }
+      },
+      {
+        "name": "Concerts Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Paramore w/ The Linda Lindas"
+          },
+          {
+            "name": "Day In Day Out, 2023",
+            "description": "Bon Iver played there!"
+          },
+          {
+            "name": "Sigur Rós w/ Wordless Music Orchestra",
+            "description": "Very calm, very chill"
+          },
+          {
+            "name": "Ed Sheeran w/ Maisie Peters, Khalid, and Macklemore"
+          }
+        ]
+      },
+      {
+        "name": "Traveling",
+        "content": [
+          {
+            "name": "Las Vegas",
+            "description": "Went for family and food, but mostly for food 😎 The X Pot was good"
+          },
+          {
+            "name": "Chicago",
+            "description": "Went for family, saw some corn"
+          }
+        ]
+      },
+      {
+        "name": "Random Events",
+        "bullet": true,
+        "content": [
+          {
+            "name": "UW President's Circle",
+            "description": "Ate some food and people-watched"
+          },
+          {
+            "name": "Theo's Chocolate Broken Bar Day",
+            "description": "Visited Theo's Chocolate for some broken chocolate bars"
+          },
+          {
+            "name": "Went to the Zoo",
+            "description": "Saw a red panda!"
+          }
+        ]
+      }
+    ],
+    "images": [
+      "/timeline/imgs/xpot.jpg",
+      "/timeline/imgs/2023lv1.jpg",
+      "/timeline/imgs/2023lv2.jpg",
+      "/timeline/imgs/2023zoo.jpg"
+    ]
+  },
   "spr2023": {
     "name": "Spring 2023",
     "activities": [
@@ -20,7 +103,7 @@
           },
           {
             "name": "Earth Day",
-            "description": "Picking up some trash around Gas Works Park"
+            "description": "Picking up some trash around Fremont/Gas Works Park"
           }
         ]
       },
