@@ -1,0 +1,84 @@
+%!TEX program = lualatex
+\documentclass{WeiAndrew}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{calc}
+\usepackage{tabto}
+\usepackage{fontspec}
+\setmainfont[
+    Path = /mnt/c/Users/andre/AppData/Local/Microsoft/Windows/Fonts/,
+    Extension = .ttf,
+    Ligatures = TeX,
+    BoldFont       = UbuntuMono-B,
+    ItalicFont     = UbuntuMono-RI,
+    BoldItalicFont = UbuntuMono-BI
+]{UbuntuMono-R}
+\usepackage{parskip}
+\usepackage{atbegshi}
+\usepackage{emoji}
+% \SetLabelAlign{center}{\clap{#1}}
+\SetLabelAlign{center}{\strut\smash{\parbox[t]\labelwidth{\centering#1}}}
+
+\def\defaultsectionspacingsize{11px}
+
+\discardpages{4}
+
+% \geometry{top=0cm, bottom=0cm, left=0cm, right=0cm}
+
+\definecolor{sidebar}{RGB}{55, 55, 55}
+\setlength{\parindent}{0pt}
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\begin{document}
+% Hack to allow for windows 10 emojis in windows 11 because they look better 😎
+% https://www.techpowerup.com/forums/threads/change-windows-11-emoji-set.291051/
+\setemojifont{seguiemj_0.ttf}[Path=/mnt/c/Windows/Fonts/]
+\setlength{\topskip}{0pt}
+\hspace{0.02\textwidth}
+% \color{black}
+
+\nameinfo
+\jobtitle
+\vspace{\defaultsectionspacingsize}
+\contactinfo
+\vspace{\defaultsectionspacingsize}
+\programminglanguages
+\vspace{\defaultsectionspacingsize}
+\hardwaredesclang
+\vspace{\defaultsectionspacingsize}
+\technologiesframeworks
+\vspace{\defaultsectionspacingsize}
+\vcdeployment
+\vspace{\defaultsectionspacingsize}
+\hardwaretools
+\vspace{\defaultsectionspacingsize}
+\operatingsystems
+\vspace{\defaultsectionspacingsize}
+\humanlanguages
+\vspace{\defaultsectionspacingsize}
+\interests
+\vspace{\defaultsectionspacingsize}
+\hobbies
+
+\experienceheader
+\vspace{6px}
+\octoml
+\vspace{8px}
+\microsoft
+\vspace{8px}
+\uwcsejob
+\vspace{8px}
+\amazon
+\vspace{8px}
+\letron
+\vspace{\defaultsectionspacingsize}
+\education
+\vspace{\defaultsectionspacingsize}
+\awards
+\end{document}
