@@ -93,7 +93,7 @@
             {horizontal}{
                 \begin{minipage}{\linewidth}
                     \small
-                    \begin{itemize*}[leftmargin=0mm, rightmargin=0mm, itemjoin=\hspace{10px}, itemsep=0px, ]
+                    \begin{itemize*}[leftmargin=0mm, rightmargin=0mm, itemjoin=\hspace{10px}, itemsep=0px, topsep=2px, noitemsep]
                         \location{Seattle}{WA}
                         \email{a.nowei42@gmail.com}
                         \phonenumber{206-850-7878}
