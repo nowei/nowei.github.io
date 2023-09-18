@@ -125,12 +125,12 @@
                     \textbf{\underline{Programming Languages}}
 
                     \vspace{2px}
-                    \begin{itemize*}[leftmargin=4mm, rightmargin=0px, noitemsep, topsep=2px]
+                    \begin{itemize}[leftmargin=4mm, rightmargin=0px, noitemsep, topsep=2px]
                         \item[---] [5yr] Python, Java
                         \item[---] [1yr] Rust, C/C++
                         \item[---] [6mo] Go, Javascript
                         \item[---] [3mo] C\#, TypeScript
-                    \end{itemize*}
+                    \end{itemize}
                 \end{minipage}
             }%
     }[\PackageError{tree}{Undefined option to tree: #1}{}]%
@@ -154,10 +154,10 @@
                     \textbf{\underline{Hardware Description Lang.}}
 
                     \vspace{2px}
-                    \begin{itemize*}[leftmargin=4mm, rightmargin=0px, noitemsep, topsep=2px]
+                    \begin{itemize}[leftmargin=4mm, rightmargin=0px, noitemsep, topsep=2px]
                         \item[---] [1yr] System Verilog
                         \item[---] [3mo] Verilog
-                    \end{itemize*}
+                    \end{itemize}
                 \end{minipage}
             }%
     }[\PackageError{tree}{Undefined option to tree: #1}{}]%
@@ -338,7 +338,7 @@
 
         \vspace{2px}
         Bob Bandes Teaching Award \hfill 2021 \\
-        Dubhacks 2017 - Accessible Design Winner \hfill 2017 \\
+        Dubhacks --- Accessible Design Winner \hfill 2017 \\
         President's Volunteer Service Award - Gold \hfill 2016
     \end{minipage}
 }
