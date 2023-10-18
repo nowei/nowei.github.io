@@ -5,10 +5,25 @@
       {
         "name": "Volunteering",
         "bullet": true,
-        "content": {
-          "name": "TEALS",
-          "description": "Teaching Python through a CMU graphics library, 2nd edition"
-        }
+        "content": [
+          {
+            "name": "TEALS",
+            "description": "Teaching Python through a CMU graphics library, 2nd edition"
+          },
+          {
+            "name": "Dubhacks 2023 Mentor",
+            "description": "Signed up to mentor for Dubhacks 2023, gave some feedback to people's projects 👀"
+          }
+        ]
+      },
+      {
+        "name": "Concerts Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Bishop Briggs & Misterwives feat. Nataline Jane"
+          }
+        ]
       }
     ]
   },
