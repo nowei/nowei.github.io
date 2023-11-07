@@ -238,17 +238,23 @@
     \end{minipage}
 }
 
-\newcommand{\experienceheader}{
+\newcommand{\experienceheader}[1]{
     \begin{minipage}{\linewidth}
-        {\Large\textbf{\underline{Experience}}~{\normalsize\emoji{rocket}}}
+        {\Large\textbf{\underline{Experience}}~{\IfEqCase{#1}{{notplain}{\normalsize\emoji{rocket}}{plain}{}}}}
     \end{minipage}
 }
 
-\newcommand{\octoml}{
+\newcommand{\octoml}[1]{
     \begin{minipage}{\linewidth}
         \begin{itemize}[leftmargin=6mm,itemsep=2px,topsep=2px]
-            \item[{$\vcenter{\hbox{\includegraphics[width=12px]{helpers/octoml.png}}}$}] \textbf{OctoML},{\small\space}{\color{olive}\textit{Platform/Cloud}}{\footnotesize\space}{\footnotesize\emoji{cloud}} \hfill \textbf{Seattle, WA}
-            \item[\footnotesize\emoji{smiling-face-with-sunglasses}] \textbf{Senior Software Engineer}{\footnotesize\space}{\footnotesize\emoji{sailboat}} {\color{gray}\textit{Model Hosting Service}} \hfill 04/2023 - present
+            \item[{\IfEqCase{#1}{{notplain}{$\vcenter{\hbox{\includegraphics[width=12px]{helpers/octoml.png}}}$}{plain}{>\tiny\space}}}]
+            \textbf{OctoML}%
+            {\IfEqCase{#1}{{notplain}{, \color{olive}\textit{Platform/Cloud}}{plain}{ -- Platform/Cloud}}}%
+            {\IfEqCase{#1}{{notplain}{\footnotesize{\space}\footnotesize\emoji{cloud}}{plain}{}}}
+            \hfill \textbf{Seattle, WA}
+            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{smiling-face-with-sunglasses}}{plain}{>>\tiny\space}}]
+                \textbf{Senior Software Engineer}{\IfEqCase{#1}{{notplain}{\footnotesize\space\footnotesize\emoji{sailboat}}{plain}{}}}
+                {\IfEqCase{#1}{{notplain}{\color{gray}\textit{Model Hosting Service}}{plain}{-- Model Hosting Service}}} \hfill 04/2023 - present
         \end{itemize}
         \begin{itemize}[labelindent=0.25em,labelsep=0.8em,leftmargin=*,itemsep=2px,topsep=2px]
             \item[---] Helped set up local dev environments for services with \underline{Tilt}; Improved dev QoL by making local env builds faster for faster iteration
@@ -256,7 +262,10 @@
             \item[---] Worked with auth, billing, and telemetry service providers and integrated those services into the platform
         \end{itemize}
         \begin{itemize}[leftmargin=6mm,itemsep=2px,topsep=2px]
-            \item[\footnotesize\emoji{folded-hands-medium-light-skin-tone}] \textbf{Software Engineer}{\footnotesize\space}{\footnotesize\emoji{check-mark-button}} {\color{gray}\textit{Model Acceleration Service}} \hfill 10/2021 - 04/2023
+            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{folded-hands-medium-light-skin-tone}}{plain}{>>\tiny\space}}]
+                \textbf{Software Engineer}{\IfEqCase{#1}{{notplain}{\footnotesize{\space}\footnotesize\emoji{check-mark-button}}{plain}{}}}
+                {\IfEqCase{#1}{{notplain}{\color{gray}\textit{Model Acceleration Service}}{plain}{-- Model Acceleration Service}}}
+                \hfill 10/2021 - 04/2023
         \end{itemize}
         \begin{itemize}[labelindent=0.25em,labelsep=0.8em,leftmargin=*,itemsep=2px,topsep=2px]
             \item[---] Designed, wrote, reviewed, and shipped \underline{Rust}, \underline{Python}, \underline{Protobufs}, \underline{SQL}, and \underline{Kubernetes} configs for internal use and cost analysis
@@ -266,11 +275,15 @@
     \end{minipage}
 }
 
-\newcommand{\microsoft}{
+\newcommand{\microsoft}[1]{
     \begin{minipage}{\linewidth}
         \begin{itemize}[leftmargin=6mm]
-            \item[{$\vcenter{\hbox{\includegraphics[width=11px]{helpers/microsoft.png}}}$}] \textbf{Microsoft},{\tiny\space}{\color{olive}\textit{Office of the Chief Economist}} \hfill \textbf{Seattle, WA}
-            \item[\footnotesize\emoji{test-tube}] \textbf{Research Intern}{\footnotesize\space}{\footnotesize\emoji{video-game}} {\color{gray}\textit{Data Eng. for Xbox Fin. \& Mktg}} \hfill 06/2021 - 09/2021
+            \item[{\IfEqCase{#1}{{notplain}{$\vcenter{\hbox{\includegraphics[width=11px]{helpers/microsoft.png}}}$}{plain}{>\tiny\space}}}]
+            \textbf{Microsoft}{\IfEqCase{#1}{{notplain}{, \color{olive}\textit{Office of the Chief Economist}}{plain}{ -- Office of the Chief Economist}}} \hfill \textbf{Seattle, WA}
+            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{test-tube}}{plain}{>>\tiny\space}}]
+                \textbf{Research Intern}{\footnotesize\space}%
+                {\IfEqCase{#1}{{notplain}{\footnotesize\emoji{video-game}\footnotesize{\space}}{plain}{}}}%
+                {\IfEqCase{#1}{{notplain}{\color{gray}\textit{Data Eng. for Xbox Fin. \& Mktg}}{plain}{-- Data Eng. for Xbox Fin.}}} \hfill 06/2021 - 09/2021
         \end{itemize}
         \begin{itemize}[labelindent=0.25em,labelsep=0.8em,leftmargin=*,itemsep=2px,topsep=2px]
             \item[---] Develop \underline{SSIS} data pipeline to crosswalk Xbox Game Pass product usage, cost, and revenue data coming from multiple teams
@@ -279,11 +292,14 @@
     \end{minipage}
 }
 
-\newcommand{\uwcsejob}{
+\newcommand{\uwcsejob}[1]{
     \begin{minipage}{\linewidth}
         \begin{itemize}[leftmargin=6mm]
-            \item[{$\vcenter{\hbox{\includegraphics[width=11px]{helpers/uw.png}}}$}] \textbf{Paul G. Allen School of Computer Science \& Engineering} \hfill \textbf{Seattle, WA}
-            \item[\footnotesize\emoji{laptop}] \textbf{Graduate Teaching Assistant}{\footnotesize\space}{\footnotesize\emoji{game-die}} \hfill 03/2018 - 06/2021
+            \item[{\IfEqCase{#1}{{notplain}{$\vcenter{\hbox{\includegraphics[width=11px]{helpers/uw.png}}}$}{plain}{>\tiny\space}}}]
+            \textbf{Paul G. Allen School of Computer Science \& Engineering} \hfill \textbf{Seattle, WA}
+            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{laptop}}{plain}{>>\tiny\space}}]
+                \textbf{Graduate Teaching Assistant}{\footnotesize\space}{\IfEqCase{#1}
+                    {{notplain}{\footnotesize\emoji{game-die}}{plain}{}}} \hfill 03/2018 - 06/2021
         \end{itemize}
         \begin{itemize}[labelindent=0.25em,labelsep=0.8em,leftmargin=*,itemsep=2px,topsep=2px]
             \item[---] Led sections of \textasciitilde25 students and held office hours, teaching ideas and concepts in Distributed Systems, Machine Learning (for Big Data),
@@ -293,11 +309,15 @@
     \end{minipage}
 }
 
-\newcommand{\amazon}{
+\newcommand{\amazon}[1]{
     \begin{minipage}{\linewidth}
         \begin{itemize}[leftmargin=6mm]
-            \item[{$\vcenter{\hbox{\includegraphics[width=11px]{helpers/amazon.png}}}$}] \textbf{Amazon},{\tiny\space}{\color{olive}\textit{Amazon Devices}} \hfill \textbf{Seattle, WA}
-            \item[\footnotesize\emoji{raising-hands-medium-skin-tone}] \textbf{SDE Intern}{\footnotesize\space}{\footnotesize\emoji{magnifying-glass-tilted-right}} {\color{gray}\textit{Improved Search Experience}} \hfill 06/2020 - 09/2020
+            \item[{\IfEqCase{#1}{{notplain}{$\vcenter{\hbox{\includegraphics[width=11px]{helpers/amazon.png}}}$}{plain}{>\tiny\space}}}]
+            \textbf{Amazon}{\IfEqCase{#1}{{notplain}{, \color{olive}\textit{Amazon Devices}}{plain}{ -- Amazon Devices}}} \hfill \textbf{Seattle, WA}
+            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{raising-hands-medium-skin-tone}}{plain}{>>\tiny\space}}]
+                \textbf{SDE Intern}{\footnotesize\space}%
+                {\IfEqCase{#1}{{notplain}{\footnotesize\emoji{magnifying-glass-tilted-right}\footnotesize{\space}}{plain}{}}}%
+                {\IfEqCase{#1}{{notplain}{\color{gray}\textit{Improved Search Experience}}{plain}{-- Improved Search Experience}}} \hfill 06/2020 - 09/2020
         \end{itemize}
         \begin{itemize}[labelindent=0.25em,labelsep=0.8em,leftmargin=*,itemsep=2px,topsep=2px]
             \item[---] Improved and added features to a promotions management tool using \underline{Java}, \underline{TypeScript} and \underline{React Redux}
@@ -306,11 +326,14 @@
     \end{minipage}
 }
 
-\newcommand{\letron}{
+\newcommand{\letron}[1]{
     \begin{minipage}{\linewidth}
         \begin{itemize}[leftmargin=6mm]
-            \item[] \textbf{LeTron Entertainment Tech} \hfill \textbf{Kaohsiung, Taiwan}
-            \item[\footnotesize\emoji{briefcase}] \textbf{Intern}{\footnotesize\space}{\footnotesize\emoji{globe-showing-asia-australia}} {\color{gray}\textit{Website Health Monitoring}}  \hfill 06/2019 - 09/2019
+            \item[{\IfEqCase{#1}{{notplain}{}{plain}{>\tiny\space}}}] \textbf{LeTron Entertainment Tech} \hfill \textbf{Kaohsiung, Taiwan}
+            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{briefcase}}{plain}{>>\tiny\space}}]
+                \textbf{Intern}{\footnotesize\space}%
+                {\IfEqCase{#1}{{notplain}{\footnotesize\emoji{globe-showing-asia-australia}\footnotesize{\space}}{plain}{}}}%
+                {\IfEqCase{#1}{{notplain}{\color{gray}\textit{Website Health Monitoring}}{plain}{-- Website Health Monitoring}}}  \hfill 06/2019 - 09/2019
         \end{itemize}
         \begin{itemize}[labelindent=0.25em,labelsep=0.8em,leftmargin=*,itemsep=2px,topsep=2px]
             \item[---] Implemented a monitoring agent for RTMP using \underline{Kafka}, \underline{Zookeeper}, \underline{Docker}, \underline{Elasticsearch}, \underline{Logstash}, and \underline{Kibana}
@@ -319,22 +342,22 @@
     \end{minipage}
 }
 
-\newcommand{\education}{
+\newcommand{\education}[1]{
     \begin{minipage}{\linewidth}
-        {\Large\textbf{\underline{Education}}~{\normalsize\emoji{graduation-cap}}}
-
+        {\Large\textbf{\underline{Education}}~{\IfEqCase{#1}{{notplain}{\normalsize\emoji{graduation-cap}}{plain}{}}}}
+        \IfEqCase{#1}{{notplain}{\def\value{6mm}}{plain}{\def\value{0mm}}}
         \vspace{2px}
-        \begin{itemize}[leftmargin=6mm]
-            \item[{$\vcenter{\hbox{\includegraphics[width=11px]{helpers/uw.png}}}$}] \textbf{University of Washington, Seattle} \hfill 2017 - 2021
-            \item[\footnotesize\emoji{scroll}] \textbf{MS} in \textbf{Computer Science \& Engineering} - 3.92 GPA \hfill 06/2021
-            \item[\footnotesize\emoji{orange-book}] \textbf{BS} in \textbf{Computer Engineering} - Cum Laude, Dean's List \hfill 06/2019
+        \begin{itemize}[leftmargin=\value]
+            \item[{\IfEqCase{#1}{{notplain}{$\vcenter{\hbox{\includegraphics[width=11px]{helpers/uw.png}}}$}{plain}{}}}] \textbf{University of Washington, Seattle} \hfill 2017 - 2021
+            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{scroll}}{plain}{}}] \textbf{MS} in \textbf{Computer Science \& Engineering} - 3.92 GPA \hfill 06/2021
+            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{orange-book}}{plain}{}}] \textbf{BS} in \textbf{Computer Engineering} - Cum Laude, Dean's List \hfill 06/2019
         \end{itemize}
     \end{minipage}
 }
 
-\newcommand{\awards}{
+\newcommand{\awards}[1]{
     \begin{minipage}{\linewidth}
-        {\Large\textbf{\underline{Awards}}~{\normalsize\emoji{trophy}}}
+        {\Large\textbf{\underline{Awards}}~{\IfEqCase{#1}{{notplain}{\normalsize\emoji{trophy}}{plain}{}}}}
 
         \vspace{2px}
         Bob Bandes Teaching Award \hfill 2021 \\
