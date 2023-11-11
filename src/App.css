@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu monospace;", monospace;
+  background-color: black;
+}
+
+.MainIndex {
+  text-align: left;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+.page {
+  height: 100vh;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+}
+
+.left {
+  width: 100%;
+}
+
+.right {
+  width: 100%;
+}
+
+.major {
+  float: left;
+}
+
+.minor {
+  width: 30%;
+  float: left;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+@media (prefers-color-scheme: dark) {
+  body,
+  html {
+    color: white;
+  }
+
+  a {
+    color: #03a2ff;
+  }
+
+  a:hover {
+    color: #03d0ff;
+  }
+
+  a:active {
+    color: cyan;
+  }
+
+  a.active {
+    text-shadow: 0px 0px 8px #ccc;
+    color: white;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
