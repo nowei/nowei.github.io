@@ -3,7 +3,7 @@ import { Nav, NavLink, NavMenu } from "./NavbarElements";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBriefcase, faExternalLink } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import Resume from "./resume/WeiAndrew.pdf";
+import Resume from "../resume/WeiAndrew.pdf";
 
 const Navbar = () => {
   return (

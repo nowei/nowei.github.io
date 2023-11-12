@@ -1,11 +1,15 @@
 import React from "react";
-import "./App.css";
 
 function Hero() {
   // TODO: Use the right globe
   let globe = "🌎";
   return (
-    <div className="page">
+    <div
+      className="page"
+      style={{
+        fontSize: "calc(10px + 2vmin)",
+      }}
+    >
       <p>👋 Hello World! {globe}</p>
       <p>🚀 My name is Andrew Wei 😎</p>
     </div>
@@ -14,7 +18,12 @@ function Hero() {
 
 function AboutMe() {
   return (
-    <div className="page">
+    <div
+      className="page"
+      style={{
+        fontSize: "calc(10px + 2vmin)",
+      }}
+    >
       <div>
         <p>
           I'm currently a Senior Software Engineer at OctoML and I'm located in
@@ -26,7 +35,7 @@ function AboutMe() {
           Engineering at the University of Washington.
         </p>
         <p>
-          I spent most of my time in college teaching as a TA and learning about
+          I spent most of my time in college as a TA and learning about
           Distributed Systems and Machine Learning.
         </p>
         <p>All opinions are my own.</p>
@@ -37,7 +46,12 @@ function AboutMe() {
 
 function Interests() {
   return (
-    <div className="page">
+    <div
+      className="page"
+      style={{
+        fontSize: "calc(10px + 2vmin)",
+      }}
+    >
       <div>
         <h2>Interests</h2>
         <hr />
@@ -69,7 +83,12 @@ function Interests() {
 
 function ContactInfo() {
   return (
-    <div className="page">
+    <div
+      className="page"
+      style={{
+        fontSize: "calc(10px + 2vmin)",
+      }}
+    >
       <p>
         <u>Contact info</u>
         <br />

@@ -2,9 +2,11 @@ import React from "react";
 import face from "./imgs/face.jpg";
 import "./App.css";
 import { text } from "stream/consumers";
-import Navbar from "./NavBar";
+import Navbar from "./navbar/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./Home";
+import Home from "./home/Home";
+import WritingRouter from "./writing/Writing";
+import SweLife from "./writing/misc/swe-life";
 // style={{
 //   background: "linear-gradient(275deg, #52acff 25%, #ffe32c 100%)",
 //   WebkitBackgroundClip: "text",
@@ -19,10 +21,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<div />} />
-          <Route path="/contact" element={<div />} />
-          <Route path="/blogs" element={<div />} />
-          <Route path="/sign-up" element={<div />} />
+          <Route path="/timeline" element={<div />} />
         </Routes>
+        <WritingRouter />
       </Router>
     </div>
   );
