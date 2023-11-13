@@ -1,6 +1,20 @@
 import React from "react";
+import { QuarterGroup, Quarter, QuarterProps } from "./Quarter";
+import timelineJson from "./timeline.json";
 
 function Timeline() {
+  let y2023: QuarterProps = { quarters: [] };
+  let data: { [id: string]: Quarter } = timelineJson;
+  let quarters = [];
+  let q_temp = [];
+  console.log(data);
+  console.log("hi");
+  y2023.quarters.push(data["aut2022"]);
+  y2023.quarters.push(data["win2023"]);
+  y2023.quarters.push(data["spr2023"]);
+  y2023.quarters.push(data["sum2023"]);
+  console.log(data);
+
   return (
     <div>
       <header style={{ zIndex: "1000" }}>
@@ -20,11 +34,8 @@ function Timeline() {
         <p style={{ padding: "12px" }}></p>
         <div className="content" style={{ maxHeight: "100%" }}>
           <div className="quarter-container">
-            <div
-              id="2023"
-              className="quarter-grid"
-              style={{ transition: "all 2s" }}
-            ></div>
+            {/* <div id="2023" className="quarter-grid"></div> */}
+            {QuarterGroup(y2023)}
           </div>
         </div>
       </div>
@@ -42,16 +53,8 @@ function Timeline() {
         <p style={{ padding: "12px" }}></p>
         <div className="content" style={{ maxHeight: "100%" }}>
           <div className="quarter-container">
-            <div
-              id="2022"
-              className="quarter-grid"
-              style={{ transition: "all 2s" }}
-            ></div>
-            <div
-              id="2021"
-              className="quarter-grid"
-              style={{ transition: "all 2s" }}
-            ></div>
+            <div id="2022" className="quarter-grid"></div>
+            <div id="2021" className="quarter-grid"></div>
           </div>
         </div>
       </div>

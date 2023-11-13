@@ -1270,7 +1270,6 @@
         "name": "ENGR 214: Statics",
         "project": "Balsa Wood Bridges",
         "thumbnail": true,
-        "position": "right",
         "description": "We won first and second place with our two bridges"
       },
       {
@@ -1282,13 +1281,11 @@
           {
             "name": "Sound and Glass",
             "thumbnail": true,
-            "position": "right",
             "description": "Analyzing sounds made from glasses and water"
           },
           {
             "name": "Waves and Dry Ice",
             "thumbnail": true,
-            "position": "right",
             "description": "Trying to depict sound waves in dry ice smoke"
           }
         ]

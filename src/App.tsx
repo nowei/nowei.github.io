@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./home/Home";
 import WritingRouter from "./writing/Writing";
 import SweLife from "./writing/misc/swe-life";
+import AboutMe from "./about/About";
+import Timeline from "./timeline/Timeline";
 // style={{
 //   background: "linear-gradient(275deg, #52acff 25%, #ffe32c 100%)",
 //   WebkitBackgroundClip: "text",
@@ -20,8 +22,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<div />} />
-          <Route path="/timeline" element={<div />} />
+          <Route path="/about" element={<AboutMe />} />
+          <Route path="/timeline" element={<Timeline />} />
         </Routes>
         <WritingRouter />
       </Router>
