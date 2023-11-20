@@ -42,10 +42,12 @@
       {
         "name": "Volunteering",
         "bullet": true,
-        "content": {
-          "name": "TEALS",
-          "description": "Teaching Python through a CMU graphics library, 2nd edition"
-        }
+        "content": [
+          {
+            "name": "TEALS",
+            "description": "Teaching Python through a CMU graphics library, 2nd edition"
+          }
+        ]
       },
       {
         "name": "Concerts Attended",
@@ -133,10 +135,12 @@
       },
       {
         "name": "Work",
-        "content": {
-          "name": "Got promoted to señor enjenir",
-          "description": "Mostly doing the same things, kind of just asked to work on more ambiguous things"
-        }
+        "content": [
+          {
+            "name": "Got promoted to señor enjenir",
+            "description": "Mostly doing the same things, kind of just asked to work on more ambiguous things"
+          }
+        ]
       },
       {
         "name": "Random Events",
@@ -153,10 +157,12 @@
       },
       {
         "name": "Traveling",
-        "content": {
-          "name": "Road trip to California/Las Vegas",
-          "description": "Went to cousin's graduation"
-        }
+        "content": [
+          {
+            "name": "Road trip to California/Las Vegas",
+            "description": "Went to cousin's graduation"
+          }
+        ]
       }
     ]
   },
@@ -175,10 +181,12 @@
       },
       {
         "name": "Work",
-        "content": {
-          "name": "Started working on a ML model hosting service",
-          "description": "so like you can put the model in a container and we host those"
-        }
+        "content": [
+          {
+            "name": "Started working on a ML model hosting service",
+            "description": "so like you can put the model in a container and we host those"
+          }
+        ]
       }
     ]
   },
@@ -188,10 +196,12 @@
       {
         "name": "Volunteering",
         "bullet": true,
-        "content": {
-          "name": "TEALS",
-          "description": "Teaching Python through a CMU graphics library, which is a little sus for python imo"
-        }
+        "content": [
+          {
+            "name": "TEALS",
+            "description": "Teaching Python through a CMU graphics library, which is a little sus for python imo"
+          }
+        ]
       },
       {
         "name": "Comedy Shows Attended",
@@ -216,10 +226,12 @@
       },
       {
         "name": "Traveling",
-        "content": {
-          "name": "Went to Taiwan",
-          "description": "partly for family, but mostly for food. Tried remote work and the timezone diff was not it."
-        }
+        "content": [
+          {
+            "name": "Went to Taiwan",
+            "description": "partly for family, but mostly for food. Tried remote work and the timezone diff was not it."
+          }
+        ]
       }
     ]
   },
@@ -229,9 +241,11 @@
       {
         "name": "Volunteering",
         "bullet": true,
-        "content": {
-          "name": "Started TEALS thingymabob"
-        }
+        "content": [
+          {
+            "name": "Started TEALS thingymabob"
+          }
+        ]
       },
       {
         "name": "Concerts Attended",
@@ -316,17 +330,21 @@
     "activities": [
       {
         "name": "Interviewing",
-        "content": {
-          "name": "Finding a job",
-          "description": "Interviewed at a handful of places and eventually found a job"
-        }
+        "content": [
+          {
+            "name": "Finding a job",
+            "description": "Interviewed at a handful of places and eventually found a job"
+          }
+        ]
       },
       {
         "name": "Work",
-        "content": {
-          "name": "Software Engineer @ OctoML",
-          "description": "ambiguously working on the backend"
-        }
+        "content": [
+          {
+            "name": "Software Engineer @ OctoML",
+            "description": "ambiguously working on the backend"
+          }
+        ]
       },
       {
         "name": "Volunteering",
@@ -362,17 +380,21 @@
     "activities": [
       {
         "name": "Intern",
-        "content": {
-          "name": "Microsoft Research",
-          "description": "Working in the Office of the Chief Economist on some data pipelining and automation for Xbox Finance + Marketing"
-        }
+        "content": [
+          {
+            "name": "Microsoft Research",
+            "description": "Working in the Office of the Chief Economist on some data pipelining and automation for Xbox Finance + Marketing"
+          }
+        ]
       },
       {
         "name": "Intern Activities",
-        "content": {
-          "name": "Microsoft Intern Puzzle Hunt",
-          "description": "7th place/162 teams"
-        }
+        "content": [
+          {
+            "name": "Microsoft Intern Puzzle Hunt",
+            "description": "7th place/162 teams"
+          }
+        ]
       }
     ]
   },
@@ -381,36 +403,46 @@
     "classes": [
       {
         "name": "CSEM 501: Intro to Compiler Construction",
-        "project": {
-          "name": "Minijava compiler (with Strings!)"
-        }
+        "project": [
+          {
+            "name": "Minijava compiler (with Strings!)"
+          }
+        ]
       },
       {
         "name": "CSEM 544: Database Systems",
-        "project": {
-          "name": "SimpleDB, toy DBMS implementation"
-        }
+        "project": [
+          {
+            "name": "SimpleDB, toy DBMS implementation"
+          }
+        ]
       },
       {
         "name": "CSE 571: Probabilistic Robotics",
-        "project": {
-          "name": "Do not hit the duckies in Duckietown",
-          "content": "../projects/571_Final_Report.pdf"
-        }
+        "project": [
+          {
+            "name": "Do not hit the duckies in Duckietown",
+            "content": "571_Final_Report.pdf"
+          }
+        ]
       },
       {
         "name": "CSE 599H: Computing for Social Good",
-        "project": {
-          "name": "HIV Tracing application with Community Health Toolkit",
-          "content": "../projects/CSE580_Final_Project_Writeup.pdf"
-        }
+        "project": [
+          {
+            "name": "HIV Tracing application with Community Health Toolkit",
+            "content": "CSE580_Final_Project_Writeup.pdf"
+          }
+        ]
       },
       {
         "name": "ME 574: Applied Parallel Computing",
-        "project": {
-          "name": "Parallelized Convolutions in CUDA",
-          "content": "../projects/parallel_computing_final.mp4"
-        }
+        "project": [
+          {
+            "name": "Parallelized Convolutions in CUDA",
+            "content": "parallel_computing_final.mp4"
+          }
+        ]
       }
     ],
     "activities": [
@@ -455,31 +487,39 @@
     "classes": [
       {
         "name": "CSE 525: Random Algorithms",
-        "project": {
-          "name": "Randomized Rumor Spreading",
-          "content": "../projects/RandomizedRumorSpreading.pdf"
-        }
+        "project": [
+          {
+            "name": "Randomized Rumor Spreading",
+            "content": "RandomizedRumorSpreading.pdf"
+          }
+        ]
       },
       {
         "name": "CSE 561: Computer Networks",
-        "project": {
-          "name": "Service Mesh Overhead Measurement",
-          "content": "../projects/svc_mesh_measurement_final_report.pdf"
-        }
+        "project": [
+          {
+            "name": "Service Mesh Overhead Measurement",
+            "content": "svc_mesh_measurement_final_report.pdf"
+          }
+        ]
       },
       {
         "name": "CSE 599C: Data Management for ML",
-        "project": {
-          "name": "Snuba Reimplementation",
-          "content": "../projects/CSE599C_Snuba.pdf"
-        }
+        "project": [
+          {
+            "name": "Snuba Reimplementation",
+            "content": "CSE599C_Snuba.pdf"
+          }
+        ]
       },
       {
         "name": "CSE 599D1: Theoretical Deep Learning",
-        "project": {
-          "name": "Slightly Overparameterized Neural Networks",
-          "content": "../projects/599_DL_Theory.pdf"
-        }
+        "project": [
+          {
+            "name": "Slightly Overparameterized Neural Networks",
+            "content": "599_DL_Theory.pdf"
+          }
+        ]
       }
     ],
     "activities": [
@@ -502,31 +542,39 @@
       },
       {
         "name": "CSE 527: Computational Biology",
-        "project": {
-          "name": "Leukemia classification",
-          "content": "https://github.com/nowei/leukemia-classification"
-        }
+        "project": [
+          {
+            "name": "Leukemia classification",
+            "content": "https://github.com/nowei/leukemia-classification"
+          }
+        ]
       },
       {
         "name": "CSEM 584: Computer Security",
-        "project": {
-          "name": "Presentation on Intro to Differential Privacy",
-          "content": "../projects/Intro to Differential Privacy.pdf"
-        }
+        "project": [
+          {
+            "name": "Presentation on Intro to Differential Privacy",
+            "content": "Intro to Differential Privacy.pdf"
+          }
+        ]
       },
       {
         "name": "CSE 599B: AI & the Brain",
-        "project": {
-          "name": "Exploring Spiking Neural Networks",
-          "content": "../projects/CSE 599 B Final Project - Andrew Wei & Kushal Jhunjhunwalla.pdf"
-        }
+        "project": [
+          {
+            "name": "Exploring Spiking Neural Networks",
+            "content": "CSE 599 B Final Project - Andrew Wei & Kushal Jhunjhunwalla.pdf"
+          }
+        ]
       },
       {
         "name": "CSE 599I: Generative Models",
-        "project": {
-          "name": "Poor Man's GPT-3",
-          "content": "https://github.com/kaiweic/Poor-man-s-GPT-3"
-        }
+        "project": [
+          {
+            "name": "Poor Man's GPT-3",
+            "content": "https://github.com/kaiweic/Poor-man-s-GPT-3"
+          }
+        ]
       }
     ],
     "activities": [
@@ -556,10 +604,12 @@
     "activities": [
       {
         "name": "Intern",
-        "content": {
-          "name": "Amazon",
-          "description": "Worked on a Promotions Management tool and made the search faster"
-        }
+        "content": [
+          {
+            "name": "Amazon",
+            "description": "Worked on a Promotions Management tool and made the search faster"
+          }
+        ]
       }
     ]
   },
@@ -568,10 +618,12 @@
     "classes": [
       {
         "name": "CSE 547: Machine Learning for Big Data",
-        "project": {
-          "name": "Stock Bot",
-          "content": "https://github.com/kaiweic/stockbot"
-        }
+        "project": [
+          {
+            "name": "Stock Bot",
+            "content": "https://github.com/kaiweic/stockbot"
+          }
+        ]
       },
       {
         "name": "CSE 599Q1: Intro to Quantum Algorithms",
@@ -579,26 +631,32 @@
       },
       {
         "name": "CSE 599W: Reinforcement Learning",
-        "project": {
-          "name": "Deep RL in the Stock Market, extension",
-          "content": "../projects/CSE599W_Final_Report.pdf"
-        }
+        "project": [
+          {
+            "name": "Deep RL in the Stock Market, extension",
+            "content": "CSE599W_Final_Report.pdf"
+          }
+        ]
       },
       {
         "name": "CSE 599Y: Mobile & Wireless Systems",
-        "project": {
-          "name": "Bathroom fall detection",
-          "content": "https://github.com/leiyiz/BathroomFallDetection"
-        }
+        "project": [
+          {
+            "name": "Bathroom fall detection",
+            "content": "https://github.com/leiyiz/BathroomFallDetection"
+          }
+        ]
       }
     ],
     "activities": [
       {
         "name": "Context",
-        "content": {
-          "name": "Zoom University",
-          "description": "everything's online and it kind of hurts"
-        }
+        "content": [
+          {
+            "name": "Zoom University",
+            "description": "everything's online and it kind of hurts"
+          }
+        ]
       },
       {
         "name": "TA",
@@ -611,10 +669,12 @@
       },
       {
         "name": "Research",
-        "content": {
-          "name": "Rocksdb Characterization",
-          "description": "working on some DS-related thing related to RocksDB"
-        }
+        "content": [
+          {
+            "name": "Rocksdb Characterization",
+            "description": "working on some DS-related thing related to RocksDB"
+          }
+        ]
       }
     ]
   },
@@ -623,10 +683,12 @@
     "classes": [
       {
         "name": "CSE 490V: Virtual Reality Systems",
-        "project": {
-          "name": "Making a Wide Field of View Headset",
-          "content": "../projects/CSE490v_final_project.pdf"
-        }
+        "project": [
+          {
+            "name": "Making a Wide Field of View Headset",
+            "content": "CSE490v_final_project.pdf"
+          }
+        ]
       },
       {
         "name": "CSE 515: Statistical Methods in Computer Science"
@@ -639,10 +701,12 @@
       },
       {
         "name": "CSE 599C: Data Center Systems",
-        "project": {
-          "name": "Consistent Hashing assignment",
-          "content": "https://github.com/nowei/consistent-hashing-lab"
-        }
+        "project": [
+          {
+            "name": "Consistent Hashing assignment",
+            "content": "https://github.com/nowei/consistent-hashing-lab"
+          }
+        ]
       },
       {
         "name": "CSE 599I: Interactive Learning"
@@ -677,17 +741,21 @@
     "classes": [
       {
         "name": "CSE 521: Design and Analysis of Algorithms",
-        "project": {
-          "name": "Finding Frequent Items in Data Streams",
-          "content": "https://github.com/nowei/frequent_items"
-        }
+        "project": [
+          {
+            "name": "Finding Frequent Items in Data Streams",
+            "content": "https://github.com/nowei/frequent_items"
+          }
+        ]
       },
       {
         "name": "CSE 552: Distributed and Parallel Systems",
-        "project": {
-          "name": "Live Inference for Distributed Machine Learning",
-          "content": "https://github.com/liangw6/byteps"
-        }
+        "project": [
+          {
+            "name": "Live Inference for Distributed Machine Learning",
+            "content": "https://github.com/liangw6/byteps"
+          }
+        ]
       },
       {
         "name": "CSE 590C1: Change Seminar: Technology for Developing Regions"
@@ -697,17 +765,21 @@
       },
       {
         "name": "CSE 599G1: Deep Learning",
-        "project": {
-          "name": "Exploration of Adversarial Deep Learning",
-          "content": "https://github.com/nowei/adversarial-dl"
-        }
+        "project": [
+          {
+            "name": "Exploration of Adversarial Deep Learning",
+            "content": "https://github.com/nowei/adversarial-dl"
+          }
+        ]
       },
       {
         "name": "CSE 599M: Principled Approaches to Robust Machine Learning",
-        "project": {
-          "name": "Robustness of Federated Learning",
-          "content": "TBD"
-        }
+        "project": [
+          {
+            "name": "Robustness of Federated Learning",
+            "content": "Robust_ML_Final_Project.pdf"
+          }
+        ]
       }
     ],
     "activities": [
@@ -772,10 +844,12 @@
     "activities": [
       {
         "name": "Intern",
-        "content": {
-          "name": "Letron Entertainment Tech",
-          "description": "A Website Health Network Monitoring start-up in Kaohsiung, Taiwan"
-        }
+        "content": [
+          {
+            "name": "Letron Entertainment Tech",
+            "description": "A Website Health Network Monitoring start-up in Kaohsiung, Taiwan"
+          }
+        ]
       }
     ]
   },
@@ -787,21 +861,25 @@
       },
       {
         "name": "CSE 457: Computer Graphics",
-        "project": {
-          "name": "SBDs on the Lucky-E (video)",
-          "content": "file:///C:/Users/andre/Documents/nowei.github.io/projects/video-1559820307.mp4",
-          "description": "Mostly done by Matt"
-        }
+        "project": [
+          {
+            "name": "SBDs on the Lucky-E (video)",
+            "content": "video-1559820307.mp4",
+            "description": "Mostly done by Matt"
+          }
+        ]
       },
       {
         "name": "CSE 470: Computer Architecture II"
       },
       {
         "name": "CSE 481V: VR Capstone",
-        "project": {
-          "name": "ChatAssist",
-          "content": "https://uwrealitylab.github.io/vrcapstone19sp-team3/"
-        }
+        "project": [
+          {
+            "name": "ChatAssist",
+            "content": "https://uwrealitylab.github.io/vrcapstone19sp-team3/"
+          }
+        ]
       }
     ],
     "activities": [
@@ -882,17 +960,21 @@
       },
       {
         "name": "CSE 442: Data Visualization",
-        "project": {
-          "name": "WHYLDFIRE 🔥",
-          "content": "https://cse442-18f.github.io/fp-whyldfire/"
-        }
+        "project": [
+          {
+            "name": "WHYLDFIRE 🔥",
+            "content": "https://cse442-18f.github.io/fp-whyldfire/"
+          }
+        ]
       },
       {
         "name": "CSE 455: Computer Vision",
-        "project": {
-          "name": "MemeDub",
-          "content": "https://github.com/MichaelMiles/HatonHead"
-        }
+        "project": [
+          {
+            "name": "MemeDub",
+            "content": "https://github.com/MichaelMiles/HatonHead"
+          }
+        ]
       },
       {
         "name": "CSE 473: Intro to Artificial Intelligence"
@@ -935,10 +1017,12 @@
     "classes": [
       {
         "name": "CSE 474: Intro to Embedded Systems",
-        "project": {
-          "name": "Combat! (video)",
-          "content": "https://drive.google.com/file/d/1iwGpQ_J5b0VphyDPrFP9gnaINVZLwMR3/view"
-        },
+        "project": [
+          {
+            "name": "Combat! (video)",
+            "content": "https://drive.google.com/file/d/1iwGpQ_J5b0VphyDPrFP9gnaINVZLwMR3/view"
+          }
+        ],
         "team": {
           "name": "Drive"
         }
@@ -1005,10 +1089,12 @@
     "classes": [
       {
         "name": "CSE 371: Design of Digital Circuits and Systems",
-        "project": {
-          "name": "Brick Breaker",
-          "content": "https://drive.google.com/file/d/1mMqNNky8TlR3kXyZnWidnr3k37A-P_Px/view?usp=sharing"
-        }
+        "project": [
+          {
+            "name": "Brick Breaker",
+            "content": "https://drive.google.com/file/d/1mMqNNky8TlR3kXyZnWidnr3k37A-P_Px/view?usp=sharing"
+          }
+        ]
       },
       {
         "name": "CSE 391: Software Tools"
@@ -1196,12 +1282,14 @@
       },
       {
         "name": "ENGR 215: Dynamics",
-        "project": {
-          "name": "Dynamics Modeling",
-          "thumbnail": true,
-          "position": "left",
-          "description": "Model a gear"
-        },
+        "project": [
+          {
+            "name": "Dynamics Modeling",
+            "thumbnail": true,
+            "position": "left",
+            "description": "Model a gear"
+          }
+        ],
         "team": {
           "name": "Team How Do We Do This?",
           "thumbnail": true,
@@ -1268,7 +1356,7 @@
       },
       {
         "name": "ENGR 214: Statics",
-        "project": "Balsa Wood Bridges",
+        "project": [{ "name": "Balsa Wood Bridges" }],
         "thumbnail": true,
         "description": "We won first and second place with our two bridges"
       },
@@ -1318,12 +1406,14 @@
       },
       {
         "name": "ENGR 224: Thermodynamics",
-        "project": {
-          "name": "Stirling Engine",
-          "thumbnail": true,
-          "position": "left",
-          "description": "Efficiency: -0.000%. Note: Building it was harder than making the model"
-        }
+        "project": [
+          {
+            "name": "Stirling Engine",
+            "thumbnail": true,
+            "position": "left",
+            "description": "Efficiency: -0.000%. Note: Building it was harder than making the model"
+          }
+        ]
       },
       {
         "name": "PHYS 222: Physics II",

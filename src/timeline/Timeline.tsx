@@ -3,16 +3,78 @@ import { QuarterGroup, Quarter, QuarterProps } from "./Quarter";
 import timelineJson from "./timeline.json";
 
 function Timeline() {
-  let y2023: QuarterProps = { quarters: [] };
   let data: { [id: string]: Quarter } = timelineJson;
+  let y2023_2024: QuarterProps = {
+    quarters: [data["aut2023"]],
+  };
   let quarters = [];
   let q_temp = [];
   console.log(data);
   console.log("hi");
-  y2023.quarters.push(data["aut2022"]);
-  y2023.quarters.push(data["win2023"]);
-  y2023.quarters.push(data["spr2023"]);
-  y2023.quarters.push(data["sum2023"]);
+  let y2022_2023: QuarterProps = {
+    quarters: [
+      data["sum2023"],
+      data["spr2023"],
+      data["win2023"],
+      data["aut2022"],
+    ],
+  };
+  let y2021_2022: QuarterProps = {
+    quarters: [
+      data["sum2022"],
+      data["spr2022"],
+      data["win2022"],
+      data["aut2021"],
+    ],
+  };
+  let y2020_2021: QuarterProps = {
+    quarters: [
+      data["sum2021"],
+      data["spr2021"],
+      data["win2021"],
+      data["aut2020"],
+    ],
+  };
+  let y2019_2020: QuarterProps = {
+    quarters: [
+      data["sum2020"],
+      data["spr2020"],
+      data["win2020"],
+      data["aut2019"],
+    ],
+  };
+  let y2018_2019: QuarterProps = {
+    quarters: [
+      data["sum2019"],
+      data["spr2019"],
+      data["win2019"],
+      data["aut2018"],
+    ],
+  };
+  let y2017_2018: QuarterProps = {
+    quarters: [
+      data["sum2018"],
+      data["spr2018"],
+      data["win2018"],
+      data["aut2017"],
+    ],
+  };
+  let y2016_2017: QuarterProps = {
+    quarters: [
+      data["sum2017"],
+      data["spr2017"],
+      data["win2017"],
+      data["aut2016"],
+    ],
+  };
+  let y2015_2016: QuarterProps = {
+    quarters: [
+      data["sum2016"],
+      data["spr2016"],
+      data["win2016"],
+      data["aut2015"],
+    ],
+  };
   console.log(data);
 
   return (
@@ -35,7 +97,7 @@ function Timeline() {
         <div className="content" style={{ maxHeight: "100%" }}>
           <div className="quarter-container">
             {/* <div id="2023" className="quarter-grid"></div> */}
-            {QuarterGroup(y2023)}
+            {QuarterGroup(y2023_2024)}
           </div>
         </div>
       </div>
@@ -52,10 +114,8 @@ function Timeline() {
 
         <p style={{ padding: "12px" }}></p>
         <div className="content" style={{ maxHeight: "100%" }}>
-          <div className="quarter-container">
-            <div id="2022" className="quarter-grid"></div>
-            <div id="2021" className="quarter-grid"></div>
-          </div>
+          <div className="quarter-container">{QuarterGroup(y2022_2023)}</div>
+          <div className="quarter-container">{QuarterGroup(y2021_2022)}</div>
         </div>
       </div>
       <div className="container">
@@ -72,16 +132,12 @@ function Timeline() {
         </header>
         <section className="two">
           <div className="content">
-            <div className="quarter-container">
-              <div id="masters2" className="quarter-grid"></div>
-            </div>
+            <div className="quarter-container">{QuarterGroup(y2020_2021)}</div>
           </div>
         </section>
         <section className="two">
           <div className="content">
-            <div className="quarter-container">
-              <div id="masters1" className="quarter-grid"></div>
-            </div>
+            <div className="quarter-container">{QuarterGroup(y2019_2020)}</div>
           </div>
         </section>
       </div>
@@ -97,16 +153,12 @@ function Timeline() {
         </header>
         <section className="three">
           <div className="content">
-            <div className="quarter-container">
-              <div id="ugrad4" className="quarter-grid"></div>
-            </div>
+            <div className="quarter-container">{QuarterGroup(y2018_2019)}</div>
           </div>
         </section>
         <section className="three">
           <div className="content">
-            <div className="quarter-container">
-              <div id="ugrad3" className="quarter-grid"></div>
-            </div>
+            <div className="quarter-container">{QuarterGroup(y2017_2018)}</div>
           </div>
         </section>
       </div>
@@ -130,9 +182,7 @@ function Timeline() {
               while in high school) at Edmonds Community College and took AP
               classes on top of that.
             </p>
-            <div className="quarter-container">
-              <div id="ugrad2" className="quarter-grid"></div>
-            </div>
+            <div className="quarter-container">{QuarterGroup(y2016_2017)}</div>
             <p style={{ textAlign: "center", width: "80%", margin: "auto" }}>
               At the time I was also taking AP Euro and a physics class. I
               volunteered at Alderwood Middle School's TSA club.
@@ -141,9 +191,7 @@ function Timeline() {
         </section>
         <section className="four">
           <div className="content">
-            <div className="quarter-container">
-              <div id="ugrad1" className="quarter-grid"></div>
-            </div>
+            <div className="quarter-container">{QuarterGroup(y2015_2016)}</div>
             <p style={{ textAlign: "center", width: "80%", margin: "auto" }}>
               At the time I was also taking AP Calculus BC, AP Chemistry, and AP
               Statistics.

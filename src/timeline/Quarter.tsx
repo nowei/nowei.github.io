@@ -1,5 +1,7 @@
 import React from "react";
 
+const projects = require.context("../projects/docs/", true);
+
 interface ActivityContent {
   name: string;
   description?: string;
@@ -8,7 +10,7 @@ interface ActivityContent {
 interface Activity {
   name: string;
   bullet?: boolean;
-  content: ActivityContent[] | ActivityContent;
+  content: ActivityContent[];
 }
 
 interface SchoolProject {
@@ -20,7 +22,7 @@ interface SchoolProject {
 
 interface SchoolClass {
   name: string;
-  project?: SchoolProject | string | SchoolProject[];
+  project?: SchoolProject[];
 }
 
 export interface Quarter {
@@ -43,6 +45,58 @@ export const QuarterGroup: React.FC<QuarterProps> = ({
         return (
           <div>
             <h3>{item.name}</h3>
+            {item.activities?.map((activity) => {
+              return (
+                <div>
+                  <div>{activity.name}</div>
+                </div>
+              );
+            })}
+            {item.classes ? (
+              <div>
+                <div>classes</div>
+                {item.classes?.map((schoolClass) => {
+                  return (
+                    <div>
+                      <div>{schoolClass.name}</div>
+                      {schoolClass.project ? (
+                        <div>
+                          {schoolClass.project?.map((project) => {
+                            const loadProject = (projectPath: string) => {
+                              if (projectPath.includes("https")) {
+                                return projectPath;
+                              } else {
+                                return projects(`./${projectPath}`);
+                              }
+                            };
+                            return (
+                              <div>
+                                <ul>
+                                  Project:{" "}
+                                  {project.content ? (
+                                    <a
+                                      href={
+                                        project.content
+                                          ? loadProject(project.content)
+                                          : null
+                                      }
+                                    >
+                                      {project.name}
+                                    </a>
+                                  ) : (
+                                    <text>{project.name}</text>
+                                  )}
+                                </ul>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      ) : null}
+                    </div>
+                  );
+                })}
+              </div>
+            ) : null}
           </div>
         );
       })}

@@ -8,6 +8,7 @@ function Hero() {
       className="page"
       style={{
         fontSize: "calc(10px + 2vmin)",
+        marginTop: "-85px",
       }}
     >
       <p>👋 Hello World! {globe}</p>
@@ -52,7 +53,7 @@ function Interests() {
         fontSize: "calc(10px + 2vmin)",
       }}
     >
-      <div>
+      <div style={{ width: "50%" }}>
         <h2>Interests</h2>
         <hr />
         <div>
