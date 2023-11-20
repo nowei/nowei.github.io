@@ -22,6 +22,7 @@ interface SchoolProject {
 
 interface SchoolClass {
   name: string;
+  dropped?: boolean;
   project?: SchoolProject[];
 }
 
@@ -36,6 +37,69 @@ export interface QuarterProps {
   quarters: Quarter[];
 }
 
+function ClassComp(schoolClass: SchoolClass) {
+  return (
+    <div>
+      <div>
+        {schoolClass.dropped ? <s>{schoolClass.name}</s> : schoolClass.name}
+      </div>
+      {schoolClass.project ? (
+        <div>
+          {schoolClass.project?.map((project) => {
+            const loadProject = (projectPath: string) => {
+              if (projectPath.includes("https")) {
+                return projectPath;
+              } else {
+                return projects(`./${projectPath}`);
+              }
+            };
+            return (
+              <div>
+                <ul style={{ margin: 0 }}>
+                  Project:{" "}
+                  {project.content ? (
+                    <a
+                      href={
+                        project.content ? loadProject(project.content) : null
+                      }
+                    >
+                      {project.name}
+                    </a>
+                  ) : (
+                    <text>{project.name}</text>
+                  )}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+function ActivityComp(activity: Activity) {
+  return (
+    <div style={{ marginTop: "12px", marginBottom: "24px" }}>
+      <h3 style={{ marginBottom: "12px" }}>
+        <u>
+          <b>{activity.name}</b>
+        </u>
+      </h3>
+      {activity.content.map((cont) => {
+        return (
+          <div>
+            <div>
+              <b>{cont.name}</b>
+              {cont.description ? ": " + cont.description : null}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 export const QuarterGroup: React.FC<QuarterProps> = ({
   quarters,
 }: QuarterProps) => {
@@ -44,56 +108,15 @@ export const QuarterGroup: React.FC<QuarterProps> = ({
       {quarters.map((item) => {
         return (
           <div>
-            <h3>{item.name}</h3>
+            <h2>{item.name}</h2>
             {item.activities?.map((activity) => {
-              return (
-                <div>
-                  <div>{activity.name}</div>
-                </div>
-              );
+              return ActivityComp(activity);
             })}
             {item.classes ? (
               <div>
-                <div>classes</div>
+                <h3>classes</h3>
                 {item.classes?.map((schoolClass) => {
-                  return (
-                    <div>
-                      <div>{schoolClass.name}</div>
-                      {schoolClass.project ? (
-                        <div>
-                          {schoolClass.project?.map((project) => {
-                            const loadProject = (projectPath: string) => {
-                              if (projectPath.includes("https")) {
-                                return projectPath;
-                              } else {
-                                return projects(`./${projectPath}`);
-                              }
-                            };
-                            return (
-                              <div>
-                                <ul>
-                                  Project:{" "}
-                                  {project.content ? (
-                                    <a
-                                      href={
-                                        project.content
-                                          ? loadProject(project.content)
-                                          : null
-                                      }
-                                    >
-                                      {project.name}
-                                    </a>
-                                  ) : (
-                                    <text>{project.name}</text>
-                                  )}
-                                </ul>
-                              </div>
-                            );
-                          })}
-                        </div>
-                      ) : null}
-                    </div>
-                  );
+                  return ClassComp(schoolClass);
                 })}
               </div>
             ) : null}
