@@ -402,7 +402,8 @@
     "name": "Spring 2021",
     "classes": [
       {
-        "name": "CSEM 501: Intro to Compiler Construction",
+        "code": "CSEM 501",
+        "name": "Intro to Compiler Construction",
         "project": [
           {
             "name": "Minijava compiler (with Strings!)"
@@ -410,7 +411,8 @@
         ]
       },
       {
-        "name": "CSEM 544: Database Systems",
+        "code": "CSEM 544",
+        "name": "Database Systems",
         "project": [
           {
             "name": "SimpleDB, toy DBMS implementation"
@@ -418,7 +420,8 @@
         ]
       },
       {
-        "name": "CSE 571: Probabilistic Robotics",
+        "code": "CSE 571",
+        "name": "Probabilistic Robotics",
         "project": [
           {
             "name": "Do not hit the duckies in Duckietown",
@@ -427,7 +430,8 @@
         ]
       },
       {
-        "name": "CSE 599H: Computing for Social Good",
+        "code": "CSE 599H",
+        "name": "Computing for Social Good",
         "project": [
           {
             "name": "HIV Tracing application with Community Health Toolkit",
@@ -436,7 +440,8 @@
         ]
       },
       {
-        "name": "ME 574: Applied Parallel Computing",
+        "code": "ME 574",
+        "name": "Applied Parallel Computing",
         "project": [
           {
             "name": "Parallelized Convolutions in CUDA",
@@ -451,10 +456,12 @@
         "bullet": true,
         "content": [
           {
-            "name": "CSE 452: Distributed Systems"
+            "code": "CSE 452",
+            "name": "Distributed Systems"
           },
           {
-            "name": "CSE 547: Machine Learning for Big Data"
+            "code": "CSE 547",
+            "name": "Machine Learning for Big Data"
           }
         ]
       },
@@ -486,7 +493,8 @@
     "name": "Winter 2021",
     "classes": [
       {
-        "name": "CSE 525: Random Algorithms",
+        "code": "CSE 525",
+        "name": "Random Algorithms",
         "project": [
           {
             "name": "Randomized Rumor Spreading",
@@ -495,7 +503,8 @@
         ]
       },
       {
-        "name": "CSE 561: Computer Networks",
+        "code": "CSE 561",
+        "name": "Computer Networks",
         "project": [
           {
             "name": "Service Mesh Overhead Measurement",
@@ -504,7 +513,8 @@
         ]
       },
       {
-        "name": "CSE 599C: Data Management for ML",
+        "code": "CSE 599C",
+        "name": "Data Management for ML",
         "project": [
           {
             "name": "Snuba Reimplementation",
@@ -513,7 +523,8 @@
         ]
       },
       {
-        "name": "CSE 599D1: Theoretical Deep Learning",
+        "code": "CSE 599D1",
+        "name": "Theoretical Deep Learning",
         "project": [
           {
             "name": "Slightly Overparameterized Neural Networks",
@@ -528,7 +539,8 @@
         "bullet": true,
         "content": [
           {
-            "name": "CSEP 552/CSE 452: Distributed Systems"
+            "code": "CSEP 552/CSE 452",
+            "name": "Distributed Systems"
           }
         ]
       }
@@ -538,10 +550,12 @@
     "name": "Autumn 2020",
     "classes": [
       {
-        "name": "CSE 492: Patterns for Career Success"
+        "code": "CSE 492",
+        "name": "Patterns for Career Success"
       },
       {
-        "name": "CSE 527: Computational Biology",
+        "code": "CSE 527",
+        "name": "Computational Biology",
         "project": [
           {
             "name": "Leukemia classification",
@@ -550,7 +564,8 @@
         ]
       },
       {
-        "name": "CSEM 584: Computer Security",
+        "code": "CSEM 584",
+        "name": "Computer Security",
         "project": [
           {
             "name": "Presentation on Intro to Differential Privacy",
@@ -559,7 +574,8 @@
         ]
       },
       {
-        "name": "CSE 599B: AI & the Brain",
+        "code": "CSE 599B",
+        "name": "AI & the Brain",
         "project": [
           {
             "name": "Exploring Spiking Neural Networks",
@@ -568,7 +584,8 @@
         ]
       },
       {
-        "name": "CSE 599I: Generative Models",
+        "code": "CSE 599I",
+        "name": "Generative Models",
         "project": [
           {
             "name": "Poor Man's GPT-3",
@@ -583,7 +600,8 @@
         "bullet": true,
         "content": [
           {
-            "name": "CSEP 546: Machine Learning"
+            "code": "CSEP 546",
+            "name": "Machine Learning"
           }
         ]
       },
@@ -617,7 +635,8 @@
     "name": "Spring 2020",
     "classes": [
       {
-        "name": "CSE 547: Machine Learning for Big Data",
+        "code": "CSE 547",
+        "name": "Machine Learning for Big Data",
         "project": [
           {
             "name": "Stock Bot",
@@ -626,11 +645,13 @@
         ]
       },
       {
-        "name": "CSE 599Q1: Intro to Quantum Algorithms",
+        "code": "CSE 599Q1",
+        "name": "Intro to Quantum Algorithms",
         "dropped": true
       },
       {
-        "name": "CSE 599W: Reinforcement Learning",
+        "code": "CSE 599W",
+        "name": "Reinforcement Learning",
         "project": [
           {
             "name": "Deep RL in the Stock Market, extension",
@@ -639,7 +660,8 @@
         ]
       },
       {
-        "name": "CSE 599Y: Mobile & Wireless Systems",
+        "code": "CSE 599Y",
+        "name": "Mobile & Wireless Systems",
         "project": [
           {
             "name": "Bathroom fall detection",
@@ -663,7 +685,8 @@
         "bullet": true,
         "content": [
           {
-            "name": "CSE 452: Distributed Systems"
+            "code": "CSE 452",
+            "name": "Distributed Systems"
           }
         ]
       },
@@ -682,7 +705,8 @@
     "name": "Winter 2020",
     "classes": [
       {
-        "name": "CSE 490V: Virtual Reality Systems",
+        "code": "CSE 490V",
+        "name": "Virtual Reality Systems",
         "project": [
           {
             "name": "Making a Wide Field of View Headset",
@@ -691,16 +715,20 @@
         ]
       },
       {
-        "name": "CSE 515: Statistical Methods in Computer Science"
+        "code": "CSE 515",
+        "name": "Statistical Methods in Computer Science"
       },
       {
-        "name": "CSE 590F: Computing and the Developing World"
+        "code": "CSE 590F",
+        "name": "Computing and the Developing World"
       },
       {
-        "name": "CSE 590R: Robotics Colloquium"
+        "code": "CSE 590R",
+        "name": "Robotics Colloquium"
       },
       {
-        "name": "CSE 599C: Data Center Systems",
+        "code": "CSE 599C",
+        "name": "Data Center Systems",
         "project": [
           {
             "name": "Consistent Hashing assignment",
@@ -709,7 +737,8 @@
         ]
       },
       {
-        "name": "CSE 599I: Interactive Learning"
+        "code": "CSE 599I",
+        "name": "Interactive Learning"
       }
     ],
     "activities": [
@@ -718,7 +747,8 @@
         "bullet": true,
         "content": [
           {
-            "name": "CSE 452: Distributed Systems"
+            "code": "CSE 452",
+            "name": "Distributed Systems"
           }
         ]
       },
@@ -740,7 +770,8 @@
     "name": "Autumn 2019",
     "classes": [
       {
-        "name": "CSE 521: Design and Analysis of Algorithms",
+        "code": "CSE 521",
+        "name": "Design and Analysis of Algorithms",
         "project": [
           {
             "name": "Finding Frequent Items in Data Streams",
@@ -749,7 +780,8 @@
         ]
       },
       {
-        "name": "CSE 552: Distributed and Parallel Systems",
+        "code": "CSE 552",
+        "name": "Distributed and Parallel Systems",
         "project": [
           {
             "name": "Live Inference for Distributed Machine Learning",
@@ -758,13 +790,16 @@
         ]
       },
       {
-        "name": "CSE 590C1: Change Seminar: Technology for Developing Regions"
+        "code": "CSE 590C1",
+        "name": "Change Seminar: Technology for Developing Regions"
       },
       {
-        "name": "CSE 590F: Computing and the Developing World"
+        "code": "CSE 590F",
+        "name": "Computing and the Developing World"
       },
       {
-        "name": "CSE 599G1: Deep Learning",
+        "code": "CSE 599G1",
+        "name": "Deep Learning",
         "project": [
           {
             "name": "Exploration of Adversarial Deep Learning",
@@ -773,7 +808,8 @@
         ]
       },
       {
-        "name": "CSE 599M: Principled Approaches to Robust Machine Learning",
+        "code": "CSE 599M",
+        "name": "Principled Approaches to Robust Machine Learning",
         "project": [
           {
             "name": "Robustness of Federated Learning",
@@ -788,7 +824,8 @@
         "bullet": true,
         "content": [
           {
-            "name": "CSEP 546: Machine Learning"
+            "code": "CSEP 546",
+            "name": "Machine Learning"
           }
         ]
       },
@@ -857,10 +894,12 @@
     "name": "Spring 2019",
     "classes": [
       {
-        "name": "CSE 452: Distributed Systems"
+        "code": "CSE 452",
+        "name": "Distributed Systems"
       },
       {
-        "name": "CSE 457: Computer Graphics",
+        "code": "CSE 457",
+        "name": "Computer Graphics",
         "project": [
           {
             "name": "SBDs on the Lucky-E (video)",
@@ -870,10 +909,12 @@
         ]
       },
       {
-        "name": "CSE 470: Computer Architecture II"
+        "code": "CSE 470",
+        "name": "Computer Architecture II"
       },
       {
-        "name": "CSE 481V: VR Capstone",
+        "code": "CSE 481V",
+        "name": "VR Capstone",
         "project": [
           {
             "name": "ChatAssist",
@@ -888,7 +929,8 @@
         "bullet": true,
         "content": [
           {
-            "name": "CSE 180: Intro to Data Science"
+            "code": "CSE 180",
+            "name": "Intro to Data Science"
           }
         ]
       },
@@ -916,16 +958,20 @@
     "name": "Winter 2019",
     "classes": [
       {
-        "name": "CSE 446: Machine Learning"
+        "code": "CSE 446",
+        "name": "Machine Learning"
       },
       {
-        "name": "CSE 447: Natural Language Processing"
+        "code": "CSE 447",
+        "name": "Natural Language Processing"
       },
       {
-        "name": "CSE 469: Computer Architecture I"
+        "code": "CSE 469",
+        "name": "Computer Architecture I"
       },
       {
-        "name": "CSE 599: Theory of Optimization and Continuous Algorithms"
+        "code": "CSE 599",
+        "name": "Theory of Optimization and Continuous Algorithms"
       }
     ],
     "activities": [
@@ -934,7 +980,8 @@
         "bullet": true,
         "content": [
           {
-            "name": "CSE 312: Statistics for CS"
+            "code": "CSE 312",
+            "name": "Statistics for CS"
           }
         ]
       },
@@ -953,13 +1000,16 @@
     "name": "Autumn 2018",
     "classes": [
       {
-        "name": "CSE 421: Intro to Algorithms"
+        "code": "CSE 421",
+        "name": "Intro to Algorithms"
       },
       {
-        "name": "CSE 431: Intro to Theory of Computation"
+        "code": "CSE 431",
+        "name": "Intro to Theory of Computation"
       },
       {
-        "name": "CSE 442: Data Visualization",
+        "code": "CSE 442",
+        "name": "Data Visualization",
         "project": [
           {
             "name": "WHYLDFIRE 🔥",
@@ -968,7 +1018,8 @@
         ]
       },
       {
-        "name": "CSE 455: Computer Vision",
+        "code": "CSE 455",
+        "name": "Computer Vision",
         "project": [
           {
             "name": "MemeDub",
@@ -977,7 +1028,8 @@
         ]
       },
       {
-        "name": "CSE 473: Intro to Artificial Intelligence"
+        "code": "CSE 473",
+        "name": "Intro to Artificial Intelligence"
       }
     ],
     "activities": [
@@ -986,7 +1038,8 @@
         "bullet": true,
         "content": [
           {
-            "name": "CSE 414: Databases"
+            "code": "CSE 414",
+            "name": "Databases"
           }
         ]
       },
@@ -1016,7 +1069,8 @@
     "name": "Summer 2018",
     "classes": [
       {
-        "name": "CSE 474: Intro to Embedded Systems",
+        "code": "CSE 474",
+        "name": "Intro to Embedded Systems",
         "project": [
           {
             "name": "Combat! (video)",
@@ -1028,10 +1082,12 @@
         }
       },
       {
-        "name": "CSE 490: Character Pre-Production for 3D Animation"
+        "code": "CSE 490",
+        "name": "Character Pre-Production for 3D Animation"
       },
       {
-        "name": "ENGL 207: Introduction to Cultural Studies"
+        "code": "ENGL 207",
+        "name": "Introduction to Cultural Studies"
       }
     ],
     "activities": [
@@ -1040,7 +1096,8 @@
         "bullet": true,
         "content": [
           {
-            "name": "CSE 344: Intro to Data Management"
+            "code": "CSE 344",
+            "name": "Intro to Data Management"
           }
         ]
       },
@@ -1088,7 +1145,8 @@
     "name": "Spring 2018",
     "classes": [
       {
-        "name": "CSE 371: Design of Digital Circuits and Systems",
+        "code": "CSE 371",
+        "name": "Design of Digital Circuits and Systems",
         "project": [
           {
             "name": "Brick Breaker",
@@ -1097,13 +1155,16 @@
         ]
       },
       {
-        "name": "CSE 391: Software Tools"
+        "code": "CSE 391",
+        "name": "Software Tools"
       },
       {
-        "name": "CSE 451: Intro to Operating Systems"
+        "code": "CSE 451",
+        "name": "Intro to Operating Systems"
       },
       {
-        "name": "LING 200: Intro to Linguistic Thought"
+        "code": "LING 200",
+        "name": "Intro to Linguistic Thought"
       }
     ],
     "activities": [
@@ -1112,7 +1173,8 @@
         "bullet": true,
         "content": [
           {
-            "name": "CSE 312: Statistics for CS"
+            "code": "CSE 312",
+            "name": "Statistics for CS"
           }
         ]
       },
@@ -1140,22 +1202,28 @@
     "name": "Winter 2018",
     "classes": [
       {
-        "name": "CSE 312: Statistics for CS"
+        "code": "CSE 312",
+        "name": "Statistics for CS"
       },
       {
-        "name": "CSE 332: Data Structures and Parallelism"
+        "code": "CSE 332",
+        "name": "Data Structures and Parallelism"
       },
       {
-        "name": "CSE 333: Systems Programming"
+        "code": "CSE 333",
+        "name": "Systems Programming"
       },
       {
-        "name": "CSE 344: Intro to Data Management"
+        "code": "CSE 344",
+        "name": "Intro to Data Management"
       },
       {
-        "name": "CSE 369: Intro to Digital Design"
+        "code": "CSE 369",
+        "name": "Intro to Digital Design"
       },
       {
-        "name": "CSE 390: Problem Solving with Programming"
+        "code": "CSE 390",
+        "name": "Problem Solving with Programming"
       }
     ],
     "activities": [
@@ -1197,19 +1265,24 @@
     "name": "Autumn 2017",
     "classes": [
       {
-        "name": "CHEM 237: Organic Chemistry I"
+        "code": "CHEM 237",
+        "name": "Organic Chemistry I"
       },
       {
-        "name": "CSE 311: Logic and Proofs"
+        "code": "CSE 311",
+        "name": "Logic and Proofs"
       },
       {
-        "name": "CSE 331: Software Design and Implementation"
+        "code": "CSE 331",
+        "name": "Software Design and Implementation"
       },
       {
-        "name": "CSE 351: Hardware/Software Interface"
+        "code": "CSE 351",
+        "name": "Hardware/Software Interface"
       },
       {
-        "name": "CSE 495: Vertically Integrated Project"
+        "code": "CSE 495",
+        "name": "Vertically Integrated Project"
       }
     ],
     "activities": [
@@ -1241,10 +1314,12 @@
     "name": "Summer 2017",
     "classes": [
       {
-        "name": "PHIL 120: Symbolic Logic"
+        "code": "PHIL 120",
+        "name": "Symbolic Logic"
       },
       {
-        "name": "ETEC 111: Soldering"
+        "code": "ETEC 111",
+        "name": "Soldering"
       }
     ],
     "activities": [
@@ -1278,10 +1353,12 @@
     "name": "Spring 2017",
     "classes": [
       {
-        "name": "ASL 123: American Sign Language III"
+        "code": "ASL 123",
+        "name": "American Sign Language III"
       },
       {
-        "name": "ENGR 215: Dynamics",
+        "code": "ENGR 215",
+        "name": "Dynamics",
         "project": [
           {
             "name": "Dynamics Modeling",
@@ -1297,13 +1374,16 @@
         }
       },
       {
-        "name": "HIST 106: African American History from 1945 to now"
+        "code": "HIST 106",
+        "name": "African American History from 1945 to now"
       },
       {
-        "name": "PE 117: Yoga Strength/Flexibility"
+        "code": "PE 117",
+        "name": "Yoga Strength/Flexibility"
       },
       {
-        "name": "PE 146: Karate - Beginner"
+        "code": "PE 146",
+        "name": "Karate - Beginner"
       }
     ],
     "activities": [
@@ -1332,19 +1412,24 @@
     "name": "Winter 2017",
     "classes": [
       {
-        "name": "ARAB 121: Arabic I"
+        "code": "ARAB 121",
+        "name": "Arabic I"
       },
       {
-        "name": "ASL 122: American Sign Language II"
+        "code": "ASL 122",
+        "name": "American Sign Language II"
       },
       {
-        "name": "CS 142: Java II"
+        "code": "CS 142",
+        "name": "Java II"
       },
       {
-        "name": "ENGR 204: Electrical Circuits"
+        "code": "ENGR 204",
+        "name": "Electrical Circuits"
       },
       {
-        "name": "ENGR 225: Mechanics of Materials"
+        "code": "ENGR 225",
+        "name": "Mechanics of Materials"
       }
     ]
   },
@@ -1352,19 +1437,23 @@
     "name": "Autumn 2016",
     "classes": [
       {
-        "name": "ASL 121: American Sign Language I"
+        "code": "ASL 121",
+        "name": "American Sign Language I"
       },
       {
-        "name": "ENGR 214: Statics",
+        "code": "ENGR 214",
+        "name": "Statics",
         "project": [{ "name": "Balsa Wood Bridges" }],
         "thumbnail": true,
         "description": "We won first and second place with our two bridges"
       },
       {
-        "name": "MATH 254: Multivariable Calculus"
+        "code": "MATH 254",
+        "name": "Multivariable Calculus"
       },
       {
-        "name": "PHYS 223: Physics III",
+        "code": "PHYS 223",
+        "name": "Physics III",
         "project": [
           {
             "name": "Sound and Glass",
@@ -1391,10 +1480,12 @@
     "name": "Summer 2016",
     "classes": [
       {
-        "name": "MATH 51: Linear Algebra and Differential Calculus of Several Variables"
+        "code": "MATH 51",
+        "name": "Linear Algebra and Differential Calculus of Several Variables"
       },
       {
-        "name": "CME 102: Ordinary Differential Equations for Engineers"
+        "code": "CME 102",
+        "name": "Ordinary Differential Equations for Engineers"
       }
     ]
   },
@@ -1402,10 +1493,12 @@
     "name": "Spring 2016",
     "classes": [
       {
-        "name": "CS 141: Java I"
+        "code": "CS 141",
+        "name": "Java I"
       },
       {
-        "name": "ENGR 224: Thermodynamics",
+        "code": "ENGR 224",
+        "name": "Thermodynamics",
         "project": [
           {
             "name": "Stirling Engine",
@@ -1416,7 +1509,8 @@
         ]
       },
       {
-        "name": "PHYS 222: Physics II",
+        "code": "PHYS 222",
+        "name": "Physics II",
         "project": [
           {
             "name": "Laser Pointers",
@@ -1437,13 +1531,16 @@
     "name": "Winter 2016",
     "classes": [
       {
-        "name": "ENGR 111: Engineering Modeling"
+        "code": "ENGR 111",
+        "name": "Engineering Modeling"
       },
       {
-        "name": "ENGR 231: Technical Writing"
+        "code": "ENGR 231",
+        "name": "Technical Writing"
       },
       {
-        "name": "PHYS 221: Physics I",
+        "code": "PHYS 221",
+        "name": "Physics I",
         "project": [
           {
             "name": "Friction",
@@ -1461,13 +1558,16 @@
     "name": "Autumn 2015",
     "classes": [
       {
-        "name": "CS 115: Visual Basic"
+        "code": "CS 115",
+        "name": "Visual Basic"
       },
       {
-        "name": "ENGL 101: English Composition"
+        "code": "ENGL 101",
+        "name": "English Composition"
       },
       {
-        "name": "HLTH 100: Contemporary Health"
+        "code": "HLTH 100",
+        "name": "Contemporary Health"
       }
     ]
   }

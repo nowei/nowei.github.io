@@ -78,7 +78,7 @@ function Timeline() {
   console.log(data);
 
   return (
-    <div>
+    <div style={{ width: "60%" }}>
       <header style={{ zIndex: "1000" }}>
         <h1>Timeline of activities</h1>
       </header>
