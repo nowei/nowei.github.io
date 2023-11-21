@@ -1,6 +1,7 @@
 import React from "react";
 
 const projects = require.context("../projects/docs/", true);
+const timelineImages = require.context("./imgs/", true);
 
 interface ActivityContent {
   code?: string;
@@ -48,9 +49,9 @@ function ClassComp(schoolClass: SchoolClass) {
             <b>{schoolClass.code}</b>: {schoolClass.name}
           </s>
         ) : (
-          <text>
+          <div>
             <b>{schoolClass.code}</b>: {schoolClass.name}
-          </text>
+          </div>
         )}
       </div>
       {schoolClass.project ? (
@@ -111,6 +112,25 @@ function ActivityComp(activity: Activity) {
   );
 }
 
+function Image(imagePath: string) {
+  console.log(imagePath);
+  return (
+    <div style={{}}>
+      <img
+        src={timelineImages(imagePath)}
+        style={{
+          display: "block",
+          width: "50%",
+          marginLeft: "auto",
+          marginRight: "auto",
+          marginTop: "24px",
+          marginBottom: "24px",
+        }}
+      />
+    </div>
+  );
+}
+
 export const QuarterGroup: React.FC<QuarterProps> = ({
   quarters,
 }: QuarterProps) => {
@@ -133,6 +153,11 @@ export const QuarterGroup: React.FC<QuarterProps> = ({
                 })}
               </div>
             ) : null}
+            {item.images
+              ? item.images.map((img) => {
+                  return Image(img);
+                })
+              : null}
           </div>
         );
       })}

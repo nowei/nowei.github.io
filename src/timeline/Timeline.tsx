@@ -7,10 +7,6 @@ function Timeline() {
   let y2023_2024: QuarterProps = {
     quarters: [data["aut2023"]],
   };
-  let quarters = [];
-  let q_temp = [];
-  console.log(data);
-  console.log("hi");
   let y2022_2023: QuarterProps = {
     quarters: [
       data["sum2023"],
@@ -75,7 +71,6 @@ function Timeline() {
       data["aut2015"],
     ],
   };
-  console.log(data);
 
   return (
     <div style={{ width: "60%" }}>
@@ -85,12 +80,9 @@ function Timeline() {
       <div id="cover"></div>
       <div className="container">
         <header>
-          <p style={{ padding: "12px" }}></p>
-          <br />
           <h1>
             <u>Adulting/Real-Worlding</u>
           </h1>
-          <br />
           <h2>2023 - Returning to Normal</h2>
         </header>
         <p style={{ padding: "12px" }}></p>
@@ -103,12 +95,9 @@ function Timeline() {
       </div>
       <div className="container">
         <header>
-          <p style={{ padding: "12px" }}></p>
-          <br />
           <h1>
             <u>Adulting/Real-Worlding</u>
           </h1>
-          <br />
           <h2>2021 - 2022 Pandemic Blues 2: Electric Boogaloo</h2>
         </header>
 
@@ -120,16 +109,14 @@ function Timeline() {
       </div>
       <div className="container">
         <header>
-          <p style={{ padding: "12px" }}></p>
-          <br />
           <h1>
             <u>University of Washington</u>
           </h1>
-          <br />
           <h2 id="masters">
             Master of Science in Computer Science and Engineering
           </h2>
         </header>
+        <p style={{ padding: "12px" }}></p>
         <section className="two">
           <div className="content">
             <div className="quarter-container">{QuarterGroup(y2020_2021)}</div>
@@ -143,14 +130,12 @@ function Timeline() {
       </div>
       <div className="container">
         <header>
-          <p style={{ padding: "12px" }}></p>
-          <br />
           <h1>
             <u>University of Washington</u>
           </h1>
-          <br />
           <h2>Bachelor of Science in Computer Engineering</h2>
         </header>
+        <p style={{ padding: "12px" }}></p>
         <section className="three">
           <div className="content">
             <div className="quarter-container">{QuarterGroup(y2018_2019)}</div>
@@ -164,12 +149,9 @@ function Timeline() {
       </div>
       <div className="container">
         <header>
-          <p style={{ padding: "12px" }}></p>
-          <br />
           <h1>
             <u>Edmonds Community College</u>
           </h1>
-          <br />
           <h2>
             Associate of Science in Mechanical Engineering and Computer
             Engineering
@@ -182,6 +164,7 @@ function Timeline() {
               while in high school) at Edmonds Community College and took AP
               classes on top of that.
             </p>
+            <p style={{ padding: "12px" }}></p>
             <div className="quarter-container">{QuarterGroup(y2016_2017)}</div>
             <p style={{ textAlign: "center", width: "80%", margin: "auto" }}>
               At the time I was also taking AP Euro and a physics class. I
@@ -189,6 +172,7 @@ function Timeline() {
             </p>
           </div>
         </section>
+        <p style={{ padding: "12px" }}></p>
         <section className="four">
           <div className="content">
             <div className="quarter-container">{QuarterGroup(y2015_2016)}</div>
@@ -206,6 +190,7 @@ function Timeline() {
             </p>
           </div>
         </section>
+        <p style={{ padding: "36px" }}></p>
       </div>
     </div>
   );

@@ -101,12 +101,7 @@
         ]
       }
     ],
-    "images": [
-      "/timeline/imgs/xpot.jpg",
-      "/timeline/imgs/2023lv1.jpg",
-      "/timeline/imgs/2023lv2.jpg",
-      "/timeline/imgs/2023zoo.jpg"
-    ]
+    "images": ["./xpot.jpg", "./2023lv1.jpg", "./2023lv2.jpg", "./2023zoo.jpg"]
   },
   "spr2023": {
     "name": "Spring 2023",
@@ -1063,7 +1058,7 @@
         ]
       }
     ],
-    "images": ["/timeline/imgs/BoxOrNoBox.jpg"]
+    "images": ["./BoxOrNoBox.jpg"]
   },
   "sum2018": {
     "name": "Summer 2018",
@@ -1259,7 +1254,7 @@
         ]
       }
     ],
-    "images": ["/timeline/imgs/nwhacks1.jpg", "/timeline/imgs/fruits.png"]
+    "images": ["./nwhacks1.jpg", "./fruits.png"]
   },
   "aut2017": {
     "name": "Autumn 2017",
@@ -1308,7 +1303,7 @@
         ]
       }
     ],
-    "images": ["/timeline/imgs/dubhacks.jpg"]
+    "images": ["./dubhacks.jpg"]
   },
   "sum2017": {
     "name": "Summer 2017",
@@ -1406,7 +1401,7 @@
         ]
       }
     ],
-    "images": ["/timeline/imgs/gear.jpg", "/timeline/imgs/dynamics.png"]
+    "images": ["./gear.jpg", "./dynamics.png"]
   },
   "win2017": {
     "name": "Winter 2017",
@@ -1469,11 +1464,11 @@
       }
     ],
     "images": [
-      "/timeline/imgs/bridge1.jpg",
-      "/timeline/imgs/bridge2.jpg",
-      "/timeline/imgs/bridge3.jpg",
-      "/timeline/imgs/glass.jpg",
-      "/timeline/imgs/waves.jpg"
+      "./bridge1.jpg",
+      "./bridge2.jpg",
+      "./bridge3.jpg",
+      "./glass.jpg",
+      "./waves.jpg"
     ]
   },
   "sum2016": {
@@ -1525,7 +1520,7 @@
         ]
       }
     ],
-    "images": ["/timeline/imgs/thermo2.png", "/timeline/imgs/magnets.JPG"]
+    "images": ["./thermo2.png", "./magnets.JPG"]
   },
   "win2016": {
     "name": "Winter 2016",
