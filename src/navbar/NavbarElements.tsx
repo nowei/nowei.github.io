@@ -16,7 +16,7 @@ export const Nav = styled.nav`
   top: 0;
   border-bottom: solid 1px var(--primary-color);
   opacity: 0.9;
-
+  overflow: visible;
   top: 0;
 `;
 

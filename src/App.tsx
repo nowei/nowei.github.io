@@ -17,7 +17,7 @@ import Timeline from "./timeline/Timeline";
 
 function App() {
   return (
-    <div className="MainIndex">
+    <div className="MainIndex" style={{ position: "relative" }}>
       <div style={{ paddingTop: "85px", width: "100%" }}></div>
       <Router>
         <Navbar />

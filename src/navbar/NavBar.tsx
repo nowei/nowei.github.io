@@ -1,14 +1,25 @@
 import React from "react";
+import { useState } from "react";
 import { Nav, NavLink, NavMenu } from "./NavbarElements";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBriefcase, faExternalLink } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import Resume from "../resume/WeiAndrew.pdf";
+import DropdownMenu from "./DropdownMenu";
 
 const Navbar = () => {
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const handleMouseEnter = () => {
+    setDropdownVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    setDropdownVisible(false);
+  };
+
   return (
     <>
-      <Nav>
+      <Nav style={{ padding: "auto" }}>
         <NavMenu>
           <NavLink to="/">
             <p>Home</p>
@@ -44,12 +55,24 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faExternalLink} />
             </p>
           </NavLink>
-          <NavLink to={Resume} target="_blank" rel="noopener noreferrer">
-            <p>
-              <FontAwesomeIcon icon={faBriefcase} /> Resume{" "}
-              <FontAwesomeIcon icon={faExternalLink} />
-            </p>
-          </NavLink>
+          <div
+            className="menu"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <NavLink
+              to={Resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ margin: "auto" }}
+            >
+              <p>
+                <FontAwesomeIcon icon={faBriefcase} /> Resume{" "}
+                <FontAwesomeIcon icon={faExternalLink} />
+              </p>
+            </NavLink>
+            {isDropdownVisible && <DropdownMenu />}
+          </div>
         </NavMenu>
       </Nav>
     </>
