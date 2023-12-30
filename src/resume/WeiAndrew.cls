@@ -254,7 +254,7 @@
             \hfill \textbf{Seattle, WA}
             \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{smiling-face-with-sunglasses}}{plain}{>>\tiny\space}}]
                 \textbf{Senior Software Engineer}{\IfEqCase{#1}{{notplain}{\footnotesize\space\footnotesize\emoji{sailboat}}{plain}{}}}
-                {\IfEqCase{#1}{{notplain}{\color{gray}\textit{Model Hosting Service}}{plain}{-- Model Hosting Service}}} \hfill 04/2023 - present
+                {\IfEqCase{#1}{{notplain}{\color{gray}\textit{Model Hosting Service}}{plain}{-- Model Hosting Service}}} \hfill 04/2023 - 01/2024
         \end{itemize}
         \begin{itemize}[labelindent=0.25em,labelsep=0.8em,leftmargin=*,itemsep=2px,topsep=2px]
             \item[---] Helped set up local dev environments for services with \underline{Tilt}; Improved dev QoL by making local env builds faster for faster iteration
