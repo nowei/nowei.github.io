@@ -6,7 +6,6 @@ import Navbar from "./navbar/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./home/Home";
 import WritingRouter from "./writing/Writing";
-import SweLife from "./writing/misc/swe-life";
 import AboutMe from "./about/About";
 import Timeline from "./timeline/Timeline";
 // style={{

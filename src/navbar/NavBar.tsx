@@ -42,7 +42,7 @@ const Navbar = () => {
           >
             <p>
               <FontAwesomeIcon icon={faGithub} /> GitHub{" "}
-              <FontAwesomeIcon icon={faExternalLink} />
+              <FontAwesomeIcon icon={faExternalLink} size="2xs" />
             </p>
           </NavLink>
           <NavLink
@@ -52,7 +52,7 @@ const Navbar = () => {
           >
             <p>
               <FontAwesomeIcon icon={faLinkedin} /> LinkedIn{" "}
-              <FontAwesomeIcon icon={faExternalLink} />
+              <FontAwesomeIcon icon={faExternalLink} size="2xs" />
             </p>
           </NavLink>
           <div
@@ -68,7 +68,7 @@ const Navbar = () => {
             >
               <p>
                 <FontAwesomeIcon icon={faBriefcase} /> Resume{" "}
-                <FontAwesomeIcon icon={faExternalLink} />
+                <FontAwesomeIcon icon={faExternalLink} size="2xs" />
               </p>
             </NavLink>
             {isDropdownVisible && <DropdownMenu />}

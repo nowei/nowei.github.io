@@ -3,9 +3,9 @@ import Blog20200328 from "./blogs/20200328";
 import Blog20220504 from "./blogs/20220504";
 import Blog20221229 from "./blogs/20221229";
 import Blog20231001 from "./blogs/20231001";
-import "./misc/swe-life";
 import Recommendations from "./Recommendations";
 import SweLife from "./misc/swe-life";
+import OnOffBoarding from "./misc/on-off-boarding";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 function WritingRouter() {
@@ -17,6 +17,10 @@ function WritingRouter() {
       <Route path="/writing/blogs/20220504" element={<Blog20220504 />} />
       <Route path="/writing/blogs/20200328" element={<Blog20200328 />} />
       <Route path="/writing/misc/swe-life" element={<SweLife />} />
+      <Route
+        path="/writing/misc/on-boarding-off-boarding"
+        element={<OnOffBoarding />}
+      />
       <Route path="/writing/recommendations" element={<Recommendations />} />
     </Routes>
   );

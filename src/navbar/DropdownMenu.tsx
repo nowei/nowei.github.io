@@ -22,7 +22,7 @@ const DropdownMenu = () => {
         style={{ margin: "auto" }}
       >
         <p>
-          1-C Resume <FontAwesomeIcon icon={faExternalLink} />
+          1-C Resume <FontAwesomeIcon icon={faExternalLink} size="2xs" />
         </p>
       </NavLink>
       <NavLink
@@ -32,7 +32,7 @@ const DropdownMenu = () => {
         style={{ margin: "auto" }}
       >
         <p>
-          Plain 1-C Resume <FontAwesomeIcon icon={faExternalLink} />
+          Plain 1-C Resume <FontAwesomeIcon icon={faExternalLink} size="2xs" />
         </p>
       </NavLink>
     </div>
