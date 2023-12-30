@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.2f6bc870.css",
-    "main.js": "/static/js/main.f1e10d44.js",
+    "main.js": "/static/js/main.fc88756e.js",
     "static/js/787.4c617d16.chunk.js": "/static/js/787.4c617d16.chunk.js",
     "static/media/parallel_computing_final.mp4": "/static/media/parallel_computing_final.201ab2644524cb9f0b3b.mp4",
     "static/media/547_video_stockbot.mp4": "/static/media/547_video_stockbot.6c6ee4068524a9222ee1.mp4",
@@ -43,8 +43,8 @@
     "static/media/CSE 599 B Final Project - Andrew Wei & Kushal Jhunjhunwalla.pdf": "/static/media/CSE 599 B Final Project - Andrew Wei & Kushal Jhunjhunwalla.4ef71e2e53156e8b4f61.pdf",
     "static/media/dubhacks.jpg": "/static/media/dubhacks.687b278c22bd7b32f574.jpg",
     "static/media/chicago-1.jpg": "/static/media/chicago-1.604bd6a21dae4cbdefbd.jpg",
-    "static/media/WeiAndrew1C.pdf": "/static/media/WeiAndrew1C.9b31a43c56a70f1a835b.pdf",
-    "static/media/WeiAndrew.pdf": "/static/media/WeiAndrew.3b07f90c4619f2763bca.pdf",
+    "static/media/WeiAndrew1C.pdf": "/static/media/WeiAndrew1C.a6c3cc17d50c0ffd3f5c.pdf",
+    "static/media/WeiAndrew.pdf": "/static/media/WeiAndrew.f119fe3709afb71af69f.pdf",
     "static/media/dell_roof.jpg": "/static/media/dell_roof.8293e6e8a6ad62415b65.jpg",
     "static/media/pike_at_night.jpg": "/static/media/pike_at_night.11b77259ebc11778d864.jpg",
     "static/media/glass.jpg": "/static/media/glass.7e2a54a52b944e07f161.jpg",
@@ -60,15 +60,15 @@
     "static/media/magic-man.jpg": "/static/media/magic-man.52a4babcd354fb634585.jpg",
     "static/media/thermo1.png": "/static/media/thermo1.f3e8be05ec06e0b13611.png",
     "static/media/gear2.JPG": "/static/media/gear2.e59ca34f927f4304c547.JPG",
-    "static/media/WeiAndrew1CPlain.pdf": "/static/media/WeiAndrew1CPlain.1f6edb42b0d82a0f5f63.pdf",
+    "static/media/WeiAndrew1CPlain.pdf": "/static/media/WeiAndrew1CPlain.f4f93ad6858271bddd9f.pdf",
     "static/media/moon-1.jpg": "/static/media/moon-1.93df0ef9e7073b533638.jpg",
     "index.html": "/index.html",
     "main.2f6bc870.css.map": "/static/css/main.2f6bc870.css.map",
-    "main.f1e10d44.js.map": "/static/js/main.f1e10d44.js.map",
+    "main.fc88756e.js.map": "/static/js/main.fc88756e.js.map",
     "787.4c617d16.chunk.js.map": "/static/js/787.4c617d16.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2f6bc870.css",
-    "static/js/main.f1e10d44.js"
+    "static/js/main.fc88756e.js"
   ]
 }
