@@ -5,7 +5,7 @@ function Hero() {
   let globe = "🌎";
   return (
     <div
-      className="page"
+      className="landingpage"
       style={{
         fontSize: "calc(10px + 2vmin)",
         marginTop: "-85px",
@@ -20,15 +20,15 @@ function Hero() {
 function AboutMe() {
   return (
     <div
-      className="page"
+      className="landingpage"
       style={{
         fontSize: "calc(10px + 2vmin)",
       }}
     >
       <div>
         <p>
-          I'm currently a Senior Software Engineer at OctoML and I'm located in
-          the greater Seattle area.
+          I'm currently a Senior Software Engineer at a solar energy company and
+          I'm located in the greater Seattle area.
         </p>
         <p>
           I received my MS in Computer Science & Engineering and BS in Computer
@@ -48,7 +48,7 @@ function AboutMe() {
 function Interests() {
   return (
     <div
-      className="page"
+      className="landingpage"
       style={{
         fontSize: "calc(10px + 2vmin)",
       }}
@@ -68,6 +68,8 @@ function Interests() {
             <li>Inclusion/Diversity</li>
             <li>Volunteering</li>
             <li>Accessibility</li>
+            <li>Public Transportation</li>
+            <li>Sustainability</li>
           </ul>
           <h3>Hobbies</h3>
           <ul>
@@ -85,7 +87,7 @@ function Interests() {
 function ContactInfo() {
   return (
     <div
-      className="page"
+      className="landingpage"
       style={{
         fontSize: "calc(10px + 2vmin)",
       }}

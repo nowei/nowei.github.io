@@ -28,7 +28,7 @@ function WritingRouter() {
 
 function Writing() {
   return (
-    <div className="page" style={{ top: 0 }}>
+    <div style={{ top: 0 }}>
       <h1>Blog</h1>
       <h2>Reflection is good, I guess</h2>
       <p>
