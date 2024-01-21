@@ -12,7 +12,7 @@ function Hero() {
       }}
     >
       <p>👋 Hello World! {globe}</p>
-      <p>🚀 My name is Andrew Wei 😎</p>
+      <p>🚀 My name is Andrew 😎</p>
     </div>
   );
 }

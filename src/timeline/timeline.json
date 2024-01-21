@@ -1,4 +1,45 @@
 {
+  "win2024": {
+    "name": "Winter 2024",
+    "activities": [
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "TEALS",
+            "description": "Still teaching Python to kiddos in Eastern Washington."
+          },
+          {
+            "name": "Abbey Arts for MLK Jr. Day",
+            "description": "Worked with some people from the Washington Conservation Corp to help clean up a church turned performing arts center."
+          }
+        ]
+      },
+      {
+        "name": "Work",
+        "content": [
+          {
+            "name": "Left OctoML (now known as OctoAI(!))",
+            "description": "Everyone was cool, but I got a little tired of the work. People were nice, but I figured that I needed to explore and do other things."
+          },
+          {
+            "name": "Joined a residential solar energy company",
+            "description": "Joined a scrappy `start-up in a real company` vibe team working to reduce friction in the funnel for residential solar adoption by automating processes."
+          }
+        ]
+      },
+      {
+        "name": "Traveling",
+        "content": [
+          {
+            "name": "Las Vegas",
+            "description": "Went for family and food, the Cut was good 😎"
+          }
+        ]
+      }
+    ]
+  },
   "aut2023": {
     "name": "Autumn 2023",
     "activities": [
@@ -31,6 +72,24 @@
         "content": [
           {
             "name": "Taylor Tomlinson @ The Paramount"
+          }
+        ]
+      },
+      {
+        "name": "Traveling",
+        "content": [
+          {
+            "name": "Taiwan",
+            "description": "Went for food, saw some family"
+          }
+        ]
+      },
+      {
+        "name": "Misc",
+        "content": [
+          {
+            "name": "Gym",
+            "description": "Started going to the gym 💪"
           }
         ]
       }

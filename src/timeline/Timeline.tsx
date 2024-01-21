@@ -5,7 +5,7 @@ import timelineJson from "./timeline.json";
 function Timeline() {
   let data: { [id: string]: Quarter } = timelineJson;
   let y2023_2024: QuarterProps = {
-    quarters: [data["aut2023"]],
+    quarters: [data["win2024"], data["aut2023"]],
   };
   let y2022_2023: QuarterProps = {
     quarters: [
@@ -83,7 +83,7 @@ function Timeline() {
           <h1>
             <u>Adulting/Real-Worlding</u>
           </h1>
-          <h2>2023 - Returning to Normal</h2>
+          <h2>2023 - 2024; Returning to Normal, Nature is Healing</h2>
         </header>
         <p style={{ padding: "12px" }}></p>
         <div className="content" style={{ maxHeight: "100%" }}>
@@ -98,7 +98,7 @@ function Timeline() {
           <h1>
             <u>Adulting/Real-Worlding</u>
           </h1>
-          <h2>2021 - 2022 Pandemic Blues 2: Electric Boogaloo</h2>
+          <h2>2021 - 2022; Pandemic Blues 2: Electric Boogaloo</h2>
         </header>
 
         <p style={{ padding: "12px" }}></p>
