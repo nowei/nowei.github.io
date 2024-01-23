@@ -47,6 +47,10 @@ html {
   color: white;
 }
 
+body {
+  overflow-y: scroll;
+}
+
 a {
   color: #03a2ff;
 }

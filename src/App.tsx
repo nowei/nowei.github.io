@@ -15,14 +15,12 @@ import Timeline from "./timeline/Timeline";
 // }}
 
 function App() {
-  const [navbarHeight, setNavbarHeight] = useState(0);
   const ref = useRef({ current: { clientHeight: 0 } });
-  let nav = <Navbar />;
   return (
     <div className="MainIndex" style={{ position: "relative" }}>
       <div style={{ paddingTop: "85px", width: "100%" }}></div>
       <Router>
-        {nav}
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutMe />} />

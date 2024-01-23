@@ -54,7 +54,12 @@ function Writing() {
       <h1>Misc. writing</h1>
       <p>
         <Link to={"./misc/swe-life"}>
-          Stuff I learned as a Software Engineersd
+          Stuff I learned as a Software Engineer
+        </Link>
+      </p>
+      <p>
+        <Link to={"./misc/on-boarding-off-boarding"}>
+          What to do when it's time to go
         </Link>
       </p>
       <h2>What do you watch/listen to</h2>
