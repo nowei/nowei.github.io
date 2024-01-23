@@ -2,7 +2,7 @@ import React from "react";
 
 function SweLife() {
   return (
-    <div>
+    <div style={{ width: "80%" }}>
       <h1>Things I learned as a Software Engineer</h1>
 
       <p style={{ textAlign: "center" }}>
