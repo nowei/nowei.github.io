@@ -23,6 +23,18 @@
   margin: auto;
 }
 
+.blogpage {
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.centeredimage {
+  margin: auto;
+  display: block;
+}
+
 .left {
   width: 100%;
 }

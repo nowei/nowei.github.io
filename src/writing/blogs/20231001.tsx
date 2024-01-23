@@ -2,7 +2,7 @@ import React from "react";
 
 function Blog20231001() {
   return (
-    <div>
+    <div className="blogpage">
       <h1>10/1/2023: On Time and Moving On</h1>
       <hr />
       <h2>It's 1:12 AM.</h2>

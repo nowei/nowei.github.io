@@ -8,7 +8,7 @@ import boba from "./imgs/20200328/boba.jpg";
 
 function Blog20200328() {
   return (
-    <div>
+    <div className="blogpage">
       <h1>3/28/2020: A new beginning</h1>
       <hr />
       <h2>It's currently 4:16 AM.</h2>
@@ -36,7 +36,8 @@ function Blog20200328() {
       <hr />
       <img
         src={kaohsiung}
-        style={{ width: "80%", height: "auto" }}
+        className="centeredimage"
+        style={{ width: "60%", height: "auto" }}
         alt="a picture of a kaohsiung street at night"
       />
       <h2>Summer</h2>
@@ -67,7 +68,8 @@ function Blog20200328() {
       </p>
       <img
         src={boba}
-        style={{ width: "50%", height: "auto" }}
+        className="centeredimage"
+        style={{ width: "30%", height: "auto" }}
         alt="a large pitcher of boba"
       />
       <p>
@@ -119,7 +121,11 @@ function Blog20200328() {
       <hr />
       <img
         src={gradUw}
-        style={{ width: "50%", height: "auto" }}
+        className="centeredimage"
+        style={{
+          width: "30%",
+          height: "auto",
+        }}
         alt="picture of uw, raining"
       />
       <h2>Grad school</h2>
@@ -140,6 +146,7 @@ function Blog20200328() {
       </p>
       <img
         src={dellRoof}
+        className="centeredimage"
         style={{ width: "80%", height: "auto" }}
         alt="a picture of rooftop in Seattle"
       />
@@ -154,6 +161,7 @@ function Blog20200328() {
       </p>
       <img
         src={dlWorth}
+        className="centeredimage"
         style={{ width: "50%", height: "auto" }}
         alt="a picture of cats on top of colab"
       />
@@ -201,7 +209,12 @@ function Blog20200328() {
         could say that UW will be competiting against other online universities
         like the University of Phoenix.
       </p>
-      <img src={aMood} alt="a picture of rooftop in Seattle" />
+      <img
+        src={aMood}
+        className="centeredimage"
+        style={{ width: "50%" }}
+        alt="a picture of rooftop in Seattle"
+      />
       <p>
         &nbsp;&nbsp;&nbsp;&nbsp;Lastly, I think I spend too much time on cs
         things and probably too much time with cs people. I don't think it's

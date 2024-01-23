@@ -13,7 +13,7 @@ import work2 from "./imgs/20220504/work-2.jpg";
 
 function Blog20220504() {
   return (
-    <div>
+    <div className="blogpage">
       <h1>5/4/2022: As good a time as any</h1>
       <hr />
       <h2>It's 10:36 PM.</h2>
@@ -85,7 +85,11 @@ function Blog20220504() {
         thing goes for people who work while going to school, have multiple
         jobs, or like volunteer after work.
       </p>
-      <img src={moon} style={{ width: "50%", height: "auto" }} />
+      <img
+        src={moon}
+        className="centeredimage"
+        style={{ width: "30%", height: "auto" }}
+      />
       <p>
         &nbsp;&nbsp;&nbsp;&nbsp;TAing came at a cost though. This often cut into
         time for my own work, especially work on group projects and research,
@@ -134,7 +138,11 @@ function Blog20220504() {
         curiosity. I aspire to be big-brain in one aspect or another one day,
         but how that might happen is kind of blurry.
       </p>
-      <img src={magicMan} style={{ width: "50%", height: "auto" }} />
+      <img
+        src={magicMan}
+        className="centeredimage"
+        style={{ width: "50%", height: "auto" }}
+      />
       <p>
         &nbsp;&nbsp;&nbsp;&nbsp;I'm out of school now. Working feels like
         there's more free time after work, but I think work takes more time than
@@ -162,7 +170,11 @@ function Blog20220504() {
         for us anyways?
       </p>
       <hr />
-      <img src={pierAtNight} style={{ width: "80%", height: "auto" }} />
+      <img
+        src={pierAtNight}
+        className="centeredimage"
+        style={{ width: "80%", height: "auto" }}
+      />
       <h2>Time passes and eventually so do we.</h2>
       <p>
         &nbsp;&nbsp;&nbsp;&nbsp;I find myself spending more and more time
@@ -207,7 +219,11 @@ function Blog20220504() {
         those old people that were like, "Back in the day, I could buy a bottle
         of coke for a nickel!" and I guess I have a taste of how it feels now.
       </p>
-      <img src={chicago2} style={{ width: "50%", height: "auto" }} />
+      <img
+        src={chicago2}
+        className="centeredimage"
+        style={{ width: "30%", height: "auto" }}
+      />
       <p>
         &nbsp;&nbsp;&nbsp;&nbsp;Another example of this is how my dad says that
         back when he was in college, he would be able to afford an entire year
@@ -220,36 +236,40 @@ function Blog20220504() {
         internships. It's possible that the quality of education changed, but I
         don't think it's changed so much that it justifies the price increase.
         At the University of Washington, the cost of tuition right now for a
-        quarter (2021-2022) is around
+        quarter (2021-2022) is around{" "}
         <a href="https://www.washington.edu/opb/tuition-fees/current-tuition-and-fees-dashboards/detailed-tuition-dashboard/">
           $4,026
-        </a>
-        for in-state students and back in 1971, it was around
+        </a>{" "}
+        for in-state students and back in 1971, it was around{" "}
         <a href="https://www.washington.edu/students/gencat/archive/GenCat1972-74v1.pdf#page=24">
           $165
-        </a>
+        </a>{" "}
         a quarter for in-state students. Adjusted for inflation, this would be
-        around
+        around{" "}
         <a href="https://www.bls.gov/data/inflation_calculator.htm">
           $1,198.57
         </a>
         . This is around a x4 increase, which is kind of insane since I don't
         think the quality of education has improved by x4.
       </p>
-      <img src={chicago1} style={{ width: "50%", height: "auto" }} />
+      <img
+        src={chicago1}
+        className="centeredimage"
+        style={{ width: "30%", height: "auto" }}
+      />
       <p>
         &nbsp;&nbsp;&nbsp;&nbsp;The fight for a $15 minimum wage started in 2012
-        and it's still not really a thing. Minimum wage back in 1970 was around
+        and it's still not really a thing. Minimum wage back in 1970 was around{" "}
         <a href="https://www.dol.gov/agencies/whd/minimum-wage/history#:~:text=The%20minimum%20wage%20went%20to,farm%20workers%20stopped%20at%20%241.30.">
           $1.45
         </a>
         . Adjusted for inflation, this would be around $11.09. The federal
-        minimum wage is currently
+        minimum wage is currently{" "}
         <a href="https://ogletree.com/insights/minimum-wage-increases-in-2022-a-chart-of-upcoming-changes-and-interactive-map/#:~:text=In%202022%2C%20while%20the%20federal,minimum%20wage%20rates%20will%20increase.">
           $7.25
-        </a>
+        </a>{" "}
         per hour. One dollar back then is worth $7.65 today. Median rent in 1970
-        was
+        was{" "}
         <a href="https://ipropertymanagement.com/research/average-rent-by-year">
           $108
         </a>
@@ -259,32 +279,40 @@ function Blog20220504() {
         surprise to learn that people are hurting and unable to survive in
         today's environment.
       </p>
-      <img src={pikeAtNight} style={{ width: "50%", height: "auto" }} />
+      <img
+        src={pikeAtNight}
+        className="centeredimage"
+        style={{ width: "30%", height: "auto" }}
+      />
       <p>
-        &nbsp;&nbsp;&nbsp;&nbsp;The
+        &nbsp;&nbsp;&nbsp;&nbsp;The{" "}
         <a href="https://en.wikipedia.org/wiki/Fair_Labor_Standards_Act_of_1938">
           40-hour work week started in 1938
         </a>
-        . Some
+        . Some{" "}
         <a href="https://buildremote.co/four-day-week/4-day-work-week-companies/">
           companies
-        </a>
-        and
+        </a>{" "}
+        and{" "}
         <a href="https://www.euronews.com/next/2022/04/04/the-four-day-week-which-countries-have-embraced-it-and-how-s-it-going-so-far">
           countries
-        </a>
+        </a>{" "}
         have experimented with or proposed 32-hour workweeks/4-10 hour
-        workweeks. I remember seeing
+        workweeks. I remember seeing{" "}
         <a href="https://www.npr.org/2019/11/04/776163853/microsoft-japan-says-4-day-workweek-boosted-workers-productivity-by-40">
           this article on the impacts of a 4-day workweek in Microsoft Japan
-        </a>
+        </a>{" "}
         back in 2019. It seems like labor practices in many places around the
         world are more favorable to workers than the United States. Many places
         in the world seem to more favorable to live in in general than the
         United States, with healthcare that isn't tied to employment and better
         transportation services, at perhaps the cost of reduced wages.
       </p>
-      <img src={work2} style={{ width: "50%", height: "auto" }} />
+      <img
+        src={work2}
+        className="centeredimage"
+        style={{ width: "50%", height: "auto" }}
+      />
       <h2>I don't believe that we were born into this world to work.</h2>
       <p>
         &nbsp;&nbsp;&nbsp;&nbsp;We decide how we spend our time with the choices

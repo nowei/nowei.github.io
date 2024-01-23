@@ -32,24 +32,22 @@ function Writing() {
       <h1>Blog</h1>
       <h2>Reflection is good, I guess</h2>
       <p>
-        <a className="links" href={"./writing/blogs/20231001"}>
+        <Link to={"./writing/blogs/20231001"}>
           10/1/2023: On Time and Moving On
-        </a>
+        </Link>
       </p>
       <p>
-        <a className="links" href="./writing/blogs/20221229">
+        <Link to={"./writing/blogs/20221229"}>
           12/29/2022 + 6/18/2023: Why do we do things?
-        </a>
+        </Link>
       </p>
       <p>
-        <a className="links" href="./writing/blogs/20220504">
+        <Link to={"./writing/blogs/20220504"}>
           5/4/2022: As good a time as any
-        </a>
+        </Link>
       </p>
       <p>
-        <a className="links" href="./writing/blogs/20200328">
-          3/28/2020: A new beginning
-        </a>
+        <Link to={"./writing/blogs/20200328"}>3/28/2020: A new beginning</Link>
       </p>
       <h1>Misc. writing</h1>
       <p>
@@ -64,10 +62,7 @@ function Writing() {
       </p>
       <h2>What do you watch/listen to</h2>
       <p>
-        <a className="links" href="./writing/recommendations">
-          {" "}
-          Recommendations
-        </a>
+        <Link to={"./writing/recommendations"}>Recommendations</Link>
       </p>
       <div style={{ padding: "10%" }}></div>
     </div>
