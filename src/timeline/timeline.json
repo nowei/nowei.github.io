@@ -1,4 +1,80 @@
 {
+  "sum2024": {
+    "name": "Summer 2024",
+    "activities": [
+      {
+        "name": "Conventions Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Anime Expo 2024"
+          }
+        ]
+      },
+      {
+        "name": "Concerts Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Day In Day Out, 2024"
+          }
+        ]
+      },
+      {
+        "name": "Events Attended",
+        "content": [{ "name": "Friend's wedding" }]
+      },
+      {
+        "name": "Traveling",
+        "content": [
+          {
+            "name": "Bahamas"
+          }
+        ]
+      }
+    ]
+  },
+  "spr2024": {
+    "name": "Spring 2024",
+    "activities": [
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "UW Better Together Service Days with BECU",
+            "description": "Reported some graffiti and stuff on street signs and random trash around UW"
+          },
+          {
+            "name": "Huskies@Work",
+            "description": "Some misc. mentoring things"
+          }
+        ]
+      },
+      {
+        "name": "Traveling",
+        "content": [
+          {
+            "name": "Japan",
+            "description": "Got to see some Wisteria flowers! Visited Kyoto, Osaka (USJ + Aquarium), Tokyo, and Mito!"
+          },
+          {
+            "name": "Alaska",
+            "description": "Saw the state capital!"
+          }
+        ]
+      },
+      {
+        "name": "Comedy Shows Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Sheng Wang @ Moore Theatre"
+          }
+        ]
+      }
+    ]
+  },
   "win2024": {
     "name": "Winter 2024",
     "activities": [

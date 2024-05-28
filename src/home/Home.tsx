@@ -1,7 +1,77 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
+function parseTime(t: string): [number, number, string] {
+  const timeHalfSplit = t.split(" ");
+  const halfSplit = timeHalfSplit[1];
+  const timeSplit = timeHalfSplit[0].split(":");
+  const hour = parseInt(timeSplit[0]);
+  const minute = parseInt(timeSplit[1]);
+  let key: [number, number, string] = [hour, minute, halfSplit];
+  return key;
+}
+
+function CurrTime() {
+  const [time, setTime] = useState(new Date());
+
+  const emojiMap = new Map<string, string>([
+    [JSON.stringify([1, false]), "🕐"],
+    [JSON.stringify([1, true]), "🕜"],
+    [JSON.stringify([2, false]), "🕑"],
+    [JSON.stringify([2, true]), "🕝"],
+    [JSON.stringify([3, false]), "🕒"],
+    [JSON.stringify([3, true]), "🕞"],
+    [JSON.stringify([4, false]), "🕓"],
+    [JSON.stringify([4, true]), "🕟"],
+    [JSON.stringify([5, false]), "🕔"],
+    [JSON.stringify([5, true]), "🕠"],
+    [JSON.stringify([6, false]), "🕕"],
+    [JSON.stringify([6, true]), "🕡"],
+    [JSON.stringify([7, false]), "🕖"],
+    [JSON.stringify([7, true]), "🕢"],
+    [JSON.stringify([8, false]), "🕗"],
+    [JSON.stringify([8, true]), "🕣"],
+    [JSON.stringify([9, false]), "🕘"],
+    [JSON.stringify([9, true]), "🕤"],
+    [JSON.stringify([10, false]), "🕙"],
+    [JSON.stringify([10, true]), "🕥"],
+    [JSON.stringify([11, false]), "🕚"],
+    [JSON.stringify([11, true]), "🕦"],
+    [JSON.stringify([12, false]), "🕛"],
+    [JSON.stringify([12, true]), "🕧"],
+  ]);
+
+  const initTimeKey = parseTime(time.toLocaleTimeString());
+  let [timeKey, setTimeKey] = useState(initTimeKey);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(new Date());
+
+      let timeKey = parseTime(time.toLocaleTimeString());
+      setTimeKey(timeKey);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [time]);
+  let emoji =
+    emojiMap.get(JSON.stringify([timeKey[0], timeKey[1] >= 30])) || "";
+  return (
+    <>
+      <p>
+        It is currently {time.toLocaleTimeString()} {emoji}
+        {((timeKey[2] === "PM" && timeKey[0] >= 9 && timeKey[0] < 12) ||
+          (timeKey[2] === "AM" && timeKey[0] <= 6)) && (
+          <> \/\/ It's time to sleep! 😴</>
+        )}
+        {((timeKey[2] === "AM" && timeKey[0] >= 11) ||
+          (timeKey[2] === "PM" && (timeKey[0] === 12 || timeKey[0] <= 2))) && (
+          <> \/\/ It's time for lunch! 🥪</>
+        )}
+      </p>
+    </>
+  );
+}
 
 function Hero() {
-  // TODO: Use the right globe
   let globe = "🌎";
   return (
     <div
@@ -11,8 +81,8 @@ function Hero() {
         marginTop: "-85px",
       }}
     >
-      <p>👋 Hello World! {globe}</p>
-      <p>🚀 My name is Andrew 😎</p>
+      <p>👋 Hello World! {globe} \/\/ 🚀 My name is Andrew Wei 😎</p>
+      <CurrTime />
     </div>
   );
 }
@@ -27,8 +97,17 @@ function AboutMe() {
     >
       <div>
         <p>
-          I'm currently a Senior Software Engineer at a solar energy company and
-          I'm located in the greater Seattle area.
+          I grew up in Washington and I like to spend my time volunteering,
+          going to the gym, and eating food 😋
+        </p>
+        <p>
+          I'm currently a Staff Software Engineer working remotely at a
+          residential solar energy company and I'm located in the greater
+          Seattle area.
+        </p>
+        <p>
+          Before that, I worked at a start-up called OctoML (now called OctoAI!)
+          where I was a senior software engineer.
         </p>
         <p>
           I received my MS in Computer Science & Engineering and BS in Computer

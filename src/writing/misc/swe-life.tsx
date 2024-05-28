@@ -5,10 +5,74 @@ function SweLife() {
     <div style={{ width: "80%" }}>
       <h1>Things I learned as a Software Engineer</h1>
 
-      <p style={{ textAlign: "center" }}>
+      <h2 style={{ textAlign: "center" }}>
+        Stuff I learned as a Software Engineer (at a larger company in a
+        start-up-ish team)
+      </h2>
+      <h3>Year 3</h3>
+      <ul>
+        <li>
+          There's a tradeoff between best-practices and shipping things; ideally
+          teams find the right balance so that they can ship things confidently
+          and there are less techincal silos. Make things easier for other
+          people to pick up in case other people need to work on things.
+        </li>
+        <li>
+          Everyone has different experiences and different companies operate at
+          different levels according to their culture
+        </li>
+        <li>
+          Depending on the business, the technology serves the business vs. the
+          technology is the business. When technology serves the business, try
+          to focus on things that will make a business impact as fast as
+          possible. A business starts to die when things are slow and business
+          needs are not met.
+        </li>
+        <li>
+          Jumping around and helping coworkers is fine, but remember to focus on
+          your main tasks/projects.
+        </li>
+        <li>
+          "Thou shalt get side-tracked by bullshit every time" - while watching
+          Fallout
+        </li>
+      </ul>
+
+      <h2 style={{ textAlign: "center" }}>
         I've been working for a while. Stuff I learned as a Software Engineer
         (at a Startup)
-      </p>
+      </h2>
+      <h3>Year 3</h3>
+      <ul>
+        <li>
+          Everyone eventually leaves, even if it's comfortable, even if the
+          people you work with are great and cool, try to figure out why you
+          would leave and what you're trying to accomplish
+        </li>
+        <li>
+          You should try to avoid technical silos because it feels like the work
+          is done in isolation and that makes it harder to see impact and is
+          risky in terms of bus-factor
+        </li>
+        <li>
+          You are generally contractually obligated to work 40 hours a week. If
+          you work more than 40 hours in a week, you should let people know and
+          try to avoid it. This is partly due to burnout reasons and the fact
+          that working more than 40 hours diminishes your $/hour returns.
+        </li>
+        <li>
+          When choosing what work to prioritize, generally prioritize the work
+          that would unblock the most people in the least amount of time.
+        </li>
+        <li>
+          Glue work is very important for keeping things running and it's
+          usually not the coolest thing around, but it's generally appreciated
+        </li>
+        <li>
+          Being flexible is nice, but if there's something that you want to work
+          on, try to do that to see if you like it or not.
+        </li>
+      </ul>
 
       <h3>Year 2</h3>
       <ul>
