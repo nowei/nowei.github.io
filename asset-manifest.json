@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7f7bc498.css",
-    "main.js": "/static/js/main.d10cff49.js",
+    "main.js": "/static/js/main.5429be80.js",
     "static/js/787.4c617d16.chunk.js": "/static/js/787.4c617d16.chunk.js",
     "static/media/parallel_computing_final.mp4": "/static/media/parallel_computing_final.201ab2644524cb9f0b3b.mp4",
     "static/media/547_video_stockbot.mp4": "/static/media/547_video_stockbot.6c6ee4068524a9222ee1.mp4",
@@ -64,11 +64,11 @@
     "static/media/moon-1.jpg": "/static/media/moon-1.93df0ef9e7073b533638.jpg",
     "index.html": "/index.html",
     "main.7f7bc498.css.map": "/static/css/main.7f7bc498.css.map",
-    "main.d10cff49.js.map": "/static/js/main.d10cff49.js.map",
+    "main.5429be80.js.map": "/static/js/main.5429be80.js.map",
     "787.4c617d16.chunk.js.map": "/static/js/787.4c617d16.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7f7bc498.css",
-    "static/js/main.d10cff49.js"
+    "static/js/main.5429be80.js"
   ]
 }
