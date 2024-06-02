@@ -60,11 +60,11 @@ function CurrTime() {
         It is currently {time.toLocaleTimeString()} {emoji}
         {((timeKey[2] === "PM" && timeKey[0] >= 9 && timeKey[0] < 12) ||
           (timeKey[2] === "AM" && timeKey[0] <= 6)) && (
-          <> \/\/ It's time to sleep! 😴</>
+          <span style={{ color: "green" }}> // It's time to sleep! 😴</span>
         )}
         {((timeKey[2] === "AM" && timeKey[0] >= 11) ||
           (timeKey[2] === "PM" && (timeKey[0] === 12 || timeKey[0] <= 2))) && (
-          <> \/\/ It's time for lunch! 🥪</>
+          <span style={{ color: "green" }}> // It's time for lunch! 🥪</span>
         )}
       </p>
     </>
@@ -81,7 +81,10 @@ function Hero() {
         marginTop: "-85px",
       }}
     >
-      <p>👋 Hello World! {globe} \/\/ 🚀 My name is Andrew Wei 😎</p>
+      <p>
+        👋 Hello World! {globe}{" "}
+        <span style={{ color: "green" }}>// 🚀 My name is Andrew Wei 😎</span>
+      </p>
       <CurrTime />
     </div>
   );

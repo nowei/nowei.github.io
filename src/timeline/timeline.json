@@ -73,6 +73,12 @@
           }
         ]
       }
+    ],
+    "images": [
+      "./wisteria.jpg",
+      "./tokyotower.jpg",
+      "./kyoto.jpg",
+      "./tori.jpg"
     ]
   },
   "win2024": {
@@ -114,7 +120,8 @@
           }
         ]
       }
-    ]
+    ],
+    "images": ["./fremont2024.jpg", "./vegas2023.jpg"]
   },
   "aut2023": {
     "name": "Autumn 2023",
@@ -169,7 +176,8 @@
           }
         ]
       }
-    ]
+    ],
+    "images": ["./taiwan2023.jpg"]
   },
   "sum2023": {
     "name": "Summer 2023",
