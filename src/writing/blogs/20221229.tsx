@@ -76,10 +76,10 @@ function Blog20221229() {
           style={{ borderRadius: "12px" }}
           src="https://open.spotify.com/embed/track/6iOQIQleZKnvWbPu9LZLnY?utm_source=generator&theme=0"
           width="100%"
-          height="352"
+          height="236"
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
-        ></iframe>
+        />
       </p>
 
       <p>
