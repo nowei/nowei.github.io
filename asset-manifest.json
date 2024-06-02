@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7f7bc498.css",
-    "main.js": "/static/js/main.5429be80.js",
+    "main.js": "/static/js/main.315f7e12.js",
     "static/js/787.4c617d16.chunk.js": "/static/js/787.4c617d16.chunk.js",
     "static/media/parallel_computing_final.mp4": "/static/media/parallel_computing_final.201ab2644524cb9f0b3b.mp4",
     "static/media/547_video_stockbot.mp4": "/static/media/547_video_stockbot.6c6ee4068524a9222ee1.mp4",
@@ -35,6 +35,8 @@
     "static/media/work-2.jpg": "/static/media/work-2.802fa230c799ae68e9ac.jpg",
     "static/media/leukemia_final.pdf": "/static/media/leukemia_final.4428a3e9f7f2d274ce8d.pdf",
     "static/media/xpot.jpg": "/static/media/xpot.2d3c4d43bd2e74fe19dd.jpg",
+    "static/media/wisteria.jpg": "/static/media/wisteria.5c075ce817281e0bcff5.jpg",
+    "static/media/kyoto.jpg": "/static/media/kyoto.c9cb8ddb910229d252f8.jpg",
     "static/media/Poor_Man_s_GPT_3.pdf": "/static/media/Poor_Man_s_GPT_3.14c627c75f5170d3d986.pdf",
     "static/media/boba.jpg": "/static/media/boba.054278e13834f564cbeb.jpg",
     "static/media/chicago-2.jpg": "/static/media/chicago-2.9965e5cc2bd3f1eaa9ef.jpg",
@@ -45,9 +47,14 @@
     "static/media/chicago-1.jpg": "/static/media/chicago-1.604bd6a21dae4cbdefbd.jpg",
     "static/media/WeiAndrew1C.pdf": "/static/media/WeiAndrew1C.a6c3cc17d50c0ffd3f5c.pdf",
     "static/media/WeiAndrew.pdf": "/static/media/WeiAndrew.f119fe3709afb71af69f.pdf",
+    "static/media/taiwan2023.jpg": "/static/media/taiwan2023.b364673a66229282b4e4.jpg",
+    "static/media/fremont2024.jpg": "/static/media/fremont2024.18ef05c1d8b771b3c28b.jpg",
     "static/media/dell_roof.jpg": "/static/media/dell_roof.8293e6e8a6ad62415b65.jpg",
     "static/media/pike_at_night.jpg": "/static/media/pike_at_night.11b77259ebc11778d864.jpg",
+    "static/media/tori.jpg": "/static/media/tori.c2014463f29bfd073717.jpg",
+    "static/media/tokyotower.jpg": "/static/media/tokyotower.ceeb5577b03c54cc82c7.jpg",
     "static/media/glass.jpg": "/static/media/glass.7e2a54a52b944e07f161.jpg",
+    "static/media/vegas2023.jpg": "/static/media/vegas2023.a27e9ebc0100be1535bd.jpg",
     "static/media/thermo0.png": "/static/media/thermo0.3faf62186b5507ccee3d.png",
     "static/media/Robust_ML_Final_Project.pdf": "/static/media/Robust_ML_Final_Project.750cb834ad55d727dc46.pdf",
     "static/media/nwhacks1.jpg": "/static/media/nwhacks1.ff9695bfaff8a23e9687.jpg",
@@ -63,12 +70,18 @@
     "static/media/WeiAndrew1CPlain.pdf": "/static/media/WeiAndrew1CPlain.f4f93ad6858271bddd9f.pdf",
     "static/media/moon-1.jpg": "/static/media/moon-1.93df0ef9e7073b533638.jpg",
     "index.html": "/index.html",
+    "static/media/kyoto.jpg:Zone.Identifier": "/static/media/kyoto.jpg:Zone.31d6cfe0d16ae931b73c.Identifier",
+    "static/media/taiwan2023.jpg:Zone.Identifier": "/static/media/taiwan2023.jpg:Zone.31d6cfe0d16ae931b73c.Identifier",
+    "static/media/tokyotower.jpg:Zone.Identifier": "/static/media/tokyotower.jpg:Zone.31d6cfe0d16ae931b73c.Identifier",
+    "static/media/tori.jpg:Zone.Identifier": "/static/media/tori.jpg:Zone.31d6cfe0d16ae931b73c.Identifier",
+    "static/media/vegas2023.jpg:Zone.Identifier": "/static/media/vegas2023.jpg:Zone.31d6cfe0d16ae931b73c.Identifier",
+    "static/media/wisteria.jpg:Zone.Identifier": "/static/media/wisteria.jpg:Zone.31d6cfe0d16ae931b73c.Identifier",
     "main.7f7bc498.css.map": "/static/css/main.7f7bc498.css.map",
-    "main.5429be80.js.map": "/static/js/main.5429be80.js.map",
+    "main.315f7e12.js.map": "/static/js/main.315f7e12.js.map",
     "787.4c617d16.chunk.js.map": "/static/js/787.4c617d16.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7f7bc498.css",
-    "static/js/main.5429be80.js"
+    "static/js/main.315f7e12.js"
   ]
 }
