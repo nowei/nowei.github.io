@@ -113,10 +113,11 @@
 
                     \vspace{2px}
                     \begin{itemize}[leftmargin=4mm, rightmargin=20px, noitemsep, topsep=2px]
-                        \item[---] Python, Java    \hfill 5yr
-                        \item[---] Rust, C/C++     \hfill 1yr
-                        \item[---] Go, Javascript  \hfill 6mo
-                        \item[---] C\#, TypeScript \hfill 3mo
+                        \item[---] Python          \hfill 6yr
+                        \item[---] Java            \hfill 5yr
+                        \item[---] Rust, C/C++, Go \hfill 1yr
+                        \item[---] Java/TypeScript \hfill 6mo
+                        \item[---] C\#             \hfill 3mo
                     \end{itemize}
                 \end{minipage}
             }%
@@ -126,10 +127,11 @@
 
                     \vspace{2px}
                     \begin{itemize}[leftmargin=4mm, rightmargin=0px, noitemsep, topsep=2px]
-                        \item[---] [5yr] Python, Java
-                        \item[---] [1yr] Rust, C/C++
-                        \item[---] [6mo] Go, Javascript
-                        \item[---] [3mo] C\#, TypeScript
+                        \item[---] [6yr] Python
+                        \item[---] [5yr] Java
+                        \item[---] [1yr] Rust, C/C++, Go
+                        \item[---] [6mo] Java/TypeScript
+                        \item[---] [3mo] C\#
                     \end{itemize}
                 \end{minipage}
             }%
@@ -234,13 +236,33 @@
         \textbf{\underline{Hobbies}}
 
         \vspace{2px}
-        food, volunteering, reading, learning, teaching
+        food, volunteering, reading, learning, teaching, gyming
     \end{minipage}
 }
 
 \newcommand{\experienceheader}[1]{
     \begin{minipage}{\linewidth}
         {\Large\textbf{\underline{Experience}}~{\IfEqCase{#1}{{notplain}{\normalsize\emoji{rocket}}{plain}{}}}}
+    \end{minipage}
+}
+
+\newcommand{\sunrun}[1]{
+    \begin{minipage}{\linewidth}
+        \begin{itemize}[leftmargin=6mm,itemsep=2px,topsep=2px]
+            \item[{\IfEqCase{#1}{{notplain}{$\vcenter{\hbox{\includegraphics[width=12px]{helpers/sunrun.png}}}$}{plain}{>\tiny\space}}}]
+            \textbf{Sunrun}%
+            {\IfEqCase{#1}{{notplain}{, \color{olive}\textit{AI\&ML - Automation Team}}{plain}{ -- AI\&ML - Automation Team}}}%
+            {\IfEqCase{#1}{{notplain}{\footnotesize{\space}\footnotesize\emoji{hammer}}{plain}{}}}
+            \hfill \textbf{Seattle, WA}
+            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{sun}}{plain}{>>\tiny\space}}]
+                \textbf{Staff Software Engineer}{\IfEqCase{#1}{{notplain}{\footnotesize\space\footnotesize\emoji{clipboard}}{plain}{}}}
+                {\IfEqCase{#1}{{notplain}{\color{gray}\textit{}}{plain}{}}} \hfill 01/2024 - present
+        \end{itemize}
+        \begin{itemize}[labelindent=0.25em,labelsep=0.8em,leftmargin=*,itemsep=2px,topsep=2px]
+            \item[---] Working with internal business stakeholders to scope out and build out projects to automate previously manual processes and adapt code to changing business requirements
+            \item[---] Write and review \underline{Python}/\underline{TypeScript} code for services that interacted with various OCR engines, OpenAI, \underline{Salesforce CRM}, and \underline{Snowflake}
+            \item[---] Refactored projects and proposed process changes to make the code more testable, easier to debug, and to allow us to reproduce errors encountered in production
+        \end{itemize}
     \end{minipage}
 }
 
