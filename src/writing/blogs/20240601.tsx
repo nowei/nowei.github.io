@@ -312,7 +312,9 @@ function Blog20240601() {
         happiness. We kind of just have to live our lives to the fullest in the
         short time we have on this earth with the people we have in our lives.
       </p>
-      <p>One day at a time.</p>
+      <center>
+        <h2>One day at a time.</h2>
+      </center>
 
       {/* <p>
         (I finished typing this before a holiday, which is probably why it ended
