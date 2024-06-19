@@ -104,7 +104,7 @@ function AboutMe() {
           going to the gym, and eating food 😋
         </p>
         <p>
-          I'm currently a Staff Software Engineer working remotely at a
+          I'm currently a Staff Software Engineer working remotely at Sunrun, a
           residential solar energy company and I'm located in the greater
           Seattle area.
         </p>

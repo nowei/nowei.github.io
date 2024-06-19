@@ -31,6 +31,8 @@
     }%
 }
 
+\def\defaultsectionspacingsize{2px}
+
 % \name{<first_name>}{<last_name>}
 % Show name at the top. Last name is bolder.
 \newcommand{\name}[2]{
@@ -240,6 +242,51 @@
     \end{minipage}
 }
 
+\newcommand{\teachingheader}[1]{
+    \begin{minipage}{\linewidth}
+        {\Large\textbf{\underline{Teaching}}~{\IfEqCase{#1}{{notplain}{\normalsize\emoji{teacher}}{plain}{}}}}
+    \end{minipage}
+}
+
+\newcommand{\teaching}[1]{
+    \begin{minipage}{\linewidth}
+        \begin{itemize}[leftmargin=6mm,itemsep=2px,topsep=2px]
+            \item[>>\tiny\space]
+                \textbf{TEALS} \hfill \textbf{Remote - Seattle, WA}%
+            \item[>\tiny\space]
+                \textbf{Volunteer Teacher/TA} \hfill 09/2022 - present%
+        \end{itemize}
+        \begin{itemize}[labelindent=0.25em,labelsep=0.8em,leftmargin=*,itemsep=2px,topsep=2px]
+            \item[---] Taught high school students python using the CMU CS Academy platform that python using a graphics-based framework
+        \end{itemize}
+    \end{minipage}
+
+    \vspace{\defaultsectionspacingsize}
+    \begin{minipage}{\linewidth}
+        \begin{itemize}[leftmargin=6mm,itemsep=2px,topsep=2px]
+            \item[>>\tiny\space]
+                \textbf{Paul G. Allen School of Computer Science and Engineering} \hfill \textbf{Seattle, WA}%
+            \item[>\tiny\space]
+                \textbf{Graduate Teaching Assistant} \hfill 09/2019 - 06/2021%
+        \end{itemize}
+        \begin{itemize}[labelindent=0.25em,labelsep=0.8em,leftmargin=*,itemsep=2px,topsep=2px]
+            \item[---] \textbf{Classes}: Distributed Systems, Machine Learning, Machine Learning for Big Data
+            \item[---] Hosted \textasciitilde3+ office hours every week + graded projects
+            \item[---] 4.6/5 average section rating
+        \end{itemize}
+
+        \vspace{\defaultsectionspacingsize}
+        \begin{itemize}[leftmargin=6mm,itemsep=2px,topsep=2px]
+            \item[>\tiny\space]
+                \textbf{Teaching Assistant} \hfill 03/2018 - 06/2019%
+        \end{itemize}
+        \begin{itemize}[labelindent=0.25em,labelsep=0.8em,leftmargin=*,itemsep=2px,topsep=2px]
+            \item[---] \textbf{Classes}: Statistics for CS, Databases, Intro to Data Science
+            \item[---] Helped update projects to use git to teach undergraduate CS students about version control
+        \end{itemize}
+    \end{minipage}
+}
+
 \newcommand{\experienceheader}[1]{
     \begin{minipage}{\linewidth}
         {\Large\textbf{\underline{Experience}}~{\IfEqCase{#1}{{notplain}{\normalsize\emoji{rocket}}{plain}{}}}}
@@ -249,12 +296,12 @@
 \newcommand{\sunrun}[1]{
     \begin{minipage}{\linewidth}
         \begin{itemize}[leftmargin=6mm,itemsep=2px,topsep=2px]
-            \item[{\IfEqCase{#1}{{notplain}{$\vcenter{\hbox{\includegraphics[width=12px]{helpers/sunrun.png}}}$}{plain}{>\tiny\space}}}]
+            \item[{\IfEqCase{#1}{{notplain}{$\vcenter{\hbox{\includegraphics[width=12px]{helpers/sunrun.png}}}$}{plain}{>>\tiny\space}}}]
             \textbf{Sunrun}%
             {\IfEqCase{#1}{{notplain}{, \color{olive}\textit{AI\&ML - Automation Team}}{plain}{ -- AI\&ML - Automation Team}}}%
             {\IfEqCase{#1}{{notplain}{\footnotesize{\space}\footnotesize\emoji{hammer}}{plain}{}}}
             \hfill \textbf{Seattle, WA}
-            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{sun}}{plain}{>>\tiny\space}}]
+            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{sun}}{plain}{>\tiny\space}}]
                 \textbf{Staff Software Engineer}{\IfEqCase{#1}{{notplain}{\footnotesize\space\footnotesize\emoji{clipboard}}{plain}{}}}
                 {\IfEqCase{#1}{{notplain}{\color{gray}\textit{}}{plain}{}}} \hfill 01/2024 - present
         \end{itemize}
@@ -269,12 +316,12 @@
 \newcommand{\octoml}[1]{
     \begin{minipage}{\linewidth}
         \begin{itemize}[leftmargin=6mm,itemsep=2px,topsep=2px]
-            \item[{\IfEqCase{#1}{{notplain}{$\vcenter{\hbox{\includegraphics[width=12px]{helpers/octoml.png}}}$}{plain}{>\tiny\space}}}]
+            \item[{\IfEqCase{#1}{{notplain}{$\vcenter{\hbox{\includegraphics[width=12px]{helpers/octoml.png}}}$}{plain}{>>\tiny\space}}}]
             \textbf{OctoML}%
             {\IfEqCase{#1}{{notplain}{, \color{olive}\textit{Platform/Cloud}}{plain}{ -- Platform/Cloud}}}%
             {\IfEqCase{#1}{{notplain}{\footnotesize{\space}\footnotesize\emoji{cloud}}{plain}{}}}
             \hfill \textbf{Seattle, WA}
-            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{smiling-face-with-sunglasses}}{plain}{>>\tiny\space}}]
+            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{smiling-face-with-sunglasses}}{plain}{>\tiny\space}}]
                 \textbf{Senior Software Engineer}{\IfEqCase{#1}{{notplain}{\footnotesize\space\footnotesize\emoji{sailboat}}{plain}{}}}
                 {\IfEqCase{#1}{{notplain}{\color{gray}\textit{Model Hosting Service}}{plain}{-- Model Hosting Service}}} \hfill 04/2023 - 01/2024
         \end{itemize}
@@ -283,8 +330,9 @@
             \item[---] Write and review \underline{Go}/\underline{Python} code and \underline{Kubernetes} configs for services; Discuss product requirements to clarify intent to design, propose, and implement product features/services; Debug things that \underline{Go} wrong
             \item[---] Worked with auth, billing, and telemetry service providers and integrated those services into the platform
         \end{itemize}
+
         \begin{itemize}[leftmargin=6mm,itemsep=2px,topsep=2px]
-            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{folded-hands-medium-light-skin-tone}}{plain}{>>\tiny\space}}]
+            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{folded-hands-medium-light-skin-tone}}{plain}{>\tiny\space}}]
                 \textbf{Software Engineer}{\IfEqCase{#1}{{notplain}{\footnotesize{\space}\footnotesize\emoji{check-mark-button}}{plain}{}}}
                 {\IfEqCase{#1}{{notplain}{\color{gray}\textit{Model Acceleration Service}}{plain}{-- Model Acceleration Service}}}
                 \hfill 10/2021 - 04/2023
@@ -300,9 +348,9 @@
 \newcommand{\microsoft}[1]{
     \begin{minipage}{\linewidth}
         \begin{itemize}[leftmargin=6mm]
-            \item[{\IfEqCase{#1}{{notplain}{$\vcenter{\hbox{\includegraphics[width=11px]{helpers/microsoft.png}}}$}{plain}{>\tiny\space}}}]
+            \item[{\IfEqCase{#1}{{notplain}{$\vcenter{\hbox{\includegraphics[width=11px]{helpers/microsoft.png}}}$}{plain}{>>\tiny\space}}}]
             \textbf{Microsoft}{\IfEqCase{#1}{{notplain}{, \color{olive}\textit{Office of the Chief Economist}}{plain}{ -- Office of the Chief Economist}}} \hfill \textbf{Seattle, WA}
-            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{test-tube}}{plain}{>>\tiny\space}}]
+            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{test-tube}}{plain}{>\tiny\space}}]
                 \textbf{Research Intern}{\footnotesize\space}%
                 {\IfEqCase{#1}{{notplain}{\footnotesize\emoji{video-game}\footnotesize{\space}}{plain}{}}}%
                 {\IfEqCase{#1}{{notplain}{\color{gray}\textit{Data Eng. for Xbox Fin. \& Mktg}}{plain}{-- Data Eng. for Xbox Fin.}}} \hfill 06/2021 - 09/2021
@@ -317,9 +365,9 @@
 \newcommand{\uwcsejob}[1]{
     \begin{minipage}{\linewidth}
         \begin{itemize}[leftmargin=6mm]
-            \item[{\IfEqCase{#1}{{notplain}{$\vcenter{\hbox{\includegraphics[width=11px]{helpers/uw.png}}}$}{plain}{>\tiny\space}}}]
+            \item[{\IfEqCase{#1}{{notplain}{$\vcenter{\hbox{\includegraphics[width=11px]{helpers/uw.png}}}$}{plain}{>>\tiny\space}}}]
             \textbf{Paul G. Allen School of Computer Science \& Engineering} \hfill \textbf{Seattle, WA}
-            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{laptop}}{plain}{>>\tiny\space}}]
+            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{laptop}}{plain}{>\tiny\space}}]
                 \textbf{Graduate Teaching Assistant}{\footnotesize\space}{\IfEqCase{#1}
                     {{notplain}{\footnotesize\emoji{game-die}}{plain}{}}} \hfill 03/2018 - 06/2021
         \end{itemize}
@@ -334,9 +382,9 @@
 \newcommand{\amazon}[1]{
     \begin{minipage}{\linewidth}
         \begin{itemize}[leftmargin=6mm]
-            \item[{\IfEqCase{#1}{{notplain}{$\vcenter{\hbox{\includegraphics[width=11px]{helpers/amazon.png}}}$}{plain}{>\tiny\space}}}]
+            \item[{\IfEqCase{#1}{{notplain}{$\vcenter{\hbox{\includegraphics[width=11px]{helpers/amazon.png}}}$}{plain}{>>\tiny\space}}}]
             \textbf{Amazon}{\IfEqCase{#1}{{notplain}{, \color{olive}\textit{Amazon Devices}}{plain}{ -- Amazon Devices}}} \hfill \textbf{Seattle, WA}
-            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{raising-hands-medium-skin-tone}}{plain}{>>\tiny\space}}]
+            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{raising-hands-medium-skin-tone}}{plain}{>\tiny\space}}]
                 \textbf{SDE Intern}{\footnotesize\space}%
                 {\IfEqCase{#1}{{notplain}{\footnotesize\emoji{magnifying-glass-tilted-right}\footnotesize{\space}}{plain}{}}}%
                 {\IfEqCase{#1}{{notplain}{\color{gray}\textit{Improved Search Experience}}{plain}{-- Improved Search Experience}}} \hfill 06/2020 - 09/2020
@@ -351,8 +399,8 @@
 \newcommand{\letron}[1]{
     \begin{minipage}{\linewidth}
         \begin{itemize}[leftmargin=6mm]
-            \item[{\IfEqCase{#1}{{notplain}{}{plain}{>\tiny\space}}}] \textbf{LeTron Entertainment Tech} \hfill \textbf{Kaohsiung, Taiwan}
-            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{briefcase}}{plain}{>>\tiny\space}}]
+            \item[{\IfEqCase{#1}{{notplain}{}{plain}{>>\tiny\space}}}] \textbf{LeTron Entertainment Tech} \hfill \textbf{Kaohsiung, Taiwan}
+            \item[\IfEqCase{#1}{{notplain}{\footnotesize\emoji{briefcase}}{plain}{>\tiny\space}}]
                 \textbf{Intern}{\footnotesize\space}%
                 {\IfEqCase{#1}{{notplain}{\footnotesize\emoji{globe-showing-asia-australia}\footnotesize{\space}}{plain}{}}}%
                 {\IfEqCase{#1}{{notplain}{\color{gray}\textit{Website Health Monitoring}}{plain}{-- Website Health Monitoring}}}  \hfill 06/2019 - 09/2019

@@ -1,6 +1,7 @@
 import React from "react";
 import Resume1C from "../resume/WeiAndrew1C.pdf";
 import Resume1CPlain from "../resume/WeiAndrew1CPlain.pdf";
+import CVDoc from "../resume/WeiAndrewCV.pdf";
 import { NavLink } from "./NavbarElements";
 import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -33,6 +34,16 @@ const DropdownMenu = () => {
       >
         <p>
           Plain 1-C Resume <FontAwesomeIcon icon={faExternalLink} size="2xs" />
+        </p>
+      </NavLink>
+      <NavLink
+        to={CVDoc}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ margin: "auto" }}
+      >
+        <p>
+          CV-ish <FontAwesomeIcon icon={faExternalLink} size="2xs" />
         </p>
       </NavLink>
     </div>
