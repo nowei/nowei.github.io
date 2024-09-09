@@ -5,7 +5,12 @@ import timelineJson from "./timeline.json";
 function Timeline() {
   let data: { [id: string]: Quarter } = timelineJson;
   let y2023_2024: QuarterProps = {
-    quarters: [data["spr2024"], data["win2024"], data["aut2023"]],
+    quarters: [
+      data["sum2024"],
+      data["spr2024"],
+      data["win2024"],
+      data["aut2023"],
+    ],
   };
   let y2022_2023: QuarterProps = {
     quarters: [

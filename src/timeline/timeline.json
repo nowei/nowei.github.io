@@ -17,6 +17,40 @@
         "content": [
           {
             "name": "Day In Day Out, 2024"
+          },
+          {
+            "name": "David Kushner"
+          },
+          {
+            "name": "Aurora"
+          }
+        ]
+      },
+      {
+        "name": "Plays Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "The Great Gatsby"
+          },
+          {
+            "name": "The Book of Mormon"
+          },
+          {
+            "name": "Chicago"
+          },
+          {
+            "name": "Hadestown"
+          }
+        ]
+      },
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "TEALS",
+            "description": "Teaching Python to kiddos in Eastern Washington, again!"
           }
         ]
       },
@@ -25,10 +59,20 @@
         "content": [{ "name": "Friend's wedding" }]
       },
       {
+        "name": "Museums Visited",
+        "content": [
+          { "name": "The Met" },
+          { "name": "The Museum of Natural History" }
+        ]
+      },
+      {
         "name": "Traveling",
         "content": [
           {
             "name": "Bahamas"
+          },
+          {
+            "name": "New York"
           }
         ]
       }
