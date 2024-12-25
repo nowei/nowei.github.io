@@ -1,4 +1,53 @@
 {
+  "aut2024": {
+    "name": "Autumn 2024",
+    "activities": [
+      {
+        "name": "Concerts Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Aurora"
+          },
+          {
+            "name": "Cyndi Lauper"
+          }
+        ]
+      },
+      {
+        "name": "Traveling",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Chicago",
+            "description": "Visiting gramps"
+          }
+        ]
+      },
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "USDR",
+            "description": "Working on some federal grant finding thing for a little bit"
+          },
+          {
+            "name": "Interview prep",
+            "description": "Helping some friends prepare for some interviews"
+          },
+          {
+            "name": "Huskies@Work",
+            "description": "Some misc. mentoring things"
+          },
+          {
+            "name": "Dubhacks",
+            "description": "Mentoring + Judging; a lot of kids were using ChatGPT this year"
+          }
+        ]
+      }
+    ]
+  },
   "sum2024": {
     "name": "Summer 2024",
     "activities": [
@@ -20,9 +69,6 @@
           },
           {
             "name": "David Kushner"
-          },
-          {
-            "name": "Aurora"
           }
         ]
       },

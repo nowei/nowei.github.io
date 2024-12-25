@@ -4,6 +4,9 @@ import timelineJson from "./timeline.json";
 
 function Timeline() {
   let data: { [id: string]: Quarter } = timelineJson;
+  let y2024_2025: QuarterProps = {
+    quarters: [data["aut2024"]],
+  };
   let y2023_2024: QuarterProps = {
     quarters: [
       data["sum2024"],
@@ -92,6 +95,7 @@ function Timeline() {
         </header>
         <p style={{ padding: "12px" }}></p>
         <div className="content" style={{ maxHeight: "100%" }}>
+          <div className="quarter-container">{QuarterGroup(y2024_2025)}</div>
           <div className="quarter-container">
             {/* <div id="2023" className="quarter-grid"></div> */}
             {QuarterGroup(y2023_2024)}
