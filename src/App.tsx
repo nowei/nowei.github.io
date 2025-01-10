@@ -8,6 +8,7 @@ import { Writing, WritingRoutes } from "./writing/Writing";
 import AboutMe from "./about/About";
 import Timeline from "./timeline/Timeline";
 import NotFoundPage from "./pages/notfoundpage";
+import { MantineProvider } from "@mantine/core";
 // style={{
 //   background: "linear-gradient(275deg, #52acff 25%, #ffe32c 100%)",
 //   WebkitBackgroundClip: "text",
@@ -20,17 +21,19 @@ function App() {
   return (
     <div className="MainIndex" style={{ position: "relative" }}>
       <div style={{ paddingTop: "85px", width: "100%" }}></div>
-      <Router>
-        <Navbar />
-        <Routes>
-          {WritingRoutes()}
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutMe />} />
-          <Route path="/timeline" element={<Timeline />} />
-          <Route path="/writing" element={<Writing />} />
-          <Route path="/*" element={<NotFoundPage />} />
-        </Routes>
-      </Router>
+      <MantineProvider>
+        <Router>
+          <Navbar />
+          <Routes>
+            {WritingRoutes()}
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutMe />} />
+            <Route path="/timeline" element={<Timeline />} />
+            <Route path="/writing" element={<Writing />} />
+            <Route path="/*" element={<NotFoundPage />} />
+          </Routes>
+        </Router>
+      </MantineProvider>
     </div>
   );
 }
