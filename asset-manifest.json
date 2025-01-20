@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7f7bc498.css",
-    "main.js": "/static/js/main.a3334ba7.js",
+    "main.js": "/static/js/main.bb34bd14.js",
     "static/js/787.4c617d16.chunk.js": "/static/js/787.4c617d16.chunk.js",
     "static/media/parallel_computing_final.mp4": "/static/media/parallel_computing_final.201ab2644524cb9f0b3b.mp4",
     "static/media/547_video_stockbot.mp4": "/static/media/547_video_stockbot.6c6ee4068524a9222ee1.mp4",
@@ -78,11 +78,11 @@
     "static/media/vegas2023.jpg:Zone.Identifier": "/static/media/vegas2023.jpg:Zone.31d6cfe0d16ae931b73c.Identifier",
     "static/media/wisteria.jpg:Zone.Identifier": "/static/media/wisteria.jpg:Zone.31d6cfe0d16ae931b73c.Identifier",
     "main.7f7bc498.css.map": "/static/css/main.7f7bc498.css.map",
-    "main.a3334ba7.js.map": "/static/js/main.a3334ba7.js.map",
+    "main.bb34bd14.js.map": "/static/js/main.bb34bd14.js.map",
     "787.4c617d16.chunk.js.map": "/static/js/787.4c617d16.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7f7bc498.css",
-    "static/js/main.a3334ba7.js"
+    "static/js/main.bb34bd14.js"
   ]
 }
