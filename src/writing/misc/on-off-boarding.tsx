@@ -45,11 +45,23 @@ function OnOffBoarding() {
           </List>
         </List.Item>
         <List.Item>
-          <b>Rolling over your 401k</b>: make sure you have access to the
+          <b>Transferring your 401k funds</b>: make sure you have access to the
           accounts or roll it over to your new company's new 401k company so you
           don't need to keep track of <Code>n</Code> many different financial
           platforms - be wary of overcontributing to the 401k if you switch
-          mid-year.
+          mid-year. (The difference between rolling over vs. transferring is
+          that rolling over requires you to middle-man the transaction by first
+          receiving the check and sending it to the new institution vs.
+          transferring just sends the check from institution to institution.)
+        </List.Item>
+        <List.Item>
+          <b>Transfering your HSA Account</b>: Usually you'll need to fill out a
+          form and mail it somewhere in order for them to start to process these
+          requests. Some good (read: better) companies allow you to upload the
+          form to a website or to fill out a form online. Some older companies
+          ask that you print out a form (who has a printer these days) and mail
+          the form to the old company. I would recommend doing things online as
+          much as possible, but that's a personal preference.
         </List.Item>
         <List.Item>
           <b>Company stock</b> - make sure you have access to the accounts or
