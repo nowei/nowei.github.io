@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7f7bc498.css",
-    "main.js": "/static/js/main.bb34bd14.js",
+    "main.js": "/static/js/main.d60f3808.js",
     "static/js/787.4c617d16.chunk.js": "/static/js/787.4c617d16.chunk.js",
     "static/media/parallel_computing_final.mp4": "/static/media/parallel_computing_final.201ab2644524cb9f0b3b.mp4",
     "static/media/547_video_stockbot.mp4": "/static/media/547_video_stockbot.6c6ee4068524a9222ee1.mp4",
@@ -44,7 +44,6 @@
     "static/media/pier_at_night.jpg": "/static/media/pier_at_night.9042dfa7aeb22082dacd.jpg",
     "static/media/CSE 599 B Final Project - Andrew Wei & Kushal Jhunjhunwalla.pdf": "/static/media/CSE 599 B Final Project - Andrew Wei & Kushal Jhunjhunwalla.4ef71e2e53156e8b4f61.pdf",
     "static/media/dubhacks.jpg": "/static/media/dubhacks.687b278c22bd7b32f574.jpg",
-    "static/media/WeiAndrew1C.pdf": "/static/media/WeiAndrew1C.d4a10f80dcd71fd10f0e.pdf",
     "static/media/chicago-1.jpg": "/static/media/chicago-1.604bd6a21dae4cbdefbd.jpg",
     "static/media/taiwan2023.jpg": "/static/media/taiwan2023.b364673a66229282b4e4.jpg",
     "static/media/fremont2024.jpg": "/static/media/fremont2024.18ef05c1d8b771b3c28b.jpg",
@@ -55,10 +54,11 @@
     "static/media/glass.jpg": "/static/media/glass.7e2a54a52b944e07f161.jpg",
     "static/media/vegas2023.jpg": "/static/media/vegas2023.a27e9ebc0100be1535bd.jpg",
     "static/media/thermo0.png": "/static/media/thermo0.3faf62186b5507ccee3d.png",
-    "static/media/WeiAndrew.pdf": "/static/media/WeiAndrew.34248145459105199acd.pdf",
     "static/media/Robust_ML_Final_Project.pdf": "/static/media/Robust_ML_Final_Project.750cb834ad55d727dc46.pdf",
     "static/media/nwhacks1.jpg": "/static/media/nwhacks1.ff9695bfaff8a23e9687.jpg",
     "static/media/BoxOrNoBox.jpg": "/static/media/BoxOrNoBox.d393065bc6415264faea.jpg",
+    "static/media/WeiAndrew1C.pdf": "/static/media/WeiAndrew1C.bd0dfb04629a4b6c5e84.pdf",
+    "static/media/WeiAndrew.pdf": "/static/media/WeiAndrew.05b92ea49130abffee07.pdf",
     "static/media/bridge2.jpg": "/static/media/bridge2.aca95bde6acb05afe4b5.jpg",
     "static/media/bridge1.jpg": "/static/media/bridge1.3ddf96f8702fa0a00f4b.jpg",
     "static/media/bridge3.jpg": "/static/media/bridge3.07797344b58cbbd66f27.jpg",
@@ -67,8 +67,8 @@
     "static/media/magic-man.jpg": "/static/media/magic-man.52a4babcd354fb634585.jpg",
     "static/media/thermo1.png": "/static/media/thermo1.f3e8be05ec06e0b13611.png",
     "static/media/gear2.JPG": "/static/media/gear2.e59ca34f927f4304c547.JPG",
-    "static/media/WeiAndrew1CPlain.pdf": "/static/media/WeiAndrew1CPlain.19b3ca87adb7f465a674.pdf",
-    "static/media/WeiAndrewCV.pdf": "/static/media/WeiAndrewCV.f57b146b9ccb900fb5f6.pdf",
+    "static/media/WeiAndrewCV.pdf": "/static/media/WeiAndrewCV.ab731acc0d7be641ade0.pdf",
+    "static/media/WeiAndrew1CPlain.pdf": "/static/media/WeiAndrew1CPlain.12fc24a0c5396765839f.pdf",
     "static/media/moon-1.jpg": "/static/media/moon-1.93df0ef9e7073b533638.jpg",
     "index.html": "/index.html",
     "static/media/kyoto.jpg:Zone.Identifier": "/static/media/kyoto.jpg:Zone.31d6cfe0d16ae931b73c.Identifier",
@@ -78,11 +78,11 @@
     "static/media/vegas2023.jpg:Zone.Identifier": "/static/media/vegas2023.jpg:Zone.31d6cfe0d16ae931b73c.Identifier",
     "static/media/wisteria.jpg:Zone.Identifier": "/static/media/wisteria.jpg:Zone.31d6cfe0d16ae931b73c.Identifier",
     "main.7f7bc498.css.map": "/static/css/main.7f7bc498.css.map",
-    "main.bb34bd14.js.map": "/static/js/main.bb34bd14.js.map",
+    "main.d60f3808.js.map": "/static/js/main.d60f3808.js.map",
     "787.4c617d16.chunk.js.map": "/static/js/787.4c617d16.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7f7bc498.css",
-    "static/js/main.bb34bd14.js"
+    "static/js/main.d60f3808.js"
   ]
 }
