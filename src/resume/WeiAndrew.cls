@@ -86,23 +86,21 @@
           \begin{itemize}[align=center, leftmargin=7.5mm, noitemsep, topsep=2px]
             \location{Seattle}{WA}
             \email{a.nowei42@gmail.com}
-            \phonenumber{206-850-7878}
+            \phonenumber{(206)850-7878}
             \linkedin{linkedin.com/in/nowei}
             \github{github.com/nowei}
           \end{itemize}
         \end{minipage}
       }%
       {horizontal}{
-        \begin{minipage}{\linewidth}
-          \small
-          \begin{itemize*}[leftmargin=0mm, rightmargin=0mm, itemjoin=\hspace{10px}, itemsep=0px, topsep=2px, noitemsep]
-            \location{Seattle}{WA}
-            \email{a.nowei42@gmail.com}
-            \phonenumber{206-850-7878}
-            \linkedin{linkedin.com/in/nowei}
-            \github{github.com/nowei}
-          \end{itemize*}
-        \end{minipage}
+        \small
+        \begin{itemize*}[leftmargin=0mm, rightmargin=0mm, itemjoin=\hspace{10.5px}, itemsep=0px, topsep=2px, noitemsep]
+          \location{Seattle}{WA}
+          \email{a.nowei42@gmail.com}
+          \phonenumber{(206)850-7878}
+          \linkedin{linkedin.com/in/nowei}
+          \github{github.com/nowei}
+        \end{itemize*}
       }%
   }[\PackageError{tree}{Undefined option to tree: #1}{}]%
 }
@@ -305,10 +303,12 @@
         {\IfEqCase{#1}{{notplain}{\color{gray}\textit{}}{plain}{}}} \hfill 01/2024 --- present
     \end{itemize}
     \begin{itemize}[labelindent=0.25em,labelsep=0.8em,leftmargin=*,itemsep=2px,topsep=2px]
-      \item[---] Working with stakeholders to scope and execute on high-impact projects to build out internal platforms/tools that result in \strong{millions of dollars of savings per year} through time saved
-      \item[---] Managed team resources like permissions, onboarding docs, and service quota requests
-      \item[---] Helped troubleshoot/guide team members to resolutions when they ran into issues with \underline{AWS}; \underline{CloudFormation}; various distributed, microservice interactions
-      \item[---] Worked on a lot of 0->1 work and refactored existing services to make them easier to run, test, and debug -- making it easier to reproduce and fix errors encountered in production
+      \item[---] Working with business and technology stakeholders to scope out work for and execute on high-impact, 0->1 projects to build out internal platforms/tools/automations to increase efficiency
+      \item[---] Mentored team members, providing guidance to troubleshoot and resolve issues related to deployments; builds; and various distributed, microservice interactions
+      \item[---] Developed inventory management software to generate and manage the bill of materials for solar installations, reducing incorrect assignments and truck rolls for installations
+      \item[---] Promoted more maintainable, reliable, and sustainable development practices to make it easier to reproduce and fix bugs
+        % \item[---] Managed team resources, maintained onboarding documentation, and adapted to urgent business needs and changing requirements
+        % \item[---] Refactored existing services to make them more maintainable and easier to run, test, and debug -- making it easier to reproduce and fix errors encountered in production
     \end{itemize}
   \end{minipage}
 }
