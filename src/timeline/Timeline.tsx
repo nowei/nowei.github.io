@@ -4,6 +4,15 @@ import timelineJson from "./timeline.json";
 
 function Timeline() {
   let data: { [id: string]: Quarter } = timelineJson;
+  let y2025_2026: QuarterProps = {
+    quarters: [
+      // data["win2026"],
+      data["aut2025"],
+      data["sum2025"],
+      data["spr2025"],
+      data["win2025"],
+    ],
+  };
   let y2024_2025: QuarterProps = {
     quarters: [data["aut2024"]],
   };
@@ -91,9 +100,16 @@ function Timeline() {
           <h1>
             <u>Adulting/Real-Worlding</u>
           </h1>
+        </header>
+        <header>
+          <h2>2025 - Present; Just trying to survive</h2>
+        </header>
+        <div className="content" style={{ maxHeight: "100%" }}>
+          <div className="quarter-container">{QuarterGroup(y2025_2026)}</div>
+        </div>
+        <header>
           <h2>2023 - 2024; Returning to Normal, Nature is Healing</h2>
         </header>
-        <p style={{ padding: "12px" }}></p>
         <div className="content" style={{ maxHeight: "100%" }}>
           <div className="quarter-container">{QuarterGroup(y2024_2025)}</div>
           <div className="quarter-container">

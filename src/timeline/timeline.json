@@ -1,4 +1,190 @@
 {
+  "aut2025": {
+    "name": "Autumn 2025",
+    "activities": [
+      {
+        "name": "Traveling",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Las Vegas",
+            "description": "Visiting with family friends"
+          },
+          {
+            "name": "Chicago",
+            "description": "Visiting family"
+          }
+        ]
+      },
+      {
+        "name": "Concerts Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Lorde"
+          }
+        ]
+      },
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "CodePath volunteering",
+            "description": "Reviewed resumes and gave mock technical interviews"
+          }
+        ]
+      }
+    ]
+  },
+  "sum2025": {
+    "name": "Summer 2025",
+    "activities": [
+      {
+        "name": "Traveling",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Las Vegas",
+            "description": "Visiting with friends"
+          },
+          {
+            "name": "Europe",
+            "description": "Berlin, Germany -> Zurich, Switzerland -> Milan, Italy -> Barcelona, Spain"
+          },
+          {
+            "name": "New York City",
+            "description": "Visiting some friends in NYC on the way back"
+          }
+        ]
+      },
+      {
+        "name": "Concerts Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Death Cab for Cutie"
+          },
+          {
+            "name": "Hozier"
+          }
+        ]
+      },
+      {
+        "name": "Comedy Shows Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Josh Johnson"
+          }
+        ]
+      },
+      {
+        "name": "Shows",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Mystere"
+          }
+        ]
+      },
+      {
+        "name": "Random Events",
+        "bullet": true,
+        "content": [
+          {
+            "name": "UW President's Circle"
+          },
+          {
+            "name": "Electrify Expo"
+          },
+          {
+            "name": "Paddle-boarded for the first time"
+          },
+          {
+            "name": "Escape room in West Seattle"
+          },
+          {
+            "name": "Escape room in Barcelona"
+          }
+        ]
+      },
+      {
+        "name": "Tests/Certifications",
+        "bullet": true,
+        "content": [
+          {
+            "name": "FE: Other Disciplines",
+            "description": "passed 😎"
+          }
+        ]
+      },
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "CodePath volunteering",
+            "description": "Reviewed resumes and gave mock technical interviews"
+          }
+        ]
+      }
+    ]
+  },
+  "spr2025": {
+    "name": "Spring 2025",
+    "activities": [
+      {
+        "name": "Concerts Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Jukebox the Ghost"
+          },
+          {
+            "name": "Saint Motel"
+          }
+        ]
+      },
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Talked about career stuff at a middle school"
+          }
+        ]
+      }
+    ]
+  },
+  "win2025": {
+    "name": "Winter 2025",
+    "activities": [
+      {
+        "name": "Traveling",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Taiwan",
+            "description": "Visit the fam"
+          }
+        ]
+      },
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "CSRSEF judging"
+          },
+          {
+            "name": "Huskies@Work",
+            "description": "Meeting with some UW students to answer questions"
+          }
+        ]
+      }
+    ]
+  },
   "aut2024": {
     "name": "Autumn 2024",
     "activities": [
