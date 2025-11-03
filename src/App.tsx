@@ -1,40 +1,34 @@
-import React, { useState, useRef, useEffect } from "react";
-import face from "./imgs/face.jpg";
-import "./App.css";
-import Navbar from "./navbar/NavBar";
+import Navbar from "./components/navbar/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./home/Home";
+import Home from "./pages/home/Home";
 import { Writing, WritingRoutes } from "./writing/Writing";
 import AboutMe from "./about/About";
-import Timeline from "./timeline/Timeline";
+import Timeline from "./pages/timeline/Timeline";
 import NotFoundPage from "./pages/notfoundpage";
 import { MantineProvider } from "@mantine/core";
-// style={{
-//   background: "linear-gradient(275deg, #52acff 25%, #ffe32c 100%)",
-//   WebkitBackgroundClip: "text",
-//   WebkitTextFillColor: "transparent"
-// }}
+import "@mantine/core/styles.css";
+import "./index.css";
 
-// Set up SPA based on: https://github.com/rafgraph/spa-github-pages
-// and https://github.com/gfmio/github-pages-boilerplate
 function App() {
   return (
-    <div className="MainIndex" style={{ position: "relative" }}>
-      <div style={{ paddingTop: "85px", width: "100%" }}></div>
-      <MantineProvider>
-        <Router>
-          <Navbar />
-          <Routes>
-            {WritingRoutes()}
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<AboutMe />} />
-            <Route path="/timeline" element={<Timeline />} />
-            <Route path="/writing" element={<Writing />} />
-            <Route path="/*" element={<NotFoundPage />} />
-          </Routes>
-        </Router>
-      </MantineProvider>
-    </div>
+    <MantineProvider
+      defaultColorScheme="auto"
+      theme={{
+        fontFamily: "Consolas, 'Liberation Mono', Menlo, Courier, monospace",
+      }}
+    >
+      <Router>
+        <Navbar />
+        <Routes>
+          {WritingRoutes()}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutMe />} />
+          <Route path="/timeline" element={<Timeline />} />
+          <Route path="/writing" element={<Writing />} />
+          <Route path="/*" element={<NotFoundPage />} />
+        </Routes>
+      </Router>
+    </MantineProvider>
   );
 }
 

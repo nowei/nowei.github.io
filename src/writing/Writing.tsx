@@ -3,31 +3,46 @@ import Recommendations from "./Recommendations";
 import SweLife from "./misc/swe-life";
 import OnOffBoarding from "./misc/on-off-boarding";
 import { Blogs, BlogRoutes } from "./blogs/index";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
+import {
+  Title,
+  Text,
+  Stack,
+  Paper,
+  Anchor,
+  Divider,
+  Space,
+} from "@mantine/core";
 
 export function Writing() {
   return (
-    <>
-      <div style={{ top: 0 }}>
+    <Paper
+      p="xl"
+      radius="lg"
+      withBorder
+      shadow="sm"
+      mt="lg"
+      mx="auto"
+      maw={700}
+    >
+      <Stack gap="md">
         <Blogs />
-        <h1>Misc. writing</h1>
-        <p>
-          <Link to={"./misc/swe-life"}>
-            Stuff I learned as a Software Engineer
-          </Link>
-        </p>
-        <p>
-          <Link to={"./misc/on-boarding-off-boarding"}>
-            What to do when it's time to go
-          </Link>
-        </p>
-        <h2>What do you watch/listen to</h2>
-        <p>
-          <Link to={"./recommendations"}>Recommendations</Link>
-        </p>
-        <div style={{ padding: "10%" }}></div>
-      </div>
-    </>
+        <Divider my="sm" />
+        <Title order={2}>Misc. writing</Title>
+        <Anchor component={Link} to="./misc/swe-life" size="md">
+          Stuff I learned as a Software Engineer
+        </Anchor>
+        <Anchor component={Link} to="./misc/on-boarding-off-boarding" size="md">
+          What to do when it's time to go
+        </Anchor>
+        <Divider my="sm" />
+        <Title order={3}>What do you watch/listen to</Title>
+        <Anchor component={Link} to="./recommendations" size="md">
+          Recommendations
+        </Anchor>
+        <Space h="xl" />
+      </Stack>
+    </Paper>
   );
 }
 
