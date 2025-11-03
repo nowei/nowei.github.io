@@ -1,4 +1,3 @@
-import React from "react";
 import { Paper, Title, Text, Divider, Stack } from "@mantine/core";
 
 function Blog20231001() {

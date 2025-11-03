@@ -1,15 +1,4 @@
-import React from "react";
-import {
-  Paper,
-  Title,
-  Text,
-  Divider,
-  Image,
-  Stack,
-  Space,
-} from "@mantine/core";
-import img1 from "./images/20221229/uw_winter.jpg";
-import img2 from "./images/20221229/uw_snowman.jpg";
+import { Paper, Title, Text, Divider, Stack } from "@mantine/core";
 
 function Blog20221229() {
   return (

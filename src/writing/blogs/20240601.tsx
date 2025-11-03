@@ -9,7 +9,11 @@ import {
   Space,
   Group,
 } from "@mantine/core";
-import capybara from "./imgs/20240601/capybara.jpg";
+
+const blogImages = require.context(
+  "/public/images/writing/blogs/20240601",
+  true
+);
 
 function Blog20240601() {
   return (
@@ -315,7 +319,7 @@ function Blog20240601() {
         </Title>
         <Group>
           <Image
-            src={capybara}
+            src={blogImages("./capybara.jpg")}
             alt="capybara"
             width="200px"
             mx="auto"

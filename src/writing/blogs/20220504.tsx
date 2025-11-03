@@ -8,17 +8,11 @@ import {
   Stack,
   Space,
 } from "@mantine/core";
-import chicago1 from "./imgs/20220504/chicago-1.jpg";
-import chicago2 from "./imgs/20220504/chicago-2.jpg";
-import magicMan from "./imgs/20220504/magic-man.jpg";
-import moon from "./imgs/20220504/moon-1.jpg";
-import pierAtNight from "./imgs/20220504/pier_at_night.jpg";
-import pikeAtNight from "./imgs/20220504/pike_at_night.jpg";
-import taiwan3 from "./imgs/20220504/taiwan-3.jpg";
-import tuition1971 from "./imgs/20220504/tuition-1971.jpg";
-import tuition2021 from "./imgs/20220504/tuition-2021.jpg";
-import work1 from "./imgs/20220504/work-1.jpg";
-import work2 from "./imgs/20220504/work-2.jpg";
+
+const blogImages = require.context(
+  "/public/images/writing/blogs/20220504",
+  true
+);
 
 function Blog20220504() {
   return (
@@ -107,7 +101,7 @@ function Blog20220504() {
           going to school, have multiple jobs, or like volunteer after work.
         </Text>
         <Image
-          src={moon}
+          src={blogImages("./moon-1.jpg")}
           alt="Moon"
           width="80%"
           mx="auto"
@@ -165,7 +159,7 @@ function Blog20220504() {
           but how that might happen is kind of blurry.
         </Text>
         <Image
-          src={magicMan}
+          src={blogImages("./magic-man.jpg")}
           alt="Magic Man"
           width="80%"
           mx="auto"
@@ -200,7 +194,7 @@ function Blog20220504() {
         </Text>
         <Divider />
         <Image
-          src={pierAtNight}
+          src={blogImages("./pier_at_night.jpg")}
           alt="Pier at Night"
           width="80%"
           mx="auto"
@@ -257,7 +251,7 @@ function Blog20220504() {
           of how it feels now.
         </Text>
         <Image
-          src={chicago2}
+          src={blogImages("./chicago-2.jpg")}
           alt="Chicago"
           width="80%"
           mx="auto"
@@ -293,7 +287,7 @@ function Blog20220504() {
           think the quality of education has improved by x4.
         </Text>
         <Image
-          src={chicago1}
+          src={blogImages("./chicago-1.jpg")}
           alt="Chicago"
           width="80%"
           mx="auto"
@@ -324,7 +318,7 @@ function Blog20220504() {
           today's environment.
         </Text>
         <Image
-          src={pikeAtNight}
+          src={blogImages("./pike_at_night.jpg")}
           alt="Pike at Night"
           width="80%"
           mx="auto"
@@ -356,7 +350,7 @@ function Blog20220504() {
           better transportation services, at perhaps the cost of reduced wages.
         </Text>
         <Image
-          src={work2}
+          src={blogImages("./work-2.jpg")}
           alt="Work"
           width="80%"
           mx="auto"

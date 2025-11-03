@@ -1,10 +1,3 @@
-import React from "react";
-import gradUw from "./imgs/20200328/grad_uw.jpg";
-import dellRoof from "./imgs/20200328/dell_roof.jpg";
-import dlWorth from "./imgs/20200328/dl_worth.jpg";
-import aMood from "./imgs/20200328/a_mood.jpg";
-import kaohsiung from "./imgs/20200328/kaohsiung.jpg";
-import boba from "./imgs/20200328/boba.jpg";
 import {
   Paper,
   Title,
@@ -14,6 +7,11 @@ import {
   Stack,
   Space,
 } from "@mantine/core";
+
+const blogImages = require.context(
+  "/public/images/writing/blogs/20200328",
+  true
+);
 
 function Blog20200328() {
   return (
@@ -55,7 +53,7 @@ function Blog20200328() {
         </Text>
         <Divider />
         <Image
-          src={kaohsiung}
+          src={blogImages("./kaohsiung.jpg")}
           alt="a picture of a kaohsiung street at night"
           width="60%"
           mx="auto"
@@ -90,7 +88,7 @@ function Blog20200328() {
           guess that's life though and it's definitely a learning experience.
         </Text>
         <Image
-          src={boba}
+          src={blogImages("./boba.jpg")}
           alt="a large pitcher of boba"
           width="30%"
           mx="auto"
@@ -145,7 +143,7 @@ function Blog20200328() {
         </Text>
         <Divider />
         <Image
-          src={gradUw}
+          src={blogImages("./grad_uw.jpg")}
           alt="picture of uw, raining"
           width="30%"
           mx="auto"
@@ -171,7 +169,7 @@ function Blog20200328() {
           so I think I need to fix it somehow.
         </Text>
         <Image
-          src={dellRoof}
+          src={blogImages("./dell_roof.jpg")}
           alt="a picture of rooftop in Seattle"
           width="80%"
           mx="auto"
@@ -188,7 +186,7 @@ function Blog20200328() {
           still hard @_@, but I guess that's also just life.
         </Text>
         <Image
-          src={dlWorth}
+          src={blogImages("./dl_worth.jpg")}
           alt="a picture of cats on top of colab"
           width="50%"
           mx="auto"
@@ -240,7 +238,7 @@ function Blog20200328() {
           universities like the University of Phoenix.
         </Text>
         <Image
-          src={aMood}
+          src={blogImages("./a_mood.jpg")}
           alt="a picture of rooftop in Seattle"
           width="50%"
           mx="auto"

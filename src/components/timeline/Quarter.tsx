@@ -118,21 +118,6 @@ function ActivityComp(activity: Activity) {
     </Paper>
   );
 }
-
-function TimelineImage(imagePath: string, idx: number) {
-  return (
-    <Group justify="center" key={imagePath + idx} my="md">
-      <Image
-        src={timelineImages(imagePath)}
-        width={350}
-        radius="md"
-        alt="Timeline visual"
-        fit="contain"
-      />
-    </Group>
-  );
-}
-
 function TimelineImages({ images }: { images: string[] }) {
   return (
     <SimpleGrid
