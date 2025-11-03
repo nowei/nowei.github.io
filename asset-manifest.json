@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7f7bc498.css",
-    "main.js": "/static/js/main.593fe2e9.js",
+    "main.css": "/static/css/main.60b12d4e.css",
+    "main.js": "/static/js/main.778f2e76.js",
     "static/js/787.4c617d16.chunk.js": "/static/js/787.4c617d16.chunk.js",
     "static/media/parallel_computing_final.mp4": "/static/media/parallel_computing_final.201ab2644524cb9f0b3b.mp4",
     "static/media/547_video_stockbot.mp4": "/static/media/547_video_stockbot.6c6ee4068524a9222ee1.mp4",
@@ -31,6 +31,7 @@
     "static/media/CSE599C_Snuba.pdf": "/static/media/CSE599C_Snuba.fb73e511598b60780358.pdf",
     "static/media/CSE599W_Final_Report.pdf": "/static/media/CSE599W_Final_Report.35c7ec7e3f5ad75e76e8.pdf",
     "static/media/599_DL_Theory.pdf": "/static/media/599_DL_Theory.12ef1bc2748bb503a1af.pdf",
+    "static/media/work-1.jpg": "/static/media/work-1.8fceb88c1fe1e749b553.jpg",
     "static/media/a_mood.jpg": "/static/media/a_mood.162261e86c3b50e4cc4b.jpg",
     "static/media/work-2.jpg": "/static/media/work-2.802fa230c799ae68e9ac.jpg",
     "static/media/leukemia_final.pdf": "/static/media/leukemia_final.4428a3e9f7f2d274ce8d.pdf",
@@ -57,6 +58,7 @@
     "static/media/Robust_ML_Final_Project.pdf": "/static/media/Robust_ML_Final_Project.750cb834ad55d727dc46.pdf",
     "static/media/nwhacks1.jpg": "/static/media/nwhacks1.ff9695bfaff8a23e9687.jpg",
     "static/media/BoxOrNoBox.jpg": "/static/media/BoxOrNoBox.d393065bc6415264faea.jpg",
+    "static/media/taiwan-3.jpg": "/static/media/taiwan-3.785af5c9f589b4136e1e.jpg",
     "static/media/WeiAndrew1C.pdf": "/static/media/WeiAndrew1C.a11af10a94a4da4b73e8.pdf",
     "static/media/WeiAndrew.pdf": "/static/media/WeiAndrew.1a5367e0158caee23f0b.pdf",
     "static/media/bridge2.jpg": "/static/media/bridge2.aca95bde6acb05afe4b5.jpg",
@@ -66,23 +68,26 @@
     "static/media/gear.jpg": "/static/media/gear.a07b57b739f8638cb257.jpg",
     "static/media/magic-man.jpg": "/static/media/magic-man.52a4babcd354fb634585.jpg",
     "static/media/thermo1.png": "/static/media/thermo1.f3e8be05ec06e0b13611.png",
+    "static/media/tuition-1971.jpg": "/static/media/tuition-1971.20bee9962d7ceb324dc1.jpg",
+    "static/media/tuition-2021.jpg": "/static/media/tuition-2021.239ea39eca78f177214c.jpg",
     "static/media/gear2.JPG": "/static/media/gear2.e59ca34f927f4304c547.JPG",
     "static/media/WeiAndrewCV.pdf": "/static/media/WeiAndrewCV.f53bcb851e61a3153fe7.pdf",
     "static/media/WeiAndrew1CPlain.pdf": "/static/media/WeiAndrew1CPlain.737deb0740816fab7ead.pdf",
     "static/media/moon-1.jpg": "/static/media/moon-1.93df0ef9e7073b533638.jpg",
     "index.html": "/index.html",
+    "static/media/capybara.jpg:Zone.Identifier": "/static/media/capybara.jpg:Zone.31d6cfe0d16ae931b73c.Identifier",
     "static/media/kyoto.jpg:Zone.Identifier": "/static/media/kyoto.jpg:Zone.31d6cfe0d16ae931b73c.Identifier",
     "static/media/taiwan2023.jpg:Zone.Identifier": "/static/media/taiwan2023.jpg:Zone.31d6cfe0d16ae931b73c.Identifier",
     "static/media/tokyotower.jpg:Zone.Identifier": "/static/media/tokyotower.jpg:Zone.31d6cfe0d16ae931b73c.Identifier",
     "static/media/tori.jpg:Zone.Identifier": "/static/media/tori.jpg:Zone.31d6cfe0d16ae931b73c.Identifier",
     "static/media/vegas2023.jpg:Zone.Identifier": "/static/media/vegas2023.jpg:Zone.31d6cfe0d16ae931b73c.Identifier",
     "static/media/wisteria.jpg:Zone.Identifier": "/static/media/wisteria.jpg:Zone.31d6cfe0d16ae931b73c.Identifier",
-    "main.7f7bc498.css.map": "/static/css/main.7f7bc498.css.map",
-    "main.593fe2e9.js.map": "/static/js/main.593fe2e9.js.map",
+    "main.60b12d4e.css.map": "/static/css/main.60b12d4e.css.map",
+    "main.778f2e76.js.map": "/static/js/main.778f2e76.js.map",
     "787.4c617d16.chunk.js.map": "/static/js/787.4c617d16.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7f7bc498.css",
-    "static/js/main.593fe2e9.js"
+    "static/css/main.60b12d4e.css",
+    "static/js/main.778f2e76.js"
   ]
 }
