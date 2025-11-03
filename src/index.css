@@ -10,3 +10,7 @@ a:hover {
 a:active {
   color: cyan;
 }
+
+html {
+  overflow-y: scroll;
+}
