@@ -1,0 +1,310 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-21T07:12:00Z",
+  "title": "Design System: Andrew Wei",
+  "extensions": {
+    "colorMeta": {
+      "terminal-azure": {
+        "role": "primary",
+        "displayName": "Terminal Azure",
+        "canonical": "#1864ab",
+        "tonalRamp": ["#00122a", "#002a54", "#003d7a", "#0c4d8c", "#1864ab", "#3d82c4", "#7ba9db", "#c5d9f0"]
+      },
+      "hover-cyan": {
+        "role": "primary",
+        "displayName": "Hover Cyan",
+        "canonical": "#0b7285",
+        "tonalRamp": ["#001619", "#002f38", "#044a57", "#085e6e", "#0b7285", "#2e8e9f", "#74b5c0", "#b9dce2"]
+      },
+      "link-active": {
+        "role": "primary",
+        "displayName": "Link Active",
+        "canonical": "#087f5b",
+        "tonalRamp": ["#00180f", "#003525", "#00533c", "#066b50", "#087f5b", "#2b9a7a", "#72beaa", "#b8e2d8"]
+      },
+      "cursor-gold": {
+        "role": "primary",
+        "displayName": "Cursor Gold",
+        "canonical": "#ffcc00",
+        "tonalRamp": ["#1c0f00", "#3b2400", "#5d3c00", "#805500", "#a27100", "#c29900", "#dcc279", "#f6ebca"]
+      },
+      "control-blue": {
+        "role": "primary",
+        "displayName": "Control Blue",
+        "canonical": "#145999",
+        "tonalRamp": ["#00122a", "#002953", "#003f6f", "#0e4f85", "#145999", "#3a76b0", "#7aa3cb", "#c0d4e8"]
+      },
+      "comment-green": {
+        "role": "secondary",
+        "displayName": "Comment Green",
+        "canonical": "#087f5b",
+        "tonalRamp": ["#00180f", "#003525", "#00533c", "#066b50", "#087f5b", "#2b9a7a", "#72beaa", "#b8e2d8"]
+      },
+      "marker-teal": {
+        "role": "neutral",
+        "displayName": "Marker Teal",
+        "canonical": "#12b886",
+        "tonalRamp": ["#00180c", "#00341f", "#005333", "#00734b", "#009464", "#43b68b", "#93d5b7", "#d6f3e5"]
+      },
+      "marker-orange": {
+        "role": "neutral",
+        "displayName": "Marker Orange",
+        "canonical": "#fd7e14",
+        "tonalRamp": ["#260600", "#4c1300", "#772200", "#a13600", "#ca4f00", "#e87e35", "#f9b287", "#ffe3d0"]
+      },
+      "alert-red": {
+        "role": "neutral",
+        "displayName": "Alert Red",
+        "canonical": "#ff0000",
+        "tonalRamp": ["#2f0000", "#5c0000", "#8e0000", "#be0000", "#ed0000", "#ff5645", "#ff9f8e", "#ffdcd3"]
+      },
+      "nav-light": {
+        "role": "neutral",
+        "displayName": "Lab Gray",
+        "canonical": "#d3d3d3",
+        "tonalRamp": ["#121212", "#292929", "#424242", "#5d5d5d", "#7a7a7a", "#9e9e9e", "#c4c4c4", "#ebebeb"]
+      },
+      "nav-dark": {
+        "role": "neutral",
+        "displayName": "Charcoal Bar",
+        "canonical": "#333333",
+        "tonalRamp": ["#121212", "#292929", "#424242", "#5d5d5d", "#7a7a7a", "#9e9e9e", "#c4c4c4", "#ebebeb"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#121212", "#292929", "#424242", "#5d5d5d", "#7a7a7a", "#9e9e9e", "#c4c4c4", "#ebebeb"]
+      },
+      "paper-dark": {
+        "role": "neutral",
+        "displayName": "Night Paper",
+        "canonical": "#242424",
+        "tonalRamp": ["#121212", "#292929", "#424242", "#5d5d5d", "#7a7a7a", "#9e9e9e", "#c4c4c4", "#ebebeb"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#000000",
+        "tonalRamp": ["#121212", "#292929", "#424242", "#5d5d5d", "#7a7a7a", "#9e9e9e", "#c4c4c4", "#ebebeb"]
+      },
+      "ink-dark": {
+        "role": "neutral",
+        "displayName": "Ash Ink",
+        "canonical": "#c9c9c9",
+        "tonalRamp": ["#121212", "#292929", "#424242", "#5d5d5d", "#7a7a7a", "#9e9e9e", "#c4c4c4", "#ebebeb"]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#ced4da",
+        "tonalRamp": ["#101213", "#27292c", "#3f4346", "#5a5e63", "#767b80", "#9a9fa4", "#c1c4c8", "#eaebed"]
+      },
+      "border-dark": {
+        "role": "neutral",
+        "displayName": "Night Hairline",
+        "canonical": "#424242",
+        "tonalRamp": ["#121212", "#292929", "#424242", "#5d5d5d", "#7a7a7a", "#9e9e9e", "#c4c4c4", "#ebebeb"]
+      },
+      "dimmed": {
+        "role": "neutral",
+        "displayName": "Dimmed",
+        "canonical": "#868e96",
+        "tonalRamp": ["#101214", "#26292d", "#3e4348", "#585e65", "#747b83", "#989fa6", "#c0c5c9", "#e9ebee"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Blog and page titles. The largest line on the site."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles on a sheet."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Subsections, including the interest columns."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Prose, lists, and the hero."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Navigation labels at weight 600."
+      }
+    },
+    "shadows": [
+      {
+        "name": "sheet-lift",
+        "value": "0 1px 3px rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0 10px 15px -5px, rgba(0, 0, 0, 0.04) 0 7px 7px -5px",
+        "purpose": "Home, about, and writing sheets."
+      },
+      {
+        "name": "group-lift",
+        "value": "0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1)",
+        "purpose": "Timeline groups and section sheets."
+      },
+      {
+        "name": "menu-lift",
+        "value": "0 1px 3px rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0 20px 25px -5px, rgba(0, 0, 0, 0.04) 0 10px 10px -5px",
+        "purpose": "The resume menu only."
+      },
+      {
+        "name": "cursor-glow",
+        "value": "#ffcc00 0 0 5px",
+        "purpose": "Text shadow on anchor hover."
+      }
+    ],
+    "motion": [
+      {
+        "name": "hover-immediate",
+        "value": "0s",
+        "purpose": "Link and button color changes are instant. No custom easing is defined."
+      }
+    ],
+    "breakpoints": [
+      { "name": "xs", "value": "576px" },
+      { "name": "sm", "value": "768px" },
+      { "name": "md", "value": "992px" },
+      { "name": "lg", "value": "1200px" },
+      { "name": "xl", "value": "1408px" }
+    ],
+    "cssVariables": {
+      "light": {
+        "--terminal-azure": "#1864ab",
+        "--hover-cyan": "#0b7285",
+        "--link-active": "#087f5b",
+        "--control-blue": "#145999",
+        "--comment-green": "#087f5b",
+        "--cursor-gold": "#ffcc00",
+        "--nav-bg": "#d3d3d3",
+        "--nav-fg": "#145999"
+      },
+      "dark": {
+        "--terminal-azure": "#74c0fc",
+        "--hover-cyan": "#66d9e8",
+        "--link-active": "#63e6be",
+        "--control-blue": "#a5d8ff",
+        "--comment-green": "#69db7c",
+        "--nav-bg": "#333333",
+        "--nav-fg": "#a5d8ff"
+      }
+    }
+  },
+  "components": [
+    {
+      "name": "Navigation bar",
+      "kind": "nav",
+      "refersTo": "nav-bar",
+      "description": "Sticky flat bar. Lab Gray in light, Charcoal Bar when the system prefers dark.",
+      "html": "<nav class=\"ds-navbar\"><a class=\"ds-nav-link ds-nav-link-current\" href=\"/\">Home</a><a class=\"ds-nav-link\" href=\"/about\">About</a><a class=\"ds-nav-link\" href=\"/timeline\">Timeline</a><a class=\"ds-nav-link\" href=\"/writing\">Writing</a></nav>",
+      "css": ".ds-navbar { display: flex; gap: 4px; align-items: center; width: 100%; box-sizing: border-box; background: #d3d3d3; padding: 12px 16px; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; } .ds-nav-link { display: inline-flex; align-items: center; justify-content: center; min-width: 80px; height: 42px; padding: 0 18px; border: none; border-radius: 8px; background: transparent; color: #145999; font: 600 1rem/1 Consolas, 'Liberation Mono', Menlo, Courier, monospace; text-decoration: none; cursor: pointer; } .ds-nav-link:hover { background: rgba(20, 89, 153, 0.12); color: #0b7285; text-shadow: #ffcc00 0 0 5px; } .ds-nav-link:focus-visible { outline: 2px solid #1864ab; outline-offset: 2px; } .ds-nav-link-current { text-decoration: underline; }"
+    },
+    {
+      "name": "Nav link",
+      "kind": "button",
+      "refersTo": "button-nav",
+      "description": "Transparent navigation label in Control Blue.",
+      "html": "<a class=\"ds-nav-link\" href=\"/about\">About</a>",
+      "css": ".ds-nav-link { display: inline-flex; align-items: center; justify-content: center; min-width: 80px; height: 42px; padding: 0 18px; border: none; border-radius: 8px; background: transparent; color: #145999; font: 600 1rem/1 Consolas, 'Liberation Mono', Menlo, Courier, monospace; text-decoration: none; cursor: pointer; } .ds-nav-link:hover { background: rgba(20, 89, 153, 0.12); color: #0b7285; text-shadow: #ffcc00 0 0 5px; } .ds-nav-link:focus-visible { outline: 2px solid #1864ab; outline-offset: 2px; } .ds-nav-link:active { color: #087f5b; }"
+    },
+    {
+      "name": "Current nav link",
+      "kind": "button",
+      "refersTo": "button-nav-active",
+      "description": "The current page. Same transparent button, with an underline.",
+      "html": "<a class=\"ds-nav-link ds-nav-link-current\" href=\"/\">Home</a>",
+      "css": ".ds-nav-link { display: inline-flex; align-items: center; justify-content: center; min-width: 80px; height: 42px; padding: 0 18px; border: none; border-radius: 8px; background: transparent; color: #145999; font: 600 1rem/1 Consolas, 'Liberation Mono', Menlo, Courier, monospace; text-decoration: none; cursor: pointer; } .ds-nav-link-current { text-decoration: underline; } .ds-nav-link:hover { background: rgba(20, 89, 153, 0.12); color: #0b7285; text-shadow: #ffcc00 0 0 5px; } .ds-nav-link:focus-visible { outline: 2px solid #1864ab; outline-offset: 2px; }"
+    },
+    {
+      "name": "Text link",
+      "kind": "custom",
+      "refersTo": "link",
+      "description": "A plain anchor. Terminal Azure at rest, Hover Cyan and a Cursor Gold glow on hover.",
+      "html": "<a class=\"ds-text-link\" href=\"/writing\">Stuff I learned as a Software Engineer</a>",
+      "css": ".ds-text-link { color: #1864ab; font: 400 1rem/1.55 Consolas, 'Liberation Mono', Menlo, Courier, monospace; text-decoration: underline; text-underline-offset: 2px; } .ds-text-link:hover { color: #0b7285; text-shadow: #ffcc00 0 0 5px; } .ds-text-link:focus-visible { outline: 2px solid #145999; outline-offset: 2px; } .ds-text-link:active { color: #087f5b; }"
+    },
+    {
+      "name": "Paper sheet",
+      "kind": "card",
+      "refersTo": "card-paper",
+      "description": "Bordered content sheet. 16px radius, hairline, quiet lift.",
+      "html": "<article class=\"ds-paper\"><h2 class=\"ds-title\">About Me</h2><hr class=\"ds-rule\" /><p class=\"ds-body\">I grew up in Washington and I like to spend my time volunteering, going to the gym, and eating food.</p></article>",
+      "css": ".ds-paper { max-width: 700px; background: #ffffff; color: #000000; border: 1px solid #ced4da; border-radius: 16px; padding: 16px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0 10px 15px -5px, rgba(0, 0, 0, 0.04) 0 7px 7px -5px; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; } .ds-title { margin: 0 0 12px; font: 700 1.625rem/1.35 Consolas, 'Liberation Mono', Menlo, Courier, monospace; } .ds-rule { border: 0; border-top: 1px solid #ced4da; margin: 0 0 16px; } .ds-body { margin: 0; font: 400 1rem/1.55 Consolas, 'Liberation Mono', Menlo, Courier, monospace; }"
+    },
+    {
+      "name": "Comment aside",
+      "kind": "custom",
+      "refersTo": "comment",
+      "description": "A code-comment aside in Comment Green.",
+      "html": "<p class=\"ds-comment\">// It's time to sleep!</p>",
+      "css": ".ds-comment { margin: 0; color: #087f5b; font: 400 1rem/1.55 Consolas, 'Liberation Mono', Menlo, Courier, monospace; }"
+    },
+    {
+      "name": "Category markers",
+      "kind": "chip",
+      "description": "24px check circles. One color per interest column.",
+      "html": "<ul class=\"ds-markers\"><li><span class=\"ds-marker ds-marker-blue\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5L20 7\"/></svg></span>Distributed Systems</li><li><span class=\"ds-marker ds-marker-teal\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5L20 7\"/></svg></span>Volunteering</li><li><span class=\"ds-marker ds-marker-orange\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5L20 7\"/></svg></span>Food</li></ul>",
+      "css": ".ds-markers { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; font: 400 1rem/1.55 Consolas, 'Liberation Mono', Menlo, Courier, monospace; color: #000000; } .ds-markers li { display: flex; align-items: center; gap: 10px; } .ds-marker { width: 24px; height: 24px; border-radius: 32px; display: inline-flex; align-items: center; justify-content: center; flex: none; } .ds-marker-blue { background: #145999; } .ds-marker-teal { background: #12b886; } .ds-marker-orange { background: #fd7e14; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Terminal Notebook",
+    "overview": "The Terminal Notebook is a personal site that reads like a shell session left open on a desk. One monospace face carries the page. Content sits on bordered sheets. Navigation is a flat bar. Personality shows up as comments, not decoration: a green `//` aside, an emoji inside a sentence, an underline for where you are.\n\nDensity is comfortable and a little loose. Home is a stack of sheets in a centered column. Writing narrows, like a note. The timeline uses the same sheets with smaller cards nested inside. Fills stay rare. Type does the talking.\n\nColor follows the system preference. The bar switches from lab gray to charcoal, and the sheets follow light or dark paper. The link behavior does not change: hover still flares cyan and picks up a small gold glow.",
+    "keyCharacteristics": [
+      "One monospace stack for body, labels, and headings",
+      "Bordered paper for content, a flat bar for navigation",
+      "The current page marked by an underline",
+      "Terminal Azure links, with Hover Cyan and a Cursor Gold glow",
+      "Comment Green reserved for `//` asides",
+      "Shadows only as a quiet lift under paper"
+    ],
+    "rules": [
+      {
+        "name": "The Link Hover Rule",
+        "section": "colors",
+        "body": "Resting color depends on the element: plain anchors are Terminal Azure, component anchors and subtle buttons are Control Blue. On hover, every anchor becomes Hover Cyan and gains the Cursor Gold glow. Pressed anchors go Link Active. These colors stay on the glyphs. They do not paint bars, sheets, or buttons."
+      },
+      {
+        "name": "The Comment Voice Rule",
+        "section": "colors",
+        "body": "Comment Green is for comment-style asides. It is not a success badge, not a link color, and not a large surface."
+      },
+      {
+        "name": "The One Face Rule",
+        "section": "typography",
+        "body": "Every role uses Consolas, Liberation Mono, Menlo, Courier, monospace. Headings included. Mantine Title still resolves to the library's system sans because `fontFamilyHeadings` is unset; that is drift, not a second voice. New work sets the heading family to this stack."
+      },
+      {
+        "name": "The Border First Rule",
+        "section": "elevation",
+        "body": "A sheet without a border is unfinished. A shadow without a border is not how this system makes hierarchy. Do not stack stronger shadows to mean \"more important.\""
+      },
+      {
+        "name": "The Sheet Rule",
+        "section": "shapes",
+        "body": "If it holds a page of writing, the radius is 16px. If it is a control or a card inside a sheet, the radius is 8px. Do not mix those two jobs."
+      },
+      {
+        "name": "The Underline Rule",
+        "section": "components",
+        "body": "The current location is an underline. Not a pill, not a filled button, not a second background."
+      }
+    ],
+    "dos": [
+      "**Do** set headings to the same monospace stack as body: Consolas, Liberation Mono, Menlo, Courier, monospace.",
+      "**Do** mark the current page with an underline on a transparent button.",
+      "**Do** put biography, writing, and timeline groups on bordered paper. Page sheets use a 16px radius and a 1px hairline.",
+      "**Do** keep the navigation bar flat: Lab Gray or Charcoal Bar, with transparent controls.",
+      "**Do** use Comment Green only for asides written as code comments."
+    ],
+    "donts": [
+      "**Don't** introduce a second typeface. Headings included. The unset Mantine heading face is drift, not permission.",
+      "**Don't** fill navigation buttons, or turn the current page into a pill.",
+      "**Don't** use shadow to create hierarchy. The border does that. The menu lift stays on the resume menu.",
+      "**Don't** paint bars, sheets, or buttons with Terminal Azure, Hover Cyan, or Cursor Gold. Those belong to link glyphs and the hover glow."
+    ]
+  }
+}

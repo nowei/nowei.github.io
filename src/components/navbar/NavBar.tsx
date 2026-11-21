@@ -5,7 +5,6 @@ import {
   rem,
   Center,
   Text,
-  useMantineColorScheme,
 } from "@mantine/core";
 import {
   IconBrandGithub,
@@ -13,24 +12,30 @@ import {
   IconBriefcase,
   IconExternalLink,
 } from "@tabler/icons-react";
-import Resume from "../../resume/WeiAndrew.pdf";
 import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
-import Resume1C from "../../resume/WeiAndrew1C.pdf";
-import Resume1CPlain from "../../resume/WeiAndrew1CPlain.pdf";
-import CVDoc from "../../resume/WeiAndrewCV.pdf";
+import { Anchor } from "@mantine/core";
+import { useEffect, useState, type MouseEvent } from "react";
 
-function prefersDarkColorScheme(): boolean {
-  // Ensure window and matchMedia are available (e.g., when running in a browser environment)
-  if (typeof window !== "undefined" && window.matchMedia) {
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
-  }
-  // Default to false or handle server-side rendering scenarios
-  return false;
+const Resume = "/resume/WeiAndrew.pdf";
+const Resume1C = "/resume/WeiAndrew1C.pdf";
+const Resume1CPlain = "/resume/WeiAndrew1CPlain.pdf";
+const CVDoc = "/resume/WeiAndrewCV.pdf";
+
+function useSystemPrefersDark(): boolean {
+  const [prefersDark, setPrefersDark] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    const update = () => setPrefersDark(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
+
+  return prefersDark;
 }
 
 const navLinks = [
-  { label: "Home", to: "/" },
   { label: "About", to: "/about" },
   { label: "Timeline", to: "/timeline" },
   { label: "Writing", to: "/writing" },
@@ -39,20 +44,38 @@ const navLinks = [
 const Navbar = () => {
   const location = useLocation();
 
-  let systemPrefersDark = prefersDarkColorScheme();
+  const systemPrefersDark = useSystemPrefersDark();
 
   return (
     <Center
+      component="nav"
+      aria-label="Primary"
+      className="site-nav"
+      data-nav-theme={systemPrefersDark ? "dark" : "light"}
       style={{
         position: "sticky",
         top: 0,
         zIndex: 100,
+        backgroundColor: "var(--nav-bg)",
+        ["--nav-bg" as string]: systemPrefersDark ? "#2b2b2b" : "#e8eaed",
+        ["--nav-fg" as string]: systemPrefersDark ? "#a5d8ff" : "#145999",
       }}
-      bg={systemPrefersDark ? "#333" : "lightgray"}
       w={"100%"}
     >
-      <Group justify="space-between" px="md" py="sm" w="100%" maw={1200}>
-        <Group>
+      <Group
+        justify="space-between"
+        px="md"
+        py="sm"
+        w="100%"
+        maw={1200}
+        wrap="wrap"
+        gap="sm"
+      >
+        <Group gap="lg" wrap="wrap" className="site-nav-primary">
+          <Anchor component={Link} to="/" className="site-brand" underline="never">
+            Andrew Wei
+          </Anchor>
+          <Group gap="sm" wrap="wrap" className="site-nav-links">
           {navLinks.map((link) => (
             <Button
               miw={"80px"}
@@ -77,8 +100,9 @@ const Navbar = () => {
               {link.label}
             </Button>
           ))}
+          </Group>
         </Group>
-        <Group>
+        <Group gap="sm" wrap="wrap" className="site-nav-external">
           <Button
             component="a"
             href="https://github.com/nowei"
@@ -118,28 +142,50 @@ const Navbar = () => {
             width={220}
             position="bottom-end"
             withinPortal
-            trigger="hover"
+            trigger="click"
+            closeOnItemClick
           >
             <Menu.Target>
               <Button
-                component="a"
-                href={Resume}
-                target="_blank"
-                rel="noopener noreferrer"
                 leftSection={<IconBriefcase size={18} />}
                 rightSection={<IconExternalLink size={16} />}
                 variant="subtle"
                 size="md"
                 radius="md"
+                aria-haspopup="menu"
+                aria-expanded={undefined}
                 style={{
                   fontWeight: 500,
                   background: "transparent",
+                }}
+                onClick={(event: MouseEvent<HTMLButtonElement>) => {
+                  event.preventDefault();
                 }}
               >
                 Resume
               </Button>
             </Menu.Target>
             <Menu.Dropdown>
+              <Menu.Item
+                component="a"
+                href={Resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                rightSection={
+                  <IconExternalLink
+                    size={16}
+                    style={{ marginRight: 8, verticalAlign: "middle" }}
+                  />
+                }
+              >
+                <Text
+                  size="sm"
+                  component="span"
+                  style={{ verticalAlign: "middle" }}
+                >
+                  Default resume
+                </Text>
+              </Menu.Item>
               <Menu.Item
                 component="a"
                 href={Resume1C}

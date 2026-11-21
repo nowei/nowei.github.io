@@ -11,8 +11,17 @@ import {
   SimpleGrid,
 } from "@mantine/core";
 
-const projects = require.context("../../pages/projects/docs/", true);
-const timelineImages = require.context("/public/images/timeline", true);
+function projectHref(projectPath: string) {
+  if (projectPath.includes("https")) {
+    return projectPath;
+  }
+  return `/projects/docs/${encodeURIComponent(projectPath)}`;
+}
+
+function timelineImageSrc(imagePath: string) {
+  const file = imagePath.replace(/^\.\//, "");
+  return `/images/timeline/${encodeURIComponent(file)}`;
+}
 
 interface ActivityContent {
   code?: string;
@@ -73,7 +82,7 @@ function ClassComp(schoolClass: SchoolClass) {
                 if (projectPath.includes("https")) {
                   return projectPath;
                 } else {
-                  return projects(`./${projectPath}`);
+                  return projectHref(projectPath);
                 }
               };
               return (
@@ -129,11 +138,12 @@ function TimelineImages({ images }: { images: string[] }) {
       {images.map((imagePath, idx) => (
         <Image
           key={imagePath + idx}
-          src={timelineImages(imagePath)}
+          src={timelineImageSrc(imagePath)}
           width="100%"
           height={320}
           radius="md"
           alt="Timeline visual"
+          loading="lazy"
           fit="cover"
           style={{
             objectFit: "cover",
