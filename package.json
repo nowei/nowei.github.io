@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "postbuild": "node scripts/copy-timeline-assets.mjs",
+    "postbuild": "node scripts/copy-timeline-assets.mjs && node scripts/export-spa-route-html.mjs",
     "predeploy": "npm run build && touch out/.nojekyll && cp public/404.html out/404.html",
     "deploy": "gh-pages -d out -t true"
   },

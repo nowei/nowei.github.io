@@ -1,20 +1,9 @@
-import React from "react";
-import { Paper, Title, Text, Divider, Stack, List } from "@mantine/core";
+import { Title, Text, Divider, List } from "@mantine/core";
+import { WritingDocLayout } from "../WritingDocLayout";
 
 function SweLife() {
   return (
-    <Paper
-      p="xl"
-      radius="lg"
-      withBorder
-      shadow="sm"
-      mt="lg"
-      mx="auto"
-      maw={900}
-    >
-      <Stack gap="md">
-        <Title order={1}>Things I learned as a Software Engineer</Title>
-        <Divider />
+    <WritingDocLayout title="Stuff I learned as a Software Engineer">
         <Title order={2} ta="center">
           Stuff I learned as a Software Engineer (at a larger company in a
           start-up-ish team)
@@ -283,8 +272,7 @@ function SweLife() {
             the beginning.
           </List.Item>
         </List>
-      </Stack>
-    </Paper>
+    </WritingDocLayout>
   );
 }
 

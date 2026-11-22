@@ -57,8 +57,8 @@ const Navbar = () => {
         top: 0,
         zIndex: 100,
         backgroundColor: "var(--nav-bg)",
-        ["--nav-bg" as string]: systemPrefersDark ? "#2b2b2b" : "#e8eaed",
-        ["--nav-fg" as string]: systemPrefersDark ? "#a5d8ff" : "#145999",
+        ["--nav-bg" as string]: systemPrefersDark ? "#1f1f1f" : "#dde1e6",
+        ["--nav-fg" as string]: systemPrefersDark ? "#c5e4ff" : "#0f4785",
       }}
       w={"100%"}
     >
@@ -90,11 +90,14 @@ const Navbar = () => {
                 fontSize: rem(16),
                 padding: "0 18px",
                 background: "transparent",
-                textDecoration:
-                  (location.pathname == "/" && link.to == "/") ||
-                  (link.to != "/" && location.pathname.includes(link.to))
-                    ? "underline"
-                    : "none",
+                textDecoration: (() => {
+                  const active =
+                    link.to === "/"
+                      ? location.pathname === "/"
+                      : location.pathname === link.to ||
+                        location.pathname.startsWith(`${link.to}/`);
+                  return active ? "underline" : "none";
+                })(),
               }}
             >
               {link.label}
@@ -148,7 +151,6 @@ const Navbar = () => {
             <Menu.Target>
               <Button
                 leftSection={<IconBriefcase size={18} />}
-                rightSection={<IconExternalLink size={16} />}
                 variant="subtle"
                 size="md"
                 radius="md"

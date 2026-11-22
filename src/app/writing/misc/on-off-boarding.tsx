@@ -1,24 +1,17 @@
-import React from "react";
-import { Stack, List, Text, Title, Code, Anchor, Paper } from "@mantine/core";
+import { List, Text, Title, Code, Anchor } from "@mantine/core";
+import { WritingDocLayout } from "../WritingDocLayout";
 
 function OnOffBoarding() {
   return (
-    <Paper
-      p="xl"
-      radius="lg"
-      withBorder
-      shadow="sm"
-      mt="lg"
-      mx="auto"
-      maw={900}
-    >
-      <Stack gap="md">
+    <WritingDocLayout title="What to do when it's time to go">
         <Text>
           I don't on-board or off-board often, but here's a list of action items
           you should do when you're off-boarding and on-boarding.
         </Text>
 
-        <Title>Off-boarding</Title>
+        <Title order={2} className="home-section__title">
+          Off-boarding
+        </Title>
         <List>
           <List.Item>
             <b>Talking to people</b>: this is very important because you want to
@@ -121,7 +114,9 @@ function OnOffBoarding() {
           </List.Item>
         </List>
 
-        <Title>On-boarding</Title>
+        <Title order={2} className="home-section__title">
+          On-boarding
+        </Title>
         <List>
           <List.Item>Take a deep breath! (You got this! 😀)</List.Item>
           <List.Item>
@@ -170,6 +165,9 @@ function OnOffBoarding() {
                 <Anchor href="https://stackoverflow.com/questions/4489885/how-can-i-increase-the-cursor-speed-in-terminal">
                   keyboard cursor speed
                 </Anchor>
+              </List.Item>
+              <List.Item>
+                <Anchor href="https://stackoverflow.com/questions/327664/mac-os-x-terminal-map-optiondelete-to-backward-delete-word">Multi-word deletion in MacOS Terminal</Anchor>
               </List.Item>
               <List.Item>If you're on windows, good luck!</List.Item>
               <List.Item>
@@ -237,8 +235,7 @@ function OnOffBoarding() {
             team to solve them.
           </List.Item>
         </List>
-      </Stack>
-    </Paper>
+    </WritingDocLayout>
   );
 }
 

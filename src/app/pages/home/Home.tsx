@@ -1,14 +1,13 @@
-import { useState, useEffect, type ReactNode } from "react";
+import { useState, useEffect, type CSSProperties } from "react";
+import { PageSection } from "../../../components/layout/PageSection";
 import {
   Title,
   Text,
   Divider,
-  List,
   Stack,
-  ThemeIcon,
   SimpleGrid,
+  Group,
 } from "@mantine/core";
-import { IconCheck } from "@tabler/icons-react";
 
 function LocalTime() {
   const [time, setTime] = useState<Date | null>(null);
@@ -28,76 +27,66 @@ function LocalTime() {
 
   return (
     <Text size="sm" className="text-muted" ff="monospace">
-      Local time {formatted}
-      <Text span className="comment-aside">
-        {" "}
-        // Seattle area
-      </Text>
+      {formatted}
     </Text>
-  );
-}
-
-function HomeSection({
-  id,
-  title,
-  children,
-}: {
-  id?: string;
-  title?: string;
-  children: ReactNode;
-}) {
-  return (
-    <section
-      className="home-section"
-      aria-labelledby={title ? id : undefined}
-    >
-      {title ? (
-        <Title order={2} id={id} className="home-section__title">
-          {title}
-        </Title>
-      ) : null}
-      {children}
-    </section>
   );
 }
 
 function Hero() {
   return (
-    <HomeSection>
-      <Stack gap="md" w="100%">
-        <Stack gap={6}>
-          <Title order={1} size="h2" id="home-intro">
+    <PageSection>
+      <Group
+        justify="space-between"
+        align="flex-start"
+        wrap="wrap"
+        gap="xl"
+        w="100%"
+      >
+        <Stack gap="sm" maw={640}>
+          <Title order={1} id="home-intro" className="home-hero__name">
             Andrew Wei
           </Title>
-          <Text className="text-muted" size="lg">
-            Staff Software Engineer (and Professional Engineer!)
+          <Stack gap={4}>
+            <Text className="home-hero__role" size="lg" fw={600}>
+              Staff Software Engineer
+            </Text>
+            <Text className="text-muted" size="md">
+              Professional Engineer
+            </Text>
+          </Stack>
+          <Text size="md" className="home-hero__summary">
+            Distributed systems, machine learning, and general software
+            engineering.
           </Text>
-          <Text size="md">
-            Distributed systems, machine learning, general software engineering.
-          </Text>
-          <Text size="md">Based in the greater Seattle area.</Text>
         </Stack>
-        <LocalTime />
-      </Stack>
-    </HomeSection>
+        <Stack gap={6} className="home-hero__meta" align="flex-end">
+          <Text size="sm" className="text-muted" ta="right">
+            Greater Seattle area
+          </Text>
+          <LocalTime />
+        </Stack>
+      </Group>
+    </PageSection>
   );
 }
 
 function AboutMe() {
   return (
-    <HomeSection id="about-heading" title="About Me">
-      <Stack gap="md" mt="md" w="100%">
+    <PageSection id="about-heading" title="About">
+      <Stack gap="md" w="100%">
         <Text>
-          I grew up in Washington state and spend time volunteering, staying active,
-          and exploring food in the greater Seattle area.
+          I grew up in Washington state and spend time volunteering, staying
+          active, and exploring food in the greater Seattle area.
         </Text>
         <Text>
-          I&apos;m currently a Staff Software Engineer at Sunrun, working remotely from
-          the greater Seattle area on software systems for business operations.
+          I&apos;m currently a Staff Software Engineer at Sunrun, working
+          remotely from the greater Seattle area on software systems for business
+          operations.
         </Text>
         <Text>
-          Previously I was a senior software engineer at OctoML (then OctoAI, which was then acquired!),
-          building out ML deployment infrastructure and the SaaS platform.
+          Previously I was a senior software engineer at OctoML (then OctoAI,
+          which was then acquired!), building out ML deployment infrastructure and
+          the SaaS platform.
         </Text>
         <Text>
           I earned an MS and BS in Computer Science & Engineering from the Paul
@@ -109,68 +98,45 @@ function AboutMe() {
           All opinions are my own.
         </Text>
       </Stack>
-    </HomeSection>
+    </PageSection>
   );
 }
 
-const MARKER_CONTROL_BLUE = "#145999";
-const MARKER_TEAL = "#12b886";
-const MARKER_ORANGE = "#fd7e14";
-
 function InterestColumn({
   title,
-  markerColor,
+  accent,
   items,
 }: {
   title: string;
-  markerColor: string;
+  accent: string;
   items: string[];
 }) {
-  const marker = (
-    <ThemeIcon
-      size={24}
-      radius="xl"
-      variant="filled"
-      className="interest-marker"
-      style={{ backgroundColor: markerColor, color: "#ffffff" }}
-    >
-      <IconCheck size={14} stroke={2.5} />
-    </ThemeIcon>
-  );
-
   return (
-    <div>
-      <Title order={3} size="h4" mb="sm">
+    <div
+      className="home-interest-col"
+      style={{ "--interest-accent": accent } as CSSProperties}
+    >
+      <Title order={3} size="h5" className="home-interest-col__title">
         {title}
       </Title>
-      <List
-        classNames={{
-          root: "interest-list",
-          item: "interest-list__item",
-          itemWrapper: "interest-list__row",
-          itemIcon: "interest-list__icon",
-        }}
-        center
-        spacing="sm"
-        size="md"
-        listStyleType="none"
-        icon={marker}
-      >
+      <ul className="home-interest-col__list">
         {items.map((item) => (
-          <List.Item key={item}>{item}</List.Item>
+          <li key={item}>
+            <Text size="md">{item}</Text>
+          </li>
         ))}
-      </List>
+      </ul>
     </div>
   );
 }
 
 function Interests() {
   return (
-    <HomeSection id="interests-heading" title="Interests">
-      <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="lg" mt="md" w="100%">
+    <PageSection id="interests-heading" title="Interests">
+      <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="xl" w="100%">
         <InterestColumn
           title="Technical"
-          markerColor={MARKER_CONTROL_BLUE}
+          accent="#145999"
           items={[
             "Machine / deep learning",
             "Distributed systems",
@@ -180,7 +146,7 @@ function Interests() {
         />
         <InterestColumn
           title="Community"
-          markerColor={MARKER_TEAL}
+          accent="#12b886"
           items={[
             "Inclusion and diversity",
             "Volunteering",
@@ -191,24 +157,26 @@ function Interests() {
         />
         <InterestColumn
           title="Outside work"
-          markerColor={MARKER_ORANGE}
+          accent="#fd7e14"
           items={["Food and cooking", "Live music", "Games", "Fitness"]}
         />
       </SimpleGrid>
-    </HomeSection>
+    </PageSection>
   );
 }
 
 function ContactInfo() {
   return (
-    <HomeSection id="contact-heading" title="Contact">
-      <Text mt="md" w="100%">
-        Email{" "}
-        <Text span fw={600}>
+    <PageSection id="contact-heading" title="Contact">
+      <Group gap="sm" wrap="wrap" align="baseline" className="home-contact">
+        <Text className="text-muted" size="sm">
+          Email
+        </Text>
+        <Text fw={600} ff="monospace" size="md">
           a.nowei42 [at] gmail.com
         </Text>
-      </Text>
-    </HomeSection>
+      </Group>
+    </PageSection>
   );
 }
 

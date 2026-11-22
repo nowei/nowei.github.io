@@ -1,36 +1,13 @@
-import {
-  Paper,
-  Title,
-  Text,
-  Divider,
-  Image,
-  Stack,
-  Space,
-} from "@mantine/core";
+import { Text, Divider, Image, Space } from "@mantine/core";
+import { BlogPostLayout, BlogKicker, BlogSection } from "./BlogPostLayout";
 
-function blogImages(imagePath: string) {
-  const file = imagePath.replace(/^\.\//, "");
-  return `/images/writing/blogs/20200328/${encodeURIComponent(file)}`;
-}
+import { blogAsset } from "./blogAsset";
 
 function Blog20200328() {
   return (
-    <Paper
-      p="xl"
-      radius="lg"
-      withBorder
-      shadow="sm"
-      mt="lg"
-      mx="auto"
-      maw={700}
-    >
-      <Stack gap="md">
-        <Title order={1}>3/28/2020: A new beginning</Title>
-        <Divider />
-        <Title order={2} size="h3">
-          It's currently 4:16 AM.
-        </Title>
-        <Text>
+    <BlogPostLayout date="2020-03-28" title="A new beginning">
+<BlogKicker>It's currently 4:16 AM.</BlogKicker>
+<Text>
           So I decided that I'll start a blog because reflection is good and I
           guess maybe it'll be a good thing for me in the long-run; documenting
           how I'm doing over time and I can reflect on that later. It's like
@@ -53,16 +30,14 @@ function Blog20200328() {
         </Text>
         <Divider />
         <Image
-          src={blogImages("./kaohsiung.jpg")}
+          src={blogAsset("20200328", "./kaohsiung.jpg")}
           alt="a picture of a kaohsiung street at night"
           width="60%"
           mx="auto"
           radius="md"
           my="md"
         />
-        <Title order={2} size="h3">
-          Summer
-        </Title>
+        <BlogSection title="Summer" />
         <Text>
           So during the summer, I went back to Taiwan to do an internship at my
           dad's friend's start-up. It was in Taiwan because I got
@@ -88,7 +63,7 @@ function Blog20200328() {
           guess that's life though and it's definitely a learning experience.
         </Text>
         <Image
-          src={blogImages("./boba.jpg")}
+          src={blogAsset("20200328", "./boba.jpg")}
           alt="a large pitcher of boba"
           width="30%"
           mx="auto"
@@ -143,16 +118,14 @@ function Blog20200328() {
         </Text>
         <Divider />
         <Image
-          src={blogImages("./grad_uw.jpg")}
+          src={blogAsset("20200328", "./grad_uw.jpg")}
           alt="picture of uw, raining"
           width="30%"
           mx="auto"
           radius="md"
           my="md"
         />
-        <Title order={2} size="h3">
-          Grad school
-        </Title>
+        <BlogSection title="Grad school" />
         <Text>
           Then when I got back, I started grad school. It was just a masters as
           a part of a combined bs/ms program though. It's sort of like
@@ -169,7 +142,7 @@ function Blog20200328() {
           so I think I need to fix it somehow.
         </Text>
         <Image
-          src={blogImages("./dell_roof.jpg")}
+          src={blogAsset("20200328", "./dell_roof.jpg")}
           alt="a picture of rooftop in Seattle"
           width="80%"
           mx="auto"
@@ -186,7 +159,7 @@ function Blog20200328() {
           still hard @_@, but I guess that's also just life.
         </Text>
         <Image
-          src={blogImages("./dl_worth.jpg")}
+          src={blogAsset("20200328", "./dl_worth.jpg")}
           alt="a picture of cats on top of colab"
           width="50%"
           mx="auto"
@@ -238,7 +211,7 @@ function Blog20200328() {
           universities like the University of Phoenix.
         </Text>
         <Image
-          src={blogImages("./a_mood.jpg")}
+          src={blogAsset("20200328", "./a_mood.jpg")}
           alt="a picture of rooftop in Seattle"
           width="50%"
           mx="auto"
@@ -251,8 +224,7 @@ function Blog20200328() {
           comedic sense or idea of what is "funny" is directly tied to your
           field of study, but I guess that's my life at this point.
         </Text>
-      </Stack>
-    </Paper>
+    </BlogPostLayout>
   );
 }
 

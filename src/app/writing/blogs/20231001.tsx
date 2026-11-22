@@ -1,23 +1,11 @@
-import { Paper, Title, Text, Divider, Stack } from "@mantine/core";
+import { Text } from "@mantine/core";
+import { BlogPostLayout, BlogKicker, BlogSection } from "./BlogPostLayout";
 
 function Blog20231001() {
   return (
-    <Paper
-      p="xl"
-      radius="lg"
-      withBorder
-      shadow="sm"
-      mt="lg"
-      mx="auto"
-      maw={700}
-    >
-      <Stack gap="md">
-        <Title order={1}>10/1/2023: On Time and Moving On</Title>
-        <Divider />
-        <Title order={2} size="h3">
-          It's 1:12 AM.
-        </Title>
-        <Text>
+    <BlogPostLayout date="2023-10-01" title="On Time and Moving On">
+<BlogKicker>It's 1:12 AM.</BlogKicker>
+<Text>
           I woke up yesterday to my dad asking me if I wanted to go with him on
           a hike, but I was too tired from staying up to play games with some
           friends. The good, healthy thing probably would've been to join him
@@ -95,10 +83,8 @@ function Blog20231001() {
           of everyone's mind. "What am I doing?" "Who am I?" "Am I enough? What
           does that even mean?"
         </Text>
-        <Title order={2} size="h3">
-          I got home from Seattle a few hours ago from a friend's going away
-          party.
-        </Title>
+        <BlogSection title="I got home from Seattle a few hours ago from a friend's going away
+          party." />
         <Text>If they ever read this, however unlikely, "Hi! xD"</Text>
         <Text>
           It's not like they'll be gone forever or that I'd never see them again
@@ -144,8 +130,7 @@ function Blog20231001() {
         <Text>
           May we meet in better times and better places. Until next time.
         </Text>
-      </Stack>
-    </Paper>
+    </BlogPostLayout>
   );
 }
 

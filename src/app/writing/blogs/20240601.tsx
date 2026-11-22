@@ -1,39 +1,14 @@
-import React from "react";
-import {
-  Paper,
-  Title,
-  Text,
-  Divider,
-  Stack,
-  Image,
-  Space,
-  Group,
-} from "@mantine/core";
+import { Text, Image, Space, Group } from "@mantine/core";
+import { BlogPostLayout, BlogKicker, BlogSection } from "./BlogPostLayout";
 
-function blogImages(imagePath: string) {
-  const file = imagePath.replace(/^\.\//, "");
-  return `/images/writing/blogs/20240601/${encodeURIComponent(file)}`;
-}
+import { blogAsset } from "./blogAsset";
 
 function Blog20240601() {
   return (
-    <Paper
-      p="xl"
-      radius="lg"
-      withBorder
-      shadow="sm"
-      mt="lg"
-      mx="auto"
-      maw={700}
-    >
-      <Stack gap="md">
-        <Title order={1}>6/1/2024: Cycle times</Title>
-        <Divider />
-        <Title order={2} size="h3">
-          It's 10:56 PM.
-        </Title>
-        <Text>
-          &nbsp;&nbsp;&nbsp;&nbsp;I'm tired, or maybe I just think I am. It's
+    <BlogPostLayout date="2024-06-01" title="Cycle times">
+<BlogKicker>It's 10:56 PM.</BlogKicker>
+<Text>
+          I'm tired, or maybe I just think I am. It's
           kind of weird. I wake up, go to the gym, work, eat, and then sleep. I
           occasionally visit friends, but many of them live in Seattle and I'm
           waiting for the light rail station in Lynnwood to open up. Even then,
@@ -79,9 +54,7 @@ function Blog20240601() {
           inflation wasn't as bad back then? Maybe they could own and buy a
           house and raise a family? Maybe life was not as bleak?
         </Text>
-        <Title order={2} size="h3" ta="center">
-          Where did the collective shine in our eyes go?
-        </Title>
+        <BlogSection title="Where did the collective shine in our eyes go?" center />
         <Text>
           Where is the purpose that we are all searching for? Does it actually
           exist or is it something we made up to cope with the heavy, crushing
@@ -139,10 +112,8 @@ function Blog20240601() {
           of your own destiny, is not a privilege that most people have or can
           afford.
         </Text>
-        <Title order={2} size="h3" ta="center">
-          In life, we are often pulled in different directions than what we
-          originally set out for.
-        </Title>
+        <BlogSection title="In life, we are often pulled in different directions than what we
+          originally set out for." center />
         <Text>
           I guess what I want to say is that if you're trying to be the best
           version of yourself, what are you doing to get there? How do you get
@@ -161,7 +132,7 @@ function Blog20240601() {
           loading="lazy"
         />
         <Text>
-          &nbsp;&nbsp;&nbsp;&nbsp;I think there's something wrong with me. I get
+          I think there's something wrong with me. I get
           overwhelmed. I find it hard to start things because if I start
           something, I would like to finish it, otherwise I feel like I failed
           somehow. Like I lost something, or that I'm a loser. This is a
@@ -176,12 +147,10 @@ function Blog20240601() {
           to achieve. We tell ourselves that the limited time we have is better
           spent one way or another.
         </Text>
-        <Title order={2} size="h3" ta="center">
-          Or that we're just waiting for X or Y before starting something.
+        <BlogSection title="Or that we're just waiting for X or Y before starting something.
           Surely, it was the lack of X or Y that prevented us from achieving
           something in the past. After X or Y, we will have more time, more
-          energy, more gusto.
-        </Title>
+          energy, more gusto." center />
         <Text>
           This is likely why things like new years resolutions often fail. We
           predicate starting on an arbitrary milestone that will just pass, like
@@ -221,12 +190,10 @@ function Blog20240601() {
           messy, unprincipled, raw, unfettered? Who cares? It can still be
           considered progress.
         </Text>
-        <Title order={2} size="h3" ta="center">
-          Who we are as a person generally isn't defined by a single day, but by
+        <BlogSection title="Who we are as a person generally isn't defined by a single day, but by
           the life we have lived. With our limited time, every day matters and
           any progress is infinitely better than no progress. To take a step is
-          generally much better than standing still.
-        </Title>
+          generally much better than standing still." center />
         <Text>
           In any case, I might be burnt out. I might be depressed. I might have
           crippling social anxiety and I very likely have neurodivergent
@@ -313,13 +280,11 @@ function Blog20240601() {
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
         />
-        <Title order={2} size="h3" ta="center">
-          Holding onto the past in the present may cause you to miss out on your
-          future.
-        </Title>
+        <BlogSection title="Holding onto the past in the present may cause you to miss out on your
+          future." center />
         <Group>
           <Image
-            src={blogImages("./capybara.jpg")}
+            src={blogAsset("20240601", "./capybara.jpg")}
             alt="capybara"
             width="200px"
             mx="auto"
@@ -335,11 +300,8 @@ function Blog20240601() {
           the short time we have on this earth with the people we have in our
           lives.
         </Text>
-        <Title order={2} size="h3" ta="center">
-          One day at a time.
-        </Title>
-      </Stack>
-    </Paper>
+        <BlogSection title="One day at a time." center />
+    </BlogPostLayout>
   );
 }
 

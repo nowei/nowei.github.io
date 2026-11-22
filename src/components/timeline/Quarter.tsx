@@ -1,13 +1,10 @@
-import React from "react";
+import type { FC } from "react";
 import {
-  Paper,
   Title,
   Text,
-  Group,
   Stack,
   Image,
   Anchor,
-  Divider,
   SimpleGrid,
 } from "@mantine/core";
 
@@ -21,6 +18,34 @@ function projectHref(projectPath: string) {
 function timelineImageSrc(imagePath: string) {
   const file = imagePath.replace(/^\.\//, "");
   return `/images/timeline/${encodeURIComponent(file)}`;
+}
+
+const MONTH_NAMES = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+] as const;
+
+function timelineImageAlt(imagePath: string, quarterName: string): string {
+  const file = imagePath.replace(/^\.\//, "").replace(/\.[^.]+$/, "");
+  const stamp = file.match(/^(\d{4})(\d{2})(\d{2})_/);
+  if (stamp) {
+    const year = Number(stamp[1]);
+    const month = MONTH_NAMES[Number(stamp[2]) - 1];
+    const day = Number(stamp[3]);
+    return `Photo from ${quarterName}, ${month} ${day}, ${year}`;
+  }
+  const readable = file.replace(/[_-]+/g, " ");
+  return `Photo from ${quarterName}: ${readable}`;
 }
 
 interface ActivityContent {
@@ -62,138 +87,139 @@ export interface QuarterProps {
 
 function ClassComp(schoolClass: SchoolClass) {
   return (
-    <Paper p="sm" mb="sm" radius="md" withBorder>
-      <Stack gap={4}>
-        {schoolClass.dropped ? (
-          <Text c="red" span>
-            <s>
-              <b>{schoolClass.code}</b>: {schoolClass.name}
-            </s>
-          </Text>
-        ) : (
-          <Text span>
+    <div className="timeline-class">
+      {schoolClass.dropped ? (
+        <Text c="red" span>
+          <s>
             <b>{schoolClass.code}</b>: {schoolClass.name}
+          </s>
+        </Text>
+      ) : (
+        <Text>
+          <b>{schoolClass.code}</b>: {schoolClass.name}
+        </Text>
+      )}
+      {schoolClass.project?.map((project) => {
+        const href = project.content
+          ? project.content.includes("https")
+            ? project.content
+            : projectHref(project.content)
+          : null;
+        return (
+          <Text size="sm" className="text-muted" key={project.name} pl="md">
+            Project:{" "}
+            {href ? (
+              <Anchor
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                size="sm"
+              >
+                {project.name}
+              </Anchor>
+            ) : (
+              project.name
+            )}
           </Text>
-        )}
-        {schoolClass.project && (
-          <Stack gap={2} style={{ marginTop: 4 }}>
-            {schoolClass.project.map((project) => {
-              const loadProject = (projectPath: string) => {
-                if (projectPath.includes("https")) {
-                  return projectPath;
-                } else {
-                  return projectHref(projectPath);
-                }
-              };
-              return (
-                <Text size="sm" key={project.name}>
-                  Project:{" "}
-                  {project.content ? (
-                    <Anchor
-                      href={loadProject(project.content)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {project.name}
-                    </Anchor>
-                  ) : (
-                    project.name
-                  )}
-                </Text>
-              );
-            })}
-          </Stack>
-        )}
-      </Stack>
-    </Paper>
+        );
+      })}
+    </div>
   );
 }
 
 function ActivityComp(activity: Activity) {
   return (
-    <Paper p="sm" mb="md" radius="md" withBorder>
-      <Title order={3} mb={6} style={{ textDecoration: "underline" }}>
+    <article className="timeline-activity">
+      <Title order={4} size="h5" mb="xs" fw={600}>
         {activity.name}
       </Title>
-      <Stack gap={2}>
+      <Stack gap={4}>
         {activity.content.map((cont, idx) => (
-          <Text key={idx}>
+          <Text key={idx} size="sm">
             {cont.code && <b>{cont.code}: </b>}
             {cont.code ? cont.name : <b>{cont.name}</b>}
             {cont.description ? `: ${cont.description}` : null}
           </Text>
         ))}
       </Stack>
-    </Paper>
-  );
-}
-function TimelineImages({ images }: { images: string[] }) {
-  return (
-    <SimpleGrid
-      cols={2}
-      spacing="lg"
-      verticalSpacing="lg"
-      style={{ width: "100%", margin: "0 auto" }}
-    >
-      {images.map((imagePath, idx) => (
-        <Image
-          key={imagePath + idx}
-          src={timelineImageSrc(imagePath)}
-          width="100%"
-          height={320}
-          radius="md"
-          alt="Timeline visual"
-          loading="lazy"
-          fit="cover"
-          style={{
-            objectFit: "cover",
-            width: "100%",
-            maxWidth: 600,
-            margin: "0 auto",
-          }}
-        />
-      ))}
-    </SimpleGrid>
+    </article>
   );
 }
 
-export const QuarterGroup: React.FC<QuarterProps> = ({
-  quarters,
-}: QuarterProps) => {
+function TimelineImages({
+  images,
+  sectionLabel,
+}: {
+  images: string[];
+  sectionLabel: string;
+}) {
   return (
-    <Stack gap="xl" w="100%">
+    <section className="timeline-photos">
+      <Text size="sm" fw={600} mb="sm" component="div">
+        {sectionLabel} ({images.length})
+      </Text>
+      <SimpleGrid
+        cols={{ base: 1, xs: 2 }}
+        spacing="sm"
+        verticalSpacing="sm"
+        className="timeline-images"
+      >
+        {images.map((imagePath, idx) => (
+          <Image
+            key={imagePath + idx}
+            src={timelineImageSrc(imagePath)}
+            width="100%"
+            height={168}
+            radius="md"
+            alt={timelineImageAlt(imagePath, sectionLabel.replace(/^Photos · /, ""))}
+            loading="lazy"
+            fit="cover"
+            className="timeline-images__thumb"
+          />
+        ))}
+      </SimpleGrid>
+    </section>
+  );
+}
+
+export const QuarterGroup: FC<QuarterProps> = ({ quarters }) => {
+  return (
+    <Stack gap="xl" w="100%" className="timeline-quarter-group">
       {quarters.map((item, i) => (
-        <Paper key={item.name + i} p="md" radius="lg" withBorder shadow="xs">
-          <Title order={2} mb="sm">
+        <article key={item.name + i} className="timeline-quarter">
+          <Title order={3} size="h4" className="timeline-quarter__name">
             {item.name}
           </Title>
-          <Divider mb="md" />
-          <Stack gap="md">
+          <Stack gap="md" mt="md">
             {item.activities?.map((activity, idx) => (
               <ActivityComp {...activity} key={activity.name + idx} />
             ))}
-            {item.classes && (
-              <>
-                <Title
-                  order={3}
-                  mt="md"
-                  mb="xs"
-                  style={{ textDecoration: "underline" }}
+            {item.classes && item.classes.length > 0 && (
+              <div className="timeline-classes">
+                <Text
+                  size="sm"
+                  fw={600}
+                  className="home-section__title"
+                  mb="sm"
+                  component="div"
                 >
                   Classes
-                </Title>
-                <Stack gap={4}>
+                </Text>
+                <Stack gap="xs">
                   {item.classes.map((schoolClass, idx) => (
                     <ClassComp {...schoolClass} key={schoolClass.code + idx} />
                   ))}
                 </Stack>
-              </>
+              </div>
             )}
             {item.images && item.images.length > 0 && (
-              <TimelineImages images={item.images} />
+              <TimelineImages
+                images={item.images}
+                sectionLabel={`Photos · ${item.name}`}
+              />
             )}
           </Stack>
-        </Paper>
+        </article>
       ))}
     </Stack>
   );

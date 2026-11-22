@@ -1,4 +1,206 @@
 {
+  "aut2026": {
+    "name": "Autumn 2026",
+    "activities": [
+      {
+        "name": "Tests/Certifications",
+        "bullet": true,
+        "content": [
+          {
+            "name": "PE Electrical and Computer: Computer Engineering",
+            "description": "passed"
+          }
+        ]
+      },
+      {
+        "name": "Licenses/Certifications",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Professional Engineer (PE) in Washington State",
+            "description": "Licensed"
+          }
+        ]
+      },
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Dubhacks",
+            "description": "Mentoring + Judging; the kids were vibing again"
+          }
+        ]
+      },
+      {
+        "name": "Traveling",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Vancouver, BC",
+            "description": "Quick trip to drop off family at the airport"
+          }
+        ]
+      },
+      {
+        "name": "Concerts Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Kishi Bashi"
+          }
+        ]
+      }
+    ],
+    "images": [
+      "./20260907_091846.jpg",
+      "./20261011_204119.jpg",
+      "./20261011_232937.jpg",
+      "./20261027_181910.jpg"
+    ]
+  },
+  "sum2026": {
+    "name": "Summer 2026",
+    "activities": [
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Mentoring",
+            "description": "Helping folks with career advice"
+          }
+        ]
+      }, {
+        "name": "Life Events",
+        "bullet": true,
+        "content": [
+          {
+            "name": "House",
+            "description": "Bro why is everything so expensive??"
+          },
+          {
+            "name": "Started a side-hustle"
+          }
+        ]
+      },
+      {
+        "name": "Traveling",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Los Angeles",
+            "description": "Anime Expo 2026 with a couple of friends"
+          }
+        ]
+      },
+      {
+        "name": "Random Events",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Went to a friend's wedding"
+          },
+          {
+            "name": "Seattle Indie Game Expo"
+          }
+        ]
+      }
+    ]
+  },
+  "spr2026": {
+    "name": "Spring 2026",
+    "activities": [
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Mentoring",
+            "description": "Helping folks with career advice"
+          },
+          {
+            "name": "Supporting UW Food Pantry and Friday Feast",
+            "description": "Helping prepare utensils for the food pantry and Friday Feast"
+          },
+          {
+            "name": "Huskies@Work",
+            "description": "Meeting with some UW students to answer career-related questions"
+          },
+          {
+            "name": "Talked to kids in a class about life, school, going to college, and working"
+          }
+        ]
+      },
+      {
+        "name": "Concerts Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Oh Wonder"
+          }
+        ]
+      }
+    ],
+    "images": ["./20260422_183800.jpg", "./20260515_150813.jpg"]
+  },
+  "win2026": {
+    "name": "Winter 2026",
+    "activities": [
+      {
+        "name": "Traveling",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Chicago",
+            "description": "Family stuff happened"
+          },
+          {
+            "name": "Los Angeles",
+            "description": "Visiting family friends"
+          },
+          {
+            "name": "San Francisco",
+            "description": "Work trip and visiting friends"
+          },
+          {
+            "name": "Miami",
+            "description": "Visiting some family friends"
+          }
+        ]
+      },
+      {
+        "name": "Volunteering",
+        "bullet": true,
+        "content": [
+          {
+            "name": "CodePath volunteering",
+            "description": "Reviewed resumes and gave mock technical interviews"
+          },
+          {
+            "name": "Mentors in Tech",
+            "description": "Mentoring a couple students in college on career advice and interview prep"
+          }
+        ]
+      },
+      {
+        "name": "Concerts Attended",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Candlelight: Best of Joe Hisaishi"
+          }
+        ]
+      }
+    ],
+    "images": [
+      "./20260123_170848.jpg",
+      "./20260123_173252.jpg",
+      "./20260125_134430.jpg",
+      "./20260127_174123.jpg",
+      "./20260317_175221.jpg"
+    ]
+  },
   "aut2025": {
     "name": "Autumn 2025",
     "activities": [
@@ -13,6 +215,10 @@
           {
             "name": "Chicago",
             "description": "Visiting family"
+          },
+          {
+            "name": "San Francisco",
+            "description": "Work trip and visiting friends"
           }
         ]
       },
@@ -32,6 +238,19 @@
           {
             "name": "CodePath volunteering",
             "description": "Reviewed resumes and gave mock technical interviews"
+          },
+          {
+            "name": "Dubhacks",
+            "description": "Mentoring + Judging; the kids were vibing"
+          }
+        ]
+      },
+      {
+        "name": "Misc. Events",
+        "bullet": true,
+        "content": [
+          {
+            "name": "Jury Duty"
           }
         ]
       }
@@ -55,6 +274,10 @@
           {
             "name": "New York City",
             "description": "Visiting some friends in NYC on the way back"
+          }, 
+          {
+            "name": "Visalia",
+            "description": "Work trip"
           }
         ]
       },
@@ -129,6 +352,21 @@
           }
         ]
       }
+    ],
+    "images": [
+      "./20250721_124251.jpg",
+      "./20250721_133237.jpg",
+      "./20250724_195111.jpg",
+      "./20250809_123355.jpg",
+      "./20250829_114031.jpg",
+      "./20250829_115923.jpg",
+      "./20250830_200005.jpg",
+      "./20250830_204924.jpg",
+      "./20250902_190717.jpg",
+      "./20250905_103626.jpg",
+      "./20250909_092131.jpg",
+      "./20250910_200922.jpg",
+      "./20250912_082725.jpg"
     ]
   },
   "spr2025": {
@@ -183,6 +421,13 @@
           }
         ]
       }
+    ],
+    "images": [
+      "./20250205_110049.jpg",
+      "./20250205_115151.jpg",
+      "./20250206_150245.jpg",
+      "./20250212_160738.jpg",
+      "./20250215_135143.jpg"
     ]
   },
   "aut2024": {
@@ -232,7 +477,8 @@
           }
         ]
       }
-    ]
+    ],
+    "images": ["./20241116_151905.jpg"]
   },
   "sum2024": {
     "name": "Summer 2024",
@@ -308,6 +554,12 @@
           }
         ]
       }
+    ],
+    "images": [
+      "./20240704_104657.jpg",
+      "./20240705_102843.jpg",
+      "./20240708_191516.jpg",
+      "./20240712_204846.jpg"
     ]
   },
   "spr2024": {
@@ -382,7 +634,7 @@
             "description": "Everyone was cool, but I got a little tired of the work. People were nice, but I figured that I needed to explore and do other things."
           },
           {
-            "name": "Joined a residential solar energy company",
+            "name": "Joined Sunrun, a residential solar energy company",
             "description": "Joined a scrappy `start-up in a real company` vibe team working to reduce friction in the funnel for residential solar adoption by automating processes."
           }
         ]

@@ -1,38 +1,14 @@
-import React from "react";
-import {
-  Paper,
-  Title,
-  Text,
-  Divider,
-  Image,
-  Stack,
-  Space,
-} from "@mantine/core";
+import { Text, Divider, Image, Space } from "@mantine/core";
+import { BlogPostLayout, BlogKicker, BlogSection } from "./BlogPostLayout";
 
-function blogImages(imagePath: string) {
-  const file = imagePath.replace(/^\.\//, "");
-  return `/images/writing/blogs/20220504/${encodeURIComponent(file)}`;
-}
+import { blogAsset } from "./blogAsset";
 
 function Blog20220504() {
   return (
-    <Paper
-      p="xl"
-      radius="lg"
-      withBorder
-      shadow="sm"
-      mt="lg"
-      mx="auto"
-      maw={700}
-    >
-      <Stack gap="md">
-        <Title order={1}>5/4/2022: As good a time as any</Title>
-        <Divider />
-        <Title order={2} size="h3">
-          It's 10:36 PM.
-        </Title>
+    <BlogPostLayout date="2022-05-04" title="As good a time as any">
+<BlogKicker>It's 10:36 PM.</BlogKicker>
         <Text>
-          &nbsp;&nbsp;&nbsp;&nbsp;I still believe reflection is good and I can't
+          I still believe reflection is good and I can't
           exactly say it's hard to find the time. I think it's harder to find
           the motivation after working the entire day. I'm 8 months into my
           first job outside of college and the stuff I work on is somewhat
@@ -44,7 +20,7 @@ function Blog20220504() {
           what we knew in the past.
         </Text>
         <Text>
-          &nbsp;&nbsp;&nbsp;&nbsp;In the spirit of recording the general feeling
+          In the spirit of recording the general feeling
           of my days at this point in time, I sit in front of a computer from
           around 9 to around 5, give or take some time depending on projects.
           Then give or take some more time depending on how many times I
@@ -64,7 +40,7 @@ function Blog20220504() {
         </Text>
         <Divider />
         <Text>
-          &nbsp;&nbsp;&nbsp;&nbsp;Looking back on my time in college. I do have
+          Looking back on my time in college. I do have
           some regrets. I wish I spent more time interacting with and meeting
           people. The last two years were a bit rougher in that aspect, with the
           pandemic and all. I think the best times I've had back in college was
@@ -88,7 +64,7 @@ function Blog20220504() {
           much help and support as they need.
         </Text>
         <Text>
-          &nbsp;&nbsp;&nbsp;&nbsp;I TA'ed several professional masters classes
+          I TA'ed several professional masters classes
           and most of the other TAs had office hours during the day, which is
           when people were working or had meetings, so the only office hours
           that really worked were the ones after normal working hours, which
@@ -101,7 +77,7 @@ function Blog20220504() {
           going to school, have multiple jobs, or like volunteer after work.
         </Text>
         <Image
-          src={blogImages("./moon-1.jpg")}
+          src={blogAsset("20220504", "./moon-1.jpg")}
           alt="Moon"
           width="80%"
           mx="auto"
@@ -109,7 +85,7 @@ function Blog20220504() {
           my="md"
         />
         <Text>
-          &nbsp;&nbsp;&nbsp;&nbsp;TAing came at a cost though. This often cut
+          TAing came at a cost though. This often cut
           into time for my own work, especially work on group projects and
           research, which during the masters portion of my time at UW was
           generally open-ended and exploratory. This led me to have the mindset
@@ -128,7 +104,7 @@ function Blog20220504() {
           failing are a part of life.
         </Text>
         <Text>
-          &nbsp;&nbsp;&nbsp;&nbsp;It's kind of wild though. Like the number of
+          It's kind of wild though. Like the number of
           people you can meet when you go to college. It's hard to meet people
           outside of work nowadays. I actually have to put in effort to go out
           and do things to meet new people. Anyways, in college there's
@@ -159,7 +135,7 @@ function Blog20220504() {
           but how that might happen is kind of blurry.
         </Text>
         <Image
-          src={blogImages("./magic-man.jpg")}
+          src={blogAsset("20220504", "./magic-man.jpg")}
           alt="Magic Man"
           width="80%"
           mx="auto"
@@ -167,7 +143,7 @@ function Blog20220504() {
           my="md"
         />
         <Text>
-          &nbsp;&nbsp;&nbsp;&nbsp;I'm out of school now. Working feels like
+          I'm out of school now. Working feels like
           there's more free time after work, but I think work takes more time
           than school. There's no homework and people generally don't need to
           work on weekends (depending on company), but the time invested from 9
@@ -194,18 +170,16 @@ function Blog20220504() {
         </Text>
         <Divider />
         <Image
-          src={blogImages("./pier_at_night.jpg")}
+          src={blogAsset("20220504", "./pier_at_night.jpg")}
           alt="Pier at Night"
           width="80%"
           mx="auto"
           radius="md"
           my="md"
         />
-        <Title order={2} size="h3">
-          Time passes and eventually so do we.
-        </Title>
+        <BlogSection title="Time passes and eventually so do we." />
         <Text>
-          &nbsp;&nbsp;&nbsp;&nbsp;I find myself spending more and more time
+          I find myself spending more and more time
           thinking about inequality. I am incredibly privileged and grateful to
           be able to get to where I am, but I'm not so daft as to think that I
           got here with hard work or luck alone. I was able to get to where I
@@ -221,7 +195,7 @@ function Blog20220504() {
           the world is.
         </Text>
         <Text>
-          &nbsp;&nbsp;&nbsp;&nbsp;We all have some amount of time in our lives,
+          We all have some amount of time in our lives,
           some have more and some less. The amount of time we have is
           intrinsically unequal. This inequality is partially due to our
           choices, but it seems like it's mostly due to circumstances outside
@@ -236,7 +210,7 @@ function Blog20220504() {
           is still a lot of money.
         </Text>
         <Text>
-          &nbsp;&nbsp;&nbsp;&nbsp;I remember back in middle school, my dad used
+          I remember back in middle school, my dad used
           to buy chicken teriyaki at a local teriyaki place for $3.99 a plate. A
           few years later, the price increased to $4.99. Now the same teriyaki
           place sells the same teriyaki for ~$12.49 after tax and tip. It's
@@ -251,7 +225,7 @@ function Blog20220504() {
           of how it feels now.
         </Text>
         <Image
-          src={blogImages("./chicago-2.jpg")}
+          src={blogAsset("20220504", "./chicago-2.jpg")}
           alt="Chicago"
           width="80%"
           mx="auto"
@@ -259,7 +233,7 @@ function Blog20220504() {
           my="md"
         />
         <Text>
-          &nbsp;&nbsp;&nbsp;&nbsp;Another example of this is how my dad says
+          Another example of this is how my dad says
           that back when he was in college, he would be able to afford an entire
           year of tuition by working over the summer. Apparently it wasn't that
           crazy of a thing and it's not because he had a fancy tech job or
@@ -287,7 +261,7 @@ function Blog20220504() {
           think the quality of education has improved by x4.
         </Text>
         <Image
-          src={blogImages("./chicago-1.jpg")}
+          src={blogAsset("20220504", "./chicago-1.jpg")}
           alt="Chicago"
           width="80%"
           mx="auto"
@@ -295,7 +269,7 @@ function Blog20220504() {
           my="md"
         />
         <Text>
-          &nbsp;&nbsp;&nbsp;&nbsp;The fight for a $15 minimum wage started in
+          The fight for a $15 minimum wage started in
           2012 and it's still not really a thing. Minimum wage back in 1970 was
           around{" "}
           <a href="https://www.dol.gov/agencies/whd/minimum-wage/history#:~:text=The%20minimum%20wage%20went%20to,farm%20workers%20stopped%20at%20%241.30.">
@@ -318,7 +292,7 @@ function Blog20220504() {
           today's environment.
         </Text>
         <Image
-          src={blogImages("./pike_at_night.jpg")}
+          src={blogAsset("20220504", "./pike_at_night.jpg")}
           alt="Pike at Night"
           width="80%"
           mx="auto"
@@ -326,7 +300,7 @@ function Blog20220504() {
           my="md"
         />
         <Text>
-          &nbsp;&nbsp;&nbsp;&nbsp;The{" "}
+          The{" "}
           <a href="https://en.wikipedia.org/wiki/Fair_Labor_Standards_Act_of_1938">
             40-hour work week started in 1938
           </a>
@@ -350,18 +324,16 @@ function Blog20220504() {
           better transportation services, at perhaps the cost of reduced wages.
         </Text>
         <Image
-          src={blogImages("./work-2.jpg")}
+          src={blogAsset("20220504", "./work-2.jpg")}
           alt="Work"
           width="80%"
           mx="auto"
           radius="md"
           my="md"
         />
-        <Title order={2} size="h3">
-          I don't believe that we were born into this world to work.
-        </Title>
+        <BlogSection title="I don't believe that we were born into this world to work." />
         <Text>
-          &nbsp;&nbsp;&nbsp;&nbsp;We decide how we spend our time with the
+          We decide how we spend our time with the
           choices we make. We try to build good habits. Who we are and what we
           do seem to be a function of time, among many other things. It takes
           time to do things. It takes time to get better at doing things. It
@@ -377,13 +349,12 @@ function Blog20220504() {
         </Text>
         <Divider />
         <Text>
-          &nbsp;&nbsp;&nbsp;&nbsp;It's been a couple of years. A lot of things
+          It's been a couple of years. A lot of things
           have happened, yet lots of things haven't happened, and many more
           things have yet to happen. It's hard to imagine that we somehow got to
           where we are from where we were; but we're here, for better or worse.
         </Text>
-      </Stack>
-    </Paper>
+    </BlogPostLayout>
   );
 }
 
