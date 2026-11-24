@@ -1,3 +1,5 @@
+/** Slug must match `blogs/<slug>.mdx` + thin `blogs/<slug>.tsx` wrapper. */
+
 export const BLOG_POSTS = [
   { slug: "20261121", date: "2026-11-21", title: "A burning star" },
   { slug: "20240601", date: "2024-06-01", title: "Cycle times" },

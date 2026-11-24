@@ -1,3 +1,9 @@
+declare module "*.mdx" {
+  import type { ComponentType } from "react";
+  const MDXComponent: ComponentType;
+  export default MDXComponent;
+}
+
 declare module "*.pdf";
 declare module "*.jpg";
 declare module "*.jpeg";

@@ -1,3 +1,5 @@
 {
-  "latex-workshop.formatting.latex": "latexindent"
+  "latex-workshop.formatting.latex": "latexindent",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

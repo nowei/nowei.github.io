@@ -1,15 +1,11 @@
-import { Text } from "@mantine/core";
-import { BlogPostLayout, BlogKicker, BlogSection } from "./BlogPostLayout";
-
-function BlogYYYYMMDD() {
-  return (
-    <BlogPostLayout date="YYYY-MM-DD" title="Post title">
-      <BlogKicker>Optional time or opening line.</BlogKicker>
-      <Text>Body paragraph.</Text>
-      <BlogSection title="Section heading" />
-      <Text>More body.</Text>
-    </BlogPostLayout>
-  );
-}
-
-export default BlogYYYYMMDD;
+/**
+ * New post checklist:
+ * 1. Add entry to posts.ts
+ * 2. Copy _template.mdx → YYYYMMDD.mdx
+ * 3. Create YYYYMMDD.tsx:
+ *    import Content from "./YYYYMMDD.mdx";
+ *    import { withBlogLayout } from "./withBlogLayout";
+ *    export default withBlogLayout("YYYYMMDD", Content);
+ * 4. Register lazy import in routes.tsx and rebuild
+ */
+export {};

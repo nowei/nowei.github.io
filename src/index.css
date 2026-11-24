@@ -342,7 +342,10 @@ body {
   max-width: 70ch;
 }
 
-.blog-prose .mantine-Stack-root > .mantine-Text-root + .mantine-Text-root {
+.blog-prose .blog-paragraph + .blog-paragraph,
+.blog-prose .mantine-Stack-root > .mantine-Text-root + .mantine-Text-root,
+.blog-prose .mantine-Stack-root > .blog-paragraph + .mantine-Text-root,
+.blog-prose .mantine-Stack-root > .mantine-Text-root + .blog-paragraph {
   text-indent: 1.5em;
 }
 

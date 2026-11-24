@@ -20,7 +20,7 @@ export function BlogPostLayout({ date, title, children }: BlogPostLayoutProps) {
 
 export function BlogKicker({ children }: { children: ReactNode }) {
   return (
-    <Text component="p" className="blog-kicker" size="lg">
+    <Text component="div" className="blog-kicker" size="lg">
       {children}
     </Text>
   );
