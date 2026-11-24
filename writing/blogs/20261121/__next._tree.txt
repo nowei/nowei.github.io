@@ -1,5 +1,5 @@
-:HL["/_next/static/chunks/1oww076u84054.css","style"]
+:HL["/_next/static/chunks/2r5x3wiufswbe.css","style"]
 :HL["/_next/static/chunks/0uptzsh46tm7k.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":{"n":"slug","t":"c","k":"writing/blogs/20261121","s":["about","pages","resume","writing"]},"h":96,"c":"$Q2"}]]
-0:{"b":"Pp1hpwEMdLPRwpJkhkBw8","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"yknfvHqOs5PlOpwKgwA9S","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
