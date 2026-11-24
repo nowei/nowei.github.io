@@ -8,21 +8,16 @@
 \usepackage{calc}
 \usepackage{tabto}
 \usepackage{fontspec}
-\setmainfont[
-    Path = /mnt/c/Users/andre/AppData/Local/Microsoft/Windows/Fonts/,
-    Extension = .ttf,
-    Ligatures = TeX,
-    BoldFont       = UbuntuMono-B,
-    ItalicFont     = UbuntuMono-RI,
-    BoldItalicFont = UbuntuMono-BI
-]{UbuntuMono-R}
-\usepackage{parskip}
+\input{resume-fontpaths}
+\setubuntumonofrompaths
+\usepackage[skip=0pt plus 0pt]{parskip}
 \usepackage{atbegshi}
 \usepackage{emoji}
 % \SetLabelAlign{center}{\clap{#1}}
 \SetLabelAlign{center}{\strut\smash{\parbox[t]\labelwidth{\centering#1}}}
 
-\def\defaultsectionspacingsize{2px}
+\def\defaultsectionspacingsize{18px}
+\def\defaultexperiencespacingsize{14px}
 
 \discardpages{3}
 
@@ -38,7 +33,7 @@
 \begin{document}
 % Hack to allow for windows 10 emojis in windows 11 because they look better 😎
 % https://www.techpowerup.com/forums/threads/change-windows-11-emoji-set.291051/
-\setemojifont{seguiemj_0.ttf}[Path=/mnt/c/Windows/Fonts/]
+\setwinemojifontfrompaths
 \setlength{\topskip}{0pt}
 \hspace{0.02\textwidth}
 % \color{black}
@@ -51,28 +46,30 @@
 \vspace{\defaultsectionspacingsize}
 \education{plain}
 
-\teachingheader{plain}
-\vspace{-12px}
+\vspace{\defaultsectionspacingsize}
+\licenses{plain}
 
-\teaching{plain}
-
+\vspace{\defaultsectionspacingsize}
 \experienceheader{plain}
 
-\vspace{-12px}
-\vspace{\defaultsectionspacingsize}
 \sunrun{plain}
 
-\vspace{\defaultsectionspacingsize}
+\vspace{\defaultexperiencespacingsize}
 \octoml{plain}
 
-\vspace{\defaultsectionspacingsize}
+\vspace{\defaultexperiencespacingsize}
 \microsoft{plain}
 
-\vspace{\defaultsectionspacingsize}
+\vspace{\defaultexperiencespacingsize}
 \amazon{plain}
 
-\vspace{\defaultsectionspacingsize}
+\vspace{\defaultexperiencespacingsize}
 \letron{plain}
+
+\vspace{\defaultsectionspacingsize}
+\teachingheader{plain}
+
+\teaching{plain}
 
 \vspace{\defaultsectionspacingsize}
 \awards{plain}

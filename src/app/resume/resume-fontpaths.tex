@@ -1,0 +1,101 @@
+% LuaLaTeX: fontspec Path is single-valued; pick the first directory that has the file.
+% Do not use Lua `--` comments inside \newcommand{\...}{\directlua{...}}: TeX
+% turns those newlines into spaces, so `--` comments out the rest of the chunk.
+\directlua{
+  function resume_font_dir(name, dirs, label)
+    for _, dir in ipairs(dirs) do
+      local fh = io.open(dir .. name, "r")
+      if fh then
+        fh:close()
+        return dir
+      end
+    end
+    tex.error("Could not find " .. name .. " (" .. label
+      .. ") in Windows Fonts or macOS Library/Fonts")
+    return nil
+  end
+
+  function resume_set_ubuntu_mono()
+    local dirs = {
+      "/mnt/c/Users/andre/AppData/Local/Microsoft/Windows/Fonts/",
+      "/Library/Fonts/",
+      (os.getenv("HOME") or "") .. "/Library/Fonts/",
+    }
+    local families = {
+      {
+        regular = "UbuntuMono-R",
+        bold = "UbuntuMono-B",
+        italic = "UbuntuMono-RI",
+        bolditalic = "UbuntuMono-BI",
+      },
+      {
+        regular = "UbuntuMono-Regular",
+        bold = "UbuntuMono-Bold",
+        italic = "UbuntuMono-Italic",
+        bolditalic = "UbuntuMono-BoldItalic",
+      },
+    }
+    local dir, family
+    for _, d in ipairs(dirs) do
+      for _, f in ipairs(families) do
+        local fh = io.open(d .. f.regular .. ".ttf", "r")
+        if fh then
+          fh:close()
+          dir, family = d, f
+          break
+        end
+      end
+      if dir then break end
+    end
+    if not dir then
+      tex.error("Could not find Ubuntu Mono (UbuntuMono-R.ttf or UbuntuMono-Regular.ttf)"
+        .. " in Windows Fonts or macOS Library/Fonts")
+      return
+    end
+    tex.sprint(
+      "\\setmainfont[Path=" .. dir
+      .. ",Extension=.ttf,Ligatures=TeX,Renderer=Node,"
+      .. "BoldFont=" .. family.bold
+      .. ",ItalicFont=" .. family.italic
+      .. ",BoldItalicFont=" .. family.bolditalic
+      .. "]{" .. family.regular .. "}"
+    )
+  end
+
+  function resume_set_win_emoji_font()
+    local home = os.getenv("HOME") or ""
+    local names = { "seguiemj_0.ttf", "seguiemj.ttf" }
+    local dirs = {
+      "/mnt/c/Windows/Fonts/",
+      "/Library/Fonts/",
+      home .. "/Library/Fonts/",
+      home .. "/Downloads/",
+    }
+    local dir, name
+    for _, d in ipairs(dirs) do
+      for _, n in ipairs(names) do
+        local fh = io.open(d .. n, "r")
+        if fh then
+          fh:close()
+          dir, name = d, n
+          break
+        end
+      end
+      if dir then break end
+    end
+    if not dir then
+      tex.error("Could not find seguiemj_0.ttf or seguiemj.ttf"
+        .. " in Windows Fonts, macOS Library/Fonts, or ~/Downloads")
+      return
+    end
+    tex.sprint("\\setemojifont{" .. name .. "}[Path=" .. dir .. ",Renderer=HarfBuzz]")
+  end
+}
+
+\newcommand{\setubuntumonofrompaths}{%
+  \directlua{resume_set_ubuntu_mono()}%
+}
+
+\newcommand{\setwinemojifontfrompaths}{%
+  \directlua{resume_set_win_emoji_font()}%
+}

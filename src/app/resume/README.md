@@ -21,7 +21,7 @@
 
 ```
 
-## Dependencies
+## Dependencies (windows)
 
 ```bash
 sudo apt install texlive texlive-lang-german texlive-latex-extra texlive-science
@@ -33,18 +33,27 @@ export INFOPATH="/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH"
 export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
 ```
 
-## Install old Windows emojis path:
+## Fonts (Windows + macOS)
+
+`resume-fontpaths.tex` picks the first directory that contains the file:
+
+- Ubuntu Mono: WSL user fonts (`UbuntuMono-R.ttf` / `-B` / `-RI` / `-BI`), then `/Library/Fonts/` and `~/Library/Fonts/` with either those names or Homebrew’s (`UbuntuMono-Regular.ttf`, `-Bold`, `-Italic`, `-BoldItalic`)
+- Win10 Segoe emoji: `seguiemj_0.ttf` or `seguiemj.ttf` in `/mnt/c/Windows/Fonts/`, `/Library/Fonts/`, `~/Library/Fonts/`, or `~/Downloads/`
 
 Hack to allow for windows 10 emojis in windows 11 because they look better 😎
 https://www.techpowerup.com/forums/threads/change-windows-11-emoji-set.291051/
 
-```latex
-\setemojifont{seguiemj_0.ttf}[Path=/mnt/c/Windows/Fonts/]
+On macOS, copy the Win10 font into `~/Library/Fonts/` (either filename). If it is still in `~/Downloads/seguiemj.ttf`, the resume will pick that up. Ubuntu Mono is installed by `brew install --cask font-ubuntu-mono`.
+
+Ubuntu Mono uses `Renderer=Node`. Segoe emoji uses `Renderer=HarfBuzz` so LuaTeX reads the CBDT color bitmaps; Node only draws the colorless outline glyphs in the same file. If HarfBuzz warns on Apple Color Emoji, confirm the log lists `seguiemj.ttf` and not `Apple Color Emoji.ttc`. `luaotfload-tool --cache=erase` if a stale cache sticks.
+
+## MacOS instructions
+
 ```
+brew install texlive
+brew install --cask basictex
 
-then put it in the fonts and reference it in the LaTeX file
-e.g.
-
-```bash
-/mnt/c/Users/andre/AppData/Local/Microsoft/Windows/Fonts/
+sudo tlmgr update --self
+sudo tlmgr install xstring ifsym bbding fontawesome enumitem tabto-ltx
+brew install --cask font-ubuntu-mono
 ```

@@ -8,15 +8,9 @@
 \usepackage{calc}
 \usepackage{tabto}
 \usepackage{fontspec}
-\setmainfont[
-    Path = /mnt/c/Users/andre/AppData/Local/Microsoft/Windows/Fonts/,
-    Extension = .ttf,
-    Ligatures = TeX,
-    BoldFont       = UbuntuMono-B,
-    ItalicFont     = UbuntuMono-RI,
-    BoldItalicFont = UbuntuMono-BI
-]{UbuntuMono-R}
-\usepackage{parskip}
+\input{resume-fontpaths}
+\setubuntumonofrompaths
+\usepackage[skip=0pt plus 0pt]{parskip}
 \usepackage{atbegshi}
 \usepackage{emoji}
 % \SetLabelAlign{center}{\clap{#1}}
@@ -24,6 +18,7 @@
 \SetLabelAlign{center}{\strut\smash{\parbox[t]\labelwidth{\centering#1}}}
 
 \def\defaultsectionspacingsize{11px}
+\def\defaultsidebarspacingsize{8px}
 
 \geometry{top=0cm, bottom=0cm, left=0cm, right=0cm}
 
@@ -38,7 +33,7 @@
 \begin{document}
 % Hack to allow for windows 10 emojis in windows 11 because they look better 😎
 % https://www.techpowerup.com/forums/threads/change-windows-11-emoji-set.291051/
-\setemojifont{seguiemj_0.ttf}[Path=/mnt/c/Windows/Fonts/]
+\setwinemojifontfrompaths
 \setlength{\topskip}{0pt}
 \noindent\fcolorbox{sidebar}{sidebar}%
 {
@@ -46,36 +41,37 @@
     \begin{minipage}[t][\textheight-2\fboxsep-2\fboxrule][c]{0.25\textwidth}
         % \color{black}
         \color{white}
+        \def\defaultheaderspacingsize{2px}%
         \namejobdesc{vertical}
 
-        \vspace{\defaultsectionspacingsize}
+        \vspace{\defaultsidebarspacingsize}
         \contactinfo{vertical}
 
-        \vspace{\defaultsectionspacingsize}
+        \vspace{\defaultsidebarspacingsize}
         \programminglanguages{horizontal}
 
-        \vspace{\defaultsectionspacingsize}
+        \vspace{\defaultsidebarspacingsize}
         \hardwaredesclang{horizontal}
 
-        \vspace{\defaultsectionspacingsize}
+        \vspace{\defaultsidebarspacingsize}
         \technologiesframeworks
 
-        \vspace{\defaultsectionspacingsize}
+        \vspace{\defaultsidebarspacingsize}
         \vcdeployment
 
-        \vspace{\defaultsectionspacingsize}
+        \vspace{\defaultsidebarspacingsize}
         \hardwaretools
 
-        \vspace{\defaultsectionspacingsize}
+        \vspace{\defaultsidebarspacingsize}
         \operatingsystems
 
-        \vspace{\defaultsectionspacingsize}
+        \vspace{\defaultsidebarspacingsize}
         \humanlanguages
 
-        \vspace{\defaultsectionspacingsize}
+        \vspace{\defaultsidebarspacingsize}
         \interests
 
-        \vspace{\defaultsectionspacingsize}
+        \vspace{\defaultsidebarspacingsize}
         \hobbies
 
     \end{minipage}%
@@ -88,17 +84,20 @@
 
         \sunrun{notplain}
 
-        \vspace{6px}
+        \vspace{\defaultsectionspacingsize}
         \octoml{notplain}
 
-        % \vspace{8px}
+        % \vspace{\defaultsectionspacingsize}
         % \microsoft{notplain}
 
-        \vspace{8px}
+        \vspace{\defaultsectionspacingsize}
         \uwcsejob{notplain}
 
         \vspace{\defaultsectionspacingsize}
         \education{notplain}
+
+        \vspace{\defaultsectionspacingsize}
+        \licenses{notplain}
 
         \vspace{\defaultsectionspacingsize}
         \awards{notplain}
