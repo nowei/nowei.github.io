@@ -1,0 +1,5 @@
+:HL["/_next/static/chunks/0xgtmvj-ohgp4.css","style"]
+:HL["/_next/static/chunks/0uptzsh46tm7k.css","style"]
+2:[["children",{"s":"__PAGE__","h":160}]]
+1:[["children",{"s":{"n":"slug","t":"c","k":"teaching","s":["about","now","pages","resume","teaching","writing"]},"h":96,"c":"$Q2"}]]
+0:{"b":"b4ZlKcYlmWT154wRTVrxT","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
