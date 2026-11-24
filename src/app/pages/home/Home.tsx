@@ -76,17 +76,17 @@ function AboutMe() {
       <Stack gap="md" w="100%">
         <Text>
           I grew up in Washington state and spend time volunteering, staying
-          active, and exploring food in the greater Seattle area.
+          active, and exploring the food scene in the greater Seattle area.
         </Text>
         <Text>
           I&apos;m currently a Staff Software Engineer at Sunrun, working
-          remotely from the greater Seattle area on software systems for business
-          operations.
+          remotely from the greater Seattle area on software systems for
+          business operations.
         </Text>
         <Text>
-          Previously I was a senior software engineer at OctoML (then OctoAI,
-          which was then acquired!), building out ML deployment infrastructure and
-          the SaaS platform.
+          Previously, I was a senior software engineer at OctoML (then OctoAI,
+          which was then acquired!), building out ML deployment infrastructure
+          and the SaaS platform.
         </Text>
         <Text>
           I earned an MS and BS in Computer Science & Engineering from the Paul

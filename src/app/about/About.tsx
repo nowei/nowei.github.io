@@ -72,18 +72,20 @@ function AboutMe() {
       <PageSection id="about-work" title="Work">
         <Stack gap="md" w="100%">
           <Text>
-            I&apos;m a staff software engineer, working remotely from the
-            Seattle area and collaborating with teammates across the country.
+            I&apos;m a staff software engineer at Sunrun, working remotely from
+            the greater Seattle area and collaborating with teammates across the
+            country.
           </Text>
           <Text>
             Being a software engineer means that I write code (read: bugs), ship
             it, and fix things that inevitably break in prod. Being a senior
             engineer means I&apos;ve broken prod a handful of times, fixed it a
             handful of times, and attempt to work with people to break it less
-            often.
+            often. Being a staff software engineer means that I try to convince
+            people not to break things before they break.
           </Text>
           <Text>
-            I&apos;ve worked at large companies and start-ups and prefer
+            I&apos;ve worked at large companies and start-ups, but prefer
             start-up environments.
           </Text>
         </Stack>
@@ -110,7 +112,7 @@ function AboutMe() {
           <AboutList
             items={[
               "Accessibility because everyone deserves a seat at the table",
-              "Public transportation because everyone deserves to get around easily",
+              "Public transportation because everyone deserves to be able to get around",
               "Sustainability because everyone deserves a shot at a future",
             ]}
           />
@@ -119,19 +121,6 @@ function AboutMe() {
             food with friends, going to concerts, or watching shows.
           </Text>
         </Stack>
-      </PageSection>
-
-      <Divider className="home-section-divider" />
-
-      <PageSection id="about-goals" title="This year">
-        <AboutList
-          items={[
-            "Go to the gym more consistently",
-            "Cook more",
-            "Get better at a language",
-            "Volunteer more",
-          ]}
-        />
       </PageSection>
     </div>
   );

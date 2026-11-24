@@ -7,6 +7,8 @@ import { BLOG_POSTS, blogPostPath } from "../app/writing/blogs/posts";
  */
 export const SPA_CLIENT_PATHS = [
   "/about",
+  "/now",
+  "/teaching",
   "/timeline",
   "/writing",
   ...BLOG_POSTS.map((post) => blogPostPath(post.slug)),

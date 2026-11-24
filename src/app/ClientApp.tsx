@@ -11,6 +11,8 @@ import { lazy, Suspense, useLayoutEffect, useState } from "react";
 import { restoreSpaPathFromQuery } from "../lib/spaRedirect";
 
 const AboutMe = lazy(() => import("./about/About"));
+const Now = lazy(() => import("./now/Now"));
+const Teaching = lazy(() => import("./teaching/Teaching"));
 const Timeline = lazy(() => import("./pages/timeline/Timeline"));
 const Writing = lazy(() => import("./writing/Writing"));
 
@@ -57,6 +59,8 @@ export default function ClientApp() {
                 {WritingRoutes()}
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<AboutMe />} />
+                <Route path="/now" element={<Now />} />
+                <Route path="/teaching" element={<Teaching />} />
                 <Route path="/timeline" element={<Timeline />} />
                 <Route path="/writing" element={<Writing />} />
                 <Route path="/*" element={<NotFoundPage />} />

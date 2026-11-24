@@ -37,6 +37,7 @@ function useSystemPrefersDark(): boolean {
 
 const navLinks = [
   { label: "About", to: "/about" },
+  { label: "Now", to: "/now" },
   { label: "Timeline", to: "/timeline" },
   { label: "Writing", to: "/writing" },
 ];

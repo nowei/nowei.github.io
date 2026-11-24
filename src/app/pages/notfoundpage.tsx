@@ -34,6 +34,9 @@ export default function NotFoundPage() {
             <Button component={Link} to="/about" variant="subtle">
               About
             </Button>
+            <Button component={Link} to="/now" variant="subtle">
+              Now
+            </Button>
             <Button component={Link} to="/timeline" variant="subtle">
               Timeline
             </Button>
