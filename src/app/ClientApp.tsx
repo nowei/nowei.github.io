@@ -15,6 +15,7 @@ const Now = lazy(() => import("./now/Now"));
 const Teaching = lazy(() => import("./teaching/Teaching"));
 const Timeline = lazy(() => import("./pages/timeline/Timeline"));
 const Writing = lazy(() => import("./writing/Writing"));
+const Draft = lazy(() => import("./pages/draft/Draft"));
 
 const monoStack =
   "Consolas, 'Liberation Mono', Menlo, Courier, monospace";
@@ -58,6 +59,7 @@ export default function ClientApp() {
               <Routes>
                 {WritingRoutes()}
                 <Route path="/" element={<Home />} />
+                <Route path="/draft" element={<Draft />} />
                 <Route path="/about" element={<AboutMe />} />
                 <Route path="/now" element={<Now />} />
                 <Route path="/teaching" element={<Teaching />} />

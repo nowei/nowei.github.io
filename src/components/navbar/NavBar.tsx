@@ -46,20 +46,27 @@ const Navbar = () => {
   const location = useLocation();
 
   const systemPrefersDark = useSystemPrefersDark();
+  const isDraft = location.pathname === "/draft";
+  const darkNav = isDraft || systemPrefersDark;
 
   return (
     <Center
       component="nav"
       aria-label="Primary"
       className="site-nav"
-      data-nav-theme={systemPrefersDark ? "dark" : "light"}
+      data-nav-theme={darkNav ? "dark" : "light"}
+      data-draft-nav={isDraft ? "true" : undefined}
       style={{
         position: "sticky",
         top: 0,
         zIndex: 100,
         backgroundColor: "var(--nav-bg)",
-        ["--nav-bg" as string]: systemPrefersDark ? "#1f1f1f" : "#dde1e6",
-        ["--nav-fg" as string]: systemPrefersDark ? "#c5e4ff" : "#0f4785",
+        ["--nav-bg" as string]: isDraft
+          ? "#10161c"
+          : systemPrefersDark
+            ? "#1f1f1f"
+            : "#dde1e6",
+        ["--nav-fg" as string]: darkNav ? "#c5e4ff" : "#0f4785",
       }}
       w={"100%"}
     >

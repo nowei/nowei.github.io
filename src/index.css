@@ -817,3 +817,128 @@ a:active {
 html {
   overflow-y: scroll;
 }
+
+.site-nav[data-draft-nav="true"] {
+  border-bottom-color: #24303a;
+}
+
+.site-main:has(.draft-page) {
+  padding-bottom: 0;
+  min-height: 0;
+}
+
+.draft-page__body {
+  padding-top: 2.5rem;
+}
+
+.taipei {
+  background: #10161c;
+}
+
+.taipei__title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.taipei__frame {
+  position: relative;
+  width: 100%;
+}
+
+.taipei__frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.taipei__zones {
+  position: absolute;
+  inset: 0;
+}
+
+.taipei__zone {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  color: transparent;
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.taipei__zone:focus-visible {
+  outline: none;
+}
+
+.taipei__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.taipei__glow {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    linear-gradient(
+      105deg,
+      transparent 28%,
+      rgba(255, 255, 255, 0.85) 48%,
+      transparent 68%
+    ),
+    rgba(176, 255, 255, 0.72);
+  background-size: 220% 100%, 100% 100%;
+  background-position: 130% 0, 0 0;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mix-blend-mode: screen;
+}
+
+.taipei__frame:has([data-zone="about"]:is(:hover, :focus-visible)) [data-for="about"],
+.taipei__frame:has([data-zone="timeline"]:is(:hover, :focus-visible)) [data-for="timeline"],
+.taipei__frame:has([data-zone="contact"]:is(:hover, :focus-visible)) [data-for="contact"],
+.taipei__frame:has([data-zone="writing"]:is(:hover, :focus-visible)) [data-for="writing"],
+.taipei__frame:has([data-zone="now"]:is(:hover, :focus-visible)) [data-for="now"] {
+  opacity: 1;
+  animation: taipei-shine 1.15s ease-in-out infinite;
+}
+
+@keyframes taipei-shine {
+  0% {
+    background-position: 140% 0, 0 0;
+  }
+  100% {
+    background-position: -50% 0, 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .taipei__frame:has([data-zone]:is(:hover, :focus-visible)) .taipei__glow {
+    animation: none;
+    filter: none;
+  }
+}
+
+.draft-page ::selection {
+  background: rgba(126, 240, 255, 0.28);
+  color: inherit;
+}

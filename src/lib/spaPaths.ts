@@ -6,6 +6,7 @@ import { BLOG_POSTS, blogPostPath } from "../app/writing/blogs/posts";
  * only on 404.html.
  */
 export const SPA_CLIENT_PATHS = [
+  "/draft",
   "/about",
   "/now",
   "/teaching",
